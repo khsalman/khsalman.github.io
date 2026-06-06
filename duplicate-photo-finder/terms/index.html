@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Duplicate Photo Finder</title>
+    <meta name="description" content="Terms of Service for Duplicate Photo Finder app by LynxApps">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .logo img {
+            height: 35px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .breadcrumb {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 40px;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #999;
+            font-size: 14px;
+            margin: 0 8px;
+        }
+
+        main {
+            background: white;
+            padding: 60px 0;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .last-updated {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: #f0f2ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #333;
+        }
+
+        .important-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .important-note p {
+            margin: 0;
+            color: #856404;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-section p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .contact-section a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: #ccc;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+            }
+
+            main {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps">
+            </a>
+            <nav class="nav-links">
+                <a href="/duplicate-photo-finder">← Back to App</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">LynxApps</a>
+                <span>/</span>
+                <a href="/duplicate-photo-finder">Duplicate Photo Finder</a>
+                <span>/</span>
+                <span>Terms of Service</span>
+            </div>
+
+            <h1>Terms of Service</h1>
+            <p class="last-updated">Last Updated: June 2026</p>
+
+            <div class="highlight-box">
+                <p><strong>Please read these terms carefully.</strong> By downloading and using the Duplicate Photo Finder app, you agree to be bound by these Terms of Service. If you do not agree, please do not use the app.</p>
+            </div>
+
+            <h2>1. Service Description</h2>
+            <p>Duplicate Photo Finder ("App") is a mobile application developed by LynxApps ("Company," "we," "us") that uses on-device artificial intelligence and machine learning to:</p>
+            <ul>
+                <li>Identify and detect duplicate and visually similar photos and videos</li>
+                <li>Analyze your photo library using three detection methods: exact matching, perceptual matching, and AI-powered visual similarity</li>
+                <li>Provide smart recommendations for photo quality and retention</li>
+                <li>Help manage and optimize storage space on your device</li>
+            </ul>
+            <p><strong>Important:</strong> All duplicate detection and analysis occurs locally on your device. Your photos are processed entirely on your device and are not uploaded to our servers.</p>
+
+            <h2>2. License Grant</h2>
+            <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to:</p>
+            <ul>
+                <li>Download and install the App on your compatible device</li>
+                <li>Use the App for personal, non-commercial purposes</li>
+                <li>Access photo library information for duplicate detection</li>
+            </ul>
+            <p>This license does not include the right to:</p>
+            <ul>
+                <li>Modify, adapt, or create derivative works</li>
+                <li>Reverse engineer, decompile, or disassemble the App</li>
+                <li>Rent, lease, or lend the App to others</li>
+                <li>Remove or alter copyright or proprietary notices</li>
+                <li>Use the App for commercial purposes</li>
+            </ul>
+
+            <h2>3. Pricing and Subscriptions</h2>
+
+            <h3>Free Tier</h3>
+            <p>The App offers a free version with limited features including basic duplicate detection and ad support.</p>
+
+            <h3>Pro Subscription</h3>
+            <p>We offer three Pro subscription options:</p>
+            <ul>
+                <li><strong>Monthly:</strong> $1.99 USD per month (auto-renewing)</li>
+                <li><strong>Annual:</strong> $14.99 USD per year (auto-renewing)</li>
+                <li><strong>Lifetime:</strong> $29.99 USD one-time purchase</li>
+            </ul>
+
+            <h3>Subscription Terms</h3>
+            <ul>
+                <li>Subscriptions auto-renew unless you cancel in your Apple ID settings</li>
+                <li>You will be charged on your billing date unless auto-renewal is canceled</li>
+                <li>Apple processes all transactions and handles billing</li>
+                <li>Refunds are governed by Apple's App Store policies</li>
+                <li>You can manage or cancel subscriptions anytime through Apple ID Settings</li>
+            </ul>
+
+            <h2>4. Data Handling and Privacy</h2>
+
+            <h3>Local Processing</h3>
+            <p>Your photos and videos:</p>
+            <ul>
+                <li>Are never uploaded to our servers</li>
+                <li>Are never transmitted outside your device</li>
+                <li>Are never shared with third parties</li>
+                <li>Are processed entirely on your device using local AI</li>
+            </ul>
+
+            <h3>Technical Data Collection</h3>
+            <p>We collect limited technical information through third-party services:</p>
+            <ul>
+                <li>Device model, OS version, and app performance metrics</li>
+                <li>Crash reports and error logs for improvement</li>
+                <li>Usage analytics to enhance features</li>
+                <li>Advertising identifiers (governed by your privacy settings)</li>
+            </ul>
+
+            <p>Please review our <a href="/duplicate-photo-finder/privacy">Privacy Policy</a> for complete details about data collection and usage.</p>
+
+            <h2>5. User Responsibilities</h2>
+            <p>You agree to:</p>
+            <ul>
+                <li>Use the App only for legitimate, legal purposes</li>
+                <li>Not attempt to gain unauthorized access to the App</li>
+                <li>Not use the App to disrupt service or harm others</li>
+                <li>Back up important photos before deletion</li>
+                <li>Verify duplicates before confirming removal</li>
+                <li>Understand that deleted items go to your Photos app's "Recently Deleted" folder for 30 days before permanent deletion</li>
+            </ul>
+
+            <h2>6. Disclaimers and Limitations</h2>
+
+            <h3>As-Is Service</h3>
+            <p>The App is provided "AS IS" without warranties or guarantees. We do not warrant that:</p>
+            <ul>
+                <li>The App will be error-free or uninterrupted</li>
+                <li>All duplicates will be detected</li>
+                <li>The App will function on all devices or iOS versions</li>
+            </ul>
+
+            <h3>No Liability for Data Loss</h3>
+            <p>You use the App at your own risk. We are not responsible for:</p>
+            <ul>
+                <li>Accidental deletion of photos or videos</li>
+                <li>Data loss or corruption</li>
+                <li>Device malfunctions or OS issues</li>
+                <li>Storage space management issues</li>
+            </ul>
+
+            <p><strong>You are solely responsible for backing up your photos and videos.</strong></p>
+
+            <h2>7. Limitation of Liability</h2>
+
+            <h3>Liability Cap</h3>
+            <p>To the fullest extent permitted by law, our total liability to you shall not exceed:</p>
+            <ul>
+                <li>The amount you paid for the App or in-app purchases (if any), or</li>
+                <li>$0 USD if you used only the free version</li>
+            </ul>
+
+            <h3>Excluded Damages</h3>
+            <p>We are not liable for any:</p>
+            <ul>
+                <li>Indirect or consequential damages</li>
+                <li>Lost profits or revenue</li>
+                <li>Data loss or corruption</li>
+                <li>Business interruption</li>
+                <li>Lost data or photos</li>
+            </ul>
+
+            <h2>8. Indemnification</h2>
+            <p>You agree to indemnify and hold harmless LynxApps from any claims, damages, or expenses arising from:</p>
+            <ul>
+                <li>Your use of the App</li>
+                <li>Violation of these Terms</li>
+                <li>Infringement of third-party rights</li>
+                <li>Photos or content you process through the App</li>
+            </ul>
+
+            <h2>9. Intellectual Property</h2>
+            <p>The App, including all code, design, graphics, and features, is owned by LynxApps. All rights are reserved. You may not:</p>
+            <ul>
+                <li>Copy or reproduce the App</li>
+                <li>Modify or create derivative works</li>
+                <li>Remove copyright or trademark notices</li>
+                <li>Use our branding without permission</li>
+            </ul>
+
+            <h2>10. Termination</h2>
+            <p>We may terminate or suspend your access to the App:</p>
+            <ul>
+                <li>If you violate these Terms</li>
+                <li>At our sole discretion without notice or liability</li>
+                <li>If required by law or regulation</li>
+            </ul>
+            <p>Upon termination, you must stop using the App and delete it from your device.</p>
+
+            <h2>11. Third-Party Services</h2>
+            <p>The App uses third-party services including:</p>
+            <ul>
+                <li>Google Firebase (analytics and crash reporting)</li>
+                <li>Google AdMob (advertising)</li>
+                <li>Apple App Store (transactions and billing)</li>
+            </ul>
+            <p>These services are governed by their own terms and privacy policies. We are not responsible for their practices.</p>
+
+            <h2>12. Changes to Terms</h2>
+            <p>We may modify these Terms at any time. Continued use of the App after changes constitutes acceptance of the updated Terms. We will notify you of significant changes by updating the "Last Updated" date.</p>
+
+            <h2>13. Governing Law</h2>
+            <p>These Terms are governed by the laws of the United States and applicable state laws, without regard to conflict of law principles. Any disputes shall be resolved exclusively in the federal or state courts of the relevant jurisdiction.</p>
+
+            <h2>14. Severability</h2>
+            <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
+
+            <h2>15. Entire Agreement</h2>
+            <p>These Terms, together with our <a href="/duplicate-photo-finder/privacy">Privacy Policy</a>, constitute the entire agreement between you and LynxApps regarding the App.</p>
+
+            <h2>16. Contact Information</h2>
+            <p>For questions about these Terms of Service, please contact:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></li>
+                <li><strong>Response Time:</strong> We aim to respond within 48 hours</li>
+            </ul>
+
+            <div class="important-note">
+                <p><strong>Important Reminder:</strong> Before deleting any photos, ensure you have a backup of important images. Items deleted through the app go to your Photos app's "Recently Deleted" album for 30 days before permanent deletion.</p>
+            </div>
+
+            <div class="contact-section">
+                <h2>Questions About Our Terms?</h2>
+                <p>We're committed to clarity and fairness. If anything is unclear, please reach out.</p>
+                <p><a href="mailto:lynxapps.contact@gmail.com">Contact Our Team</a></p>
+            </div>
+
+            <p style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 13px; color: #999;">
+                These Terms of Service are effective as of June 2026. By using Duplicate Photo Finder, you acknowledge that you have read, understood, and agree to be bound by these Terms.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/duplicate-photo-finder">App Page</a>
+            <span>•</span>
+            <a href="/duplicate-photo-finder/privacy">Privacy Policy</a>
+            <span>•</span>
+            <a href="/duplicate-photo-finder/support">Support</a>
+            <span>•</span>
+            <a href="mailto:lynxapps.contact@gmail.com">Contact</a>
+        </div>
+        <p style="color: #ccc; font-size: 13px; margin: 0;">&copy; 2026 LynxApps. All rights reserved.</p>
+    </footer>
+</body>
+</html>

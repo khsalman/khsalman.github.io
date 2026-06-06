@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Duplicate Photo Finder</title>
+    <meta name="description" content="Privacy Policy for Duplicate Photo Finder app by LynxApps">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #667eea;
+        }
+
+        .logo img {
+            height: 35px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .breadcrumb {
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 40px;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb span {
+            color: #999;
+            font-size: 14px;
+            margin: 0 8px;
+        }
+
+        main {
+            background: white;
+            padding: 60px 0;
+            border-radius: 0;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .last-updated {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background: #f0f2ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: #333;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-section p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .contact-section a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #1a1a2e;
+            color: #ccc;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            font-size: 13px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                text-align: center;
+            }
+
+            main {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps">
+            </a>
+            <nav class="nav-links">
+                <a href="/duplicate-photo-finder">← Back to App</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">LynxApps</a>
+                <span>/</span>
+                <a href="/duplicate-photo-finder">Duplicate Photo Finder</a>
+                <span>/</span>
+                <span>Privacy Policy</span>
+            </div>
+
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: June 2026</p>
+
+            <div class="highlight-box">
+                <p><strong>Privacy First Commitment:</strong> Your photos never leave your device. All scanning and duplicate detection happens entirely on your device. We do not collect, upload, transmit, or sell your photos.</p>
+            </div>
+
+            <h2>1. Overview</h2>
+            <p>LynxApps ("Company," "we," or "us") operates the Duplicate Photo Finder application ("App"). This Privacy Policy explains our data practices and how we handle your information when you use our App.</p>
+            <p>We are committed to protecting your privacy. Your photos remain private and are processed only on your device using on-device AI technology.</p>
+
+            <h2>2. Information We Collect</h2>
+
+            <h3>Photo and Video Data</h3>
+            <p>The App accesses your photo library to:</p>
+            <ul>
+                <li>Detect duplicate and similar photos</li>
+                <li>Analyze photo metadata (resolution, quality, format)</li>
+                <li>Provide intelligent recommendations</li>
+            </ul>
+            <p><strong>Important:</strong> All processing happens locally on your device. Your photos are never uploaded, transmitted, or stored on our servers.</p>
+
+            <h3>Device and Usage Information</h3>
+            <p>Through third-party services, we automatically collect:</p>
+            <ul>
+                <li>Device model and operating system version</li>
+                <li>App usage data and performance metrics</li>
+                <li>Crash reports and error logs</li>
+                <li>Advertising identifier (for personalized ads)</li>
+                <li>App performance and feature usage analytics</li>
+            </ul>
+
+            <h3>Subscription and Payment Information</h3>
+            <p>All in-app purchases are processed through Apple's App Store. We do not collect or store payment card information. Apple processes your subscription and we receive only:</p>
+            <ul>
+                <li>Purchase confirmation</li>
+                <li>Subscription status</li>
+                <li>Receipt information</li>
+            </ul>
+
+            <h2>3. How We Use Information</h2>
+            <ul>
+                <li><strong>App Functionality:</strong> To detect and manage duplicate photos on your device</li>
+                <li><strong>Service Improvement:</strong> To enhance features and user experience</li>
+                <li><strong>Analytics:</strong> To understand how you use the app and improve performance</li>
+                <li><strong>Support:</strong> To provide customer support and troubleshooting</li>
+                <li><strong>Advertising:</strong> To deliver personalized ads (if enabled)</li>
+                <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
+            </ul>
+
+            <h2>4. Third-Party Services</h2>
+
+            <h3>Google Firebase</h3>
+            <p>We use Google Firebase for:</p>
+            <ul>
+                <li>Analytics and usage tracking</li>
+                <li>Crash reporting and error monitoring</li>
+                <li>App performance metrics</li>
+            </ul>
+            <p><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy →</a></p>
+
+            <h3>Google AdMob</h3>
+            <p>We use Google AdMob to display personalized advertisements. AdMob collects advertising identifiers and usage data to serve relevant ads.</p>
+            <p><a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Privacy Policy →</a></p>
+
+            <h3>Apple</h3>
+            <p>Apple processes all App Store transactions and subscription management. Apple's privacy practices apply to payment information.</p>
+            <p><a href="https://www.apple.com/privacy/" target="_blank">Apple Privacy Policy →</a></p>
+
+            <h2>5. Data Security</h2>
+            <p>We implement industry-standard security measures to protect your information:</p>
+            <ul>
+                <li>On-device processing ensures photos never leave your iPhone</li>
+                <li>Encryption in transit for analytics data</li>
+                <li>Regular security updates and patches</li>
+                <li>Limited server-side data retention</li>
+            </ul>
+            <p>However, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
+
+            <h2>6. Your Privacy Rights</h2>
+
+            <h3>General Users</h3>
+            <p>You can:</p>
+            <ul>
+                <li>Revoke photo library access anytime through iOS Settings</li>
+                <li>Disable personalized ads in iOS Settings</li>
+                <li>Delete the app to stop data collection</li>
+                <li>Request information about data we process</li>
+            </ul>
+
+            <h3>European Union (GDPR)</h3>
+            <p>If you're in the EEA or UK, you have additional rights:</p>
+            <ul>
+                <li><strong>Right to Access:</strong> Request a copy of your data</li>
+                <li><strong>Right to Deletion:</strong> Request deletion of your data</li>
+                <li><strong>Right to Rectification:</strong> Correct inaccurate data</li>
+                <li><strong>Right to Portability:</strong> Receive your data in portable format</li>
+                <li><strong>Right to Object:</strong> Object to processing</li>
+            </ul>
+
+            <h3>California (CCPA/CPRA)</h3>
+            <p>California residents have rights including:</p>
+            <ul>
+                <li><strong>Right to Know:</strong> What personal information is collected</li>
+                <li><strong>Right to Delete:</strong> Request deletion of collected data</li>
+                <li><strong>Right to Opt-Out:</strong> Opt out of sale/sharing of personal information</li>
+                <li><strong>Right to Non-Discrimination:</strong> No discrimination for exercising rights</li>
+            </ul>
+
+            <h2>7. Children's Privacy</h2>
+            <p>The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected information from a child under 13, we will promptly delete such information.</p>
+
+            <h2>8. Data Retention</h2>
+            <ul>
+                <li><strong>Photos:</strong> Never stored on our servers</li>
+                <li><strong>Usage Analytics:</strong> Retained for up to 60 days</li>
+                <li><strong>Crash Reports:</strong> Retained for 90 days</li>
+                <li><strong>Ad Data:</strong> Governed by Google's retention policies</li>
+            </ul>
+
+            <h2>9. Changes to Privacy Policy</h2>
+            <p>We may update this Privacy Policy periodically to reflect changes in our practices, technology, or applicable laws. We will notify you of significant changes by updating the "Last Updated" date at the top of this policy and posting the new version on this page.</p>
+            <p>Your continued use of the App after changes constitutes your acceptance of the updated Privacy Policy.</p>
+
+            <h2>10. Contact Us</h2>
+            <p>If you have questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></li>
+                <li><strong>Response Time:</strong> We aim to respond within 2-3 business days</li>
+            </ul>
+
+            <p>For GDPR or CCPA data requests, please include "Privacy Request" in the subject line along with specific details of your request.</p>
+
+            <div class="contact-section">
+                <h2>Questions About Your Privacy?</h2>
+                <p>We're here to help. Reach out to us at any time with your privacy concerns.</p>
+                <p><a href="mailto:lynxapps.contact@gmail.com">Contact Privacy Team</a></p>
+            </div>
+
+            <p style="margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; font-size: 13px; color: #999;">
+                This Privacy Policy is effective as of June 2026. LynxApps is committed to maintaining your trust through transparent and responsible privacy practices.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/duplicate-photo-finder">App Page</a>
+            <span>•</span>
+            <a href="/duplicate-photo-finder/terms">Terms of Service</a>
+            <span>•</span>
+            <a href="/duplicate-photo-finder/support">Support</a>
+            <span>•</span>
+            <a href="mailto:lynxapps.contact@gmail.com">Contact</a>
+        </div>
+        <p style="color: #ccc; font-size: 13px; margin: 0;">&copy; 2026 LynxApps. All rights reserved.</p>
+    </footer>
+</body>
+</html>
