@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140">
+  <defs>
+    <mask id="mask">
+      <rect width="120" height="120" fill="white"></rect>
+      <path d="M44 70 L52 66 L52 76 L44 80 Z" fill="black"></path>
+      <path d="M76 70 L68 66 L68 76 L76 80 Z" fill="black"></path>
+      <circle cx="54" cy="92" r="2.2" fill="black"></circle>
+      <circle cx="60" cy="92" r="2.2" fill="black"></circle>
+      <circle cx="66" cy="92" r="2.2" fill="black"></circle>
+    </mask>
+  </defs>
+  <g transform="translate(10 10)" mask="url(#mask)">
+    <path d="M22 78 L34 12 L52 64 Z" fill="#ffffff"></path>
+    <path d="M98 78 L86 12 L68 64 Z" fill="#ffffff"></path>
+    <path d="M60 38 L100 78 L60 110 L20 78 Z" fill="#ffffff"></path>
+  </g>
+  <text x="155" y="92" font-family="Space Grotesk, Helvetica, Arial, sans-serif" font-size="68" font-weight="600" letter-spacing="-1.4" fill="#ffffff">Lynx<tspan font-weight="500">Apps</tspan></text>
+</svg>
