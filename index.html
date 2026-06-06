@@ -3,508 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LynxApps - Premium Mobile Applications</title>
+    <title>LynxApps — Thoughtfully crafted iOS apps</title>
+    <meta name="description" content="LynxApps builds privacy-first iOS apps that do one thing exceptionally well. Explore Duplicate Photo Finder, PillVault, and Receipt Digitizer.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <link rel="stylesheet" href="/assets/css/lynx.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #f5f7fa;
-        }
-        
-        header {
-            background: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        
-        .logo img {
-            height: 40px;
-            width: auto;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #667eea;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 100px 0;
-            margin-bottom: 60px;
-        }
-        
-        .hero .container {
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 20px;
-            opacity: 0.95;
-            margin-bottom: 30px;
-        }
-        
-        .apps-section h2 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            text-align: center;
-            color: #1a1a1a;
-        }
-        
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-bottom: 80px;
-        }
-        
+        /* Home-only flourishes */
         .app-card {
-            background: white;
-            border-radius: 16px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .app-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .app-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 40px 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-        
-        .app-icon {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 15px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .app-icon img {
-            width: 70px;
-            height: 70px;
-        }
-        
-        .app-card h3 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        
-        .app-card .badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-        
-        .app-body {
-            padding: 30px;
-            flex-grow: 1;
+            transition: all .35s var(--ease);
             display: flex;
             flex-direction: column;
         }
-        
-        .app-description {
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        .app-features {
-            flex-grow: 1;
-        }
-        
-        .app-features h4 {
-            font-size: 12px;
-            font-weight: 700;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-        }
-        
-        .app-features ul {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-        
-        .app-features li {
-            font-size: 14px;
-            color: #666;
-            padding: 6px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-        
-        .app-features li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: 700;
-        }
-        
-        .app-stats {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        
-        .app-stat {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .app-stat-value {
-            font-size: 18px;
-            font-weight: 700;
-            color: #667eea;
-        }
-        
-        .app-stat-label {
-            font-size: 11px;
-            color: #999;
-            text-transform: uppercase;
-            margin-top: 4px;
-        }
-        
-        .app-footer {
-            display: flex;
-            gap: 10px;
-            margin-top: auto;
-        }
-        
-        .btn {
-            flex: 1;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            display: inline-block;
-        }
-        
-        .btn-primary {
-            background: #667eea;
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background: #5568d3;
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background: #f0f2ff;
-            color: #667eea;
-            border: 1px solid #e0e4ff;
-        }
-        
-        .btn-secondary:hover {
-            background: #e8ecff;
-        }
-        
-        .coming-soon {
-            background: #f8f9ff;
-            padding: 30px;
-            border-radius: 12px;
-            border: 2px dashed #d0d9ff;
-            text-align: center;
-            color: #666;
-        }
-        
-        .coming-soon h4 {
-            color: #667eea;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        .coming-soon p {
-            font-size: 14px;
-        }
-        
-        .qr-section {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .qr-section h4 {
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-        
-        .qr-code {
-            display: inline-block;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-        }
-        
-        .qr-code img {
-            width: 150px;
-            height: 150px;
-            border-radius: 6px;
-        }
-        
-        footer {
-            background: #1a1a2e;
-            color: #ccc;
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 80px;
-        }
-        
-        .footer-links {
-            margin-bottom: 20px;
-        }
-        
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            margin: 0 20px;
-            transition: color 0.3s;
-            font-size: 14px;
-        }
-        
-        .footer-links a:hover {
-            color: #667eea;
-        }
-        
-        .footer-text {
-            font-size: 13px;
-            opacity: 0.8;
-        }
-        
-        @media (max-width: 768px) {
-            .hero {
-                padding: 60px 0;
-            }
-            
-            .hero h1 {
-                font-size: 32px;
-            }
-            
-            .hero p {
-                font-size: 16px;
-            }
-            
-            .apps-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav-links {
-                gap: 15px;
-            }
-            
-            .apps-section h2 {
-                font-size: 32px;
-            }
-            
-            header .container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .app-stats {
-                flex-direction: column;
-            }
-        }
+        .app-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: transparent; }
+        .app-top { padding: 34px 30px; color: #fff; position: relative; overflow: hidden; }
+        .app-top::after { content:""; position:absolute; inset:0; background: radial-gradient(400px 160px at 85% -20%, rgba(255,255,255,.22), transparent 60%); }
+        .app-top .app-icon { width: 64px; height: 64px; border-radius: 18px; background: rgba(255,255,255,.16); display:grid; place-items:center; font-size:30px; margin-bottom:18px; border:1px solid rgba(255,255,255,.25); position:relative; }
+        .app-top h3 { font-size: 24px; font-weight: 800; letter-spacing:-.01em; position:relative; }
+        .app-top .app-tag { font-size:14px; opacity:.9; margin-top:4px; position:relative; }
+        .app-body { padding: 28px 30px 30px; display:flex; flex-direction:column; flex-grow:1; }
+        .app-body .feat { list-style:none; margin: 4px 0 24px; }
+        .app-body .feat li { padding:7px 0; font-size:14px; color:var(--ink-2); display:flex; gap:10px; }
+        .app-body .feat li::before { content:"✓"; font-weight:800; color:var(--accent); }
+        .app-actions { display:flex; gap:10px; margin-top:auto; }
+        .app-actions .btn { flex:1; padding:12px 16px; font-size:14px; }
+
+        .theme-row-photo   { --accent:#6d5dfb; --accent-soft:#eef0ff; --accent-border:#e0e3ff; }
+        .theme-row-pill    { --accent:#0d9488; --accent-soft:#ecfeff; --accent-border:#cffafe; }
+        .theme-row-receipt { --accent:#ea7317; --accent-soft:#fff7ed; --accent-border:#fed7aa; }
+
+        .grad-photo   { background: linear-gradient(135deg,#6366f1,#8b5cf6); }
+        .grad-pill    { background: linear-gradient(135deg,#0ea5e9,#14b8a6); }
+        .grad-receipt { background: linear-gradient(135deg,#f59e0b,#f97316); }
+
+        .values { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+        .value { text-align:center; padding: 8px; }
+        .value .v-icon { width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:28px;margin:0 auto 16px;background:linear-gradient(140deg,#eef2ff,#f5f3ff); }
+        .value h3 { font-size:19px;font-weight:700;margin-bottom:8px; }
+        .value p { color:var(--muted);font-size:15px; }
+
+        @media (max-width:920px){ .apps-grid{grid-template-columns:1fr;} .values{grid-template-columns:1fr;} }
     </style>
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="container">
-            <a href="/" class="logo">
-                <img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps" style="height: 35px;">
-            </a>
-            <nav class="nav-links">
+            <a href="/" class="brand"><img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <nav class="nav">
                 <a href="#apps">Apps</a>
-                <a href="mailto:lynxapps.contact@gmail.com">Contact</a>
+                <a href="#values">Why LynxApps</a>
+                <a href="mailto:lynxapps.contact@gmail.com" class="muted">Contact</a>
+                <a href="#apps" class="nav-cta">Explore Apps</a>
             </nav>
         </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero">
-        <div class="container">
-            <h1>Premium Mobile Applications</h1>
-            <p>Innovative iOS apps designed to enhance your daily life</p>
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">Privacy-first iOS apps</span>
+                <h1>Little apps that<br><span class="gradient-text">respect your time.</span></h1>
+                <p class="lead">LynxApps builds focused, beautifully simple tools for iPhone. Each one does a single job exceptionally well — and keeps your data entirely on your device.</p>
+                <div class="hero-cta">
+                    <a href="#apps" class="btn btn-primary">Explore our apps</a>
+                    <a href="mailto:lynxapps.contact@gmail.com" class="btn btn-ghost">Get in touch</a>
+                </div>
+                <div class="hero-meta">
+                    <div><div class="m-val gradient-text">3</div><div class="m-lbl">Apps & counting</div></div>
+                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device privacy</div></div>
+                    <div><div class="m-val gradient-text">iOS 16+</div><div class="m-lbl">Built for modern iPhone</div></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device">
+                    <div class="device-screen">
+                        <div class="d-icon">🦊</div>
+                        <div class="d-title">LynxApps</div>
+                        <div class="d-sub">Focused tools, crafted with care</div>
+                    </div>
+                    <div class="device-float f1"><span class="dot">🔒</span> On-device only</div>
+                    <div class="device-float f2"><span class="dot">⚡</span> Fast & lightweight</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="container">
-        <section id="apps">
-            <h2>Our Apps</h2>
-            
-            <div class="apps-grid">
-                <!-- Duplicate Photo Finder Card -->
-                <div class="app-card">
-                    <div class="app-header">
-                        <div class="app-icon">
-                            <img src="/svg/lynxapps-appicon.svg" alt="Duplicate Photo Finder">
-                        </div>
-                        <h3>Duplicate Photo Finder</h3>
-                        <span class="badge">Now Available</span>
-                    </div>
-                    <div class="app-body">
-                        <p class="app-description">
-                            Smart AI-powered duplicate detection. Reclaim storage space instantly with advanced machine learning.
-                        </p>
-                        
-                        <div class="app-features">
-                            <h4>Key Features</h4>
-                            <ul>
-                                <li>AI-powered duplicate detection</li>
-                                <li>Scan 1000+ photos in &lt;30s</li>
-                                <li>Smart ranking algorithm</li>
-                                <li>Safe deletion with undo</li>
-                                <li>Photo & video support</li>
-                                <li>100% on-device processing</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="app-stats">
-                            <div class="app-stat">
-                                <div class="app-stat-value">&lt;30s</div>
-                                <div class="app-stat-label">Scan Time</div>
-                            </div>
-                            <div class="app-stat">
-                                <div class="app-stat-value">100%</div>
-                                <div class="app-stat-label">Private</div>
-                            </div>
-                            <div class="app-stat">
-                                <div class="app-stat-value">⭐⭐⭐</div>
-                                <div class="app-stat-label">Reviews</div>
-                            </div>
-                        </div>
-                        
-                        <div class="app-footer">
-                            <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-primary">
-                                Get on App Store
-                            </a>
-                            <a href="#dpf-qr" class="btn btn-secondary">
-                                QR Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Coming Soon Card -->
-                <div class="app-card">
-                    <div class="app-header" style="background: linear-gradient(135deg, #f5a623 0%, #e89b3c 100%);">
-                        <div style="font-size: 60px; margin-bottom: 15px;">🚀</div>
-                        <h3>Coming Soon</h3>
-                        <span class="badge">Q3 2026</span>
-                    </div>
-                    <div class="app-body">
-                        <p class="app-description">
-                            More innovative tools are on the way. Stay tuned for exciting new apps from LynxApps.
-                        </p>
-                        
-                        <div class="coming-soon" style="margin-top: auto;">
-                            <h4>Be the First to Know</h4>
-                            <p>New apps coming to the App Store soon</p>
-                            <a href="mailto:lynxapps.contact@gmail.com?subject=Notify%20me%20about%20new%20LynxApps" class="btn btn-secondary" style="margin-top: 15px;">
-                                Get Notified
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Apps -->
+    <section class="section" id="apps">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Our apps</span>
+                <h2>Three tools, one philosophy</h2>
+                <p>Each app is designed to be the simplest, most private way to solve a real everyday problem.</p>
             </div>
-            
-            <!-- QR Code Section for Duplicate Photo Finder -->
-            <div id="dpf-qr" class="qr-section">
-                <h4>Download Duplicate Photo Finder</h4>
-                <div class="qr-code">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" alt="Scan to download">
-                </div>
-                <p style="margin-top: 15px; color: #666; font-size: 14px;">Scan with your iPhone camera</p>
-            </div>
-        </section>
-    </div>
 
-    <footer>
-        <div class="footer-links">
-            <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761">App Store</a>
-            <a href="https://sites.google.com/view/lynxapps/products/duplicate-photo-finder/privacy-policy">Privacy Policy</a>
-            <a href="mailto:lynxapps.contact@gmail.com">Support</a>
+            <div class="grid grid-3 apps-grid">
+                <!-- Duplicate Photo Finder -->
+                <div class="app-card theme-row-photo reveal">
+                    <div class="app-top grad-photo">
+                        <div class="app-icon">📷</div>
+                        <h3>Duplicate Photo Finder</h3>
+                        <div class="app-tag">Reclaim your storage</div>
+                        <div style="margin-top:14px;"><span class="badge badge-live">Live on App Store</span></div>
+                    </div>
+                    <div class="app-body">
+                        <ul class="feat">
+                            <li>AI-powered duplicate &amp; similar detection</li>
+                            <li>Scan 1,000+ photos in seconds</li>
+                            <li>Smart best-photo selection</li>
+                            <li>100% on-device processing</li>
+                        </ul>
+                        <div class="app-actions">
+                            <a href="/duplicate-photo-finder" class="btn btn-primary">Learn more</a>
+                            <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft">App Store</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PillVault -->
+                <div class="app-card theme-row-pill reveal">
+                    <div class="app-top grad-pill">
+                        <div class="app-icon">💊</div>
+                        <h3>PillVault</h3>
+                        <div class="app-tag">Never miss a dose</div>
+                        <div style="margin-top:14px;"><span class="badge badge-review">In App Review</span></div>
+                    </div>
+                    <div class="app-body">
+                        <ul class="feat">
+                            <li>Track medications, doses &amp; schedules</li>
+                            <li>Smart refill reminders</li>
+                            <li>Color-coded urgency indicators</li>
+                            <li>Data stays private on your device</li>
+                        </ul>
+                        <div class="app-actions">
+                            <a href="/pillvault" class="btn btn-primary">Learn more</a>
+                            <a href="/pillvault/support" class="btn btn-soft">Support</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Receipt Digitizer -->
+                <div class="app-card theme-row-receipt reveal">
+                    <div class="app-top grad-receipt">
+                        <div class="app-icon">🧾</div>
+                        <h3>Receipt Digitizer</h3>
+                        <div class="app-tag">Scan, sort, save</div>
+                        <div style="margin-top:14px;"><span class="badge badge-review">In App Review</span></div>
+                    </div>
+                    <div class="app-body">
+                        <ul class="feat">
+                            <li>On-device OCR receipt scanning</li>
+                            <li>Auto-categorized expenses</li>
+                            <li>Spending dashboard &amp; insights</li>
+                            <li>Works fully offline, PDF export</li>
+                        </ul>
+                        <div class="app-actions">
+                            <a href="/receipt-digitizer" class="btn btn-primary">Learn more</a>
+                            <a href="/receipt-digitizer/support" class="btn btn-soft">Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="footer-text">&copy; 2026 LynxApps. All rights reserved.</p>
+    </section>
+
+    <!-- Values -->
+    <section class="section" id="values" style="background:linear-gradient(180deg,#fff,var(--bg));">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Why LynxApps</span>
+                <h2>Built on a few simple beliefs</h2>
+            </div>
+            <div class="values">
+                <div class="value reveal">
+                    <div class="v-icon">🔒</div>
+                    <h3>Privacy by default</h3>
+                    <p>Your data lives on your device, not our servers. No accounts, no tracking of the things that matter to you.</p>
+                </div>
+                <div class="value reveal">
+                    <div class="v-icon">✨</div>
+                    <h3>Focused &amp; simple</h3>
+                    <p>Every app does one job and does it beautifully. No clutter, no confusion — just the result you came for.</p>
+                </div>
+                <div class="value reveal">
+                    <div class="v-icon">⚡</div>
+                    <h3>Fast &amp; native</h3>
+                    <p>Lightweight, responsive, and built for modern iPhone. They feel instant because they are.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="cta reveal">
+                <h2>Have an idea or feedback?</h2>
+                <p>We're a small team that reads every message. Tell us what you'd love to see next.</p>
+                <div class="hero-cta">
+                    <a href="mailto:lynxapps.contact@gmail.com" class="btn btn-white">Contact us</a>
+                    <a href="#apps" class="btn btn-on-dark">Browse apps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/svg/lynxapps-lockup-white.svg" alt="LynxApps">
+                    <p>Thoughtfully crafted, privacy-first iOS apps. Made with care for the everyday.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Apps</h4>
+                    <a href="/duplicate-photo-finder">Duplicate Photo Finder</a>
+                    <a href="/pillvault">PillVault</a>
+                    <a href="/receipt-digitizer">Receipt Digitizer</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="/duplicate-photo-finder/support">Photo Finder Help</a>
+                    <a href="/pillvault/support">PillVault Help</a>
+                    <a href="/receipt-digitizer/support">Receipt Help</a>
+                    <a href="mailto:lynxapps.contact@gmail.com">Email Us</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/duplicate-photo-finder/privacy">Privacy Policies</a>
+                    <a href="/duplicate-photo-finder/terms">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="/assets/js/lynx.js"></script>
 </body>
 </html>

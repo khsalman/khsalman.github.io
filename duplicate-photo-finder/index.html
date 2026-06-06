@@ -1,642 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="photo">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duplicate Photo Finder - AI-Powered Photo Management App</title>
-    <meta name="description" content="Smart AI-powered app to find and remove duplicate photos and videos. Reclaim storage space instantly with 100% on-device processing.">
+    <title>Duplicate Photo Finder — Reclaim your storage with AI</title>
+    <meta name="description" content="Smart AI-powered app to find and remove duplicate photos and videos. Scan thousands in seconds with 100% on-device privacy. Free on the App Store.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #f5f7fa;
-        }
-
-        header {
-            background: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            color: #667eea;
-        }
-
-        .logo img {
-            height: 35px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-        }
-
-        .nav-links .back-link {
-            font-size: 12px;
-            color: #999;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 20px;
-            opacity: 0.95;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 14px 32px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: white;
-            color: #667eea;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        section h2 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            text-align: center;
-            color: #1a1a1a;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-        }
-
-        .feature-icon {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-
-        .feature-card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #1a1a1a;
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .specs-section {
-            background: white;
-            padding: 60px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        }
-
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 0;
-        }
-
-        .spec-item {
-            text-align: center;
-        }
-
-        .spec-value {
-            font-size: 32px;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 8px;
-        }
-
-        .spec-label {
-            font-size: 14px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .pricing-section {
-            background: #f5f7fa;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .pricing-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-            position: relative;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .pricing-card.featured {
-            border: 2px solid #667eea;
-            transform: scale(1.05);
-        }
-
-        .pricing-card h3 {
-            font-size: 20px;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-
-        .pricing-card .price {
-            font-size: 42px;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 20px;
-        }
-
-        .pricing-card .billing-period {
-            font-size: 14px;
-            color: #999;
-            margin-bottom: 30px;
-        }
-
-        .pricing-card ul {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-
-        .pricing-card li {
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .pricing-card li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-card li:before {
-            content: "✓";
-            color: #667eea;
-            font-weight: 700;
-            margin-right: 8px;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-section h2 {
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        .cta-section p {
-            font-size: 18px;
-            opacity: 0.95;
-            margin-bottom: 40px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .download-qr {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            display: inline-block;
-            margin-bottom: 30px;
-        }
-
-        .download-qr h3 {
-            color: #1a1a1a;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .qr-code {
-            display: inline-block;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        .qr-code img {
-            width: 180px;
-            height: 180px;
-            border-radius: 6px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            margin-top: 40px;
-            flex-wrap: wrap;
-            font-size: 14px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        footer {
-            background: #1a1a2e;
-            color: #ccc;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        .footer-text {
-            font-size: 13px;
-            opacity: 0.8;
-            margin-bottom: 15px;
-        }
-
-        .section-subtitle {
-            font-size: 16px;
-            color: #667eea;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            display: inline-block;
-            font-weight: 600;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 60px 0;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .hero p {
-                font-size: 16px;
-            }
-
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-cta .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            section h2 {
-                font-size: 32px;
-            }
-
-            header .container {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 15px;
-                width: 100%;
-                text-align: center;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pricing-card.featured {
-                transform: scale(1);
-            }
-
-            .specs-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .specs-section {
-                padding: 40px 20px;
-            }
-
-            .feature-card {
-                padding: 30px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/lynx.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="container">
-            <a href="/" class="logo">
-                <img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps">
-            </a>
-            <nav class="nav-links">
-                <a href="/" class="back-link">← Back to Apps</a>
+            <a href="/" class="brand"><img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <nav class="nav">
+                <a href="/" class="muted">← All apps</a>
                 <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
                 <a href="/duplicate-photo-finder/support">Support</a>
+                <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="nav-cta">Download</a>
             </nav>
         </div>
     </header>
 
+    <!-- Hero -->
     <section class="hero">
-        <div class="container">
-            <h1>Duplicate Photo Finder</h1>
-            <p>Smart AI-powered app to find and remove duplicate photos and videos instantly. Reclaim storage space with 100% on-device privacy.</p>
-            <div class="hero-cta">
-                <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-primary">Download on App Store</a>
-                <a href="#download" class="btn btn-secondary">View QR Code</a>
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">📷 Photo cleanup</span>
+                <h1>Clear the clutter. <span class="gradient-text">Keep the memories.</span></h1>
+                <p class="lead">Duplicate Photo Finder uses on-device AI to find duplicate and similar photos and videos in seconds — so you can reclaim storage without ever risking your privacy.</p>
+                <div class="hero-cta">
+                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-primary">Download on App Store</a>
+                    <a href="#download" class="btn btn-ghost">View QR code</a>
+                </div>
+                <div class="hero-meta">
+                    <div><div class="m-val gradient-text">&lt;30s</div><div class="m-lbl">Scan 1,000+ photos</div></div>
+                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device privacy</div></div>
+                    <div><div class="m-val gradient-text">Free</div><div class="m-lbl">To download</div></div>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <section id="features">
-        <div class="container">
-            <span class="section-subtitle">Why Choose Us?</span>
-            <h2>Powerful Features</h2>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Scan 1000+ photos in less than 30 seconds using advanced on-device processing.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>100% Private</h3>
-                    <p>All processing happens on your device. Your photos never leave your iPhone.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h3>AI-Powered</h3>
-                    <p>Advanced machine learning detects exact duplicates and visually similar photos.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">✨</div>
-                    <h3>Smart Ranking</h3>
-                    <p>Automatically selects the best photo by resolution, sharpness, and quality.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎬</div>
-                    <h3>Video Support</h3>
-                    <p>Detect and remove duplicate videos alongside photos.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">↩️</div>
-                    <h3>Safe Deletion</h3>
-                    <p>Recover deleted items within 30 days from Photos app. One-tap undo available.</p>
+            <div class="hero-visual">
+                <div class="device">
+                    <div class="device-screen">
+                        <div class="d-icon">📷</div>
+                        <div class="d-title">Duplicate Photo Finder</div>
+                        <div class="d-sub">Smart, fast, private cleanup</div>
+                    </div>
+                    <div class="device-float f1"><span class="dot">✨</span> 248 duplicates</div>
+                    <div class="device-float f2"><span class="dot">💾</span> 1.2 GB freed</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <!-- Features -->
+    <section class="section" id="features">
         <div class="container">
-            <span class="section-subtitle">Technical Specs</span>
-            <h2>Built for Performance</h2>
-
-            <div class="specs-section">
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <div class="spec-value">&lt;30s</div>
-                        <div class="spec-label">Scan Time</div>
-                    </div>
-                    <div class="spec-item">
-                        <div class="spec-value">iOS 16+</div>
-                        <div class="spec-label">Compatibility</div>
-                    </div>
-                    <div class="spec-item">
-                        <div class="spec-value">10.2 MB</div>
-                        <div class="spec-label">App Size</div>
-                    </div>
-                    <div class="spec-item">
-                        <div class="spec-value">3x</div>
-                        <div class="spec-label">Detection Methods</div>
-                    </div>
-                </div>
+            <div class="section-head reveal">
+                <span class="eyebrow">Features</span>
+                <h2>Powerful detection, total control</h2>
+                <p>Advanced on-device intelligence finds what you can't, while you stay in charge of every decision.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal"><div class="f-icon">⚡</div><h3>Lightning fast</h3><p>Scan 1,000+ photos in under 30 seconds with efficient on-device processing.</p></div>
+                <div class="feature reveal"><div class="f-icon">🤖</div><h3>AI-powered</h3><p>Detects exact duplicates and visually similar shots — including burst photos.</p></div>
+                <div class="feature reveal"><div class="f-icon">🔒</div><h3>100% private</h3><p>Everything happens on your device. Your photos never leave your iPhone.</p></div>
+                <div class="feature reveal"><div class="f-icon">✨</div><h3>Smart selection</h3><p>Automatically recommends the best photo by resolution, sharpness, and quality.</p></div>
+                <div class="feature reveal"><div class="f-icon">🎬</div><h3>Video support</h3><p>Find and remove duplicate videos alongside your photos.</p></div>
+                <div class="feature reveal"><div class="f-icon">↩️</div><h3>Safe deletion</h3><p>One-tap undo, and deleted items are recoverable for 30 days in Photos.</p></div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="pricing-section">
+    <!-- How it works -->
+    <section class="section" id="how" style="background:linear-gradient(180deg,#fff,var(--bg));">
         <div class="container">
-            <span class="section-subtitle">Flexible Plans</span>
-            <h2>Choose Your Plan</h2>
+            <div class="section-head reveal">
+                <span class="eyebrow">How it works</span>
+                <h2>Three taps to a cleaner library</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal"><h3>Scan</h3><p>Grant photo access and let the AI sweep your entire library in seconds.</p></div>
+                <div class="step reveal"><h3>Review</h3><p>Browse duplicate groups with the best shot pre-selected for you.</p></div>
+                <div class="step reveal"><h3>Clean up</h3><p>Delete with one tap — and recover anytime within 30 days if you change your mind.</p></div>
+            </div>
+        </div>
+    </section>
 
-            <div class="pricing-grid">
-                <div class="pricing-card">
+    <!-- Specs -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val gradient-text">&lt;30s</div><div class="s-lbl">Scan time</div></div>
+                <div class="stat"><div class="s-val gradient-text">iOS 16+</div><div class="s-lbl">Compatibility</div></div>
+                <div class="stat"><div class="s-val gradient-text">10.2 MB</div><div class="s-lbl">App size</div></div>
+                <div class="stat"><div class="s-val gradient-text">3×</div><div class="s-lbl">Detection methods</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Pricing</span>
+                <h2>Free to use. Pro to go unlimited.</h2>
+                <p>Start free, then upgrade to remove ads and unlock unlimited duplicate groups.</p>
+            </div>
+            <div class="pricing">
+                <div class="price-card reveal">
                     <h3>Free</h3>
-                    <div class="price">$0</div>
-                    <div class="billing-period">Forever Free</div>
-                    <ul>
-                        <li>AI duplicate detection</li>
-                        <li>Limited duplicate groups</li>
-                        <li>Ad supported</li>
-                        <li>Video support</li>
-                    </ul>
-                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-secondary" style="background: #f0f2ff; color: #667eea; border: 1px solid #e0e4ff;">Download</a>
+                    <div class="amount">$0</div>
+                    <div class="per">Forever</div>
+                    <ul><li>AI duplicate detection</li><li>Limited duplicate groups</li><li>Video support</li><li>Ad-supported</li></ul>
+                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft">Download</a>
                 </div>
-
-                <div class="pricing-card featured">
+                <div class="price-card featured reveal">
+                    <div class="tag-pop">Popular</div>
                     <h3>Pro Monthly</h3>
-                    <div class="price">$1.99</div>
-                    <div class="billing-period">Per Month</div>
-                    <ul>
-                        <li>Unlimited duplicate groups</li>
-                        <li>Remove ads</li>
-                        <li>Fast scanning</li>
-                        <li>Video support</li>
-                    </ul>
+                    <div class="amount">$1.99</div>
+                    <div class="per">Per month</div>
+                    <ul><li>Unlimited groups</li><li>No ads</li><li>Fast scanning</li><li>Video support</li></ul>
                     <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-primary">Get Pro</a>
                 </div>
-
-                <div class="pricing-card">
+                <div class="price-card reveal">
                     <h3>Pro Yearly</h3>
-                    <div class="price">$14.99</div>
-                    <div class="billing-period">Per Year</div>
-                    <ul>
-                        <li>All Pro features</li>
-                        <li>Save 38%</li>
-                        <li>Annual billing</li>
-                        <li>Video support</li>
-                    </ul>
-                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-secondary" style="background: #f0f2ff; color: #667eea; border: 1px solid #e0e4ff;">Get Pro</a>
+                    <div class="amount">$14.99</div>
+                    <div class="per">Per year · save 38%</div>
+                    <ul><li>All Pro features</li><li>No ads</li><li>Best annual value</li><li>Video support</li></ul>
+                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft">Get Pro</a>
                 </div>
-
-                <div class="pricing-card">
-                    <h3>Pro Lifetime</h3>
-                    <div class="price">$29.99</div>
-                    <div class="billing-period">One-Time</div>
-                    <ul>
-                        <li>Lifetime access</li>
-                        <li>All features</li>
-                        <li>No recurring charges</li>
-                        <li>Video support</li>
-                    </ul>
-                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-secondary" style="background: #f0f2ff; color: #667eea; border: 1px solid #e0e4ff;">Get Lifetime</a>
+                <div class="price-card reveal">
+                    <h3>Lifetime</h3>
+                    <div class="amount">$29.99</div>
+                    <div class="per">One-time</div>
+                    <ul><li>Lifetime access</li><li>No ads, forever</li><li>No recurring charges</li><li>Video support</li></ul>
+                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft">Get Lifetime</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section" id="download">
+    <!-- Download CTA -->
+    <section class="section-sm" id="download">
         <div class="container">
-            <h2>Get Duplicate Photo Finder Today</h2>
-            <p>Download from the App Store and start reclaiming storage space in seconds.</p>
-
-            <div class="download-qr">
-                <h3>Scan to Download</h3>
-                <div class="qr-code">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" alt="Download QR Code">
+            <div class="cta reveal">
+                <h2>Reclaim your storage today</h2>
+                <p>Download Duplicate Photo Finder free and start clearing duplicates in seconds.</p>
+                <div style="display:flex;justify-content:center;margin:8px 0 28px;">
+                    <div class="qr">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" alt="Scan to download Duplicate Photo Finder">
+                        <span>Scan with your iPhone camera</span>
+                    </div>
                 </div>
-                <p style="margin-top: 15px; color: #666; font-size: 13px;">Scan with your iPhone camera</p>
-            </div>
-
-            <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-primary">Download on App Store</a>
-
-            <div class="footer-links">
-                <a href="/duplicate-photo-finder/privacy">Privacy Policy</a>
-                <span>•</span>
-                <a href="/duplicate-photo-finder/terms">Terms of Service</a>
-                <span>•</span>
-                <a href="/duplicate-photo-finder/support">Support & FAQ</a>
+                <div class="hero-cta">
+                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-white">Download on App Store</a>
+                    <a href="/duplicate-photo-finder/support" class="btn btn-on-dark">Visit support</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p class="footer-text">Made with ❤️ by LynxApps</p>
-        <p class="footer-text">&copy; 2026 LynxApps. All rights reserved.</p>
-        <p class="footer-text">
-            <a href="mailto:lynxapps.contact@gmail.com" style="color: #667eea;">Contact Us</a>
-        </p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/svg/lynxapps-lockup-white.svg" alt="LynxApps">
+                    <p>Thoughtfully crafted, privacy-first iOS apps. Made with care for the everyday.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Photo Finder</h4>
+                    <a href="/duplicate-photo-finder">Overview</a>
+                    <a href="/duplicate-photo-finder#features">Features</a>
+                    <a href="/duplicate-photo-finder#pricing">Pricing</a>
+                    <a href="/duplicate-photo-finder/support">Support &amp; FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/duplicate-photo-finder/privacy">Privacy Policy</a>
+                    <a href="/duplicate-photo-finder/terms">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <h4>More apps</h4>
+                    <a href="/pillvault">PillVault</a>
+                    <a href="/receipt-digitizer">Receipt Digitizer</a>
+                    <a href="/">All apps</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a>
+            </div>
+        </div>
     </footer>
+
+    <script src="/assets/js/lynx.js"></script>
 </body>
 </html>

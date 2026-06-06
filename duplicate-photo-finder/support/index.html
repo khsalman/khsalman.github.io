@@ -1,696 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="photo">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support & FAQ - Duplicate Photo Finder</title>
-    <meta name="description" content="Support, FAQ, and help for Duplicate Photo Finder app by LynxApps">
+    <title>Support &amp; FAQ — Duplicate Photo Finder</title>
+    <meta name="description" content="Support, FAQ, and help for Duplicate Photo Finder by LynxApps.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f7fa;
-        }
-
-        header {
-            background: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            color: #667eea;
-        }
-
-        .logo img {
-            height: 35px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #667eea;
-        }
-
-        .breadcrumb {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 40px;
-        }
-
-        .breadcrumb a {
-            color: #667eea;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        .breadcrumb span {
-            color: #999;
-            font-size: 14px;
-            margin: 0 8px;
-        }
-
-        main {
-            background: white;
-            padding: 60px 0;
-        }
-
-        h1 {
-            font-size: 42px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-
-        .page-subtitle {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 50px;
-        }
-
-        h2 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-top: 50px;
-            margin-bottom: 25px;
-            color: #1a1a1a;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-
-        h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-top: 30px;
-            margin-bottom: 12px;
-            color: #333;
-        }
-
-        p {
-            margin-bottom: 16px;
-            color: #555;
-            line-height: 1.8;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            color: #555;
-        }
-
-        strong {
-            color: #1a1a1a;
-            font-weight: 600;
-        }
-
-        a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .faq-section {
-            margin: 40px 0;
-        }
-
-        .faq-item {
-            background: white;
-            border: 1px solid #e0e4ff;
-            border-radius: 8px;
-            margin-bottom: 16px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item:hover {
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
-        }
-
-        .faq-question {
-            padding: 20px;
-            background: white;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-            font-weight: 600;
-            color: #1a1a1a;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: #f5f7fa;
-        }
-
-        .faq-toggle {
-            font-size: 24px;
-            color: #667eea;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            color: #555;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 0 20px 20px 20px;
-            max-height: 1000px;
-        }
-
-        .contact-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 12px;
-            margin: 50px 0;
-            text-align: center;
-        }
-
-        .contact-card h3 {
-            color: white;
-            margin-top: 0;
-        }
-
-        .contact-card p {
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 20px;
-        }
-
-        .contact-card a {
-            color: white;
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
-        .quick-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-
-        .quick-link-card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .quick-link-card h3 {
-            margin-top: 0;
-            color: #667eea;
-        }
-
-        .quick-link-card p {
-            margin-bottom: 12px;
-        }
-
-        .quick-link-card a {
-            font-weight: 600;
-        }
-
-        .troubleshooting-steps {
-            background: #f0f2ff;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-
-        .troubleshooting-steps ol {
-            margin: 0;
-        }
-
-        .troubleshooting-steps li {
-            margin-bottom: 15px;
-            padding-left: 10px;
-        }
-
-        .step-number {
-            font-weight: 700;
-            color: #667eea;
-        }
-
-        footer {
-            background: #1a1a2e;
-            color: #ccc;
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 80px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            font-size: 13px;
-        }
-
-        .footer-links a {
-            color: #ccc;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #667eea;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 22px;
-            }
-
-            header .container {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-                text-align: center;
-            }
-
-            main {
-                padding: 40px 0;
-            }
-
-            .quick-links {
-                grid-template-columns: 1fr;
-            }
-
-            .faq-question {
-                font-size: 14px;
-                padding: 16px;
-            }
-
-            .faq-answer {
-                padding: 0 16px;
-            }
-
-            .faq-item.active .faq-answer {
-                padding: 0 16px 16px 16px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/css/lynx.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <div class="container">
-            <a href="/" class="logo">
-                <img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps">
-            </a>
-            <nav class="nav-links">
-                <a href="/duplicate-photo-finder">← Back to App</a>
+            <a href="/" class="brand"><img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <nav class="nav">
+                <a href="/duplicate-photo-finder" class="muted">← Photo Finder</a>
+                <a href="/duplicate-photo-finder/privacy">Privacy</a>
+                <a href="/duplicate-photo-finder/terms">Terms</a>
+                <a href="mailto:lynxapps.contact@gmail.com" class="nav-cta">Email us</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="container">
+    <section class="doc-hero">
+        <div class="container-doc">
             <div class="breadcrumb">
-                <a href="/">LynxApps</a>
-                <span>/</span>
-                <a href="/duplicate-photo-finder">Duplicate Photo Finder</a>
-                <span>/</span>
-                <span>Support & FAQ</span>
+                <a href="/">LynxApps</a><span>/</span><a href="/duplicate-photo-finder">Duplicate Photo Finder</a><span>/</span><span>Support &amp; FAQ</span>
             </div>
+            <h1>Support &amp; FAQ</h1>
+            <p class="updated">Find answers fast, or reach our team directly.</p>
+        </div>
+    </section>
 
-            <h1>Support & FAQ</h1>
-            <p class="page-subtitle">Find answers to common questions and get help with Duplicate Photo Finder</p>
-
+    <main class="doc-body">
+        <div class="container-doc">
             <div class="quick-links">
-                <div class="quick-link-card">
-                    <h3>📧 Email Support</h3>
-                    <p>Contact our support team anytime with questions or issues.</p>
-                    <a href="mailto:lynxapps.contact@gmail.com">Email Us</a>
-                </div>
-                <div class="quick-link-card">
-                    <h3>⏱️ Response Time</h3>
-                    <p>We aim to respond to all inquiries within 2-3 business days.</p>
-                    <p style="font-size: 13px; color: #999; margin: 0;">lynxapps.contact@gmail.com</p>
-                </div>
-                <div class="quick-link-card">
-                    <h3>📱 App Store Reviews</h3>
-                    <p>Have a quick question? Check app reviews for common issues.</p>
-                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761">View on App Store</a>
-                </div>
+                <div class="qlink"><h3>📧 Email support</h3><p>Questions, feature requests, or bug reports — we read them all.</p><a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></div>
+                <div class="qlink"><h3>⏱️ Response time</h3><p>We typically reply within 2–3 business days.</p></div>
+                <div class="qlink"><h3>⭐ App Store</h3><p>Check reviews or leave your own feedback.</p><a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761">View on App Store</a></div>
             </div>
 
-            <h2>Frequently Asked Questions</h2>
-
-            <div class="faq-section">
-                <div class="faq-item active">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How does Duplicate Photo Finder work?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Duplicate Photo Finder uses advanced on-device AI and machine learning to scan your photo library and identify duplicate and similar photos. The app employs three detection methods:</p>
+            <h2>Frequently asked questions</h2>
+            <div class="faq">
+                <details class="faq-item" open>
+                    <summary class="faq-q"><span>How does Duplicate Photo Finder work?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>It uses on-device AI and machine learning to scan your library and identify duplicate and similar photos using three methods:</p>
                         <ul>
-                            <li><strong>Exact Matching:</strong> Identifies identical photos (same file)</li>
-                            <li><strong>Perceptual Matching:</strong> Finds photos that look the same even if resized or slightly modified</li>
-                            <li><strong>AI-Powered Visual Similarity:</strong> Detects visually similar images like burst shots and near-identical photos</li>
+                            <li><strong>Exact matching:</strong> identical photos (same file)</li>
+                            <li><strong>Perceptual matching:</strong> photos that look the same even if resized</li>
+                            <li><strong>AI visual similarity:</strong> burst shots and near-identical images</li>
                         </ul>
-                        <p>All processing happens entirely on your device. Your photos never leave your iPhone.</p>
+                        <p>All processing happens entirely on your device — your photos never leave your iPhone.</p>
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Is my privacy protected? Do you upload my photos?</span>
-                        <span class="faq-toggle">+</span>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>Is my privacy protected? Do you upload my photos?</span><span class="chev">+</span></summary>
+                    <div class="faq-a"><p><strong>Your privacy is completely protected.</strong> We do not collect, upload, transmit, or sell your photos. All scanning and duplicate detection happens entirely on your device. We only collect minimal technical data (crash reports and usage analytics) to improve the app.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>How fast is the scanning process?</span><span class="chev">+</span></summary>
+                    <div class="faq-a"><p>Most users scan 1,000+ photos in under 30 seconds. Speed depends on your library size, device model, photo resolution, and iOS version. On-device processing makes it much faster than cloud-based solutions.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>How does the app choose which photos to keep?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>The app ranks and pre-selects the best photo in each group based on resolution, sharpness, file format, and overall quality. <strong>You stay in full control</strong> — review the recommendations and manually adjust your selection before confirming.</p>
                     </div>
-                    <div class="faq-answer">
-                        <p><strong>Your privacy is completely protected.</strong> We do not collect, upload, transmit, or sell your photos. All scanning, comparison, and duplicate detection happens entirely on your device using local AI processing.</p>
-                        <p>We only collect minimal technical data (like crash reports and usage analytics) to improve the app. Your photos never leave your iPhone under any circumstances.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How fast is the scanning process?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Duplicate Photo Finder is extremely fast. Most users can scan 1,000+ photos in less than 30 seconds, depending on:</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>What if I accidentally delete important photos?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>Don't worry — deleted photos don't disappear immediately:</p>
                         <ul>
-                            <li>Total number of photos in your library</li>
-                            <li>Device model and available RAM</li>
-                            <li>Photo resolution and file sizes</li>
-                            <li>iOS version and system load</li>
+                            <li>They go to the Photos app's <strong>"Recently Deleted"</strong> album</li>
+                            <li>You have <strong>30 days</strong> to recover them</li>
+                            <li>Recovery is one tap: Photos → Recently Deleted → Recover</li>
+                            <li>The app also provides one-tap undo</li>
                         </ul>
-                        <p>The on-device AI processing makes it much faster than cloud-based solutions.</p>
+                        <p>We still recommend backing up important photos to iCloud before deleting.</p>
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How does the app select which photos to keep?</span>
-                        <span class="faq-toggle">+</span>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>Does the app support video duplicates?</span><span class="chev">+</span></summary>
+                    <div class="faq-a"><p>Yes! It scans your entire photo and video library, identifies duplicate videos, ranks them by resolution and file size, and provides the same safe 30-day recovery.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>What's the difference between Free and Pro?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p><strong>Free:</strong> AI duplicate detection, limited duplicate groups, ad-supported, video support.</p>
+                        <p><strong>Pro (Monthly, Yearly, or Lifetime):</strong> unlimited duplicate groups, no ads, priority support, all detection methods, video support.</p>
                     </div>
-                    <div class="faq-answer">
-                        <p>Duplicate Photo Finder automatically ranks and selects the best photo in each duplicate group based on:</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>How do I manage my subscription?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>All subscriptions are managed through your Apple ID:</p>
+                        <ol class="steps-list">
+                            <li>Open <strong>Settings</strong> on your iPhone</li>
+                            <li>Tap <strong>[Your Name]</strong> at the top</li>
+                            <li>Select <strong>Subscriptions</strong></li>
+                            <li>Find <strong>Duplicate Photo Finder</strong></li>
+                            <li>Tap <strong>Manage</strong> or <strong>Cancel Subscription</strong></li>
+                        </ol>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>The app won't access my photos. What should I do?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <ol class="steps-list">
+                            <li>Open <strong>Settings</strong> on your iPhone</li>
+                            <li>Find <strong>Duplicate Photo Finder</strong></li>
+                            <li>Tap <strong>Photos</strong></li>
+                            <li>Select <strong>"Full Access"</strong> or <strong>"All Photos"</strong></li>
+                            <li>Return to the app and scan again</li>
+                        </ol>
+                        <p>The app needs full library access to detect duplicates across your entire library.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>What iOS versions are supported?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
                         <ul>
-                            <li><strong>Resolution:</strong> Higher resolution photos are preferred</li>
-                            <li><strong>Sharpness:</strong> Sharper images are ranked higher</li>
-                            <li><strong>File Format:</strong> Prefers JPEG over HEIF for compatibility</li>
-                            <li><strong>Overall Quality:</strong> AI analysis of image quality</li>
-                        </ul>
-                        <p><strong>You maintain full control.</strong> You can review all recommendations and manually select which photos to delete before confirming.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>What happens if I accidentally delete important photos?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p><strong>Don't worry!</strong> Deleted photos don't disappear immediately. Here's how recovery works:</p>
-                        <ul>
-                            <li>Deleted items go to your Photos app's <strong>"Recently Deleted"</strong> album</li>
-                            <li>You have <strong>30 days</strong> to recover them before permanent deletion</li>
-                            <li>Recovery is one-tap: open Photos app → Recently Deleted → Recover</li>
-                            <li>The app also provides one-tap undo functionality</li>
-                        </ul>
-                        <p><strong>Recommendation:</strong> Always back up important photos to iCloud or other backup services before deleting.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Does the app support video duplicates?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! Duplicate Photo Finder detects duplicate videos alongside photos. The app:</p>
-                        <ul>
-                            <li>Scans your entire photo and video library</li>
-                            <li>Identifies duplicate video files</li>
-                            <li>Ranks videos by resolution, codec, and file size</li>
-                            <li>Provides safe deletion with 30-day recovery</li>
-                        </ul>
-                        <p>Both Pro Monthly and Pro Lifetime plans include full video support.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>What's the difference between Free and Pro?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p><strong>Free Version:</strong></p>
-                        <ul>
-                            <li>AI duplicate detection</li>
-                            <li>Limited duplicate groups</li>
-                            <li>Ad supported</li>
-                            <li>Video support</li>
-                        </ul>
-                        <p><strong>Pro Version (Monthly, Yearly, or Lifetime):</strong></p>
-                        <ul>
-                            <li>Unlimited duplicate groups</li>
-                            <li>Remove all ads</li>
-                            <li>Priority support</li>
-                            <li>All detection methods</li>
-                            <li>Video support</li>
+                            <li><strong>iOS 16.0</strong> or later (iPhone)</li>
+                            <li><strong>iPadOS 16.0</strong> or later (iPad)</li>
+                            <li><strong>macOS 13.0</strong> or later (Mac with M1 or later)</li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How do I manage my subscription?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>All subscriptions are managed through your Apple ID. To manage or cancel:</p>
-                        <div class="troubleshooting-steps">
-                            <ol>
-                                <li>Open <strong>Settings</strong> on your iPhone</li>
-                                <li>Tap <strong>[Your Name]</strong> at the top</li>
-                                <li>Select <strong>Subscriptions</strong></li>
-                                <li>Find <strong>Duplicate Photo Finder</strong></li>
-                                <li>Tap <strong>Manage</strong> to change your plan</li>
-                                <li>Tap <strong>Cancel Subscription</strong> to stop renewing</li>
-                            </ol>
-                        </div>
-                        <p>Changes take effect immediately or at the end of your billing period, depending on your action.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>The app won't access my photos. What should I do?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>If the app can't access your photo library, follow these steps:</p>
-                        <div class="troubleshooting-steps">
-                            <ol>
-                                <li>Open <strong>Settings</strong> on your iPhone</li>
-                                <li>Scroll down and find <strong>Duplicate Photo Finder</strong></li>
-                                <li>Tap <strong>Photos</strong> or <strong>Library</strong></li>
-                                <li>Select <strong>"All Photos"</strong> or <strong>"Full Access"</strong></li>
-                                <li>Return to the app and try scanning again</li>
-                            </ol>
-                        </div>
-                        <p><strong>Note:</strong> The app requires full photo library access to detect duplicates across your entire library.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>What iOS versions does the app support?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Duplicate Photo Finder requires:</p>
-                        <ul>
-                            <li><strong>iOS 16.0</strong> or later on iPhones</li>
-                            <li><strong>iPadOS 16.0</strong> or later on iPads</li>
-                            <li><strong>macOS 13.0</strong> or later on Mac (M1 chip or later)</li>
-                        </ul>
-                        <p>We recommend keeping your device updated to iOS 17 or later for best performance and features.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How much storage does the app use?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Duplicate Photo Finder is very lightweight:</p>
-                        <ul>
-                            <li><strong>App Size:</strong> Only 10.2 MB</li>
-                            <li><strong>Installation:</strong> Minimal device storage required</li>
-                            <li><strong>Cache:</strong> Minimal temporary data (automatically cleared)</li>
-                        </ul>
-                        <p>The app doesn't store your photos—it processes them on-device and only uses storage for its own code and temporary processing.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Will using the app drain my battery?</span>
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Scanning will use some battery depending on your library size, but it's generally efficient:</p>
-                        <ul>
-                            <li>1,000 photos typically uses 5-10% battery</li>
-                            <li>Larger libraries (10,000+) may use more</li>
-                            <li>On-device processing is more battery-efficient than cloud alternatives</li>
-                            <li>Tip: Plug in your device for optimal scanning</li>
-                        </ul>
-                        <p>The app doesn't run in the background or continuously monitor your photos.</p>
-                    </div>
-                </div>
+                </details>
             </div>
 
             <h2>Troubleshooting</h2>
+            <h3>App crashes or won't open</h3>
+            <ol class="steps-list">
+                <li>Force-close the app and reopen it</li>
+                <li>Restart your iPhone</li>
+                <li>Update iOS in Settings → General → Software Update</li>
+                <li>Delete and reinstall the app from the App Store</li>
+            </ol>
+            <h3>Slow scanning or freezing</h3>
+            <ol class="steps-list">
+                <li>Close other apps running in the background</li>
+                <li>Ensure at least 2 GB of available storage</li>
+                <li>Restart your iPhone</li>
+                <li>Try scanning a smaller album first</li>
+            </ol>
+            <h3>Missing photos in results</h3>
+            <ol class="steps-list">
+                <li>Ensure the app has <strong>Full Access</strong> to your library</li>
+                <li>Check Settings → Privacy &amp; Security → Photos</li>
+                <li>iCloud-only photos may take longer to scan</li>
+            </ol>
 
-            <h3>App Crashes or Won't Open</h3>
-            <div class="troubleshooting-steps">
-                <ol>
-                    <li>Force close the app by swiping up from the bottom</li>
-                    <li>Wait a few seconds and reopen it</li>
-                    <li>If issues persist, try restarting your iPhone</li>
-                    <li>Update to the latest iOS version in Settings → General → Software Update</li>
-                    <li>Delete and reinstall the app from the App Store</li>
-                </ol>
+            <div class="doc-contact">
+                <h2>Still need help?</h2>
+                <p>Couldn't find your answer? Our team is happy to help with any question or issue.</p>
+                <a href="mailto:lynxapps.contact@gmail.com?subject=Duplicate%20Photo%20Finder%20Support" class="btn btn-white">Contact support</a>
+                <p style="font-size:13px;opacity:.85;margin:14px 0 0;">Typical response time: 2–3 business days</p>
             </div>
 
-            <h3>Slow Scanning or Freezing</h3>
-            <div class="troubleshooting-steps">
-                <ol>
-                    <li>Close other apps running in the background</li>
-                    <li>Ensure you have at least 2GB of available storage</li>
-                    <li>Restart your iPhone</li>
-                    <li>Try scanning a smaller album first (Photos app → Create Album)</li>
-                    <li>Update to the latest app version from the App Store</li>
-                </ol>
-            </div>
-
-            <h3>Missing Photos from Scan Results</h3>
-            <div class="troubleshooting-steps">
-                <ol>
-                    <li>Ensure the app has <strong>Full Access</strong> to your photo library</li>
-                    <li>Check Settings → Privacy & Security → Photos → Duplicate Photo Finder</li>
-                    <li>Photos in iCloud Photos-only may take longer to scan</li>
-                    <li>Recently deleted photos won't appear in duplicate detection</li>
-                </ol>
-            </div>
-
-            <div class="contact-card">
-                <h3>Still Need Help?</h3>
-                <p>Couldn't find what you're looking for? Our support team is here to help with any questions or issues.</p>
-                <p style="margin-bottom: 0;">
-                    <a href="mailto:lynxapps.contact@gmail.com">Contact Support Team</a>
-                </p>
-                <p style="font-size: 13px; margin-top: 12px; opacity: 0.9;">
-                    Expected response time: 2-3 business days
-                </p>
-            </div>
-
-            <h2>Additional Resources</h2>
+            <h2>More resources</h2>
             <ul>
-                <li><a href="/duplicate-photo-finder">Back to App Page</a> - View app overview and features</li>
-                <li><a href="/duplicate-photo-finder/privacy">Privacy Policy</a> - Learn how we protect your data</li>
-                <li><a href="/duplicate-photo-finder/terms">Terms of Service</a> - Review app terms and conditions</li>
-                <li><a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761">App Store</a> - View ratings and reviews</li>
+                <li><a href="/duplicate-photo-finder">App overview</a> — features and pricing</li>
+                <li><a href="/duplicate-photo-finder/privacy">Privacy Policy</a> — how your data is handled</li>
+                <li><a href="/duplicate-photo-finder/terms">Terms of Service</a> — terms and conditions</li>
+                <li><a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761">App Store</a> — ratings and reviews</li>
             </ul>
         </div>
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <a href="/duplicate-photo-finder">App Page</a>
-            <span>•</span>
-            <a href="/duplicate-photo-finder/privacy">Privacy Policy</a>
-            <span>•</span>
-            <a href="/duplicate-photo-finder/terms">Terms of Service</a>
-            <span>•</span>
-            <a href="mailto:lynxapps.contact@gmail.com">Contact</a>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:0;padding-top:0;">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <span>
+                    <a href="/duplicate-photo-finder">Photo Finder</a> &nbsp;·&nbsp;
+                    <a href="/duplicate-photo-finder/privacy">Privacy</a> &nbsp;·&nbsp;
+                    <a href="/duplicate-photo-finder/terms">Terms</a>
+                </span>
+            </div>
         </div>
-        <p style="color: #ccc; font-size: 13px; margin: 0;">&copy; 2026 LynxApps. All rights reserved.</p>
     </footer>
 
-    <script>
-        function toggleFAQ(element) {
-            const faqItem = element.parentElement;
-            faqItem.classList.toggle('active');
-        }
-    </script>
+    <script src="/assets/js/lynx.js"></script>
 </body>
 </html>
