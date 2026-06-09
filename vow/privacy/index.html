@@ -7,6 +7,43 @@
     <meta name="description" content="Privacy Policy for Vow – Commitment Tracker by LynxApps. Your data stays on your device.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            margin: 24px 0;
+            font-size: 14px;
+        }
+        .data-table thead tr {
+            background: linear-gradient(120deg, var(--g1), var(--g2));
+        }
+        .data-table th {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 14px 16px;
+            text-align: left;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+        }
+        .data-table td {
+            padding: 13px 16px;
+            color: var(--ink-2);
+            border-top: 1px solid var(--line);
+            vertical-align: top;
+        }
+        .data-table tr:hover td { background: var(--accent-soft); }
+        .data-table .yes { color: #16a34a; font-weight: 700; }
+        .data-table .no  { color: var(--muted-2); }
+        .data-table td:first-child { font-weight: 600; color: var(--ink); }
+        @media (max-width: 640px) {
+            .data-table { display: block; overflow-x: auto; }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -25,129 +62,274 @@
     <section class="doc-hero">
         <div class="container-doc">
             <div class="breadcrumb">
-                <a href="/">LynxApps</a><span>/</span><a href="/vow">Vow</a><span>/</span><span>Privacy Policy</span>
+                <a href="/">LynxApps</a><span>/</span>
+                <a href="/vow">Vow</a><span>/</span>
+                <span>Privacy Policy</span>
             </div>
             <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: June 2026</p>
+            <p class="updated">Last updated: June 9, 2026 &nbsp;·&nbsp; Vow – Commitment Tracker v1.0.0</p>
         </div>
     </section>
 
     <main class="doc-body">
         <div class="container-doc">
+
             <div class="callout">
-                <p><strong>Your commitment data never leaves your device by default.</strong> Vow stores all check-ins, streaks, and commitment data locally using encrypted on-device storage. No backend servers. No account required. CloudKit sync is optional, end-to-end encrypted, and user-controlled.</p>
+                <p><strong>Your data lives on your device.</strong> All commitment and check-in data is stored locally using Apple's encrypted SwiftData. It is never sent to external servers — except when you explicitly enable optional CloudKit sync or analytics, as described below.</p>
             </div>
 
-            <h2>1. Overview</h2>
-            <p>This Privacy Policy explains how Vow ("App"), developed by LynxApps ("we," "us," "our"), handles your information. Vow is a native iOS commitment tracking and accountability application. We believe your personal habit data is yours — it is stored locally by default and never transmitted to our servers.</p>
-            <p>By using Vow, you agree to the practices described in this policy.</p>
+            <!-- 1 -->
+            <h2>1. Introduction</h2>
+            <p>Vow ("we," "us," "our," or "Company") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our iOS application, Vow - Commitment Tracker (the "App").</p>
+            <p>Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our App.</p>
 
-            <h2>2. Information Stored On Your Device</h2>
-            <p>The following data is created and stored <strong>entirely on your device</strong> using SwiftData with device encryption. It is never uploaded to our servers:</p>
+            <!-- 2 -->
+            <h2>2. Information We Collect</h2>
+
+            <h3>2.1 Information You Provide Directly</h3>
             <ul>
-                <li>Commitment names, descriptions, frequencies, and end dates</li>
-                <li>Daily check-in history (Done / Missed / Skip)</li>
-                <li>Streak data (current, longest, personal best)</li>
-                <li>Streak Saver balances and Vacation Mode periods</li>
-                <li>Analytics data (success rates, heatmaps, year-in-review)</li>
-                <li>App preferences (theme, accent colour, font size, reminder times)</li>
-                <li>Partner connection codes and local partnership data</li>
+                <li><strong>Commitment Data:</strong> Titles, descriptions, categories, frequencies, difficulty levels, and end dates for personal commitments</li>
+                <li><strong>Check-in Records:</strong> Daily check-in entries, results (success, missed, skip), and optional notes</li>
+                <li><strong>Reminders:</strong> Notification preferences and reminder times per commitment</li>
+                <li><strong>Calendar Sync Preferences:</strong> Your choice to enable iOS Calendar synchronization</li>
+                <li><strong>Profile Information:</strong> Display information visible to accountability partners (if enabled)</li>
+                <li><strong>Feedback:</strong> When you contact us via the "Send Feedback" feature, we receive your email address and message content</li>
             </ul>
 
-            <h2>3. Optional CloudKit Sync</h2>
-            <p>If you choose to enable cross-device sync (Settings → Data → Enable Sync), your data is synced via Apple's CloudKit private database:</p>
+            <h3>2.2 Information Collected Automatically</h3>
             <ul>
-                <li>Data is <strong>end-to-end encrypted</strong> — Apple cannot read your data</li>
-                <li>Sync uses your personal iCloud account and Apple's private CloudKit container</li>
-                <li>LynxApps has no access to your synced data</li>
-                <li>You can disable sync and delete all iCloud copies at any time via Settings → Data</li>
+                <li><strong>Device Information:</strong> Device model, OS version, app version, build number</li>
+                <li><strong>Usage Analytics:</strong> Features used, commit patterns, engagement metrics (via Firebase Analytics)</li>
+                <li><strong>App Performance:</strong> Crash reports and error data (via Firebase Crashlytics)</li>
+                <li><strong>Purchase Information:</strong> In-app purchase history and subscription status (via StoreKit 2)</li>
+                <li><strong>Location (Optional):</strong> Only if you enable location services — never collected by Vow itself</li>
             </ul>
 
-            <h2>4. Information Collected Automatically</h2>
-            <p>To keep the App stable and continuously improve it, limited anonymous technical data is collected via trusted third-party services. This never includes your personal commitment or check-in data.</p>
+            <h3>2.3 Third-Party Data</h3>
             <ul>
-                <li><strong>Firebase Analytics:</strong> anonymous app usage events (features used, session duration, app version)</li>
-                <li><strong>Firebase Crashlytics:</strong> anonymous crash reports and error logs to fix bugs</li>
-                <li><strong>Device information:</strong> iOS version, device model, locale (for analytics only)</li>
-            </ul>
-            <p>Vow does not use Google AdMob or serve advertisements of any kind.</p>
-
-            <h2>5. Partner Accountability System</h2>
-            <p>The partner system uses WCSession (WatchConnectivity) for local device communication. When connecting with an accountability partner:</p>
-            <ul>
-                <li>Invitations use unique VOW-XXXXXX codes generated on-device</li>
-                <li>Shared data is limited to streak counts and challenge progress — not commitment names or check-in details unless you choose to share them</li>
-                <li>Partner connections can be removed at any time from Settings</li>
+                <li><strong>Calendar Data:</strong> If you enable iOS Calendar sync, calendar event data is read from your device's calendar</li>
+                <li><strong>Contact Information:</strong> You may optionally share your email to invite accountability partners</li>
             </ul>
 
-            <h2>6. Apple Watch</h2>
-            <p>The Apple Watch app communicates with the iPhone app via WatchConnectivity. No data is transmitted outside your personal device ecosystem.</p>
-
-            <h2>7. Calendar Integration</h2>
-            <p>If you enable Calendar sync (Premium), the App uses Apple's EventKit framework to write recurring events to your local iOS Calendar. We request only the minimum permissions required. Calendar data stays on your device and is managed by Apple.</p>
-
-            <h2>8. Siri Shortcuts</h2>
-            <p>Siri Shortcuts integration uses Apple's SiriKit framework entirely on-device. No commitment data is transmitted to Apple's servers through this feature.</p>
-
-            <h2>9. In-App Purchases</h2>
-            <p>All purchases are processed through Apple's App Store via StoreKit 2. We do not collect or store payment card information. We receive only purchase confirmation, subscription status, and receipt information from Apple.</p>
-
-            <h2>10. Third-Party Services</h2>
-            <h3>Google Firebase (Analytics &amp; Crashlytics)</h3>
-            <p>Used for anonymous usage analytics and crash reporting only. No personal or habit data is included.<br><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security →</a></p>
-            <h3>Apple (CloudKit, StoreKit, EventKit, SiriKit)</h3>
-            <p>Apple provides optional sync, calendar integration, payments, and Siri, each governed by Apple's privacy practices.<br><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy →</a></p>
-
-            <h2>11. Your Rights &amp; Controls</h2>
+            <!-- 3 -->
+            <h2>3. How We Use Your Information</h2>
+            <p>We use collected information for:</p>
             <ul>
-                <li><strong>Delete all data:</strong> use Settings → Data → Delete All Data, or uninstall the App</li>
-                <li><strong>Disable CloudKit sync:</strong> Settings → Data → Disable Sync and delete iCloud copy</li>
-                <li><strong>Manage notifications:</strong> iOS Settings → Notifications → Vow</li>
-                <li><strong>Export your data:</strong> Settings → Export Data (CSV or PDF — Premium feature)</li>
-                <li><strong>Remove a partner:</strong> Settings → Partners → Remove</li>
+                <li><strong>Core Functionality:</strong> Recording, storing, and displaying your commitments and check-ins</li>
+                <li><strong>Feature Personalization:</strong> Calculating streaks, insights, analytics, and recommendations</li>
+                <li><strong>Notifications:</strong> Sending weekly recaps, per-commitment reminders, and streak updates (opt-in)</li>
+                <li><strong>Cloud Sync:</strong> Synchronizing your data across your Apple devices via CloudKit</li>
+                <li><strong>Cross-Device Sync:</strong> Enabling your Apple Watch to display and record commitments</li>
+                <li><strong>Partner Features:</strong> Syncing partner accountability data via CloudKit (private database)</li>
+                <li><strong>In-App Purchases:</strong> Processing subscriptions and tracking premium feature access</li>
+                <li><strong>Analytics &amp; Improvement:</strong> Understanding app usage to improve features and fix bugs</li>
+                <li><strong>Communication:</strong> Responding to your feedback and support requests</li>
+                <li><strong>Legal Compliance:</strong> Fulfilling legal obligations and protecting against fraud</li>
             </ul>
 
-            <h3>GDPR (European Union / EEA)</h3>
-            <p>You have the right to access, correct, delete, and port your data, as well as object to processing. To exercise these rights, contact us at the address below.</p>
+            <!-- 4 -->
+            <h2>4. Data Storage &amp; Security</h2>
 
-            <h3>CCPA / CPRA (California)</h3>
-            <p>You have the right to know what data is collected, request deletion, and opt out of sale of personal information. We do not sell personal information.</p>
-
-            <h2>12. Data Security</h2>
+            <h3>4.1 On-Device Storage</h3>
+            <p>All commitment, check-in, and personal data is stored <strong>100% on your device</strong> using SwiftData (Apple's encrypted local database). Data is never sent to external servers except when:</p>
             <ul>
-                <li>On-device data uses SwiftData with device-level encryption</li>
-                <li>Optional CloudKit sync is end-to-end encrypted</li>
-                <li>All analytics data is transmitted over HTTPS/TLS</li>
-                <li>No tracking cookies or third-party advertising SDKs</li>
-                <li>User-initiated data deletion is immediate and complete</li>
+                <li>You explicitly enable CloudKit sync (private, device-to-device)</li>
+                <li>You invite an accountability partner (partner profile synced via CloudKit)</li>
+                <li>Analytics are sent to Firebase (aggregated, anonymized)</li>
+                <li>Crash reports are sent to Firebase Crashlytics (for debugging)</li>
             </ul>
 
-            <h2>13. Children's Privacy</h2>
-            <p>Vow is not directed to children under 13. We do not knowingly collect personal information from children under 13.</p>
-
-            <h2>14. Data Retention</h2>
+            <h3>4.2 iCloud Synchronization (CloudKit)</h3>
             <ul>
-                <li><strong>Commitment &amp; check-in data:</strong> stored locally on your device until you delete it</li>
-                <li><strong>CloudKit data:</strong> synced until you disable sync and delete iCloud copy</li>
-                <li><strong>Analytics data:</strong> retained for up to 60 days in anonymised form</li>
-                <li><strong>Crash reports:</strong> retained for up to 90 days</li>
+                <li>If you enable cross-device sync, your data is stored in your <strong>private CloudKit database</strong> managed by Apple</li>
+                <li>CloudKit uses <strong>end-to-end encryption</strong> — Apple cannot read your data</li>
+                <li>You control sync via <strong>Settings → Data → Enable Cross-Device Sync</strong> (can be disabled anytime)</li>
             </ul>
 
-            <h2>15. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy periodically. Changes will be reflected by updating the "Last updated" date above. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+            <h3>4.3 Security Measures</h3>
+            <ul>
+                <li>All network communications use <strong>HTTPS/TLS encryption</strong></li>
+                <li>No passwords or sensitive authentication data stored in the app</li>
+                <li>Firebase Crashlytics and Analytics use secure, anonymized reporting</li>
+                <li>Partner data uses CloudKit's public-private separation (partners see only what you share)</li>
+            </ul>
 
-            <h2>16. Contact Us</h2>
-            <p>For privacy questions, data requests, or GDPR/CCPA inquiries, contact us:</p>
+            <h3>4.4 Data Deletion</h3>
+            <ul>
+                <li>You can delete all data at any time via <strong>Settings → Data → Delete All Data</strong></li>
+                <li>Deletion is permanent and cannot be undone</li>
+                <li>Partner data is also removed from your partner's account when you disconnect</li>
+            </ul>
+
+            <!-- 5 -->
+            <h2>5. Third-Party Services</h2>
+
+            <h3>5.1 Firebase (Google)</h3>
+            <ul>
+                <li><strong>Analytics:</strong> Aggregated usage metrics (features, events, engagement)</li>
+                <li><strong>Crashlytics:</strong> Crash reports and error logs for debugging</li>
+                <li><strong>No Personal Data:</strong> Firebase does not receive your commitment data, check-ins, or email</li>
+            </ul>
+            <p><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy →</a></p>
+
+            <h3>5.2 CloudKit (Apple)</h3>
+            <ul>
+                <li><strong>Cross-Device Sync:</strong> Your commitment data synced across your Apple devices</li>
+                <li><strong>Partner Sync:</strong> Partner accountability data stored in encrypted CloudKit containers</li>
+            </ul>
+            <p><a href="https://www.apple.com/icloud/privacy/" target="_blank" rel="noopener">Apple iCloud Privacy Overview →</a></p>
+
+            <h3>5.3 StoreKit 2 (Apple)</h3>
+            <ul>
+                <li><strong>Purchases:</strong> In-app subscription and purchase transactions</li>
+                <li><strong>No Card Data:</strong> Apple handles all payment processing — we never see credit card details</li>
+            </ul>
+            <p><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy →</a></p>
+
+            <h3>5.4 EventKit (Apple)</h3>
+            <ul>
+                <li><strong>Calendar Sync:</strong> When enabled, reads and writes to your iOS Calendar</li>
+                <li><strong>Local Only:</strong> No calendar data leaves your device</li>
+                <li><strong>User Control:</strong> You grant permission explicitly in iOS Settings</li>
+            </ul>
+
+            <h3>5.5 WatchConnectivity (Apple)</h3>
+            <ul>
+                <li><strong>Watch Sync:</strong> Your commitments synced to Apple Watch via WatchConnectivity</li>
+                <li><strong>Encrypted:</strong> Watch-to-iPhone communication is encrypted</li>
+                <li><strong>User Control:</strong> Can be disabled in Settings</li>
+            </ul>
+
+            <h3>5.6 UserNotifications (Apple)</h3>
+            <ul>
+                <li><strong>Reminders &amp; Recaps:</strong> Local notifications for commitment reminders and weekly recaps</li>
+                <li><strong>On-Device:</strong> All notifications generated and stored locally</li>
+                <li><strong>User Control:</strong> Toggle per-commitment reminders and weekly recaps in Settings</li>
+            </ul>
+
+            <!-- 6 -->
+            <h2>6. Your Privacy Rights &amp; Choices</h2>
+
+            <h3>6.1 You Control Your Data</h3>
+            <ul>
+                <li><strong>Disable Sync:</strong> Turn off CloudKit sync anytime (Settings → Data)</li>
+                <li><strong>Disable Notifications:</strong> Opt out of reminders and weekly recaps (Settings → Notifications)</li>
+                <li><strong>Disable Analytics:</strong> Firebase Analytics can be disabled (requires app reinstall or reaching out to us)</li>
+                <li><strong>Delete Everything:</strong> Permanently delete all data via Settings → Data → Delete All Data</li>
+            </ul>
+
+            <h3>6.2 Partner Privacy</h3>
+            <ul>
+                <li>Only people you invite can see your partner profile data</li>
+                <li>Partner data is removed when you disconnect</li>
+                <li>Partners cannot access your full commitment history — only shared challenges and basic stats</li>
+            </ul>
+
+            <h3>6.3 Data Access &amp; Export</h3>
+            <ul>
+                <li><strong>Premium feature:</strong> Export your data as CSV (check-in history) or PDF (annual report) via Settings → Export Data</li>
+                <li>You own all your data and can export it anytime before deletion</li>
+            </ul>
+
+            <h3>6.4 GDPR / CCPA Compliance</h3>
+            <p>If you are in the EU (GDPR) or California (CCPA), you have the right to:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of your data</li>
+                <li><strong>Deletion:</strong> Request permanent deletion of your data (use Settings → Data → Delete All Data)</li>
+                <li><strong>Portability:</strong> Export your data as CSV or PDF via the Export feature</li>
+                <li><strong>Withdrawal:</strong> Disable data collection features (sync, analytics, notifications)</li>
+            </ul>
+            <p>To exercise these rights, contact us at <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a>.</p>
+
+            <!-- 7 -->
+            <h2>7. Children's Privacy</h2>
+            <p>Vow is not intended for children under 13 (COPPA) or under 16 (GDPR). We do not knowingly collect data from children under these ages. If we discover we have collected data from a child, we will delete it immediately.</p>
+
+            <!-- 8 -->
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy at any time. We will notify you of material changes via:</p>
+            <ul>
+                <li>In-app notification</li>
+                <li>Updated date shown at the top of this policy</li>
+                <li>New version in the App Store</li>
+            </ul>
+            <p>Your continued use of the App constitutes acceptance of the updated Privacy Policy.</p>
+
+            <!-- 9 -->
+            <h2>9. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or our privacy practices:</p>
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></li>
-                <li><strong>Response time:</strong> within 10 business days for privacy requests</li>
+                <li><strong>App:</strong> Vow - Commitment Tracker</li>
+                <li><strong>Version:</strong> 1.0.0</li>
             </ul>
+
+            <!-- 10 – summary table -->
+            <h2>10. Summary of Data Practices</h2>
+            <div style="overflow-x:auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Storage</th>
+                            <th>Shared With</th>
+                            <th>Encrypted</th>
+                            <th>User Control</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Commitments &amp; Check-ins</td>
+                            <td>Device + CloudKit (optional)</td>
+                            <td class="no">Not shared</td>
+                            <td class="yes">✓ Yes</td>
+                            <td>Enable / disable sync</td>
+                        </tr>
+                        <tr>
+                            <td>Partner Data</td>
+                            <td>CloudKit (private)</td>
+                            <td>Partner only</td>
+                            <td class="yes">✓ Yes</td>
+                            <td>Disconnect anytime</td>
+                        </tr>
+                        <tr>
+                            <td>Analytics</td>
+                            <td>Firebase</td>
+                            <td>Aggregated only</td>
+                            <td class="yes">✓ Yes</td>
+                            <td>Disable in Settings</td>
+                        </tr>
+                        <tr>
+                            <td>Crash Reports</td>
+                            <td>Firebase Crashlytics</td>
+                            <td>Google only</td>
+                            <td class="yes">✓ Yes</td>
+                            <td>Disable in Settings</td>
+                        </tr>
+                        <tr>
+                            <td>Reminders</td>
+                            <td>Device only</td>
+                            <td class="no">Not shared</td>
+                            <td class="yes">✓ Yes</td>
+                            <td>Toggle per commitment</td>
+                        </tr>
+                        <tr>
+                            <td>Subscription Status</td>
+                            <td>Device + StoreKit</td>
+                            <td>Apple only</td>
+                            <td class="yes">✓ Yes</td>
+                            <td>View in Settings</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div class="doc-contact">
                 <h2>Questions about your privacy?</h2>
-                <p>We're committed to being transparent. Reach out anytime.</p>
+                <p>We're committed to full transparency. Reach out anytime and we'll be happy to help.</p>
                 <a href="mailto:lynxapps.contact@gmail.com" class="btn btn-white">Email our team</a>
             </div>
+
         </div>
     </main>
 
