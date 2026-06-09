@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="vow">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vow — Build commitments that stick</title>
+    <meta name="description" content="Vow is a privacy-first iOS app for building sustainable habits through daily check-ins, streak tracking, and partner accountability. 100% on-device. Coming soon to the App Store.">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        /* Vow-specific feature highlight grid */
+        .free-premium {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 0;
+        }
+        .fp-block {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+        }
+        .fp-block.premium {
+            border: 2px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .fp-block.premium::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px 200px at 80% -20%, color-mix(in srgb, var(--g2) 8%, transparent), transparent 60%);
+            pointer-events: none;
+        }
+        .fp-block h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .fp-block .fp-sub {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        .fp-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .fp-list li {
+            display: flex;
+            gap: 12px;
+            font-size: 15px;
+            color: var(--ink-2);
+        }
+        .fp-list li .icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: var(--accent-soft);
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+        .fp-list li strong {
+            display: block;
+            font-weight: 600;
+            color: var(--ink);
+            font-size: 14px;
+        }
+        .fp-list li span {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .comp-table th {
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 16px 20px;
+            text-align: left;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+        }
+        .comp-table td {
+            padding: 14px 20px;
+            font-size: 14px;
+            color: var(--ink-2);
+            border-top: 1px solid var(--line);
+        }
+        .comp-table tr:hover td { background: var(--bg); }
+        .comp-table .yes { color: #16a34a; font-weight: 700; }
+        .comp-table .no  { color: var(--muted-2); }
+        .comp-table .vow { font-weight: 700; color: var(--accent); }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .tech-item {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            text-align: center;
+        }
+        .tech-item .t-icon { font-size: 28px; margin-bottom: 10px; }
+        .tech-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+        .tech-item p { font-size: 12px; color: var(--muted); }
+
+        @media (max-width: 768px) {
+            .free-premium { grid-template-columns: 1fr; }
+            .tech-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 500px) {
+            .tech-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="brand"><img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <nav class="nav">
+                <a href="/" class="muted">← All apps</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#how">How it works</a>
+                <a href="/vow/support" class="nav-cta">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">🤝 Commitment tracker</span>
+                <h1>Make a vow. <span class="gradient-text">Keep it.</span></h1>
+                <p class="lead">Vow helps you build sustainable habits through daily check-ins, streak tracking, and partner accountability — all stored privately on your device. Zero backend. Zero excuses.</p>
+                <div class="hero-cta">
+                    <a href="#features" class="btn btn-primary">Explore features</a>
+                    <a href="mailto:khawaja.nadeem@getmyboat.com?subject=Notify%20me%20about%20Vow" class="btn btn-ghost">Notify me at launch</a>
+                </div>
+                <div class="hero-meta">
+                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device by default</div></div>
+                    <div><div class="m-val gradient-text">24+</div><div class="m-lbl">Features shipped</div></div>
+                    <div><div class="m-val gradient-text">iOS 15+</div><div class="m-lbl">iPhone &amp; Watch</div></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device">
+                    <div class="device-screen">
+                        <div class="d-icon">🤝</div>
+                        <div class="d-title">Vow</div>
+                        <div class="d-sub">Build commitments that last</div>
+                    </div>
+                    <div class="device-float f1"><span class="dot">🔥</span> 42-day streak!</div>
+                    <div class="device-float f2"><span class="dot">🏅</span> Partner #1</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core features overview -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Core features</span>
+                <h2>Everything you need to stay committed</h2>
+                <p>Simple enough to use every day. Powerful enough to drive real change.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal">
+                    <div class="f-icon">✅</div>
+                    <h3>Daily check-ins</h3>
+                    <p>Quick tap-based interface. Mark commitments as Done, Missed, or Skip. Undo anytime with a 5-second grace period.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🔥</div>
+                    <h3>Streak tracking</h3>
+                    <p>Current, longest, and personal best streaks per commitment. Earn Streak Savers every 7 days, and use Vacation Mode to pause without penalties.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🤝</div>
+                    <h3>Partner accountability</h3>
+                    <p>Invite friends via unique VOW-XXXXXX codes. Share challenges, a live leaderboard, and medal badges to keep each other honest.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📊</div>
+                    <h3>Beautiful analytics</h3>
+                    <p>Success rate charts, streak longevity rankings, best time-of-day heatmaps, and a year-in-review summary — all on-device.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">⌚</div>
+                    <h3>Apple Watch app</h3>
+                    <p>Standalone watchOS app with today's commitments, haptic feedback, and 5 complication families to keep your streak front and center.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🔒</div>
+                    <h3>Privacy-first</h3>
+                    <p>No backend servers. All data stored locally by default. Optional CloudKit sync is end-to-end encrypted — Apple can't read it either.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free vs Premium detail -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">What's included</span>
+                <h2>Free does a lot. Premium does everything.</h2>
+            </div>
+            <div class="free-premium">
+                <div class="fp-block reveal">
+                    <h3>🆓 Free tier</h3>
+                    <p class="fp-sub">No account needed. Always free.</p>
+                    <ul class="fp-list">
+                        <li><span class="icon">✅</span><div><strong>Daily check-in system</strong><span>Done, Missed, or Skip with 5-sec undo</span></div></li>
+                        <li><span class="icon">🔥</span><div><strong>Streak tracking</strong><span>Current, longest, best + Streak Savers</span></div></li>
+                        <li><span class="icon">🏖️</span><div><strong>Vacation mode</strong><span>Pause streaks 7–14 days penalty-free</span></div></li>
+                        <li><span class="icon">📅</span><div><strong>Commitment end dates</strong><span>Perfect for challenges and seasonal goals</span></div></li>
+                        <li><span class="icon">🔔</span><div><strong>Per-commitment reminders</strong><span>Individual time picker, fully customisable</span></div></li>
+                        <li><span class="icon">🗣️</span><div><strong>Siri Shortcuts</strong><span>"Hey Siri, check in with Vow"</span></div></li>
+                        <li><span class="icon">📤</span><div><strong>Social streak sharing</strong><span>Shareable cards for Instagram, Twitter &amp; more</span></div></li>
+                        <li><span class="icon">🌙</span><div><strong>Dark mode &amp; 6 accent colours</strong><span>Personalise everything</span></div></li>
+                        <li><span class="icon">📬</span><div><strong>Weekly recap notifications</strong><span>Auto-generated every Sunday</span></div></li>
+                    </ul>
+                </div>
+                <div class="fp-block premium reveal">
+                    <h3><span class="gradient-text">⭐ Premium</span></h3>
+                    <p class="fp-sub">Everything in Free, plus:</p>
+                    <ul class="fp-list">
+                        <li><span class="icon">⌚</span><div><strong>Apple Watch mini-app</strong><span>Standalone app, 5 complication families, haptics</span></div></li>
+                        <li><span class="icon">📆</span><div><strong>Calendar integration</strong><span>Sync to native iOS Calendar, auto-recurring</span></div></li>
+                        <li><span class="icon">⚡</span><div><strong>Difficulty levels</strong><span>Easy 🍃, Medium 🔥, Hard ⚡ — smart recommendations</span></div></li>
+                        <li><span class="icon">📊</span><div><strong>Analytics dashboard</strong><span>Charts, heatmaps, year-in-review</span></div></li>
+                        <li><span class="icon">💾</span><div><strong>Data export</strong><span>CSV + PDF reports — you own your data</span></div></li>
+                        <li><span class="icon">🤝</span><div><strong>Partner accountability system</strong><span>Invite codes, leaderboard, medals, challenges</span></div></li>
+                        <li><span class="icon">☁️</span><div><strong>Cross-device sync</strong><span>CloudKit, end-to-end encrypted, iPhone + iPad + Mac</span></div></li>
+                        <li><span class="icon">👨‍👩‍👧‍👦</span><div><strong>Family Sharing</strong><span>Up to 6 family members at no extra cost</span></div></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how" style="background: linear-gradient(180deg, var(--bg), white);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">How it works</span>
+                <h2>From intention to habit in three steps</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <h3>Create a commitment</h3>
+                    <p>Name your goal, set a frequency (daily to monthly), add a reminder, and optionally set an end date or difficulty level.</p>
+                </div>
+                <div class="step reveal">
+                    <h3>Check in daily</h3>
+                    <p>One tap — Done, Missed, or Skip. Your streak updates instantly. Miss one? Use a Streak Saver or trigger Vacation Mode to stay protected.</p>
+                </div>
+                <div class="step reveal">
+                    <h3>See yourself grow</h3>
+                    <p>Watch streaks climb, explore analytics, share progress cards, and keep partners honest with challenges and leaderboards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val gradient-text">iOS 15+</div><div class="s-lbl">Compatibility</div></div>
+                <div class="stat"><div class="s-val gradient-text">watchOS 9+</div><div class="s-lbl">Apple Watch</div></div>
+                <div class="stat"><div class="s-val gradient-text">6</div><div class="s-lbl">Accent colours</div></div>
+                <div class="stat"><div class="s-val gradient-text">24+</div><div class="s-lbl">Features shipped</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech highlight -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Built to last</span>
+                <h2>Native, fast, and deeply integrated</h2>
+                <p>Vow is built with the latest Apple frameworks for a performance and privacy level no cross-platform app can match.</p>
+            </div>
+            <div class="tech-grid reveal">
+                <div class="tech-item"><div class="t-icon">🧱</div><h4>SwiftUI &amp; SwiftData</h4><p>100% native, encrypted local storage</p></div>
+                <div class="tech-item"><div class="t-icon">☁️</div><h4>CloudKit</h4><p>Optional E2E-encrypted cross-device sync</p></div>
+                <div class="tech-item"><div class="t-icon">⌚</div><h4>watchOS 9+</h4><p>Standalone Watch app + 5 complication families</p></div>
+                <div class="tech-item"><div class="t-icon">📆</div><h4>EventKit</h4><p>Native iOS Calendar integration</p></div>
+                <div class="tech-item"><div class="t-icon">🗣️</div><h4>SiriKit</h4><p>Voice check-ins &amp; Lock Screen shortcuts</p></div>
+                <div class="tech-item"><div class="t-icon">🔔</div><h4>UserNotifications</h4><p>Per-commitment, fully local reminders</p></div>
+                <div class="tech-item"><div class="t-icon">💳</div><h4>StoreKit 2</h4><p>Secure in-app purchases &amp; subscriptions</p></div>
+                <div class="tech-item"><div class="t-icon">🛡️</div><h4>GDPR / CCPA</h4><p>Privacy-compliant, user-deletable data</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitor comparison -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Why Vow</span>
+                <h2>The only habit app built for privacy</h2>
+            </div>
+            <div style="overflow-x:auto;" class="reveal">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="vow">Vow ✦</th>
+                            <th>Habitica</th>
+                            <th>Done</th>
+                            <th>StickK</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>On-device storage (default)</td><td class="vow yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+                        <tr><td>Apple Watch app</td><td class="vow yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+                        <tr><td>Partner accountability</td><td class="vow yes">✓</td><td class="yes">✓</td><td class="no">✗</td><td class="yes">✓</td></tr>
+                        <tr><td>Calendar integration</td><td class="vow yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+                        <tr><td>Siri Shortcuts</td><td class="vow yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+                        <tr><td>Data export (CSV/PDF)</td><td class="vow yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+                        <tr><td>Vacation mode</td><td class="vow yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+                        <tr><td>Family Sharing</td><td class="vow yes">✓</td><td class="no">✗</td><td class="no">✗</td><td class="no">✗</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing" style="background: white;">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Pricing</span>
+                <h2>Start free. Grow on your terms.</h2>
+                <p>Vow is free to use forever. Premium unlocks the full accountability stack.</p>
+            </div>
+            <div class="pricing">
+                <div class="price-card reveal">
+                    <h3>Free</h3>
+                    <div class="amount">$0</div>
+                    <div class="per">Forever</div>
+                    <ul>
+                        <li>Check-ins &amp; streaks</li>
+                        <li>Vacation mode</li>
+                        <li>Siri Shortcuts</li>
+                        <li>Social sharing</li>
+                        <li>Weekly recaps</li>
+                    </ul>
+                    <a href="#notify" class="btn btn-soft">Get notified</a>
+                </div>
+                <div class="price-card featured reveal">
+                    <div class="tag-pop">Most popular</div>
+                    <h3>Premium Monthly</h3>
+                    <div class="amount">$4.99</div>
+                    <div class="per">Per month</div>
+                    <ul>
+                        <li>Everything in Free</li>
+                        <li>Apple Watch app</li>
+                        <li>Partner system</li>
+                        <li>Analytics &amp; export</li>
+                        <li>Calendar + Cloud sync</li>
+                    </ul>
+                    <a href="#notify" class="btn btn-primary">Coming soon</a>
+                </div>
+                <div class="price-card reveal">
+                    <h3>Premium Annual</h3>
+                    <div class="amount">$39.99</div>
+                    <div class="per">Per year · save ~37%</div>
+                    <ul>
+                        <li>Everything in Premium</li>
+                        <li>Best annual value</li>
+                        <li>Family Sharing (6 users)</li>
+                    </ul>
+                    <a href="#notify" class="btn btn-soft">Coming soon</a>
+                </div>
+                <div class="price-card reveal">
+                    <h3>Lifetime</h3>
+                    <div class="amount">$29.99</div>
+                    <div class="per">One-time purchase</div>
+                    <ul>
+                        <li>All Premium features</li>
+                        <li>No recurring charges</li>
+                        <li>All future updates</li>
+                    </ul>
+                    <a href="#notify" class="btn btn-soft">Coming soon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Notify -->
+    <section class="section-sm" id="notify">
+        <div class="container">
+            <div class="cta reveal">
+                <h2>Coming soon to the App Store</h2>
+                <p>Vow is in final pre-launch testing. Want to be the first to know when it drops?</p>
+                <div class="hero-cta">
+                    <a href="mailto:khawaja.nadeem@getmyboat.com?subject=Notify%20me%20about%20Vow" class="btn btn-white">✉️ Notify me at launch</a>
+                    <a href="/vow/support" class="btn btn-on-dark">Visit support</a>
+                </div>
+                <div style="margin-top:28px;"><span class="review-note">⏳ Status: Pre-launch testing — App Store submission imminent</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/svg/lynxapps-lockup-white.svg" alt="LynxApps">
+                    <p>Thoughtfully crafted, privacy-first iOS apps. Made with care for the everyday.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Vow</h4>
+                    <a href="/vow">Overview</a>
+                    <a href="/vow#features">Features</a>
+                    <a href="/vow#pricing">Pricing</a>
+                    <a href="/vow/support">Support &amp; FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/vow/privacy">Privacy Policy</a>
+                    <a href="/vow/terms">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <h4>More apps</h4>
+                    <a href="/duplicate-photo-finder">Duplicate Photo Finder</a>
+                    <a href="/pillvault">PillVault</a>
+                    <a href="/receipt-digitizer">Receipt Digitizer</a>
+                    <a href="/">All apps</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <a href="mailto:khawaja.nadeem@getmyboat.com">khawaja.nadeem@getmyboat.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/lynx.js"></script>
+</body>
+</html>

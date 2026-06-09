@@ -42,6 +42,7 @@
 [data-theme="photo"]   { --g1:#6366f1; --g2:#8b5cf6; --accent:#6d5dfb; --accent-soft:#eef0ff; --accent-border:#e0e3ff; }
 [data-theme="pill"]    { --g1:#0ea5e9; --g2:#14b8a6; --accent:#0d9488; --accent-soft:#ecfeff; --accent-border:#cffafe; }
 [data-theme="receipt"] { --g1:#f59e0b; --g2:#f97316; --accent:#ea7317; --accent-soft:#fff7ed; --accent-border:#fed7aa; }
+[data-theme="vow"]     { --g1:#7c3aed; --g2:#db2777; --accent:#7c3aed; --accent-soft:#faf5ff; --accent-border:#e9d5ff; }
 
 /* ---------- Reset / Base ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
