@@ -45,6 +45,7 @@
 [data-theme="vow"]     { --g1:#7c3aed; --g2:#db2777; --accent:#7c3aed; --accent-soft:#faf5ff; --accent-border:#e9d5ff; }
 [data-theme="mhp"]     { --g1:#0ea5e9; --g2:#06b6d4; --accent:#0284c7; --accent-soft:#cffafe; --accent-border:#a5f3fc; }
 [data-theme="inspectkit"] { --g1:#1B4FBF; --g2:#00C4FF; --accent:#1B4FBF; --accent-soft:#E3F2FD; --accent-border:#90CAF9; }
+[data-theme="orvia"]   { --g1:#5856D6; --g2:#A855F7; --accent:#5856D6; --accent-soft:#F1F0FE; --accent-border:#D9D6FB; }
 
 /* ---------- Reset / Base ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
