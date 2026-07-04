@@ -48,7 +48,8 @@
 [data-theme="orvia"]   { --g1:#5856D6; --g2:#A855F7; --accent:#5856D6; --accent-soft:#F1F0FE; --accent-border:#D9D6FB; }
 [data-theme="subguard"] { --g1:#10b981; --g2:#0d9488; --accent:#059669; --accent-soft:#ecfdf5; --accent-border:#a7f3d0; }
 [data-theme="reefdose"] { --g1:#0891b2; --g2:#06b6d4; --accent:#0284c7; --accent-soft:#cffafe; --accent-border:#a5f3fc; }
-[data-theme="honestfast"] { --g1:#f97316; --g2:#d4a017; --accent:#ea7317; --accent-soft:#fff7ed; --accent-border:#fed7aa; }
+[data-theme="honestfast"]  { --g1:#f97316; --g2:#d4a017; --accent:#ea7317; --accent-soft:#fff7ed; --accent-border:#fed7aa; }
+[data-theme="homelogbook"] { --g1:#2E75B6; --g2:#1e9de0; --accent:#2E75B6; --accent-soft:#eff6ff; --accent-border:#bfdbfe; }
 
 /* ---------- Reset / Base ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
