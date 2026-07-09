@@ -21,7 +21,8 @@
         .app-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: transparent; }
         .app-top { padding: 34px 30px; color: #fff; position: relative; overflow: hidden; }
         .app-top::after { content:""; position:absolute; inset:0; background: radial-gradient(400px 160px at 85% -20%, rgba(255,255,255,.22), transparent 60%); }
-        .app-top .app-icon { width: 64px; height: 64px; border-radius: 18px; background: rgba(255,255,255,.16); display:grid; place-items:center; font-size:30px; margin-bottom:18px; border:1px solid rgba(255,255,255,.25); position:relative; }
+        .app-top .app-icon { width: 64px; height: 64px; border-radius: 18px; background: rgba(255,255,255,.16); display:grid; place-items:center; font-size:30px; margin-bottom:18px; border:1px solid rgba(255,255,255,.25); position:relative; overflow:hidden; }
+        .app-top .app-icon img { width: 64px; height: 64px; display:block; border-radius: 0; }
         .app-top h3 { font-size: 24px; font-weight: 800; letter-spacing:-.01em; position:relative; }
         .app-top .app-tag { font-size:14px; opacity:.9; margin-top:4px; position:relative; }
         .app-body { padding: 28px 30px 30px; display:flex; flex-direction:column; flex-grow:1; }
@@ -126,7 +127,7 @@
                 <!-- Duplicate Photo Finder -->
                 <div class="app-card theme-row-photo reveal">
                     <div class="app-top grad-photo">
-                        <div class="app-icon">📷</div>
+                        <div class="app-icon"><img src="/duplicate-photo-finder/app-icon.jpg" alt="Duplicate Photo Finder icon"></div>
                         <h3>Duplicate Photo Finder</h3>
                         <div class="app-tag">Reclaim your storage</div>
                         <div style="margin-top:14px;"><span class="badge badge-live">Live on App Store</span></div>
@@ -148,7 +149,7 @@
                 <!-- Receipt Digitizer -->
                 <div class="app-card theme-row-receipt reveal">
                     <div class="app-top grad-receipt">
-                        <div class="app-icon">🧾</div>
+                        <div class="app-icon"><img src="/receipt-digitizer/app-icon.jpg" alt="Receipt Digitizer icon"></div>
                         <h3>Receipt Digitizer</h3>
                         <div class="app-tag">Scan, sort, save</div>
                         <div style="margin-top:14px;"><span class="badge badge-live">Live on App Store</span></div>
@@ -170,7 +171,7 @@
                 <!-- Vow -->
                 <div class="app-card theme-row-vow reveal">
                     <div class="app-top grad-vow">
-                        <div class="app-icon">🤝</div>
+                        <div class="app-icon"><img src="/vow/app-icon.jpg" alt="Vow icon"></div>
                         <h3>Vow</h3>
                         <div class="app-tag">Build commitments that stick</div>
                         <div style="margin-top:14px;"><span class="badge badge-live">Live on App Store</span></div>
@@ -192,7 +193,7 @@
                 <!-- InspectKit -->
                 <div class="app-card theme-row-inspectkit reveal">
                     <div class="app-top grad-inspectkit">
-                        <div class="app-icon">📋</div>
+                        <div class="app-icon"><img src="/inspectkit/app-icon.jpg" alt="InspectKit icon"></div>
                         <h3>InspectKit Site Reports Pro</h3>
                         <div class="app-tag">Professional reports instantly</div>
                         <div style="margin-top:14px;"><span class="badge badge-live">Live on App Store</span></div>
@@ -214,7 +215,7 @@
                 <!-- ReefDose -->
                 <div class="app-card theme-row-reefdose reveal">
                     <div class="app-top grad-reefdose">
-                        <div class="app-icon">🪸</div>
+                        <div class="app-icon"><img src="/reefdose/app-icon.jpg" alt="ReefDose icon"></div>
                         <h3>ReefDose</h3>
                         <div class="app-tag">Reef tank chemistry tracker</div>
                         <div style="margin-top:14px;"><span class="badge badge-live">Live on App Store</span></div>
@@ -236,17 +237,17 @@
                 <!-- Honest Fast -->
                 <div class="app-card theme-row-honestfast reveal">
                     <div class="app-top grad-honestfast">
-                        <div class="app-icon">⏱️</div>
+                        <div class="app-icon"><img src="/honestfast/app-icon.jpg" alt="Honest Fast icon"></div>
                         <h3>Honest Fast</h3>
-                        <div class="app-tag">Intermittent fasting tracker</div>
+                        <div class="app-tag">Track your fasts with purpose</div>
                         <div style="margin-top:14px;"><span class="badge badge-live">Live on App Store</span></div>
                     </div>
                     <div class="app-body">
                         <ul class="feat">
-                            <li>Live fasting timer & protocols</li>
-                            <li>Streak tracking & history</li>
-                            <li>Apple Watch app</li>
-                            <li>100% on-device, fully private</li>
+                            <li>Smart fasting timer</li>
+                            <li>Metabolic stage tracking</li>
+                            <li>Ramadan mode with prayer times</li>
+                            <li>Water tracking &amp; analytics</li>
                         </ul>
                         <div class="app-actions">
                             <a href="/honestfast" class="btn btn-primary">Learn more</a>
@@ -299,28 +300,6 @@
                     </div>
                 </div>
 
-                <!-- Orvia -->
-                <div class="app-card theme-row-orvia reveal">
-                    <div class="app-top grad-orvia">
-                        <div class="app-icon">✨</div>
-                        <h3>Orvia</h3>
-                        <div class="app-tag">AI Executive Assistant</div>
-                        <div style="margin-top:14px;"><span class="badge badge-review">Under Development</span></div>
-                    </div>
-                    <div class="app-body">
-                        <ul class="feat">
-                            <li>Agentic AI that plans & acts for you</li>
-                            <li>Tasks, Focus, Goals & Calendar</li>
-                            <li>Lock-screen Focus Live Activity</li>
-                            <li>Weekly analytics & insights</li>
-                        </ul>
-                        <div class="app-actions">
-                            <a href="/orvia" class="btn btn-primary">Learn more</a>
-                            <a href="/orvia/support" class="btn btn-soft">Support</a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- SubGuard -->
                 <div class="app-card theme-row-subguard reveal">
                     <div class="app-top grad-subguard">
@@ -343,24 +322,24 @@
                     </div>
                 </div>
 
-                <!-- Honest Fast -->
-                <div class="app-card theme-row-honestfast reveal">
-                    <div class="app-top grad-honestfast">
-                        <div class="app-icon">🌙</div>
-                        <h3>Honest Fast</h3>
-                        <div class="app-tag">Track your fasts with purpose</div>
-                        <div style="margin-top:14px;"><span class="badge badge-live">Live on App Store</span></div>
+                <!-- Orvia -->
+                <div class="app-card theme-row-orvia reveal">
+                    <div class="app-top grad-orvia">
+                        <div class="app-icon">✨</div>
+                        <h3>Orvia</h3>
+                        <div class="app-tag">AI Executive Assistant</div>
+                        <div style="margin-top:14px;"><span class="badge badge-review">Under Development</span></div>
                     </div>
                     <div class="app-body">
                         <ul class="feat">
-                            <li>Smart fasting timer</li>
-                            <li>Metabolic stage tracking</li>
-                            <li>Ramadan mode with prayer times</li>
-                            <li>Water tracking &amp; analytics</li>
+                            <li>Agentic AI that plans & acts for you</li>
+                            <li>Tasks, Focus, Goals & Calendar</li>
+                            <li>Lock-screen Focus Live Activity</li>
+                            <li>Weekly analytics & insights</li>
                         </ul>
                         <div class="app-actions">
-                            <a href="/honestfast" class="btn btn-primary">Learn more</a>
-                            <a href="https://apps.apple.com/us/app/honest-fast-track-your-fasts/id6786001645" class="btn btn-soft">App Store</a>
+                            <a href="/orvia" class="btn btn-primary">Learn more</a>
+                            <a href="/orvia/support" class="btn btn-soft">Support</a>
                         </div>
                     </div>
                 </div>

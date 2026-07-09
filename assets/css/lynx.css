@@ -259,6 +259,7 @@ a { color: var(--accent); text-decoration: none; transition: color .2s var(--eas
     overflow: hidden;
 }
 .device-screen .d-icon { font-size: 64px; filter: drop-shadow(0 8px 16px rgba(0,0,0,.25)); }
+.device-screen .d-icon img { width: 88px; height: 88px; border-radius: 20px; display: block; box-shadow: 0 8px 24px rgba(0,0,0,.35); }
 .device-screen .d-title { font-size: 22px; font-weight: 800; }
 .device-screen .d-sub { font-size: 14px; opacity: .85; }
 .device-float {
