@@ -33,7 +33,7 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 | `microhabit-physics` | MicroHabit Physics | ⏳ In App Review | — |
 | `subguard` | SubGuard | ⏳ In App Review | — |
 | `orvia` | Orvia | 🔧 Under Development | — |
-| `zakatbook` | Zakat Book | 🔧 Under Development | — |
+| `zakatbook` | Zakat Book | ✅ Live | https://apps.apple.com/us/app/zakat-book/id6789597763 |
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
