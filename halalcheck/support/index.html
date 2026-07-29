@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="halalcheck">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support and Contact — HalalCheck</title>
+    <meta name="description" content="Support, FAQ, and contact information for HalalCheck by LynxApps.">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <link rel="stylesheet" href="/assets/css/lynx.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="brand"><img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <nav class="nav">
+                <a href="/halalcheck" class="muted">&#8592; HalalCheck</a>
+                <a href="/halalcheck/privacy">Privacy</a>
+                <a href="/halalcheck/terms">Terms</a>
+                <a href="mailto:support@lynxapps.com" class="nav-cta">Email us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="doc-hero">
+        <div class="container-doc">
+            <div class="breadcrumb">
+                <a href="/">LynxApps</a><span>/</span><a href="/halalcheck">HalalCheck</a><span>/</span><span>Support &amp; Contact</span>
+            </div>
+            <h1>Support &amp; Contact</h1>
+            <p class="updated">Find answers fast, or reach our team directly.</p>
+        </div>
+    </section>
+
+    <main class="doc-body">
+        <div class="container-doc">
+            <div class="quick-links">
+                <div class="qlink"><h3>📧 Email support</h3><p>Questions, bugs, database corrections, or feature requests -- we read every message.</p><a href="mailto:support@lynxapps.com">support@lynxapps.com</a></div>
+                <div class="qlink"><h3>⏱️ Response time</h3><p>We typically reply within 2-3 business days. Include your iOS version and device model for the fastest response.</p></div>
+                <div class="qlink"><h3>🔒 Your data is local</h3><p>Scan history stays on your device. We cannot access or recover it remotely.</p></div>
+            </div>
+
+            <div style="background:var(--accent-soft);border:1px solid var(--accent-border);border-radius:var(--radius);padding:28px 32px;margin-bottom:48px;">
+                <p style="font-weight:700;font-size:17px;margin-bottom:6px;">🔍 HalalCheck is coming soon</p>
+                <p style="color:var(--ink-2);">The app is currently in development and launching soon. Have a question before it lands? Email us and we will get back to you.</p>
+            </div>
+
+            <h2>Frequently asked questions</h2>
+            <div class="faq">
+
+                <details class="faq-item" open>
+                    <summary class="faq-q"><span>What is HalalCheck?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>HalalCheck is an offline-first halal ingredient scanner for iPhone. It helps you:</p>
+                        <ul>
+                            <li>Scan product barcodes to retrieve and analyse ingredient lists</li>
+                            <li>Photograph ingredient labels for instant OCR analysis</li>
+                            <li>Search any ingredient or E-code by name in 7 languages</li>
+                            <li>Browse a full E-code reference (E100 to E1521)</li>
+                            <li>Keep a history of every product you have checked</li>
+                        </ul>
+                        <p>All analysis runs on your device. No account is required. No scan data leaves your phone.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>How accurate are the verdicts?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>HalalCheck uses a deterministic, rule-based engine against a curated database of 178+ ingredients and 446+ E-codes. It is designed to be conservative:</p>
+                        <ul>
+                            <li>Unknown ingredients are always classified as <strong>Doubtful</strong>, never Halal</li>
+                            <li>If any ingredient is confirmed Haram, the overall verdict is Haram regardless of other ingredients</li>
+                            <li>If any ingredient is Doubtful and none are Haram, the overall verdict is Doubtful</li>
+                        </ul>
+                        <p>Verdicts are algorithmic estimates, not religious rulings. Formulations change without notice. Always read the physical label and consult a qualified scholar for your specific dietary needs.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>What does "Doubtful" mean?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>An ingredient is classified as Doubtful when:</p>
+                        <ul>
+                            <li>It is not in the HalalCheck database (unknown ingredients are never assumed to be Halal)</li>
+                            <li>It has a source that can be either plant-based or animal-derived depending on the manufacturer (e.g. plain "lecithin" without qualification)</li>
+                            <li>It is an E-code with an ambiguous or contested status</li>
+                        </ul>
+                        <p>A Doubtful verdict means you should exercise personal caution and investigate further before consuming the product.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>How does barcode scanning work?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>When you scan a barcode:</p>
+                        <ol class="steps-list">
+                            <li>HalalCheck checks its local cache for a previously fetched result (valid for 30 days)</li>
+                            <li>On a cache miss, it queries OpenFoodFacts and UPC Item DB concurrently</li>
+                            <li>The richer ingredient list is selected and stored in the local cache</li>
+                            <li>The ingredient text is passed to the offline verdict engine for analysis</li>
+                        </ol>
+                        <p>Only the barcode number is sent to third-party APIs -- no personal data accompanies the request.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>How does label scanning work?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>Label scanning uses on-device OCR via Apple's Vision framework:</p>
+                        <ol class="steps-list">
+                            <li>Point your camera at the ingredient panel on the product packaging</li>
+                            <li>The app analyses the frame in real time and automatically detects the ingredient block</li>
+                            <li>When confidence is high enough for 3 consecutive frames, the scan fires automatically</li>
+                            <li>Results appear instantly -- no internet connection required</li>
+                        </ol>
+                        <p>For best results: ensure the label is well-lit, flat, and fills the screen. No image is ever uploaded or stored beyond the local scan record.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>What languages does ingredient search support?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>The ingredient database includes aliases in 7 languages:</p>
+                        <ul>
+                            <li>English</li>
+                            <li>Arabic</li>
+                            <li>French</li>
+                            <li>German</li>
+                            <li>Turkish</li>
+                            <li>Indonesian</li>
+                            <li>Urdu</li>
+                        </ul>
+                        <p>You can search in any of these languages and the engine will find matching entries regardless of which language the ingredient name is in.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>What's the difference between Free and Premium?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p><strong>Free tier:</strong></p>
+                        <ul>
+                            <li>Limited number of barcode and label scans per day</li>
+                            <li>Unlimited ingredient search and E-code browsing</li>
+                            <li>Full scan history</li>
+                            <li>Banner and interstitial ads</li>
+                        </ul>
+                        <p><strong>Premium:</strong></p>
+                        <ul>
+                            <li>Unlimited daily barcode and label scans</li>
+                            <li>All free features</li>
+                            <li>Ad-free experience</li>
+                            <li>Priority support</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>What subscription options are available?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <ul>
+                            <li><strong>Monthly:</strong> $2.99/month (7-day free trial, auto-renews)</li>
+                            <li><strong>Yearly:</strong> $19.99/year (7-day free trial, auto-renews)</li>
+                        </ul>
+                        <p>All prices in USD. Prices may vary by region. Free trials convert automatically unless cancelled before the trial ends.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>A product verdict seems wrong. How do I report it?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>We take database accuracy seriously. If you believe a verdict is incorrect:</p>
+                        <ol class="steps-list">
+                            <li>Tap the report icon on the result screen to open a pre-filled email to our team</li>
+                            <li>Include the product name, barcode (if applicable), the specific ingredient, and why you believe the verdict is incorrect</li>
+                            <li>We review all reports and update the database when warranted</li>
+                        </ol>
+                        <p>Alternatively, email <a href="mailto:support@lynxapps.com">support@lynxapps.com</a> directly with the details.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>How do I cancel my subscription?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <ol class="steps-list">
+                            <li>Open <strong>Settings</strong> on your iPhone</li>
+                            <li>Tap <strong>[Your Name]</strong> at the top</li>
+                            <li>Tap <strong>Subscriptions</strong></li>
+                            <li>Find <strong>HalalCheck</strong> and tap it</li>
+                            <li>Tap <strong>Cancel Subscription</strong></li>
+                        </ol>
+                        <p>You'll keep Premium access until the end of the current billing period. All your scan history remains on your device.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-q"><span>What iOS version is required?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <ul>
+                            <li><strong>iOS 18.0</strong> or later (iPhone)</li>
+                        </ul>
+                        <p>HalalCheck uses SwiftData and VisionKit features that require iOS 18 or later.</p>
+                    </div>
+                </details>
+
+            </div>
+
+            <h2>Troubleshooting</h2>
+
+            <h3>Barcode not found</h3>
+            <p>Some products are not in the OpenFoodFacts or UPC Item DB databases, particularly regional or artisan products. If a barcode returns no result, use Label Scan to photograph the ingredient list directly, or search for individual ingredients manually.</p>
+
+            <h3>Label scan is not detecting text</h3>
+            <ol class="steps-list">
+                <li>Ensure the ingredient panel is well-lit -- avoid harsh shadows across the text</li>
+                <li>Hold the phone steady and ensure the text fills most of the screen</li>
+                <li>Move closer if you see a "Move closer" hint</li>
+                <li>Try a different angle if the label is reflective or glossy</li>
+            </ol>
+
+            <h3>Daily scan limit reached</h3>
+            <p>The free tier includes a limited number of barcode and label scans per day. The counter resets at midnight in your local time. Upgrade to Premium for unlimited scans, or use ingredient search (which has no daily limit) to look up specific ingredients manually.</p>
+
+            <h3>App is slow or crashing</h3>
+            <ol class="steps-list">
+                <li>Force-close the app (swipe up from the bottom and swipe away HalalCheck)</li>
+                <li>Restart your iPhone</li>
+                <li>Check for an app update in the App Store</li>
+                <li>If crashes persist, email us -- crash reports help us fix issues fast</li>
+            </ol>
+
+            <div class="doc-contact">
+                <h2>Still need help?</h2>
+                <p>Our team reads every message. Include your device model and iOS version for the fastest response.</p>
+                <a href="mailto:support@lynxapps.com?subject=HalalCheck%20Support" class="btn btn-white">Contact support</a>
+                <p style="font-size:13px;opacity:.85;margin:14px 0 0;">Typical response time: 2-3 business days</p>
+            </div>
+
+            <h2>More resources</h2>
+            <ul>
+                <li><a href="/halalcheck">App overview</a> -- features and pricing</li>
+                <li><a href="/halalcheck/privacy">Privacy Policy</a> -- how your data is handled</li>
+                <li><a href="/halalcheck/terms">Terms of Service</a> -- terms and conditions</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:0;padding-top:0;">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <span>
+                    <a href="/halalcheck">HalalCheck</a> &nbsp;&middot;&nbsp;
+                    <a href="/halalcheck/privacy">Privacy</a> &nbsp;&middot;&nbsp;
+                    <a href="/halalcheck/terms">Terms</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/lynx.js"></script>
+</body>
+</html>

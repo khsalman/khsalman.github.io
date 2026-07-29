@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="halalcheck">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — HalalCheck</title>
+    <meta name="description" content="Privacy Policy for HalalCheck by LynxApps. Your scan history stays on your device.">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <link rel="stylesheet" href="/assets/css/lynx.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="brand"><img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <nav class="nav">
+                <a href="/halalcheck" class="muted">&#8592; HalalCheck</a>
+                <a href="/halalcheck/terms">Terms</a>
+                <a href="/halalcheck/support">Support</a>
+                <a href="mailto:support@lynxapps.com" class="nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="doc-hero">
+        <div class="container-doc">
+            <div class="breadcrumb">
+                <a href="/">LynxApps</a><span>/</span><a href="/halalcheck">HalalCheck</a><span>/</span><span>Privacy Policy</span>
+            </div>
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last updated: July 2026</p>
+        </div>
+    </section>
+
+    <main class="doc-body">
+        <div class="container-doc">
+            <div class="callout">
+                <p><strong>Your scan data is private.</strong> HalalCheck stores your scan history and settings locally on your device. We do not collect, transmit, or store your personal data or scan records on any server we control.</p>
+            </div>
+
+            <h2>1. Data We Don't Collect</h2>
+            <p>HalalCheck does not:</p>
+            <ul>
+                <li>Transmit your scan history, ingredient queries, or product lookups to our servers</li>
+                <li>Create or require user accounts</li>
+                <li>Sell or share your personal information with third parties for marketing</li>
+                <li>Store your data outside your device (except as described below for third-party services)</li>
+                <li>Access your camera roll beyond the moment of scanning</li>
+            </ul>
+
+            <h2>2. Data Stored on Your Device</h2>
+            <p>All app data lives locally on your device:</p>
+            <ul>
+                <li><strong>Scan history:</strong> Product names, barcodes, ingredient lists, and verdicts you have received -- stored in SwiftData on your device only</li>
+                <li><strong>Daily scan count:</strong> A counter stored in UserDefaults to enforce free-tier daily limits; resets each day and contains no personal information</li>
+                <li><strong>Product cache:</strong> Ingredient data fetched via barcode lookup is cached locally for 30 days to reduce repeat network requests; stored in your device's caches directory</li>
+                <li><strong>Settings:</strong> Notification preferences, haptics setting, and onboarding completion status</li>
+            </ul>
+
+            <h2>3. Barcode Lookups -- OpenFoodFacts and UPC Item DB</h2>
+            <p>When you scan a barcode, HalalCheck queries two public databases to retrieve the product's ingredient list:</p>
+            <ul>
+                <li><strong>OpenFoodFacts</strong> (openfoodfacts.org) -- an open, community-maintained food database. Your barcode is sent to their API. OpenFoodFacts is governed by its own <a href="https://world.openfoodfacts.org/terms-of-use" target="_blank" rel="noopener">Terms of Use</a> and privacy practices.</li>
+                <li><strong>UPC Item DB</strong> (upcitemdb.com) -- a free barcode lookup service. Your barcode is sent to their API as a fallback. UPC Item DB is governed by its own privacy policy.</li>
+            </ul>
+            <p>Only the barcode number is transmitted -- no device identifiers, location, or personal information accompanies the request. Results are cached locally for 30 days so repeat lookups for the same barcode do not require a network call.</p>
+
+            <h2>4. Label OCR Scanning</h2>
+            <p>When you scan a product label, HalalCheck uses Apple's Vision framework to perform optical character recognition entirely on your device. No image or extracted text is ever sent to any external server. The camera frame is processed in real time on your device and immediately discarded.</p>
+
+            <h2>5. Community Corrections (Optional Feature)</h2>
+            <p>HalalCheck includes a community corrections system that can fetch ingredient override data from a hosted JSON file. When this feature is enabled, the app downloads a small JSON file containing ingredient verdict adjustments. This request contains no personal data. The feature is currently disabled by default.</p>
+
+            <h2>6. App Permissions</h2>
+            <p>HalalCheck may request the following permissions:</p>
+            <ul>
+                <li><strong>Camera:</strong> To scan barcodes and photograph ingredient labels. Camera frames are processed on-device and never uploaded.</li>
+                <li><strong>Notifications:</strong> To deliver optional usage tips. You control this in iOS Settings and can decline it during onboarding.</li>
+                <li><strong>App Tracking Transparency (ATT):</strong> Required by Apple if we serve ads to free-tier users. Declining ATT means you may see less relevant ads; it does not affect any app functionality.</li>
+            </ul>
+
+            <h2>7. Advertising (Free Tier)</h2>
+            <p>The free tier displays advertisements via Google AdMob. AdMob may use your device's advertising identifier (IDFA) to serve ads if you grant ATT permission. Ad SDK initialisation is deferred until after onboarding is complete and only for users who are not Premium subscribers. Google's data use is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. Premium subscribers see no ads and the ad SDK is never initialised for their sessions.</p>
+
+            <h2>8. Firebase Analytics and Crashlytics</h2>
+            <p>HalalCheck uses Firebase (by Google) for two purposes:</p>
+            <ul>
+                <li><strong>Analytics:</strong> Anonymised, aggregated event data (e.g. which scan mode is used, app open counts). No ingredient lists, scan verdicts, product names, or barcodes are included in analytics events.</li>
+                <li><strong>Crashlytics:</strong> If the app crashes, a report is sent containing device model, iOS version, and a stack trace. No personal data or scan history is included.</li>
+            </ul>
+            <p>Firebase data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+
+            <h2>9. In-App Purchases</h2>
+            <p>Premium subscriptions are processed entirely by Apple via StoreKit 2. LynxApps never sees or stores your payment details. Purchase receipt validation happens on-device.</p>
+
+            <h2>10. Data Retention and Deletion</h2>
+            <p>Your data exists only on your device. To delete it:</p>
+            <ul>
+                <li>Delete individual scan records from the History tab at any time</li>
+                <li>Delete the app from your iPhone to permanently remove all HalalCheck data, including scan history and cached product data</li>
+            </ul>
+
+            <h2>11. Security</h2>
+            <p>HalalCheck relies on iOS's built-in security model:</p>
+            <ul>
+                <li>SwiftData databases are stored in the app sandbox, encrypted at rest by iOS data protection</li>
+                <li>No personal data is transmitted over the network except as described above (barcode numbers to third-party APIs, anonymised analytics to Firebase)</li>
+                <li>Product cache and community corrections are stored in the caches directory and can be cleared by iOS at any time without data loss</li>
+            </ul>
+
+            <h2>12. Children's Privacy</h2>
+            <p>HalalCheck is not directed to children under 13. We do not knowingly collect information from children under 13.</p>
+
+            <h2>13. Your Rights (GDPR / CCPA)</h2>
+            <p>Because HalalCheck stores all personal data locally on your device:</p>
+            <ul>
+                <li><strong>Access:</strong> All your scan data is visible within the app at any time</li>
+                <li><strong>Deletion:</strong> Delete individual records in-app or delete the app entirely</li>
+                <li><strong>No data sale:</strong> We do not sell personal data</li>
+                <li><strong>Third-party opt-out:</strong> You may decline ATT to limit ad tracking; you may disable notifications at any time in iOS Settings</li>
+            </ul>
+
+            <h2>14. Changes to This Policy</h2>
+            <p>We may update this policy from time to time. Material changes will be reflected in the "Last updated" date above. Continued use of the app constitutes acceptance of the revised policy.</p>
+
+            <h2>15. Contact</h2>
+            <p>Privacy questions? Reach us at:</p>
+            <ul>
+                <li><strong>Email:</strong> <a href="mailto:support@lynxapps.com">support@lynxapps.com</a></li>
+                <li><strong>Response time:</strong> within 2-3 business days</li>
+            </ul>
+
+            <div class="callout callout-warn">
+                <p><strong>Privacy by design.</strong> HalalCheck processes ingredient lists and verdicts entirely on your device. What you eat and what you check is your business -- not ours.</p>
+            </div>
+
+            <div class="doc-contact">
+                <h2>Questions about your privacy?</h2>
+                <p>We're happy to clarify anything in plain language.</p>
+                <a href="mailto:support@lynxapps.com" class="btn btn-white">Contact our team</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:0;padding-top:0;">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <span>
+                    <a href="/halalcheck">HalalCheck</a> &nbsp;&middot;&nbsp;
+                    <a href="/halalcheck/terms">Terms</a> &nbsp;&middot;&nbsp;
+                    <a href="/halalcheck/support">Support</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/lynx.js"></script>
+</body>
+</html>

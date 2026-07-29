@@ -34,11 +34,12 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 | `subguard` | SubGuard | ⏳ In App Review | — |
 | `orvia` | Orvia | 🔧 Under Development | — |
 | `propertynest` | PropertyNest | 🔧 Under Development | — |
+| `halalcheck` | HalalCheck | 🔧 Under Development | — |
 | `zakatbook` | Zakat Book | ✅ Live | https://apps.apple.com/us/app/zakat-book/id6789597763 |
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
-**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Fifteen**).
+**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Sixteen**).
 
 ## Per-app theming
 
@@ -60,6 +61,7 @@ Each app gets a `data-theme="<key>"` attribute on `<html>`, which maps to CSS va
 [data-theme="renewaldesk"] { --g1:#4F46E5; --g2:#5956F2; --accent:#5956F2; --accent-soft:#EEF2FF; --accent-border:#C7D2FE; }
 [data-theme="zakatbook"]   { --g1:#1B6B3A; --g2:#2E8B57; --accent:#1B6B3A; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 [data-theme="propertynest"] { --g1:#7B4F2E; --g2:#C4824A; --accent:#9A5F38; --accent-soft:#FDF5EF; --accent-border:#F0D5BE; }
+[data-theme="halalcheck"]   { --g1:#14532d; --g2:#16a34a; --accent:#15803d; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 ```
 
 Homepage app cards use parallel `.theme-row-<key>` / `.grad-<key>` classes defined inline in `index.html`'s `<style>` block — keep these in sync with the per-app theme above when adding a new app.

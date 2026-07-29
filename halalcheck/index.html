@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="halalcheck">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HalalCheck — Instant Halal Ingredient Scanner</title>
+    <meta name="description" content="HalalCheck instantly scans barcodes and ingredient labels to tell you whether a product is Halal, Doubtful, or Haram. Fully offline, no account required.">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <link rel="stylesheet" href="/assets/css/lynx.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="brand"><img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <nav class="nav">
+                <a href="/" class="muted">&#8592; All apps</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="/halalcheck/support">Support</a>
+                <a href="/halalcheck/support" class="nav-cta">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">🔍 Instant Halal Scanner</span>
+                <h1>Know what's in your food. <span class="gradient-text">Instantly.</span></h1>
+                <p class="lead">HalalCheck scans product barcodes and ingredient labels to give you an instant Halal, Doubtful, or Haram verdict. Powered by a 600+ entry offline database. No internet required. No account needed.</p>
+                <div class="hero-cta">
+                    <a href="#features" class="btn btn-primary">Explore features</a>
+                    <a href="/halalcheck/support" class="btn btn-ghost">Support</a>
+                </div>
+                <div class="hero-meta">
+                    <div><div class="m-val gradient-text">600+</div><div class="m-lbl">Ingredients and E-codes</div></div>
+                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">Offline and private</div></div>
+                    <div><div class="m-val gradient-text">Free</div><div class="m-lbl">to get started</div></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device">
+                    <div class="device-screen">
+                        <div class="d-icon">🔍</div>
+                        <div class="d-title">HalalCheck</div>
+                        <div class="d-sub">Instant halal ingredient scanner</div>
+                    </div>
+                    <div class="device-float f1"><span class="dot">✅</span> Halal &mdash; 14 ingredients checked</div>
+                    <div class="device-float f2"><span class="dot">⚠️</span> E471 flagged as Doubtful</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">How it works</span>
+                <h2>Three ways to check any product</h2>
+                <p>Scan a barcode, photograph a label, or search an ingredient manually. HalalCheck gives you a clear verdict in seconds.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal">
+                    <div class="f-icon">📦</div>
+                    <h3>Barcode Scanner</h3>
+                    <p>Point your camera at any product barcode. HalalCheck fetches the ingredient list from OpenFoodFacts, analyses every ingredient offline, and returns a verdict in under two seconds.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📸</div>
+                    <h3>Label OCR Scanner</h3>
+                    <p>No barcode? No problem. Photograph the ingredient panel directly. On-device OCR extracts the text, the engine finds the ingredient block automatically, and you get a full breakdown.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🔎</div>
+                    <h3>Ingredient Search</h3>
+                    <p>Search any ingredient or E-code by name. See the verdict, the reason, and every alias the engine recognises -- in English, Arabic, French, German, Turkish, Indonesian, and Urdu.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🗄️</div>
+                    <h3>178+ Ingredient Database</h3>
+                    <p>A curated offline database of 178+ named ingredients with multilingual aliases, covering common additives, emulsifiers, enzymes, gelatins, and animal-derived substances.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🔢</div>
+                    <h3>446+ E-Code Database</h3>
+                    <p>Full coverage of E100 to E1521. Every E-code is individually classified with a verdict and a plain-language explanation of its source and halal status.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📋</div>
+                    <h3>Scan History</h3>
+                    <p>Every scan is saved locally. Browse your full scan history, filter by verdict, and re-check any product without scanning again. Your data stays on your device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verdicts -->
+    <section class="section" style="background:linear-gradient(180deg,#fff,var(--bg));">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Clear, honest verdicts</span>
+                <h2>Three outcomes. No guessing.</h2>
+                <p>HalalCheck never invents a halal verdict for an unknown ingredient. If it cannot confirm, it says so.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal" style="border-top:3px solid #16a34a;">
+                    <div class="f-icon">✅</div>
+                    <h3 style="color:#16a34a;">Halal</h3>
+                    <p>Every identified ingredient is confirmed halal. The product is safe to consume based on its listed ingredients. A percentage breakdown shows the confidence split.</p>
+                </div>
+                <div class="feature reveal" style="border-top:3px solid #d97706;">
+                    <div class="f-icon">⚠️</div>
+                    <h3 style="color:#d97706;">Doubtful</h3>
+                    <p>One or more ingredients could not be confirmed -- either because the ingredient is inherently ambiguous, or because it was not recognised by the database. Exercise caution.</p>
+                </div>
+                <div class="feature reveal" style="border-top:3px solid #dc2626;">
+                    <div class="f-icon">🚫</div>
+                    <h3 style="color:#dc2626;">Haram</h3>
+                    <p>At least one ingredient is confirmed haram (e.g. pork gelatin, alcohol, lard). The offending ingredients are highlighted with their reason clearly stated.</p>
+                </div>
+            </div>
+            <div class="section-head reveal" style="margin-top:48px;">
+                <p style="font-size:14px;color:var(--muted);max-width:600px;">HalalCheck verdicts are algorithmic estimates based on ingredient names. They are not a fatwa or religious ruling. Always exercise personal judgement and consult a qualified scholar for your specific needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Under the hood</span>
+                <h2>Fully offline, deterministic engine</h2>
+                <p>No LLM, no server calls, no guessing. The verdict engine runs entirely on your device.</p>
+            </div>
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val">🌐</div><div class="s-lbl">7 languages supported</div></div>
+                <div class="stat"><div class="s-val">🔒</div><div class="s-lbl">No account required</div></div>
+                <div class="stat"><div class="s-val">⚡</div><div class="s-lbl">Results in under 2s</div></div>
+                <div class="stat"><div class="s-val">📴</div><div class="s-lbl">Works offline</div></div>
+                <div class="stat"><div class="s-val">🔢</div><div class="s-lbl">E100 to E1521</div></div>
+                <div class="stat"><div class="s-val">🌍</div><div class="s-lbl">Global barcodes via OPF</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free vs Premium -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">What's included</span>
+                <h2>Start free. Scan more with Premium.</h2>
+                <p>The free tier covers most everyday needs. Upgrade for unlimited scans and an ad-free experience.</p>
+            </div>
+            <div style="overflow-x: auto;" class="reveal">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th style="color:#16a34a;">Free</th>
+                            <th style="color:#16a34a;">Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Daily barcode scans</td><td class="yes">✓ Limited</td><td class="yes">✓ Unlimited</td></tr>
+                        <tr><td>Daily label scans</td><td class="yes">✓ Limited</td><td class="yes">✓ Unlimited</td></tr>
+                        <tr><td>Ingredient search</td><td class="yes">✓ Unlimited</td><td class="yes">✓ Unlimited</td></tr>
+                        <tr><td>E-code browser</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Scan history</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>178+ ingredient database</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>446+ E-code database</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>7-language support</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Offline mode</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Ad-free experience</td><td class="no">✗</td><td class="yes">✓</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Pricing</span>
+                <h2>Simple, transparent pricing</h2>
+                <p>Free to start. Upgrade with a 7-day free trial -- cancel anytime.</p>
+            </div>
+            <div class="pricing reveal">
+                <div class="price-card">
+                    <h3>Free</h3>
+                    <div class="amount">$0</div>
+                    <div class="per">Forever</div>
+                    <ul>
+                        <li>Limited daily scans</li>
+                        <li>178+ ingredient database</li>
+                        <li>446+ E-code database</li>
+                        <li>Scan history</li>
+                        <li>Ingredient search</li>
+                        <li>7-language support</li>
+                    </ul>
+                    <a href="/halalcheck/support" class="btn btn-soft">Coming soon</a>
+                </div>
+                <div class="price-card featured">
+                    <div class="tag-pop">Best value</div>
+                    <h3>Premium Yearly</h3>
+                    <div class="amount">$19.99</div>
+                    <div class="per">Per year &middot; 7-day free trial</div>
+                    <ul>
+                        <li>Unlimited daily scans</li>
+                        <li>All free features</li>
+                        <li>Ad-free experience</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="/halalcheck/support" class="btn btn-primary">Coming soon</a>
+                </div>
+                <div class="price-card">
+                    <h3>Premium Monthly</h3>
+                    <div class="amount">$2.99</div>
+                    <div class="per">Per month &middot; 7-day free trial</div>
+                    <ul>
+                        <li>Unlimited daily scans</li>
+                        <li>All premium features</li>
+                        <li>Cancel anytime</li>
+                    </ul>
+                    <a href="/halalcheck/support" class="btn btn-soft">Coming soon</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="cta reveal">
+                <h2>Coming soon to the App Store</h2>
+                <p>HalalCheck is launching soon. Get notified when it's live and start scanning with confidence.</p>
+                <div class="hero-cta">
+                    <a href="mailto:support@lynxapps.com?subject=Notify%20me%20at%20HalalCheck%20launch" class="btn btn-white">&#9993;&#65039; Notify me at launch</a>
+                    <a href="/halalcheck/support" class="btn btn-on-dark">Visit support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/svg/lynxapps-lockup-white.svg" alt="LynxApps">
+                    <p>Thoughtfully crafted, privacy-first iOS apps. Made with care for the everyday.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>HalalCheck</h4>
+                    <a href="/halalcheck">Overview</a>
+                    <a href="/halalcheck#features">Features</a>
+                    <a href="/halalcheck#pricing">Pricing</a>
+                    <a href="/halalcheck/support">Support &amp; FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/halalcheck/privacy">Privacy Policy</a>
+                    <a href="/halalcheck/terms">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <h4>More apps</h4>
+                    <a href="/">All apps</a>
+                    <a href="/zakatbook">Zakat Book</a>
+                    <a href="/honestfast">Honest Fast</a>
+                    <a href="/propertynest">PropertyNest</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <a href="mailto:support@lynxapps.com">support@lynxapps.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/lynx.js"></script>
+</body>
+</html>

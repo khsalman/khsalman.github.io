@@ -54,6 +54,7 @@
 [data-theme="renewaldesk"] { --g1:#4F46E5; --g2:#5956F2; --accent:#5956F2; --accent-soft:#EEF2FF; --accent-border:#C7D2FE; }
 [data-theme="zakatbook"]  { --g1:#1B6B3A; --g2:#2E8B57; --accent:#1B6B3A; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 [data-theme="propertynest"] { --g1:#7B4F2E; --g2:#C4824A; --accent:#9A5F38; --accent-soft:#FDF5EF; --accent-border:#F0D5BE; }
+[data-theme="halalcheck"]   { --g1:#14532d; --g2:#16a34a; --accent:#15803d; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 
 /* ---------- Reset / Base ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
