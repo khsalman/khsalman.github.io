@@ -30,8 +30,8 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 | `renewaldesk` | RenewalDesk | ✅ Live | https://apps.apple.com/pk/app/renewaldesk/id6787748262 |
 | `closingdesk` | ClosingDesk | ✅ Live | https://apps.apple.com/pk/app/closingdesk/id6787710712 |
 | `zakatbook` | Zakat Book | ✅ Live | https://apps.apple.com/us/app/zakat-book/id6789597763 |
-| `pillvault` | PillVault | ⏳ In App Review | — |
-| `microhabit-physics` | MicroHabit Physics | ⏳ In App Review | — |
+| `pillvault` | PillVault | ✅ Live | https://apps.apple.com/us/app/pillvault/id6773266360 |
+| `microhabit-physics` | MicroHabit Physics | ✅ Live | https://apps.apple.com/us/app/microhabit-physics/id6779247649 |
 | `subguard` | SubGuard | ⏳ In App Review | — |
 | `orvia` | Orvia | 🔧 Under Development | — |
 | `propertynest` | PropertyNest | 🔧 Under Development | — |
@@ -39,7 +39,7 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
-**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Sixteen**).
+**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Sixteen**). Live app count is now 12.
 
 ## Per-app theming
 
