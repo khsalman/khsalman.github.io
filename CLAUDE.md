@@ -29,13 +29,13 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 | `homelogbook` | Home Logbook | ✅ Live | https://apps.apple.com/us/app/home-logbook/id6786788852 |
 | `renewaldesk` | RenewalDesk | ✅ Live | https://apps.apple.com/pk/app/renewaldesk/id6787748262 |
 | `closingdesk` | ClosingDesk | ✅ Live | https://apps.apple.com/pk/app/closingdesk/id6787710712 |
+| `zakatbook` | Zakat Book | ✅ Live | https://apps.apple.com/us/app/zakat-book/id6789597763 |
 | `pillvault` | PillVault | ⏳ In App Review | — |
 | `microhabit-physics` | MicroHabit Physics | ⏳ In App Review | — |
 | `subguard` | SubGuard | ⏳ In App Review | — |
 | `orvia` | Orvia | 🔧 Under Development | — |
 | `propertynest` | PropertyNest | 🔧 Under Development | — |
 | `halalcheck` | HalalCheck | 🔧 Under Development | — |
-| `zakatbook` | Zakat Book | ✅ Live | https://apps.apple.com/us/app/zakat-book/id6789597763 |
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
@@ -102,12 +102,17 @@ PY
 rm -rf /tmp/qrvenv
 ```
 
-Embed it using the existing `.qr` component (white card, image + caption) inside the `.cta` section:
+Embed it using the existing `.qr` component (white card, image + caption) inside the `.cta` section. Always place the QR **before** the button row, wrapped in a centering div:
 
 ```html
-<div class="qr">
-    <img src="/<slug>/appstore-qr.svg" alt="Scan to download <App> on the App Store">
-    <span>Scan with your iPhone camera</span>
+<div style="display:flex;justify-content:center;margin:8px 0 28px;">
+    <div class="qr">
+        <img src="/<slug>/appstore-qr.svg" alt="Scan to download <App> on the App Store">
+        <span>Scan with your iPhone camera</span>
+    </div>
+</div>
+<div class="hero-cta">
+    <a href="<app-store-url>" class="btn btn-white">Download on App Store</a>
 </div>
 ```
 
