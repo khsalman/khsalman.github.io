@@ -34,12 +34,12 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 | `microhabit-physics` | MicroHabit Physics | ✅ Live | https://apps.apple.com/us/app/microhabit-physics/id6779247649 |
 | `subguard` | SubGuard | ⏳ In App Review | — |
 | `orvia` | Orvia | 🔧 Under Development | — |
-| `propertynest` | PropertyNest | 🔧 Under Development | — |
+| `propertynest` | PropertyNest | ✅ Live | https://apps.apple.com/us/app/propertynest-home-organizer/id6794704452 |
 | `halalcheck` | HalalCheck | 🔧 Under Development | — |
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
-**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Sixteen**). Live app count is now 12.
+**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Sixteen**). Live app count is now 13.
 
 ## Per-app theming
 
