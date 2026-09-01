@@ -20,7 +20,7 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 
 | Slug | Name | Status | App Store URL |
 |---|---|---|---|
-| `duplicate-photo-finder` | Duplicate Photo Finder | ✅ Live | https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761 |
+| `duplicate-photo-finder` | Duplicate Photo &amp; Video Finder | ✅ Live | https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761 |
 | `receipt-digitizer` | Receipt Digitizer | ✅ Live | https://apps.apple.com/us/app/receipt-digitizer/id6771928139 |
 | `vow` | Vow | ✅ Live | https://apps.apple.com/us/app/vow-commitment-tracker/id6777075479 |
 | `inspectkit` | InspectKit Site Reports Pro | ✅ Live | https://apps.apple.com/us/app/inspectkit-site-reports-pro/id6782454914 |
