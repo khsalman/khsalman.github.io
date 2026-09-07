@@ -3,10 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zakat Book — Annual Zakat Tracker</title>
-    <meta name="description" content="Zakat Book: Track your annual Zakat obligation across all asset types — cash, gold, silver, crypto, business assets, and debts — privately on your device.">
+    <title>Zakat Book: Zakat Calculator — Track, Record &amp; Manage Your Zakat</title>
+    <meta name="description" content="Zakat Book is a private Zakat calculator and tracker for iPhone. Calculate your annual Zakat using Gold or Silver Nisab, track wealth, record payments, manage family Zakat, and keep a complete Zakat history — offline, no account required.">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khsalman.github.io/zakatbook/">
+    <meta property="og:title" content="Zakat Book: Zakat Calculator — Track &amp; Record Your Zakat">
+    <meta property="og:description" content="Calculate your Zakat, track every payment, and keep your complete Zakat history organized year after year. Private, offline, and built for peace of mind.">
+    <meta property="og:image" content="https://khsalman.github.io/zakatbook/app-icon.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Zakat Book: Zakat Calculator">
+    <meta name="twitter:description" content="Calculate your Zakat, track every payment, and keep your complete Zakat history organized year after year. Private, offline, and built for peace of mind.">
+    <meta name="twitter:image" content="https://khsalman.github.io/zakatbook/app-icon.jpg">
+
+    <!-- Canonical + Schema -->
+    <link rel="canonical" href="https://khsalman.github.io/zakatbook/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Zakat Book: Zakat Calculator",
+      "operatingSystem": "iOS",
+      "applicationCategory": "FinanceApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "url": "https://apps.apple.com/us/app/zakat-book/id6789597763",
+      "description": "A private Zakat calculator and tracker. Calculate annual Zakat, track gold and silver Nisab, record payments, manage family Zakat records, and keep a complete Zakat history — offline, no account required.",
+      "keywords": "zakat calculator, zakat tracker, nisab, gold, silver, hawl, zakat history, islamic finance, offline, private"
+    }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        /* Screenshot gallery */
+        .screenshot-gallery {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 8px 0 24px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .screenshot-gallery img {
+            height: 500px;
+            width: auto;
+            border-radius: 20px;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,.15);
+        }
+        .icon-hero {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            box-shadow: 0 4px 20px rgba(0,0,0,.18);
+            margin-bottom: 20px;
+        }
+        .highlight-box {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin-bottom: 48px;
+        }
+        .feature-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: start;
+        }
+        @media (max-width: 768px) {
+            .feature-detail { grid-template-columns: 1fr; }
+            .screenshot-gallery img { height: 360px; }
+        }
+        .feature-list { list-style: none; padding: 0; margin: 0; }
+        .feature-list li { padding: 8px 0; border-bottom: 1px solid var(--border); color: var(--ink-2); display: flex; gap: 10px; align-items: flex-start; }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list li::before { content: "✓"; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+        .privacy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .privacy-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; text-align: center; }
+        .privacy-card .p-icon { font-size: 32px; margin-bottom: 12px; }
+        .privacy-card h4 { font-size: 15px; font-weight: 700; margin: 0 0 6px; }
+        .privacy-card p { font-size: 13px; color: var(--ink-2); margin: 0; }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -27,16 +109,17 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">☽ Annual Zakat Tracker</span>
-                <h1>Your complete <span class="gradient-text">Zakat record,</span> always private.</h1>
-                <p class="lead">Zakat Book helps you track your annual Zakat obligation across every asset type — cash, gold, silver, cryptocurrency, business assets, investments, and debts — all offline and on your device. In English, Arabic, Urdu, Indonesian, and Turkish.</p>
+                <img src="/zakatbook/app-icon.jpg" alt="Zakat Book app icon" class="icon-hero">
+                <span class="eyebrow">☽ Zakat Calculator &amp; Tracker</span>
+                <h1>Calculate your Zakat. <span class="gradient-text">Track every payment.</span> Keep your history.</h1>
+                <p class="lead">Zakat Book is a private Zakat calculator and tracker designed to help you manage your Zakat year after year — offline, no account required. Calculate based on Gold or Silver Nisab, record payments, track wealth across all asset types, and manage Zakat for your entire family in one app.</p>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/zakat-book/id6789597763" class="btn btn-primary" target="_blank" rel="noopener">Download on App Store</a>
                     <a href="/zakatbook/support" class="btn btn-ghost">Support</a>
                 </div>
                 <div class="hero-meta">
                     <div><div class="m-val gradient-text">5</div><div class="m-lbl">Languages</div></div>
-                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device privacy</div></div>
+                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">Private &amp; Offline</div></div>
                     <div><div class="m-val gradient-text">Free</div><div class="m-lbl">to get started</div></div>
                 </div>
             </div>
@@ -45,7 +128,7 @@
                     <div class="device-screen">
                         <div class="d-icon">☽</div>
                         <div class="d-title">Zakat Book</div>
-                        <div class="d-sub">Annual Zakat obligation tracker</div>
+                        <div class="d-sub">Zakat Calculator &amp; Tracker</div>
                     </div>
                     <div class="device-float f1"><span class="dot">🪙</span> Nisab: Gold standard</div>
                     <div class="device-float f2"><span class="dot">✅</span> Zakat due calculated</div>
@@ -54,69 +137,211 @@
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="section" id="features">
+    <!-- Screenshots -->
+    <!-- Uncomment when screenshots are available
+    <section class="section-sm" style="background: white; overflow:hidden;">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">App Screenshots</span>
+                <h2>See Zakat Book in action</h2>
+            </div>
+        </div>
+        <div style="padding: 0 max(24px, calc((100vw - 1200px)/2));">
+            <div class="screenshot-gallery">
+                <img src="/zakatbook/screenshots/1.png" alt="Zakat Book — Zakat calculation dashboard">
+                <img src="/zakatbook/screenshots/2.png" alt="Zakat Book — Nisab settings Gold and Silver">
+                <img src="/zakatbook/screenshots/3.png" alt="Zakat Book — Wealth and asset tracking">
+                <img src="/zakatbook/screenshots/4.png" alt="Zakat Book — Payment ledger and history">
+                <img src="/zakatbook/screenshots/5.png" alt="Zakat Book — Family Zakat profiles">
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- Why Zakat Book -->
+    <section class="section" id="features" style="background: white;">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Built for Muslims</span>
-                <h2>Everything you need to fulfill your Zakat</h2>
-                <p>A focused, distraction-free tool for the annual Zakat obligation — not a general charity tracker.</p>
+                <h2>Your Zakat, organized year after year</h2>
+                <p>Instead of calculating your Zakat and starting from scratch every year, Zakat Book keeps your calculations, wealth, payments, recipients, and remaining balance organized in one private place.</p>
             </div>
             <div class="grid grid-3">
                 <div class="feature reveal">
-                    <div class="f-icon">📊</div>
-                    <h3>Multi-Asset Wealth Tracking</h3>
-                    <p>Log cash and savings, gold, silver, investments, cryptocurrency, business assets, property, and debts. Weight-based fields for metals with live price-per-gram entry. Zakat due is calculated automatically.</p>
+                    <div class="f-icon">🧮</div>
+                    <h3>Accurate Zakat Calculator</h3>
+                    <p>Calculate your annual Zakat based on the assets and debts you choose to include. Choose your Nisab standard using Gold or Silver, enter the current metal price, and see your exact Zakat due — with a detailed calculation breakdown.</p>
                 </div>
                 <div class="feature reveal">
-                    <div class="f-icon">🪙</div>
-                    <h3>Gold &amp; Silver Nisab Standards</h3>
-                    <p>Choose between the gold nisab (85g) or silver nisab (595g). Enter today's metal price and Zakat Book computes your nisab threshold and 2.5% obligation instantly.</p>
+                    <div class="f-icon">📚</div>
+                    <h3>Complete Zakat History</h3>
+                    <p>Create a dedicated record for each Zakat year. Save calculations, track your total Zakat due, see how much you have paid, record partial payments, and add payment dates and notes. Your complete Zakat record, always at hand.</p>
                 </div>
                 <div class="feature reveal">
-                    <div class="f-icon">🗓️</div>
-                    <h3>Annual Zakat Years</h3>
-                    <p>Create a new Zakat year for each hawl cycle. Track status — Unpaid, Partial, Complete, or Overpaid — and keep a running payment ledger with recipient and method details.</p>
+                    <div class="f-icon">💰</div>
+                    <h3>Wealth &amp; Asset Tracker</h3>
+                    <p>Track cash and savings, gold, silver, precious metals, investments, cryptocurrency, business assets, property, and debts. For weight-based assets, enter the weight and price per gram to calculate value automatically.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📋</div>
+                    <h3>Payment Ledger</h3>
+                    <p>Record every Zakat payment with amount, date, recipient, payment method, notes, and receipt photos. See your paid amount and remaining balance at a glance — so you always know exactly where you stand throughout the year.</p>
                 </div>
                 <div class="feature reveal">
                     <div class="f-icon">👨‍👩‍👧</div>
-                    <h3>Multi-Person Tracking</h3>
-                    <p>Manage Zakat for yourself, your spouse, and dependents from one app. Each person has their own Zakat years and assets, with a default person auto-selected when creating new years.</p>
+                    <h3>Family Zakat Management</h3>
+                    <p>Manage separate Zakat records for multiple people in one app. Create individual profiles for yourself, your spouse, and dependents. Each person keeps their own Zakat years, assets, and payment history — nothing gets mixed together.</p>
                 </div>
                 <div class="feature reveal">
                     <div class="f-icon">🌍</div>
                     <h3>5 Languages with RTL Support</h3>
-                    <p>Full support for English, Arabic, Urdu, Indonesian, and Turkish. Arabic and Urdu display in right-to-left layout throughout the app, with live language switching.</p>
+                    <p>Full support for English, Arabic, Urdu, Indonesian, and Turkish. Arabic and Urdu display in right-to-left layout throughout the entire app, with live language switching — no restart required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zakat Calculation Detail -->
+    <section class="section" style="background: linear-gradient(180deg,#fff,var(--bg));">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Zakat Calculation</span>
+                <h2>Calculate your Zakat the right way</h2>
+                <p>Zakat Book is designed to keep the calculation process clear while leaving asset classification decisions to you.</p>
+            </div>
+            <div class="feature-detail reveal">
+                <div>
+                    <h3 style="margin-bottom:16px;">Gold &amp; Silver Nisab Standards</h3>
+                    <p style="color:var(--ink-2);margin-bottom:20px;">Choose the Nisab standard that applies to your school of thought — Gold (85g) or Silver (595g). Enter today's metal price and your currency; Zakat Book calculates your Nisab threshold and 2.5% Zakat obligation instantly.</p>
+                    <ul class="feature-list">
+                        <li>Choose Gold or Silver Nisab standard</li>
+                        <li>Enter your current metal price per gram</li>
+                        <li>Calculate your Nisab threshold automatically</li>
+                        <li>See your exact 2.5% Zakat due</li>
+                        <li>View a detailed calculation breakdown</li>
+                        <li>Support for multiple currencies</li>
+                        <li>Track Nisab threshold year over year</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="margin-bottom:16px;">Every Zakatable Asset Type</h3>
+                    <p style="color:var(--ink-2);margin-bottom:20px;">Add only the categories that apply to you. No forced classifications. Zakat Book leaves asset classification decisions — especially for contested categories like property — entirely to you.</p>
+                    <ul class="feature-list">
+                        <li>Cash and savings</li>
+                        <li>Gold &amp; silver (weight-based calculation)</li>
+                        <li>Precious metals</li>
+                        <li>Investments and stocks</li>
+                        <li>Cryptocurrency</li>
+                        <li>Business assets and inventory</li>
+                        <li>Property (if applicable to your school)</li>
+                        <li>Debts and liabilities (deducted)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hawl / Annual Tracking -->
+    <section class="section" id="how" style="background: var(--bg);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Year-by-Year Hawl Tracking</span>
+                <h2>Keep your Zakat history, not just your calculation</h2>
+                <p>Your Zakat does not have to be something you remember only once a year. Over time, Zakat Book becomes your personal Zakat ledger — so you can look back at previous years instead of trying to remember what you calculated or paid.</p>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <h3>Set up your Nisab &amp; currency</h3>
+                    <p>Choose Gold or Silver Nisab during onboarding. Enter today's metal price and your currency — Zakat Book calculates your threshold and keeps a record for each Zakat year, so you can see how your Nisab threshold has changed over time.</p>
+                </div>
+                <div class="step reveal">
+                    <h3>Add your wealth &amp; assets</h3>
+                    <p>Log each zakatable asset by category. For gold and silver, enter the weight and current price per gram. Debts are deducted automatically. Add only what you personally consider zakatable — Zakat Book does not impose classifications.</p>
+                </div>
+                <div class="step reveal">
+                    <h3>Record what you pay</h3>
+                    <p>Log each Zakat payment with date, amount, recipient, payment method, notes, and receipt photos. The app tracks your paid amount and remaining balance, updating your year status from Unpaid to Partial to Complete as you go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium analytics / export -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Premium Features</span>
+                <h2>Understand your Zakat over time</h2>
+                <p>Premium features help you see your Zakat history beyond a single year — with analytics, trends, and exportable records.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal">
+                    <div class="f-icon">📊</div>
+                    <h3>Zakat History &amp; Analytics</h3>
+                    <p>View your Zakat history, payment trends, and activity across all years with clear charts. See how your wealth and Zakat obligation have changed year over year — keeping a complete record of your Zakat journey.</p>
                 </div>
                 <div class="feature reveal">
                     <div class="f-icon">📄</div>
-                    <h3>PDF &amp; CSV Reports</h3>
-                    <p>Generate branded PDF reports of your Zakat history — useful for personal records or sharing with your family. CSV export gives you full data portability. Premium feature.</p>
+                    <h3>PDF &amp; CSV Export</h3>
+                    <p>Export your Zakat records when you need them — detailed PDF reports for personal records or sharing with your family, and CSV export for full data portability. Unlock all-years export with Premium.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">☁️</div>
+                    <h3>iCloud Sync</h3>
+                    <p>Optional iCloud sync keeps your Zakat records up to date across all your Apple devices. Your data stays within your own Apple account — never on a third-party server. Available with Premium.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How it works -->
-    <section class="section" id="how" style="background:linear-gradient(180deg,#fff,var(--bg));">
+    <!-- Privacy -->
+    <section class="section" style="background: var(--accent-soft); border-top: 1px solid var(--accent-border);">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Simple Workflow</span>
-                <h2>Track your Zakat in minutes</h2>
+                <span class="eyebrow">Private by Design</span>
+                <h2>Your Zakat information is yours</h2>
+                <p>Your Zakat records contain sensitive financial information. Zakat Book is built from the ground up with privacy in mind — your data never leaves your device unless you choose to sync it.</p>
             </div>
-            <div class="steps">
-                <div class="step reveal"><h3>Set your nisab standard</h3><p>Choose gold or silver nisab during onboarding. Enter today's metal price and your currency — Zakat Book calculates your threshold automatically.</p></div>
-                <div class="step reveal"><h3>Add your assets</h3><p>Log each zakatable asset by category: cash, metals (with weight), investments, crypto, business assets, and debts as deductions. Add only what you personally consider zakatable.</p></div>
-                <div class="step reveal"><h3>Record your payments</h3><p>Log each Zakat payment with date, amount, recipient, and method. The app tracks your balance and updates your year status from Unpaid to Complete automatically.</p></div>
+            <div class="privacy-grid reveal">
+                <div class="privacy-card">
+                    <div class="p-icon">🚫</div>
+                    <h4>No Account Required</h4>
+                    <p>Open the app and get started immediately — no sign-up, no email, no password.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="p-icon">📵</div>
+                    <h4>Works Offline</h4>
+                    <p>Calculate your Zakat and manage all your records without an internet connection.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="p-icon">📱</div>
+                    <h4>On-Device Storage</h4>
+                    <p>Your financial records are stored on your device — no server required to manage your Zakat.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="p-icon">🔒</div>
+                    <h4>Face ID &amp; Touch ID</h4>
+                    <p>Protect your Zakat records with biometric authentication whenever you open the app.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="p-icon">☁️</div>
+                    <h4>Optional iCloud Sync</h4>
+                    <p>Sync stays within your own Apple account — opt in only when you want it.</p>
+                </div>
+                <div class="privacy-card">
+                    <div class="p-icon">🙈</div>
+                    <h4>No Third-Party Sharing</h4>
+                    <p>Your wealth information is never shared with any third-party service.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Asset types -->
+    <!-- Asset types stats row -->
     <section class="section-sm">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Supported asset types</span>
+                <span class="eyebrow">Supported Asset Types</span>
                 <h2>Every form of zakatable wealth</h2>
                 <p>Add only the categories that apply to you — no forced classifications.</p>
             </div>
@@ -133,13 +358,13 @@
         </div>
     </section>
 
-    <!-- Free vs Premium -->
-    <section class="section" style="background: white;">
+    <!-- Comparison table -->
+    <section class="section" id="pricing" style="background: white;">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">What's included</span>
+                <span class="eyebrow">What's Included</span>
                 <h2>Start free. Unlock more when you need it.</h2>
-                <p>The free tier covers most users. Upgrade for unlimited years, charts, reports, and an ad-free experience.</p>
+                <p>The free tier covers most users. Upgrade for unlimited years, analytics, export, and an ad-free experience.</p>
             </div>
             <div style="overflow-x: auto;" class="reveal">
                 <table class="comp-table">
@@ -153,12 +378,12 @@
                     <tbody>
                         <tr><td>Zakat years</td><td class="yes">✓ Up to 2</td><td class="yes">✓ Unlimited</td></tr>
                         <tr><td>Assets per year</td><td class="yes">✓ Up to 5</td><td class="yes">✓ Unlimited</td></tr>
-                        <tr><td>Multi-person tracking</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                        <tr><td>Gold &amp; silver nisab</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                        <tr><td>Payment ledger</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                        <tr><td>5 languages + RTL</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Gold &amp; Silver Nisab calculator</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Multi-person (family) tracking</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Payment ledger &amp; receipts</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>5 languages + RTL support</td><td class="yes">✓</td><td class="yes">✓</td></tr>
                         <tr><td>Reminders &amp; notifications</td><td class="yes">✓</td><td class="yes">✓ Advanced</td></tr>
-                        <tr><td>All-time history &amp; charts</td><td class="no">✗</td><td class="yes">✓</td></tr>
+                        <tr><td>All-time history &amp; analytics</td><td class="no">✗</td><td class="yes">✓</td></tr>
                         <tr><td>PDF &amp; CSV export</td><td class="yes">✓ Single year</td><td class="yes">✓ All years</td></tr>
                         <tr><td>iCloud sync</td><td class="no">✗</td><td class="yes">✓</td></tr>
                         <tr><td>Ad-free experience</td><td class="no">✗</td><td class="yes">✓</td></tr>
@@ -168,8 +393,8 @@
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="section" id="pricing">
+    <!-- Pricing cards -->
+    <section class="section" style="background: var(--bg);">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>
@@ -184,7 +409,7 @@
                     <ul>
                         <li>Up to 2 Zakat years</li>
                         <li>Up to 5 assets per year</li>
-                        <li>Gold &amp; silver nisab</li>
+                        <li>Gold &amp; Silver Nisab calculator</li>
                         <li>Payment ledger</li>
                         <li>5 languages + RTL</li>
                         <li>Single-year PDF export</li>
@@ -198,7 +423,7 @@
                     <div class="per">Per year · 7-day free trial</div>
                     <ul>
                         <li>Unlimited years &amp; assets</li>
-                        <li>All-time history &amp; charts</li>
+                        <li>All-time history &amp; analytics</li>
                         <li>PDF export — all years</li>
                         <li>CSV export</li>
                         <li>iCloud sync</li>
@@ -226,17 +451,17 @@
     <section class="section-sm">
         <div class="container">
             <div class="cta reveal">
-                <h2>Download Zakat Book on the App Store</h2>
-                <p>Track your annual Zakat obligation across every asset type — privately, on your device.</p>
+                <h2>Download Zakat Book: Zakat Calculator on the App Store</h2>
+                <p>Calculate your Zakat, track every payment, and keep your complete Zakat history organized year after year. Private, offline, and built for peace of mind.</p>
                 <div style="display:flex;justify-content:center;margin:8px 0 28px;">
                     <div class="qr">
-                        <img src="/zakatbook/appstore-qr.svg" alt="Scan to download Zakat Book on the App Store">
+                        <img src="/zakatbook/appstore-qr.svg" alt="Scan to download Zakat Book: Zakat Calculator on the App Store">
                         <span>Scan with your iPhone camera</span>
                     </div>
                 </div>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/zakat-book/id6789597763" class="btn btn-white" target="_blank" rel="noopener">Download on App Store</a>
-                    <a href="/zakatbook/support" class="btn btn-on-dark">Visit support</a>
+                    <a href="/zakatbook/support" class="btn btn-on-dark">Support &amp; FAQ</a>
                 </div>
             </div>
         </div>
