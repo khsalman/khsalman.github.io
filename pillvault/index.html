@@ -3,8 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PillVault — Simple, private medication tracking</title>
-    <meta name="description" content="PillVault helps you track medications, doses, and refills with smart reminders — all stored privately on your device. Download free on the App Store.">
+    <title>PillVault: Medication Tracker — Pill Reminder, Dose Log &amp; Refill Tracker for iPhone</title>
+    <meta name="description" content="PillVault is a medication tracker and pill reminder for iPhone and iPad. Log every dose, manage prescription schedules, track refills, and understand your medication adherence — all stored privately on your device via iCloud.">
+    <meta name="keywords" content="medication tracker, pill reminder, dose log, refill tracker, prescription organizer, medicine adherence, medication compliance, tablet schedule, medication history, adherence insights, doselog, pill organizer, medication schedule">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khsalman.github.io/pillvault/">
+    <meta property="og:title" content="PillVault: Medication Tracker — Pill Reminder, Dose Log &amp; Refill Tracker">
+    <meta property="og:description" content="Track every dose, stay ahead of refills, understand your adherence, and bring a clear medication report to your next doctor visit.">
+    <meta property="og:site_name" content="LynxApps">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="PillVault: Medication Tracker">
+    <meta name="twitter:description" content="Track every dose, stay ahead of refills, understand your adherence, and bring a clear medication report to your next doctor visit.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://khsalman.github.io/pillvault/">
+
+    <!-- Schema.org SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "PillVault: Medication Tracker",
+        "operatingSystem": "iOS, iPadOS",
+        "applicationCategory": "HealthApplication",
+        "description": "PillVault is a medication tracker and pill reminder designed to help you stay on schedule, understand your medication adherence, manage refills, and keep a clear record of your medication routine.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "url": "https://khsalman.github.io/pillvault/",
+        "downloadUrl": "https://apps.apple.com/us/app/pillvault/id6773266360",
+        "author": {
+            "@type": "Organization",
+            "name": "LynxApps",
+            "url": "https://khsalman.github.io"
+        }
+    }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
 </head>
@@ -16,7 +57,7 @@
             <nav class="nav">
                 <a href="/" class="muted">← All apps</a>
                 <a href="#features">Features</a>
-                <a href="#how">How it works</a>
+                <a href="#adherence">Adherence</a>
                 <a href="#pricing">Pricing</a>
                 <a href="/pillvault/support" class="nav-cta">Support</a>
             </nav>
@@ -27,17 +68,18 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">💊 Medication tracker</span>
-                <h1>Never miss a dose, <span class="gradient-text">never run out.</span></h1>
-                <p class="lead">PillVault keeps your medications, schedules, and refills organized with gentle reminders — and everything stays private, right on your device.</p>
+                <span class="eyebrow">💊 Medication Tracker &amp; Pill Reminder</span>
+                <h1>Track every dose. <span class="gradient-text">Stay ahead of refills.</span></h1>
+                <p class="lead">Track every dose, stay ahead of refills, understand your adherence, and bring a clear medication report to your next doctor visit.</p>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/pillvault/id6773266360" class="btn btn-primary">Download on App Store</a>
                     <a href="/pillvault/support" class="btn btn-ghost">Get help</a>
                 </div>
                 <div class="hero-meta">
-                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device data</div></div>
+                    <div><div class="m-val gradient-text">iCloud</div><div class="m-lbl">Sync across devices</div></div>
                     <div><div class="m-val gradient-text">No</div><div class="m-lbl">Account needed</div></div>
                     <div><div class="m-val gradient-text">Free</div><div class="m-lbl">To get started</div></div>
+                    <div><div class="m-val gradient-text">iOS+</div><div class="m-lbl">iPhone &amp; iPad</div></div>
                 </div>
             </div>
             <div class="hero-visual">
@@ -45,45 +87,165 @@
                     <div class="device-screen">
                         <div class="d-icon">💊</div>
                         <div class="d-title">PillVault</div>
-                        <div class="d-sub">Your meds, organized &amp; on time</div>
+                        <div class="d-sub">Medication Tracker</div>
                     </div>
                     <div class="device-float f1"><span class="dot">⏰</span> Dose reminder</div>
-                    <div class="device-float f2"><span class="dot">🔁</span> Refill soon</div>
+                    <div class="device-float f2"><span class="dot">📊</span> 94% adherence</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features -->
+    <!-- Track Your Medications -->
     <section class="section" id="features">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Features</span>
-                <h2>Everything you need to stay on track</h2>
-                <p>Thoughtful tools that make managing medication effortless — for you or someone you care for.</p>
+                <span class="eyebrow">Medication Organizer</span>
+                <h2>One place for every prescription and dose</h2>
+                <p>Whether you take one medication or manage several prescriptions, PillVault gives you one simple place to see what is due, what you have taken, and what is coming next.</p>
             </div>
             <div class="grid grid-3">
-                <div class="feature reveal"><div class="f-icon">💊</div><h3>Medication library</h3><p>Add each medication with its dosage, schedule, and notes in seconds.</p></div>
-                <div class="feature reveal"><div class="f-icon">⏰</div><h3>Dose reminders</h3><p>Set daily notifications so you're nudged exactly when it's time to take each dose.</p></div>
-                <div class="feature reveal"><div class="f-icon">🔁</div><h3>Refill tracking</h3><p>PillVault auto-calculates refill dates with color-coded urgency so you never run out.</p></div>
-                <div class="feature reveal"><div class="f-icon">✅</div><h3>Dose logging</h3><p>Mark doses as taken with a single tap — and undo instantly if you tap by mistake.</p></div>
-                <div class="feature reveal"><div class="f-icon">🔒</div><h3>Private by design</h3><p>All medication data is stored locally on your device. No account, no cloud, no tracking.</p></div>
-                <div class="feature reveal"><div class="f-icon">🌙</div><h3>Calm &amp; clear</h3><p>A clean, distraction-free interface that's easy to read at a glance, any time of day.</p></div>
+                <div class="feature reveal">
+                    <div class="f-icon">💊</div>
+                    <h3>Flexible medication schedules</h3>
+                    <p>Add medications with daily, weekly, interval, or custom dose schedules. Schedule multiple doses throughout the day to match your prescription exactly.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">✅</div>
+                    <h3>One-tap dose logging</h3>
+                    <p>Log each dose with a single tap. See overdue doses at a glance and undo a mistaken log instantly — keeping your medication history accurate at all times.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🗂️</div>
+                    <h3>Full medication library</h3>
+                    <p>Support tablets, capsules, liquids, drops, sprays, powders, creams, patches, injections, inhalers and more. Add prescribing doctor details and personal notes for every medicine.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📅</div>
+                    <h3>Start &amp; end dates</h3>
+                    <p>Set start and end dates for short-term medication courses. PillVault keeps your complete medication history even when a prescription is no longer active.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">⏰</div>
+                    <h3>Personalised dose reminders</h3>
+                    <p>Set reminders for each medication and dose time. View your next dose with Live Activities on the Lock Screen and use Siri &amp; Shortcuts to log doses hands-free.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🔒</div>
+                    <h3>Private by design</h3>
+                    <p>Your medication data is stored on your devices and synchronised through Apple iCloud when enabled. No account required, no data sold, no tracking.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- How it works -->
-    <section class="section" id="how" style="background:linear-gradient(180deg,#fff,var(--bg));">
+    <!-- Refill Tracking -->
+    <section class="section" id="refills" style="background:linear-gradient(180deg,#fff,var(--bg));">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">How it works</span>
-                <h2>Up and running in three taps</h2>
+                <span class="eyebrow">Refill Tracker</span>
+                <h2>Stay ahead of refills — never run out</h2>
+                <p>Running out of an important medication should not be a surprise. PillVault tracks your supply and tells you when to refill before you hit zero.</p>
             </div>
             <div class="steps">
-                <div class="step reveal"><h3>Add your meds</h3><p>Tap the plus button and enter each medication's name, dosage, and schedule.</p></div>
-                <div class="step reveal"><h3>Set reminders</h3><p>Choose the times you take each dose and let PillVault handle the nudges.</p></div>
-                <div class="step reveal"><h3>Stay stocked</h3><p>Enable pill-count tracking and PillVault tells you when a refill is coming up.</p></div>
+                <div class="step reveal">
+                    <h3>Track your supply</h3>
+                    <p>Enter your current medication quantity and record refill dates as you go. PillVault automatically estimates your remaining days of supply based on your dosing schedule.</p>
+                </div>
+                <div class="step reveal">
+                    <h3>See refill status at a glance</h3>
+                    <p>Clear color-coded refill status indicators show you how urgently each prescription needs a refill — so you can plan ahead with confidence.</p>
+                </div>
+                <div class="step reveal">
+                    <h3>Get refill reminders</h3>
+                    <p>PillVault sends reminders before your supply runs low, giving you enough lead time to contact your pharmacy or doctor without rushing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adherence & Insights -->
+    <section class="section" id="adherence">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Medication Adherence &amp; Insights</span>
+                <h2>Understand how well you follow your medication schedule</h2>
+                <p>PillVault turns your dose history into useful information about your routine — so you can see patterns, build streaks, and have informed conversations with your healthcare provider.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal">
+                    <div class="f-icon">📊</div>
+                    <h3>Adherence statistics</h3>
+                    <p>Track daily, weekly, and monthly medication compliance. See completed and missed doses in clear charts to understand your prescription adherence over time.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🔥</div>
+                    <h3>Medication streaks</h3>
+                    <p>Build dose streaks that reward consistency. Watching your streak grow is a simple but powerful motivator to stay on top of your medication schedule.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📆</div>
+                    <h3>Calendar history</h3>
+                    <p>Review your complete medication history in a calendar view. Spot missed doses, confirm past doses, and understand how your adherence has changed week by week.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📋</div>
+                    <h3>Medication reports</h3>
+                    <p>Generate detailed medication reports in seconds. Review 30-day history, adherence analysis, refill status, and calendar-based patterns — then export as a PDF to share with your doctor.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📤</div>
+                    <h3>PDF &amp; CSV export</h3>
+                    <p>Export professional PDF reports or raw CSV data to share with your doctor, caregiver, or for your own records. A clear medication report makes every visit more productive.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">💡</div>
+                    <h3>Advanced insights</h3>
+                    <p>Explore adherence analysis and insights to understand exactly how consistently you are following your medication routine — available with PillVault Premium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apple Platform -->
+    <section class="section" style="background:linear-gradient(180deg,var(--bg),#fff);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Built for Apple Devices</span>
+                <h2>A native Apple experience for iPhone and iPad</h2>
+                <p>PillVault is designed from the ground up as a native SwiftUI app — fast, accessible, and deeply integrated with the Apple devices you already use.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal">
+                    <div class="f-icon">☁️</div>
+                    <h3>iCloud sync</h3>
+                    <p>Your medication data syncs seamlessly across all your Apple devices through iCloud. Start on iPhone, check in on iPad — everything stays in sync automatically.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📱</div>
+                    <h3>Live Activities</h3>
+                    <p>See your next dose right on the Lock Screen with Live Activities — without unlocking your phone. Your medication schedule stays visible throughout the day.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🗣️</div>
+                    <h3>Siri &amp; Shortcuts</h3>
+                    <p>Use Siri and Apple Shortcuts to log supported doses and check your adherence hands-free. Medication management that fits into your daily routine.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🌙</div>
+                    <h3>Dark Mode &amp; Dynamic Type</h3>
+                    <p>Full support for Dark Mode, Dynamic Type, and iOS accessibility features ensures PillVault is easy to read and use for everyone — any time of day.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">⚡</div>
+                    <h3>Modern SwiftUI</h3>
+                    <p>Built with SwiftUI for a fast, fluid experience on every supported device. No legacy code — just a clean, modern interface that feels right on iPhone and iPad.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🛡️</div>
+                    <h3>Privacy-first storage</h3>
+                    <p>Medication data is stored on-device and synced via iCloud. PillVault does not transmit your health information to any external server — your personal data stays personal.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -93,41 +255,65 @@
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>
-                <h2>Free to use. Premium when you're ready.</h2>
-                <p>Start free with everything you need. Upgrade to Premium for an ad-free experience.</p>
+                <h2>Start free. Upgrade when you're ready.</h2>
+                <p>PillVault is free to download. Upgrade to Premium for unlimited medications, advanced adherence insights, detailed reports, and an ad-free experience.</p>
             </div>
             <div class="pricing">
                 <div class="price-card reveal">
                     <h3>Free</h3>
                     <div class="amount">$0</div>
                     <div class="per">Forever</div>
-                    <ul><li>Track medications</li><li>Dose reminders</li><li>Refill tracking</li><li>Ad-supported</li></ul>
-                    <a href="/pillvault/support" class="btn btn-soft">Learn more</a>
+                    <ul>
+                        <li>Track medications</li>
+                        <li>Dose reminders</li>
+                        <li>Refill tracking</li>
+                        <li>Basic dose history</li>
+                        <li>Ad-supported</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/pillvault/id6773266360" class="btn btn-soft">Download Free</a>
                 </div>
                 <div class="price-card featured reveal">
-                    <div class="tag-pop">Popular</div>
+                    <div class="tag-pop">Most Popular</div>
                     <h3>Premium Monthly</h3>
                     <div class="amount">Premium</div>
                     <div class="per">Billed monthly</div>
-                    <ul><li>Everything in Free</li><li>No ads</li><li>Priority support</li></ul>
+                    <ul>
+                        <li>Unlimited medications</li>
+                        <li>Ad-free experience</li>
+                        <li>Advanced adherence insights</li>
+                        <li>Detailed medication reports</li>
+                        <li>PDF &amp; CSV exports</li>
+                    </ul>
                     <a href="https://apps.apple.com/us/app/pillvault/id6773266360" class="btn btn-primary">Download on App Store</a>
                 </div>
                 <div class="price-card reveal">
                     <h3>Premium Yearly</h3>
                     <div class="amount">Premium</div>
-                    <div class="per">Billed yearly</div>
-                    <ul><li>Everything in Free</li><li>No ads</li><li>Best annual value</li></ul>
+                    <div class="per">Best annual value</div>
+                    <ul>
+                        <li>Unlimited medications</li>
+                        <li>Ad-free experience</li>
+                        <li>Advanced adherence insights</li>
+                        <li>Detailed medication reports</li>
+                        <li>PDF &amp; CSV exports</li>
+                    </ul>
                     <a href="https://apps.apple.com/us/app/pillvault/id6773266360" class="btn btn-soft">Download on App Store</a>
                 </div>
                 <div class="price-card reveal">
                     <h3>Lifetime</h3>
                     <div class="amount">Premium</div>
                     <div class="per">One-time purchase</div>
-                    <ul><li>Everything in Free</li><li>No ads, forever</li><li>No recurring charges</li></ul>
+                    <ul>
+                        <li>Unlimited medications</li>
+                        <li>Ad-free, forever</li>
+                        <li>Advanced adherence insights</li>
+                        <li>Detailed medication reports</li>
+                        <li>No recurring charges</li>
+                    </ul>
                     <a href="https://apps.apple.com/us/app/pillvault/id6773266360" class="btn btn-soft">Download on App Store</a>
                 </div>
             </div>
-            <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px;">PillVault is a personal organizational tool and is <strong>not a medical device</strong>. Always consult a healthcare professional for medical decisions.</p>
+            <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px;">Subscription pricing is shown in the app. PillVault is a personal organizational tool and is <strong>not a medical device</strong>. Always follow the instructions provided by your healthcare professional.</p>
         </div>
     </section>
 
@@ -135,17 +321,16 @@
     <section class="section-sm">
         <div class="container">
             <div class="cta reveal">
-                <h2>Download PillVault free</h2>
-                <p>Never miss a dose or run out of a refill again. PillVault is free to download on the App Store.</p>
+                <h2>Take control of your medication routine</h2>
+                <p>Download PillVault: Medication Tracker free on the App Store. Available for iPhone and iPad.</p>
                 <div style="display:flex;justify-content:center;margin:8px 0 28px;">
                     <div class="qr">
-                        <img src="/pillvault/appstore-qr.svg" alt="Scan to download PillVault on the App Store">
+                        <img src="/pillvault/appstore-qr.svg" alt="Scan to download PillVault: Medication Tracker on the App Store">
                         <span>Scan with your iPhone camera</span>
                     </div>
                 </div>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/pillvault/id6773266360" class="btn btn-white">Download on App Store</a>
-                    <a href="/pillvault/support" class="btn btn-on-dark">Visit support</a>
                 </div>
             </div>
         </div>
@@ -157,12 +342,13 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <img src="/svg/lynxapps-lockup-white.svg" alt="LynxApps">
-                    <p>Thoughtfully crafted, privacy-first iOS apps. Made with care for the everyday.</p>
+                    <p>Thoughtfully crafted, privacy-first apps for iOS. Made with care for the everyday.</p>
                 </div>
                 <div class="footer-col">
                     <h4>PillVault</h4>
                     <a href="/pillvault">Overview</a>
                     <a href="/pillvault#features">Features</a>
+                    <a href="/pillvault#adherence">Adherence</a>
                     <a href="/pillvault#pricing">Pricing</a>
                     <a href="/pillvault/support">Support &amp; FAQ</a>
                 </div>
@@ -173,7 +359,7 @@
                 </div>
                 <div class="footer-col">
                     <h4>More apps</h4>
-                    <a href="/duplicate-photo-finder">Duplicate Photo Finder</a>
+                    <a href="/duplicate-photo-finder">Duplicate Photo &amp; Video Finder</a>
                     <a href="/receipt-digitizer">Receipt Digitizer</a>
                     <a href="/">All apps</a>
                 </div>
