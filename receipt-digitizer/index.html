@@ -3,10 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receipt Digitizer - Scan, sort &amp; track your expenses</title>
-    <meta name="description" content="Receipt Digitizer scans your receipts with on-device OCR, auto-categorizes expenses, and shows where your money goes - fully offline and private. Available on the App Store.">
+    <title>Receipt Digitizer: Scanner - Scan Receipts, Track Expenses & Manage Budgets</title>
+    <meta name="description" content="Receipt Digitizer: Scanner turns paper receipts into organized digital expenses. On-device OCR, budget tracking, PDF/CSV export, iCloud sync. Free on the App Store.">
+    <link rel="canonical" href="https://khsalman.github.io/receipt-digitizer/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khsalman.github.io/receipt-digitizer/">
+    <meta property="og:title" content="Receipt Digitizer: Scanner - Scan Receipts, Track Expenses & Manage Budgets">
+    <meta property="og:description" content="Turn paper receipts into organized digital expenses. On-device OCR, budget tracking, PDF/CSV export, iCloud sync. Free on the App Store.">
+    <meta property="og:image" content="https://khsalman.github.io/receipt-digitizer/RD-Icon.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Receipt Digitizer: Scanner - Scan Receipts, Track Expenses & Manage Budgets">
+    <meta name="twitter:description" content="Turn paper receipts into organized digital expenses. On-device OCR, budget tracking, PDF/CSV export, iCloud sync.">
+    <meta name="twitter:image" content="https://khsalman.github.io/receipt-digitizer/RD-Icon.png">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Receipt Digitizer: Scanner",
+      "operatingSystem": "iOS",
+      "applicationCategory": "FinanceApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "url": "https://apps.apple.com/us/app/receipt-digitizer/id6771928139",
+      "description": "Turn paper receipts into organized digital expenses. Scan receipts, track expenses, manage budgets, and export records as PDF or CSV.",
+      "publisher": { "@type": "Organization", "name": "LynxApps" }
+    }
+    </script>
+
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        .icon-hero {
+            width: 100px;
+            height: 100px;
+            border-radius: 26px;
+            box-shadow: 0 8px 32px rgba(0,0,0,.18);
+            display: block;
+            margin-bottom: 20px;
+        }
+        .screenshot-gallery {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 8px;
+        }
+        .screenshot-gallery::-webkit-scrollbar { display: none; }
+        .screenshot-gallery img {
+            height: 480px;
+            width: auto;
+            border-radius: 20px;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            box-shadow: 0 8px 24px rgba(0,0,0,.14);
+        }
+        .scan-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .scan-step {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+        }
+        .scan-step .step-num {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--g1), var(--g2));
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .scan-step h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        .scan-step p { font-size: .9rem; color: var(--text-2); margin: 0; }
+        .category-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+            justify-content: center;
+        }
+        .cat-chip {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: .875rem;
+            font-weight: 500;
+            color: var(--accent);
+        }
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 32px;
+        }
+        .use-case {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 12px;
+            padding: 18px 16px;
+        }
+        .use-case .uc-icon { font-size: 1.5rem; margin-bottom: 8px; }
+        .use-case h4 { font-size: .95rem; margin-bottom: 4px; }
+        .use-case p { font-size: .85rem; color: var(--text-2); margin: 0; }
+        .export-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .export-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 24px;
+        }
+        .export-card .ec-icon { font-size: 2rem; margin-bottom: 12px; }
+        .export-card h3 { font-size: 1rem; margin-bottom: 8px; }
+        .export-card p { font-size: .9rem; color: var(--text-2); margin: 0; }
+        .lang-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+            justify-content: center;
+        }
+        .lang-chip {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: .875rem;
+        }
+        .free-premium {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            max-width: 760px;
+            margin: 40px auto 0;
+        }
+        .fp-block {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 24px;
+        }
+        .fp-block.featured {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px var(--accent);
+        }
+        .fp-block h3 { font-size: 1.1rem; margin-bottom: 4px; }
+        .fp-price { font-size: 1.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+        .fp-sub { font-size: .85rem; color: var(--text-2); margin-bottom: 16px; }
+        .fp-list { list-style: none; padding: 0; margin: 0; }
+        .fp-list li { padding: 5px 0; font-size: .9rem; }
+        .fp-list li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+        @media(max-width:640px) {
+            .free-premium { grid-template-columns: 1fr; }
+            .screenshot-gallery img { height: 340px; }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -16,7 +189,6 @@
             <nav class="nav">
                 <a href="/" class="muted">← All apps</a>
                 <a href="#features">Features</a>
-                <a href="#how">How it works</a>
                 <a href="#pricing">Pricing</a>
                 <a href="/receipt-digitizer/support" class="nav-cta">Support</a>
             </nav>
@@ -25,77 +197,252 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="container hero-grid">
-            <div>
-                <span class="eyebrow">🧾 Expense &amp; receipt tracker</span>
-                <h1>Snap a receipt. <span class="gradient-text">We'll do the rest.</span></h1>
-                <p class="lead">Receipt Digitizer reads your receipts with on-device OCR, sorts expenses into categories automatically, and shows exactly where your money goes - all offline, all private.</p>
-                <div class="hero-cta">
-                    <a href="https://apps.apple.com/us/app/receipt-digitizer/id6771928139" class="btn btn-primary">Download now</a>
+        <div class="container">
+            <div style="text-align:center;max-width:720px;margin:0 auto;">
+                <img src="/receipt-digitizer/RD-Icon.png" alt="Receipt Digitizer: Scanner icon" class="icon-hero" style="margin:0 auto 20px;">
+                <span class="eyebrow">🧾 Receipt &amp; Expense Tracker</span>
+                <h1>Turn paper receipts into <span class="gradient-text">organized digital records.</span></h1>
+                <p class="lead">Receipt Digitizer: Scanner makes it easy to scan receipts, record expenses, manage budgets, and understand where your money goes - with on-device OCR, automatic categorization, and full privacy.</p>
+                <div class="hero-cta" style="justify-content:center;">
+                    <a href="https://apps.apple.com/us/app/receipt-digitizer/id6771928139" class="btn btn-primary">Download Free on App Store</a>
                     <a href="#features" class="btn btn-ghost">See features</a>
                 </div>
-                <div class="hero-meta">
-                    <div><div class="m-val gradient-text">Offline</div><div class="m-lbl">Works without internet</div></div>
-                    <div><div class="m-val gradient-text">On-device</div><div class="m-lbl">OCR &amp; storage</div></div>
-                    <div><div class="m-val gradient-text">∞</div><div class="m-lbl">Unlimited receipts</div></div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="device">
-                    <div class="device-screen">
-                        <div class="d-icon"><img src="/receipt-digitizer/app-icon.jpg" alt="receipt-digitizer app icon"></div>
-                        <div class="d-title">Receipt Digitizer</div>
-                        <div class="d-sub">Scan, categorize, understand</div>
-                    </div>
-                    <div class="device-float f1"><span class="dot">📷</span> Scanned!</div>
-                    <div class="device-float f2"><span class="dot">📊</span> Categorized</div>
+                <div class="hero-meta" style="justify-content:center;">
+                    <div><div class="m-val gradient-text">On-device</div><div class="m-lbl">OCR - no cloud</div></div>
+                    <div><div class="m-val gradient-text">Free</div><div class="m-lbl">Core features always free</div></div>
+                    <div><div class="m-val gradient-text">10</div><div class="m-lbl">Languages supported</div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features -->
+    <!-- Screenshots -->
+    <section class="section-sm" style="overflow:hidden;">
+        <div class="container">
+            <div class="screenshot-gallery reveal">
+                <img src="/receipt-digitizer/screenshots/01.png" alt="Receipt Digitizer scanner screen">
+                <img src="/receipt-digitizer/screenshots/02.png" alt="Receipt Digitizer expense list">
+                <img src="/receipt-digitizer/screenshots/03.png" alt="Receipt Digitizer spending dashboard">
+                <img src="/receipt-digitizer/screenshots/04.png" alt="Receipt Digitizer budget tracking">
+                <img src="/receipt-digitizer/screenshots/05.png" alt="Receipt Digitizer categories">
+                <img src="/receipt-digitizer/screenshots/06.png" alt="Receipt Digitizer PDF export">
+                <img src="/receipt-digitizer/screenshots/07.png" alt="Receipt Digitizer search">
+            </div>
+        </div>
+    </section>
+
+    <!-- Scan Receipts -->
     <section class="section" id="features">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Features</span>
-                <h2>From shoebox to spending insights</h2>
-                <p>Everything you need to capture, organize, and understand your expenses - without the manual data entry.</p>
+                <span class="eyebrow">Scan Receipts</span>
+                <h2>Camera to record in seconds</h2>
+                <p>Use your camera or import existing receipt photos. Receipt Digitizer uses Apple's Vision technology to recognize merchant, date, and amount - entirely on your device. No internet required.</p>
             </div>
-            <div class="grid grid-3">
-                <div class="feature reveal"><div class="f-icon">📷</div><h3>Smart scanning</h3><p>Capture receipts with automatic edge detection, or batch-import straight from your photo library.</p></div>
-                <div class="feature reveal"><div class="f-icon">🔍</div><h3>On-device OCR</h3><p>Automatically extracts merchant, amount, and date - processed entirely on your device.</p></div>
-                <div class="feature reveal"><div class="f-icon">🏷️</div><h3>Auto-categorize</h3><p>Expenses are sorted into categories like groceries, dining, travel, and more - with custom color-coded categories too.</p></div>
-                <div class="feature reveal"><div class="f-icon">📊</div><h3>Spending dashboard</h3><p>See total spend, category breakdowns, and monthly trends at a glance with clear visual charts.</p></div>
-                <div class="feature reveal"><div class="f-icon">🔎</div><h3>Instant search</h3><p>Find any receipt in seconds with real-time search across merchants and categories.</p></div>
-                <div class="feature reveal"><div class="f-icon">📤</div><h3>PDF export</h3><p>Export your receipts and reports as PDFs for taxes, accounting, or reimbursement (Pro).</p></div>
+            <div class="scan-steps reveal">
+                <div class="scan-step">
+                    <div class="step-num">1</div>
+                    <h3>Scan or import</h3>
+                    <p>Point your camera at a receipt or import from your photo library.</p>
+                </div>
+                <div class="scan-step">
+                    <div class="step-num">2</div>
+                    <h3>OCR extracts details</h3>
+                    <p>On-device Apple Vision reads merchant, amount, and date automatically.</p>
+                </div>
+                <div class="scan-step">
+                    <div class="step-num">3</div>
+                    <h3>Review &amp; confirm</h3>
+                    <p>Verify the extracted details and tap to save. Edit anything in a tap.</p>
+                </div>
+                <div class="scan-step">
+                    <div class="step-num">4</div>
+                    <h3>Organized instantly</h3>
+                    <p>Your expense is categorized and added to your history automatically.</p>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:28px;" class="reveal">
+                <p style="font-size:.9rem;color:var(--text-2);">No receipt photo? Add expenses manually anytime with the same level of detail.</p>
             </div>
         </div>
     </section>
 
-    <!-- How it works -->
-    <section class="section" id="how" style="background:linear-gradient(180deg,#fff,var(--bg));">
+    <!-- Auto-categorize -->
+    <section class="section" style="background:linear-gradient(180deg,var(--bg),#fff);">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">How it works</span>
-                <h2>Three steps to organized expenses</h2>
+                <span class="eyebrow">Organize Automatically</span>
+                <h2>Every expense in the right place</h2>
+                <p>Keep expenses organized with categories that match the way you spend. Built-in categories cover everyday life - or create custom ones to match your workflow.</p>
             </div>
-            <div class="steps">
-                <div class="step reveal"><h3>Scan</h3><p>Snap a photo of any receipt or import one from your library. The app detects the edges for you.</p></div>
-                <div class="step reveal"><h3>Review</h3><p>On-device OCR pulls out the merchant, amount, and date. Tweak anything in a tap if needed.</p></div>
-                <div class="step reveal"><h3>Understand</h3><p>Your spending dashboard updates instantly so you always know where your money is going.</p></div>
+            <div class="category-grid reveal">
+                <span class="cat-chip">🛒 Groceries</span>
+                <span class="cat-chip">🍽 Dining</span>
+                <span class="cat-chip">✈️ Travel</span>
+                <span class="cat-chip">🛍 Shopping</span>
+                <span class="cat-chip">💡 Utilities</span>
+                <span class="cat-chip">🎬 Entertainment</span>
+                <span class="cat-chip">🏥 Healthcare</span>
+                <span class="cat-chip">⛽️ Transport</span>
+                <span class="cat-chip">🏠 Home</span>
+                <span class="cat-chip">+ Custom</span>
             </div>
         </div>
     </section>
 
-    <!-- Privacy highlight -->
-    <section class="section-sm">
+    <!-- Budget & Insights -->
+    <section class="section">
         <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Budget &amp; Spending Insights</span>
+                <h2>Understand where your money goes</h2>
+                <p>Create budgets and monitor spending over time. View spending dashboards, category breakdowns, and monthly trends to understand your financial habits and make better decisions.</p>
+            </div>
+            <div class="grid grid-3 reveal">
+                <div class="feature">
+                    <div class="f-icon">📊</div>
+                    <h3>Spending dashboard</h3>
+                    <p>See total spend, category breakdowns, and monthly trends at a glance with clear visual charts.</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">🎯</div>
+                    <h3>Budget tracking</h3>
+                    <p>Set budgets by category or overall. Get visual progress tracking so you know when you're near your limit.</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">📅</div>
+                    <h3>Monthly trends</h3>
+                    <p>See how spending changes month to month and spot patterns in your financial habits over time.</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">🔎</div>
+                    <h3>Instant search</h3>
+                    <p>Find any receipt by merchant, date, amount, or category. Real-time results across your entire history.</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">🏷️</div>
+                    <h3>Category breakdown</h3>
+                    <p>Visual pie charts and lists showing exactly how much you spend in each category each month.</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">📋</div>
+                    <h3>Full expense log</h3>
+                    <p>Browse your complete receipt and expense history. Review purchases, amounts, and dates in one organized place.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Export -->
+    <section class="section" style="background:linear-gradient(180deg,#fff,var(--bg));">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Export Records</span>
+                <h2>Your records, ready when you need them</h2>
+                <p>Export receipt and expense data in formats suited for taxes, reimbursements, and accounting. Your financial records are always accessible.</p>
+            </div>
+            <div class="export-row reveal">
+                <div class="export-card">
+                    <div class="ec-icon">📄</div>
+                    <h3>PDF export</h3>
+                    <p>Generate polished expense reports as PDF files. Share with employers, accountants, or keep for your records. Ideal for reimbursement submissions and tax preparation.</p>
+                </div>
+                <div class="export-card">
+                    <div class="ec-icon">📊</div>
+                    <h3>CSV export</h3>
+                    <p>Export raw expense data as CSV for use in spreadsheets, accounting software, or custom analysis. Perfect for bookkeepers and freelancers.</p>
+                </div>
+                <div class="export-card">
+                    <div class="ec-icon">☁️</div>
+                    <h3>Optional iCloud sync</h3>
+                    <p>Keep receipts, budgets, and categories synced across all your Apple devices with optional iCloud. You control whether sync is on or off.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Privacy First</span>
+                <h2>Your financial data stays on your device</h2>
+                <p>Receipts contain sensitive financial information. Receipt Digitizer uses Apple's on-device Vision framework for scanning and OCR. Your receipt images and financial data are never uploaded to our servers.</p>
+            </div>
             <div class="stats reveal">
                 <div class="stat"><div class="s-val gradient-text">100%</div><div class="s-lbl">On-device OCR</div></div>
                 <div class="stat"><div class="s-val gradient-text">0</div><div class="s-lbl">Cloud uploads</div></div>
                 <div class="stat"><div class="s-val gradient-text">Offline</div><div class="s-lbl">Core features</div></div>
-                <div class="stat"><div class="s-val gradient-text">10+</div><div class="s-lbl">Languages</div></div>
+                <div class="stat"><div class="s-val gradient-text">10</div><div class="s-lbl">Languages</div></div>
+            </div>
+            <div style="text-align:center;margin-top:32px;" class="reveal">
+                <a href="/receipt-digitizer/privacy" class="btn btn-soft">Read our privacy policy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use cases -->
+    <section class="section" style="background:linear-gradient(180deg,#fff,var(--bg));">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Who It's For</span>
+                <h2>Made for real-life expenses</h2>
+                <p>Whether you're tracking personal spending or managing business receipts, Receipt Digitizer adapts to the way you handle money.</p>
+            </div>
+            <div class="use-cases reveal">
+                <div class="use-case">
+                    <div class="uc-icon">🏠</div>
+                    <h4>Household budgeting</h4>
+                    <p>Track groceries, utilities, and household expenses in one place.</p>
+                </div>
+                <div class="use-case">
+                    <div class="uc-icon">💼</div>
+                    <h4>Business receipts</h4>
+                    <p>Organize business expenses and generate reports for bookkeeping.</p>
+                </div>
+                <div class="use-case">
+                    <div class="uc-icon">🧾</div>
+                    <h4>Reimbursements</h4>
+                    <p>Capture work expenses, export PDF reports, and get reimbursed faster.</p>
+                </div>
+                <div class="use-case">
+                    <div class="uc-icon">📁</div>
+                    <h4>Tax preparation</h4>
+                    <p>Keep deductible receipts organized and export records at tax time.</p>
+                </div>
+                <div class="use-case">
+                    <div class="uc-icon">✈️</div>
+                    <h4>Travel expenses</h4>
+                    <p>Log hotel, food, and transport receipts while you're on the road.</p>
+                </div>
+                <div class="use-case">
+                    <div class="uc-icon">🧑‍💻</div>
+                    <h4>Freelancer records</h4>
+                    <p>Manage client expenses and export clean CSV records for invoicing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">10 Languages</span>
+                <h2>Available worldwide</h2>
+                <p>Switch language anytime from Settings.</p>
+            </div>
+            <div class="lang-list reveal">
+                <span class="lang-chip">🇺🇸 English</span>
+                <span class="lang-chip">🇪🇸 Spanish</span>
+                <span class="lang-chip">🇫🇷 French</span>
+                <span class="lang-chip">🇩🇪 German</span>
+                <span class="lang-chip">🇸🇦 Arabic</span>
+                <span class="lang-chip">🇧🇷 Portuguese</span>
+                <span class="lang-chip">🇮🇹 Italian</span>
+                <span class="lang-chip">🇨🇳 Simplified Chinese</span>
+                <span class="lang-chip">🇯🇵 Japanese</span>
+                <span class="lang-chip">🇰🇷 Korean</span>
             </div>
         </div>
     </section>
@@ -105,24 +452,41 @@
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>
-                <h2>Free to start. Pro when you need more.</h2>
-                <p>Scan, organize, and get insights for free. Upgrade to Pro to remove ads and unlock PDF export.</p>
+                <h2>Full features are free</h2>
+                <p>Scanning, manual entry, expense tracking, budgets, spending insights, search, categorization, PDF export, CSV export, and more are all available without a subscription. Pro removes ads.</p>
             </div>
-            <div class="grid grid-2" style="max-width:760px;margin:0 auto;">
-                <div class="price-card reveal">
+            <div class="free-premium reveal">
+                <div class="fp-block">
                     <h3>Free</h3>
-                    <div class="amount">$0</div>
-                    <div class="per">Forever</div>
-                    <ul><li>Unlimited receipt scanning</li><li>Auto-categorization</li><li>Spending dashboard</li><li>Ad-supported</li></ul>
-                    <a href="/receipt-digitizer/support" class="btn btn-soft">Learn more</a>
+                    <div class="fp-price">$0</div>
+                    <div class="fp-sub">Forever, no credit card</div>
+                    <ul class="fp-list">
+                        <li>Receipt scanning &amp; manual entry</li>
+                        <li>On-device OCR (merchant, amount, date)</li>
+                        <li>Expense history &amp; categories</li>
+                        <li>Budget creation &amp; tracking</li>
+                        <li>Spending dashboard &amp; trends</li>
+                        <li>Search across all receipts</li>
+                        <li>PDF &amp; CSV export</li>
+                        <li>Optional iCloud sync</li>
+                        <li>10 languages</li>
+                        <li>Ad-supported</li>
+                    </ul>
                 </div>
-                <div class="price-card featured reveal">
-                    <div class="tag-pop">Best value</div>
-                    <h3>Pro</h3>
-                    <div class="amount">Pro</div>
-                    <div class="per">Subscription</div>
-                    <ul><li>Everything in Free</li><li>No ads</li><li>PDF export</li><li>Advanced reports (coming soon)</li></ul>
-                    <a href="https://apps.apple.com/us/app/receipt-digitizer/id6771928139" class="btn btn-primary">Learn more</a>
+                <div class="fp-block featured">
+                    <h3>Receipt Digitizer Pro</h3>
+                    <div class="fp-price">Pro</div>
+                    <div class="fp-sub">Monthly, yearly, or lifetime</div>
+                    <ul class="fp-list">
+                        <li>Everything in Free</li>
+                        <li>Ad-free experience</li>
+                        <li>Monthly subscription</li>
+                        <li>Yearly subscription (best value)</li>
+                        <li>Lifetime purchase</li>
+                    </ul>
+                    <div style="margin-top:20px;">
+                        <a href="https://apps.apple.com/us/app/receipt-digitizer/id6771928139" class="btn btn-primary" style="width:100%;text-align:center;">View on App Store</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,11 +496,11 @@
     <section class="section-sm">
         <div class="container">
             <div class="cta reveal">
-                <h2>Now available on the App Store</h2>
-                <p>Receipt Digitizer is live. Start scanning, organizing, and understanding your expenses today.</p>
+                <h2>Take control of your receipts and expenses</h2>
+                <p>Scan receipts. Track spending. Manage budgets. Keep your records organized. Receipt Digitizer helps turn everyday receipts into useful financial records - without making expense tracking complicated.</p>
                 <div style="display:flex;justify-content:center;margin:8px 0 28px;">
                     <div class="qr">
-                        <img src="/receipt-digitizer/appstore-qr.svg" alt="Scan to download Receipt Digitizer on the App Store">
+                        <img src="/receipt-digitizer/appstore-qr.svg" alt="Scan to download Receipt Digitizer: Scanner on the App Store">
                         <span>Scan with your iPhone camera</span>
                     </div>
                 </div>
@@ -158,7 +522,7 @@
                     <p>Thoughtfully crafted, privacy-first iOS apps. Made with care for the everyday.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Receipt Digitizer</h4>
+                    <h4>Receipt Digitizer: Scanner</h4>
                     <a href="/receipt-digitizer">Overview</a>
                     <a href="/receipt-digitizer#features">Features</a>
                     <a href="/receipt-digitizer#pricing">Pricing</a>
@@ -171,8 +535,8 @@
                 </div>
                 <div class="footer-col">
                     <h4>More apps</h4>
-                    <a href="/duplicate-photo-finder">Duplicate Photo Finder</a>
-                    <a href="/pillvault">PillVault</a>
+                    <a href="/duplicate-photo-finder">Duplicate Photo &amp; Video Finder</a>
+                    <a href="/pillvault">PillVault: Medication Tracker</a>
                     <a href="/">All apps</a>
                 </div>
             </div>
