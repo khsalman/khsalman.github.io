@@ -3,18 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Honest Fast - Track Your Fasts</title>
-    <meta name="description" content="Honest Fast: A fasting tracker with built-in Ramadan mode, astronomically calculated prayer times, metabolic stages, and health integration. Free on the App Store.">
+    <title>HonestFast: Fasting Tracker - Intermittent Fasting, Ramadan &amp; Sunnah Fasting</title>
+    <meta name="description" content="HonestFast is a fasting tracker for intermittent fasting and Islamic fasting. Track 16:8, 18:6, OMAD, Ramadan, Sehri, Iftar, Qada, and Sunnah fasts. Ketosis, autophagy stages, water tracking, Live Activity, Apple Watch. Free on iPhone.">
+    <link rel="canonical" href="https://khsalman.github.io/honestfast/">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://khsalman.github.io/honestfast/">
+    <meta property="og:title" content="HonestFast: Fasting Tracker - Intermittent Fasting, Ramadan &amp; Sunnah Fasting">
+    <meta property="og:description" content="Track 16:8, 18:6, OMAD, Ramadan, Sehri, Iftar, Qada, and Sunnah fasts. Fasting stages from Fed State to Deep Autophagy, water tracking, Live Activity, streaks and history.">
+    <meta property="og:image" content="https://khsalman.github.io/honestfast/HF-Icon.png">
+    <meta property="og:site_name" content="LynxApps">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HonestFast: Fasting Tracker">
+    <meta name="twitter:description" content="Intermittent fasting and Islamic fasting tracker. 16:8, OMAD, Ramadan mode, Sehri and Iftar times, Qada tracking, ketosis and autophagy stages.">
+    <meta name="twitter:image" content="https://khsalman.github.io/honestfast/HF-Icon.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "HonestFast: Fasting Tracker",
+      "description": "HonestFast is a fasting tracker for intermittent fasting and Islamic fasting. Track 16:8, 18:6, 20:4, OMAD, Ramadan, Qada, and Sunnah fasts. Fasting stages from Fed State to Deep Autophagy, water tracking, Live Activity, streaks and fasting history.",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "iOS 16",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "url": "https://khsalman.github.io/honestfast/",
+      "downloadUrl": "https://apps.apple.com/us/app/honest-fast-track-your-fasts/id6786001645",
+      "publisher": {
+        "@type": "Organization",
+        "name": "LynxApps",
+        "url": "https://khsalman.github.io"
+      }
+    }
+    </script>
+
+    <style>
+        .icon-hero {
+            width: 110px;
+            height: 110px;
+            border-radius: 26px;
+            box-shadow: 0 8px 32px rgba(0,0,0,.18);
+            display: block;
+            margin-bottom: 28px;
+        }
+
+        /* Screenshot gallery */
+        .screenshot-gallery {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 16px;
+            scrollbar-width: none;
+        }
+        .screenshot-gallery::-webkit-scrollbar { display: none; }
+        .screenshot-gallery img {
+            height: 520px;
+            width: auto;
+            border-radius: 28px;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,.15);
+            display: block;
+        }
+
+        /* Fasting plans */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .plan-card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 24px 20px;
+            text-align: center;
+        }
+        .plan-card.featured {
+            border: 2px solid var(--accent);
+            background: var(--accent-soft);
+        }
+        .plan-card .plan-ratio { font-size: 28px; font-weight: 900; color: var(--accent); margin-bottom: 6px; }
+        .plan-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+        .plan-card p { font-size: 12px; color: var(--muted); line-height: 1.4; }
+
+        /* Fasting stages */
+        .stages-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--line);
+        }
+        .stage-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 24px;
+            background: var(--card);
+            border-bottom: 1px solid var(--line);
+        }
+        .stage-item:last-child { border-bottom: none; }
+        .stage-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--accent-soft);
+            border: 2px solid var(--accent-border);
+            display: grid;
+            place-items: center;
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+        .stage-content h4 { font-size: 15px; font-weight: 700; margin-bottom: 2px; }
+        .stage-content p { font-size: 13px; color: var(--muted); }
+        .stage-time { font-size: 12px; font-weight: 600; color: var(--accent); margin-left: auto; white-space: nowrap; }
+
+        /* Ramadan section */
+        .ramadan-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .ramadan-item {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 28px;
+        }
+        .ramadan-item .r-icon { font-size: 32px; margin-bottom: 12px; }
+        .ramadan-item h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+        .ramadan-item p { font-size: 14px; color: var(--ink-2); line-height: 1.6; }
+
+        /* Feature detail two-column */
+        .feature-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            margin-top: 32px;
+        }
+        .feature-detail.reverse { direction: rtl; }
+        .feature-detail.reverse > * { direction: ltr; }
+        .feature-detail-text h2 { font-size: 30px; font-weight: 800; line-height: 1.2; margin-bottom: 16px; }
+        .feature-detail-text p { font-size: 16px; color: var(--ink-2); line-height: 1.7; margin-bottom: 12px; }
+        .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+        .feature-list li { display: flex; gap: 12px; font-size: 15px; color: var(--ink-2); }
+        .feature-list li::before { content: "&#10003;"; font-weight: 800; color: var(--accent); flex-shrink: 0; }
+
+        .highlight-box {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+        }
+        .highlight-box p { font-size: 16px; color: var(--ink-2); line-height: 1.7; margin: 0; }
+        .highlight-box strong { color: var(--ink); }
+
+        /* Free vs Premium */
+        .free-premium {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        .fp-block {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            padding: 36px 32px;
+        }
+        .fp-block.premium {
+            border: 2px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+        .fp-block.premium::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px 200px at 80% -20%, color-mix(in srgb, var(--g2) 8%, transparent), transparent 60%);
+            pointer-events: none;
+        }
+        .fp-block h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+        .fp-block .fp-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+        .fp-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+        .fp-list li { display: flex; gap: 12px; font-size: 15px; color: var(--ink-2); }
+        .fp-list li .icon { width: 28px; height: 28px; border-radius: 8px; background: var(--accent-soft); display: grid; place-items: center; flex-shrink: 0; font-size: 14px; }
+        .fp-list li strong { display: block; font-weight: 600; color: var(--ink); font-size: 14px; }
+        .fp-list li span { font-size: 13px; color: var(--muted); }
+
+        @media (max-width: 900px) {
+            .plans-grid { grid-template-columns: repeat(2, 1fr); }
+            .ramadan-grid { grid-template-columns: 1fr; }
+            .feature-detail { grid-template-columns: 1fr; gap: 28px; }
+            .feature-detail.reverse { direction: ltr; }
+            .free-premium { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .plans-grid { grid-template-columns: repeat(2, 1fr); }
+            .screenshot-gallery img { height: 380px; }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
             <a href="/" class="brand"><img src="/svg/lynxapps-lockup-blue.svg" alt="LynxApps"></a>
-            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
             <nav class="nav">
-                <a href="/" class="muted">← All apps</a>
+                <a href="/" class="muted">&#8592; All apps</a>
                 <a href="#features">Features</a>
                 <a href="#ramadan">Ramadan</a>
                 <a href="#pricing">Pricing</a>
@@ -27,169 +239,321 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">🌙 Fasting & Wellness Tracker</span>
-                <h1>Track your fasts with <span class="gradient-text">precision & purpose.</span></h1>
-                <p class="lead">Honest Fast combines an intuitive fasting timer, health insights, and a built-in Ramadan mode with astronomically calculated prayer times. Understand your metabolic stages, track hydration, and fast smarter.</p>
+                <span class="eyebrow">Fasting Tracker</span>
+                <img src="/honestfast/HF-Icon.png" alt="HonestFast: Fasting Tracker app icon" class="icon-hero">
+                <h1>Fast with<br><span class="gradient-text">purpose.</span></h1>
+                <p class="lead">HonestFast is a fasting tracker for both intermittent fasting and Islamic fasting. Track 16:8, 18:6, 20:4, and OMAD, or use dedicated Ramadan and Sunnah fasting tools to stay consistent with your fasting routine.</p>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/honest-fast-track-your-fasts/id6786001645" class="btn btn-primary">Download on App Store</a>
                     <a href="#features" class="btn btn-ghost">Explore features</a>
                 </div>
                 <div class="hero-meta">
-                    <div><div class="m-val gradient-text">6</div><div class="m-lbl">Fasting plans</div></div>
-                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device data</div></div>
-                    <div><div class="m-val gradient-text">iOS 14+</div><div class="m-lbl">iPhone & Apple Watch</div></div>
+                    <div><div class="m-val gradient-text">Free</div><div class="m-lbl">To start</div></div>
+                    <div><div class="m-val gradient-text">6</div><div class="m-lbl">Fasting stages</div></div>
+                    <div><div class="m-val gradient-text">iOS 16+</div><div class="m-lbl">iPhone</div></div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="device">
                     <div class="device-screen">
-                        <div class="d-icon"><img src="/honestfast/app-icon.jpg" alt="Honest Fast app icon"></div>
-                        <div class="d-title">Honest Fast</div>
-                        <div class="d-sub">Track your fasts with purpose</div>
+                        <div class="d-icon"><img src="/honestfast/HF-Icon.png" alt="HonestFast app icon"></div>
+                        <div class="d-title">HonestFast</div>
+                        <div class="d-sub">Fasting Tracker</div>
                     </div>
-                    <div class="device-float f1"><span class="dot">⏱️</span> Smart timer</div>
-                    <div class="device-float f2"><span class="dot">💪</span> Metabolic insights</div>
+                    <div class="device-float f1"><span class="dot">&#128293;</span> 14:23 fasting</div>
+                    <div class="device-float f2"><span class="dot">&#9889;</span> Ketosis reached</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Features -->
+    <!-- Screenshot gallery -->
+    <section class="section-sm" style="background: white; overflow: hidden;">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">App Screenshots</span>
+                <h2>See HonestFast in action</h2>
+            </div>
+        </div>
+        <div style="padding: 0 max(24px, calc((100vw - 1200px)/2));">
+            <div class="screenshot-gallery">
+                <img src="/honestfast/screenshots/HF-Splash-iPhone-01.png" alt="HonestFast - Fasting timer with metabolic stage tracking">
+                <img src="/honestfast/screenshots/HF-Splash-iPhone-02.png" alt="HonestFast - Intermittent fasting plans 16:8, 18:6, OMAD">
+                <img src="/honestfast/screenshots/HF-Splash-iPhone-03.png" alt="HonestFast - Ramadan mode with Sehri and Iftar times">
+                <img src="/honestfast/screenshots/HF-Splash-iPhone-04.png" alt="HonestFast - Prayer times and Hijri calendar">
+                <img src="/honestfast/screenshots/HF-Splash-iPhone-05.png" alt="HonestFast - Water tracking and hydration log">
+                <img src="/honestfast/screenshots/HF-Splash-iPhone-06.png" alt="HonestFast - Fasting history and streak view">
+                <img src="/honestfast/screenshots/HF-Splash-iPhone-07.png" alt="HonestFast - Analytics and fasting insights">
+                <img src="/honestfast/screenshots/HF-Splash-iPhone-08.png" alt="HonestFast - Live Activity on Lock Screen and Dynamic Island">
+            </div>
+        </div>
+    </section>
+
+    <!-- Intermittent fasting -->
     <section class="section" id="features">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Built for Fasters</span>
-                <h2>Everything you need to fast smarter</h2>
-                <p>A complete toolkit for tracking fasts, understanding your body, and achieving your wellness goals.</p>
+                <span class="eyebrow">Intermittent fasting</span>
+                <h2>Intermittent fasting made simple</h2>
+                <p>Start a fast with one tap and choose from the most popular fasting plans. Track your progress in real time and see exactly how long you have been fasting.</p>
             </div>
-            <div class="grid grid-3">
-                <div class="feature reveal">
-                    <div class="f-icon">⏱️</div>
-                    <h3>Intelligent Timer</h3>
-                    <p>Real-time fasting timer with elapsed time, metabolic stage indicators, and beautiful progress visualization. Works with Live Activity on lock screen.</p>
+            <div class="plans-grid reveal">
+                <div class="plan-card featured">
+                    <div class="plan-ratio">16:8</div>
+                    <h4>16:8 Fasting</h4>
+                    <p>16 hours fasting, 8-hour eating window. The most popular intermittent fasting protocol.</p>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">🔥</div>
-                    <h3>Metabolic Stages</h3>
-                    <p>Understand what's happening in your body. See when you enter fat-burning mode, peak autophagy, and recovery phases with detailed stage breakdowns.</p>
+                <div class="plan-card">
+                    <div class="plan-ratio">18:6</div>
+                    <h4>18:6 Fasting</h4>
+                    <p>18 hours fasting, 6-hour eating window. A step up for experienced fasters.</p>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">💧</div>
-                    <h3>Water Tracking</h3>
-                    <p>Log water intake throughout your fast. Track daily hydration and break fasts mindfully with hydration reminders and health integration.</p>
+                <div class="plan-card">
+                    <div class="plan-ratio">20:4</div>
+                    <h4>20:4 Warrior</h4>
+                    <p>20 hours fasting, 4-hour eating window. Extended fast for deeper ketosis.</p>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">📊</div>
-                    <h3>Fasting Insights</h3>
-                    <p>Analytics dashboard shows your trends, longest streaks, average fast duration, and achievements. Understand your patterns over time.</p>
+                <div class="plan-card">
+                    <div class="plan-ratio">OMAD</div>
+                    <h4>One Meal a Day</h4>
+                    <p>23+ hours fasting, one meal. Maximum discipline and simplicity.</p>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">🎯</div>
-                    <h3>6 Preset Plans</h3>
-                    <p>Choose from scientifically-backed fasting protocols: 16:8, 18:6, 20:4, OMAD, 24-hour, or create your own custom plan.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">⌚</div>
-                    <h3>Apple Watch & Widgets</h3>
-                    <p>Check your fast at a glance. Lock screen widgets, home screen shortcuts, and Apple Watch companion app keep you in the loop.</p>
+            </div>
+            <div style="margin-top: 20px;" class="reveal">
+                <div class="highlight-box">
+                    <p><strong>HonestFast Premium</strong> lets you create <strong>custom fasting plans from 10 to 48 hours</strong> - for every fasting style from 12:12 to extended multi-day fasts.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Ramadan Mode -->
-    <section class="section" id="ramadan" style="background:linear-gradient(180deg,#fff,var(--bg));">
+    <!-- Fasting stages -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="feature-detail reveal">
+                <div class="feature-detail-text">
+                    <span class="eyebrow">Metabolic stages</span>
+                    <h2>Understand your fasting stages</h2>
+                    <p>As your fast progresses, your body moves through distinct metabolic states. HonestFast tracks your current stage in real time so you always know exactly where you are in your fast.</p>
+                    <p>From the initial fed state all the way to deep autophagy, see your current stage update as you fast - and understand what your body is doing at every step.</p>
+                </div>
+                <div>
+                    <div class="stages-list">
+                        <div class="stage-item">
+                            <div class="stage-num">1</div>
+                            <div class="stage-content">
+                                <h4>Fed State</h4>
+                                <p>Body digesting and absorbing nutrients from the last meal</p>
+                            </div>
+                            <div class="stage-time">0-4 hrs</div>
+                        </div>
+                        <div class="stage-item">
+                            <div class="stage-num">2</div>
+                            <div class="stage-content">
+                                <h4>Catabolic State</h4>
+                                <p>Blood sugar normalizes, insulin drops, glycogen begins depleting</p>
+                            </div>
+                            <div class="stage-time">4-8 hrs</div>
+                        </div>
+                        <div class="stage-item">
+                            <div class="stage-num">3</div>
+                            <div class="stage-content">
+                                <h4>Fat Burning</h4>
+                                <p>Glycogen stores depleted, body switches to burning fat for fuel</p>
+                            </div>
+                            <div class="stage-time">8-12 hrs</div>
+                        </div>
+                        <div class="stage-item">
+                            <div class="stage-num">4</div>
+                            <div class="stage-content">
+                                <h4>Ketosis</h4>
+                                <p>Liver produces ketone bodies; brain and body run on ketones</p>
+                            </div>
+                            <div class="stage-time">12-18 hrs</div>
+                        </div>
+                        <div class="stage-item">
+                            <div class="stage-num">5</div>
+                            <div class="stage-content">
+                                <h4>Autophagy</h4>
+                                <p>Cellular cleanup begins - damaged cells are broken down and recycled</p>
+                            </div>
+                            <div class="stage-time">18-24 hrs</div>
+                        </div>
+                        <div class="stage-item">
+                            <div class="stage-num">6</div>
+                            <div class="stage-content">
+                                <h4>Deep Autophagy</h4>
+                                <p>Peak cellular renewal and immune function regeneration</p>
+                            </div>
+                            <div class="stage-time">24+ hrs</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ramadan mode -->
+    <section class="section" id="ramadan">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">🌙 Islamic Fasting</span>
-                <h2>Built-in Ramadan mode with prayer times</h2>
-                <p>Honest Fast automatically detects Ramadan and calculates precise Sehri and Iftar times based on your location using astronomical methods.</p>
+                <span class="eyebrow">Islamic fasting</span>
+                <h2>Built for Ramadan</h2>
+                <p>HonestFast includes a dedicated Ramadan mode with tools designed specifically for fasting during Ramadan - from automatic Sehri and Iftar times to prayer times and Qada tracking.</p>
             </div>
-            <div class="grid grid-2">
-                <div class="feature reveal">
-                    <div class="f-icon">🕌</div>
-                    <h3>Auto-Detected Ramadan</h3>
-                    <p>The app automatically recognizes Ramadan using the Islamic (Hijri) calendar and switches to special Ramadan mode with enhanced features and reminders.</p>
+            <div class="ramadan-grid reveal">
+                <div class="ramadan-item">
+                    <div class="r-icon">&#9790;&#65039;</div>
+                    <h3>Automatic Ramadan detection</h3>
+                    <p>HonestFast uses the Hijri calendar to automatically detect Ramadan. No manual setup needed - the app knows when Ramadan begins and switches to Ramadan mode.</p>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">🌅</div>
-                    <h3>Sehri & Iftar Times</h3>
-                    <p>Astronomically calculated using the Muslim World League method. Get precise prayer times (Fajr through Isha) for your location with automatic timezone handling.</p>
+                <div class="ramadan-item">
+                    <div class="r-icon">&#127759;</div>
+                    <h3>Sehri and Iftar times</h3>
+                    <p>Astronomically calculated Sehri (Suhoor) and Iftar times for your exact location. Set individual reminders so you never miss Sehri or Iftar.</p>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">📍</div>
-                    <h3>Location Support</h3>
-                    <p>600+ cities across 140+ countries. Use GPS for automatic location, or select your city manually. Accurate times in any timezone.</p>
+                <div class="ramadan-item">
+                    <div class="r-icon">&#128204;</div>
+                    <h3>Prayer times</h3>
+                    <p>Full prayer times for your location - Fajr, Dhuhr, Asr, Maghrib, and Isha. Supports both location-based and city selection for accurate times worldwide.</p>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">🔔</div>
-                    <h3>Smart Notifications</h3>
-                    <p>Get reminders for Sehri start/end and Iftar time with customizable notifications. Never miss an important time.</p>
+                <div class="ramadan-item">
+                    <div class="r-icon">&#128203;</div>
+                    <h3>Qada fasting tracker</h3>
+                    <p>Track missed Ramadan fasts and your Qada (makeup) fasting. Keep a clear record of which fasts still need to be made up throughout the year.</p>
+                </div>
+                <div class="ramadan-item">
+                    <div class="r-icon">&#127358;</div>
+                    <h3>Sunnah and voluntary fasts</h3>
+                    <p>Plan and track voluntary Islamic fasts alongside your regular routine. Track Ramadan, Qada, and voluntary Sunnah fasts in one place throughout the year.</p>
+                </div>
+                <div class="ramadan-item">
+                    <div class="r-icon">&#128337;</div>
+                    <h3>Voluntary Fajr to Maghrib</h3>
+                    <p>Log voluntary Sunnah fasts from Fajr to Maghrib. HonestFast calculates the fast duration automatically based on your local prayer times.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="section" id="pricing">
+    <!-- Live Activity + Water -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="feature-detail reveal">
+                <div class="feature-detail-text">
+                    <span class="eyebrow">Live Activity</span>
+                    <h2>Keep your fast visible, everywhere</h2>
+                    <p>Live Activities show your fasting timer, progress, fasting plan, and start and end times directly on the Lock Screen and Dynamic Island - so you never need to open the app to check how long you have been fasting.</p>
+                    <p>Log water directly from your Live Activity during supported fasts, without unlocking your phone.</p>
+                    <ul class="feature-list">
+                        <li>Real-time fasting timer on the Lock Screen</li>
+                        <li>Dynamic Island integration</li>
+                        <li>Fasting plan, start and end times visible at a glance</li>
+                        <li>Log water from the Lock Screen</li>
+                        <li>Home Screen widgets for quick progress check</li>
+                    </ul>
+                </div>
+                <div class="feature-detail-visual">
+                    <div style="background: linear-gradient(135deg, var(--accent-soft), var(--bg)); border-radius: var(--radius-lg); padding: 40px; text-align: center; border: 1px solid var(--accent-border);">
+                        <div style="font-size: 56px; margin-bottom: 16px;">&#127963;</div>
+                        <div style="font-size: 18px; font-weight: 800; color: var(--ink); margin-bottom: 8px;">Live Activity</div>
+                        <div style="font-size: 13px; color: var(--muted); margin-bottom: 24px;">Always visible on your Lock Screen</div>
+                        <div style="background: #1c1c1e; border-radius: 16px; padding: 16px 20px; text-align: left;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span style="font-size: 12px; color: #8e8e93;">HonestFast</span>
+                                <span style="font-size: 12px; color: #8e8e93;">16:8 Fast</span>
+                            </div>
+                            <div style="font-size: 28px; font-weight: 800; color: #f97316; margin-bottom: 4px;">14h 23m</div>
+                            <div style="background: rgba(249,115,22,.2); height: 6px; border-radius: 3px; margin-bottom: 8px; overflow: hidden;">
+                                <div style="background: #f97316; height: 100%; width: 75%; border-radius: 3px;"></div>
+                            </div>
+                            <div style="font-size: 11px; color: #8e8e93;">Iftar in 1h 37m &nbsp;&#183;&nbsp; &#128167; 1.4L today</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water tracking + Streaks -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Hydration and history</span>
+                <h2>Water tracking and fasting history</h2>
+                <p>Staying hydrated during a fast is essential. HonestFast makes water logging frictionless - and keeps a complete record of every fast you complete.</p>
+            </div>
+            <div class="grid grid-3 reveal">
+                <div class="feature">
+                    <div class="f-icon">&#128167;</div>
+                    <h3>Water tracking</h3>
+                    <p>Log water from the app or directly from your Lock Screen Live Activity. Daily water count resets automatically and syncs across Apple devices.</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">&#128293;</div>
+                    <h3>Fasting streaks</h3>
+                    <p>Build consistency. See your current and longest fasting streaks, and watch your discipline compound over time.</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">&#128218;</div>
+                    <h3>Fasting history</h3>
+                    <p>Review completed fasts with full details - duration, fasting plan, and metabolic stage reached. Create share cards to celebrate milestones.</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">&#128200;</div>
+                    <h3>Smart insights</h3>
+                    <p>View fasting trends, heatmaps, plan performance, and metabolic stage analytics. Understand how your fasting routine changes over time. (Premium)</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">&#10084;&#65039;</div>
+                    <h3>Apple Health</h3>
+                    <p>Connect HonestFast with Apple Health to read and write body weight data alongside your fasting records.</p>
+                </div>
+                <div class="feature">
+                    <div class="f-icon">&#9729;&#65039;</div>
+                    <h3>iCloud sync</h3>
+                    <p>Keep your fasting history available across all your Apple devices. Active fasting and water tracking can stay synchronized when supported.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free vs Premium -->
+    <section class="section" id="pricing" style="background: white;">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>
-                <h2>Free to try. Premium features when you're ready.</h2>
-                <p>All core fasting features are free. Upgrade for advanced analytics and custom plans.</p>
+                <h2>Start free. Go deeper with Premium.</h2>
+                <p>HonestFast is free to download with all core fasting tools included. Premium unlocks advanced analytics and custom fasting plans for fasters who want to go further.</p>
             </div>
-
-            <div class="pricing reveal">
-                <div class="price-card">
-                    <h3>Free</h3>
-                    <div class="amount">$0</div>
-                    <div class="per">Forever</div>
-                    <ul>
-                        <li>Smart fasting timer</li>
-                        <li>6 preset fasting plans</li>
-                        <li>Metabolic stage tracking</li>
-                        <li>Water logging</li>
-                        <li>Ramadan mode with prayer times</li>
-                        <li>Streaks & history</li>
+            <div class="free-premium reveal">
+                <div class="fp-block">
+                    <h3>HonestFast Free</h3>
+                    <p class="fp-sub">Everything you need to start fasting.</p>
+                    <ul class="fp-list">
+                        <li><span class="icon">&#9201;</span><div><strong>Fasting timer and preset plans</strong><span>16:8, 18:6, 20:4, and OMAD</span></div></li>
+                        <li><span class="icon">&#9889;</span><div><strong>Metabolic stage tracking</strong><span>Fed State to Deep Autophagy in real time</span></div></li>
+                        <li><span class="icon">&#9790;&#65039;</span><div><strong>Ramadan mode</strong><span>Automatic detection, Sehri and Iftar times</span></div></li>
+                        <li><span class="icon">&#128204;</span><div><strong>Prayer times</strong><span>Accurate times for your location</span></div></li>
+                        <li><span class="icon">&#128203;</span><div><strong>Qada and voluntary fasting</strong><span>Track Sunnah and makeup fasts</span></div></li>
+                        <li><span class="icon">&#128167;</span><div><strong>Water tracking</strong><span>Log from the app or Live Activity</span></div></li>
+                        <li><span class="icon">&#128293;</span><div><strong>Streaks and fasting history</strong><span>Complete record of every fast</span></div></li>
+                        <li><span class="icon">&#127963;</span><div><strong>Live Activity and Dynamic Island</strong><span>Timer and progress on your Lock Screen</span></div></li>
+                        <li><span class="icon">&#9729;&#65039;</span><div><strong>iCloud sync</strong><span>Fasting history across your Apple devices</span></div></li>
                     </ul>
-                    <a href="https://apps.apple.com/us/app/honest-fast-track-your-fasts/id6786001645" class="btn btn-soft">Download free</a>
                 </div>
-                <div class="price-card featured">
-                    <div class="tag-pop">Most popular</div>
-                    <h3>Premium Monthly</h3>
-                    <div class="amount">$1.99</div>
-                    <div class="per">Per month</div>
-                    <ul>
-                        <li>All free features</li>
-                        <li>Custom fasting plans</li>
-                        <li>Advanced insights</li>
-                        <li>Trend analytics</li>
-                        <li>Heatmaps & breakdowns</li>
-                        <li>Ad-free experience</li>
+                <div class="fp-block premium">
+                    <h3><span class="gradient-text">HonestFast Premium</span></h3>
+                    <p class="fp-sub">Everything in Free, plus deeper analysis:</p>
+                    <ul class="fp-list">
+                        <li><span class="icon">&#128200;</span><div><strong>Fasting trends and heatmaps</strong><span>See your fasting patterns over weeks and months</span></div></li>
+                        <li><span class="icon">&#128202;</span><div><strong>Detailed fasting analytics</strong><span>Fasting breakdowns and metabolic stage analytics</span></div></li>
+                        <li><span class="icon">&#127919;</span><div><strong>Plan performance insights</strong><span>Which fasting plans work best for you</span></div></li>
+                        <li><span class="icon">&#9881;&#65039;</span><div><strong>Custom fasting plans</strong><span>Create any plan from 10 to 48 hours</span></div></li>
                     </ul>
-                    <a href="https://apps.apple.com/us/app/honest-fast-track-your-fasts/id6786001645" class="btn btn-primary">Upgrade to Premium</a>
-                </div>
-                <div class="price-card">
-                    <h3>Premium Yearly</h3>
-                    <div class="amount">$14.99</div>
-                    <div class="per">Per year · save 37%</div>
-                    <ul>
-                        <li>All premium features</li>
-                        <li>Best annual value</li>
-                        <li>Continuous updates</li>
-                    </ul>
-                    <a href="https://apps.apple.com/us/app/honest-fast-track-your-fasts/id6786001645" class="btn btn-soft">Upgrade to Premium</a>
-                </div>
-                <div class="price-card">
-                    <h3>Premium Lifetime</h3>
-                    <div class="amount">$29.99</div>
-                    <div class="per">One-time purchase</div>
-                    <ul>
-                        <li>Lifetime access</li>
-                        <li>All features forever</li>
-                        <li>No recurring charges</li>
-                    </ul>
-                    <a href="https://apps.apple.com/us/app/honest-fast-track-your-fasts/id6786001645" class="btn btn-soft">Upgrade to Premium</a>
+                    <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line);">
+                        <p style="font-size: 14px; color: var(--ink-2);">Whether you practice <strong>intermittent fasting, 16:8, OMAD, Ramadan fasting, Sunnah fasting, or voluntary fasting</strong>, HonestFast gives you the tools to track your fast, understand your progress, and stay consistent.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -199,19 +563,19 @@
     <section class="section-sm">
         <div class="container">
             <div class="cta reveal">
-                <h2>Now available on the App Store</h2>
-                <p>Download Honest Fast free today. Track your fasts with precision, understand your metabolic stages, and fast smarter - all privately on your device.</p>
+                <h2>Fast with purpose</h2>
+                <p>Download HonestFast free on the App Store. Intermittent fasting, Ramadan mode, Sunnah fasting, and more - all in one app.</p>
                 <div style="display:flex;justify-content:center;margin:8px 0 28px;">
                     <div class="qr">
-                        <img src="/honestfast/appstore-qr.svg" alt="Scan to download Honest Fast on the App Store">
+                        <img src="/honestfast/appstore-qr.svg" alt="Scan to download HonestFast: Fasting Tracker on the App Store">
                         <span>Scan with your iPhone camera</span>
                     </div>
                 </div>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/honest-fast-track-your-fasts/id6786001645" class="btn btn-white">Download on App Store</a>
-                    <a href="/honestfast/support" class="btn btn-on-dark">Visit support</a>
+                    <a href="/honestfast/support" class="btn btn-on-dark">Support &amp; FAQ</a>
                 </div>
-                <div style="margin-top:28px;"><span class="review-note">✅ Status: Live on the App Store</span></div>
+                <div style="margin-top:28px;"><span class="review-note">&#10003; Status: Live on the App Store</span></div>
             </div>
         </div>
     </section>
@@ -225,7 +589,7 @@
                     <p>Thoughtfully crafted, privacy-first iOS apps. Made with care for the everyday.</p>
                 </div>
                 <div class="footer-col">
-                    <h4>Honest Fast</h4>
+                    <h4>HonestFast</h4>
                     <a href="/honestfast">Overview</a>
                     <a href="/honestfast#features">Features</a>
                     <a href="/honestfast#ramadan">Ramadan</a>
@@ -239,15 +603,19 @@
                 </div>
                 <div class="footer-col">
                     <h4>More apps</h4>
+                    <a href="/vow">Vow</a>
+                    <a href="/zakatbook">Zakat Book</a>
+                    <a href="/pillvault">PillVault</a>
                     <a href="/">All apps</a>
-                    <a href="/inspectkit">InspectKit</a>
-                    <a href="/reefdose">ReefDose</a>
-                    <a href="/subguard">SubGuard</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
-                <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a>
+                <span>
+                    <a href="/honestfast/privacy">Privacy</a> &nbsp;&#183;&nbsp;
+                    <a href="/honestfast/terms">Terms</a> &nbsp;&#183;&nbsp;
+                    <a href="/honestfast/support">Support</a>
+                </span>
             </div>
         </div>
     </footer>
