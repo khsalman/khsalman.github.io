@@ -3,10 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PropertyNest — Digital Passport for Every Property</title>
-    <meta name="description" content="PropertyNest: catalog every property, room, appliance, document, warranty, and maintenance record in one private place on your iPhone.">
+    <title>PropertyNest: Home Organizer — Home Management, Maintenance &amp; Property Records</title>
+    <meta name="description" content="PropertyNest keeps home maintenance, warranties, appliances, receipts and property records organized, searchable and ready when you need them. Free on iPhone.">
+    <meta name="keywords" content="home management, home maintenance app, home inventory, warranty tracker, property records, home binder, appliance tracker, receipts organizer, home organizer app, property manager iPhone">
+    <!-- Open Graph -->
+    <meta property="og:title" content="PropertyNest: Home Organizer — Everything Your Home Needs to Remember">
+    <meta property="og:description" content="Track maintenance. Store warranties. Save receipts and manuals. Organize appliances and assets. Build a complete digital record of every property you own.">
+    <meta property="og:image" content="https://khsalman.github.io/propertynest/PN-icon.png">
+    <meta property="og:url" content="https://khsalman.github.io/propertynest">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PropertyNest: Home Organizer">
+    <meta name="twitter:description" content="Home management, maintenance, warranties and property records — all in one private place on your iPhone.">
+    <meta name="twitter:image" content="https://khsalman.github.io/propertynest/PN-icon.png">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://khsalman.github.io/propertynest">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PropertyNest: Home Organizer",
+      "operatingSystem": "iOS",
+      "applicationCategory": "LifestyleApplication",
+      "offers": [
+        { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        { "@type": "Offer", "price": "3.99", "priceCurrency": "USD", "description": "Premium Monthly" },
+        { "@type": "Offer", "price": "29.99", "priceCurrency": "USD", "description": "Premium Yearly" }
+      ],
+      "url": "https://apps.apple.com/us/app/propertynest-home-organizer/id6794704452",
+      "description": "PropertyNest keeps home maintenance, warranties, appliances, receipts and property records organized, searchable and ready when you need them."
+    }
+    </script>
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        .screenshot-gallery {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 24px 0 8px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .screenshot-gallery img {
+            height: 480px;
+            width: auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+            scroll-snap-align: start;
+            flex-shrink: 0;
+        }
+        .app-icon-hero {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            margin-bottom: 20px;
+        }
+        .flow-chain {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            align-items: center;
+            justify-content: center;
+            margin: 28px 0 0;
+        }
+        .flow-chain-item {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+        .flow-chain-arrow {
+            padding: 0 8px;
+            color: var(--muted);
+            font-size: 18px;
+        }
+        @media (max-width: 600px) {
+            .screenshot-gallery img { height: 340px; }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -27,25 +108,26 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">🏘️ Digital Property Passport</span>
-                <h1>Every property. Every room. Every record. <span class="gradient-text">All private.</span></h1>
-                <p class="lead">PropertyNest is your home's complete digital memory. Catalog appliances, scan documents, log maintenance history, and track warranties for every property you own -- privately on your iPhone. No account required.</p>
+                <img src="/propertynest/PN-icon.png" alt="PropertyNest: Home Organizer app icon" class="app-icon-hero">
+                <span class="eyebrow">🏡 Home Management &amp; Property Records</span>
+                <h1>Your home has a lot to remember. <span class="gradient-text">PropertyNest keeps it all.</span></h1>
+                <p class="lead">Track maintenance, store warranties, save receipts and manuals, organize appliances and assets, keep property records, service history and important documents — organized, searchable and ready when you need them.</p>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/propertynest-home-organizer/id6794704452" class="btn btn-primary">Download on App Store</a>
                     <a href="/propertynest/support" class="btn btn-ghost">Support</a>
                 </div>
                 <div class="hero-meta">
-                    <div><div class="m-val gradient-text">All</div><div class="m-lbl">Properties in one place</div></div>
-                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device privacy</div></div>
                     <div><div class="m-val gradient-text">Free</div><div class="m-lbl">to get started</div></div>
+                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device privacy</div></div>
+                    <div><div class="m-val gradient-text">All</div><div class="m-lbl">Properties in one place</div></div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="device">
                     <div class="device-screen">
-                        <div class="d-icon">🏘️</div>
+                        <div class="d-icon">🏡</div>
                         <div class="d-title">PropertyNest</div>
-                        <div class="d-sub">Digital passport for every property</div>
+                        <div class="d-sub">Home Organizer</div>
                     </div>
                     <div class="device-float f1"><span class="dot">🔧</span> Boiler service due in 3 days</div>
                     <div class="device-float f2"><span class="dot">📄</span> 12 documents stored</div>
@@ -54,92 +136,229 @@
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="section" id="features">
+    <!-- Screenshot Gallery -->
+    <section class="section-sm" style="overflow:hidden;">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Built for homeowners</span>
-                <h2>Everything your property needs, in one organized place</h2>
-                <p>A focused record-keeping app for every property you own -- not a generic notes tool.</p>
+                <span class="eyebrow">See it in action</span>
+                <h2>Built for how homeowners actually think</h2>
+                <p>Every property, room, asset and document — connected and always within reach.</p>
             </div>
-            <div class="grid grid-3">
-                <div class="feature reveal">
-                    <div class="f-icon">📋</div>
-                    <h3>Multi-Property Catalog</h3>
-                    <p>Add every property you own with address, type, and key details. Each property gets its own dashboard, room list, and asset inventory. Switch between properties in a tap.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">🚪</div>
-                    <h3>Room-by-Room Organization</h3>
-                    <p>Structure each property room by room. Assign appliances, fixtures, and systems to their exact location so you always know what is where -- and who installed it.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">📸</div>
-                    <h3>OCR Document Scanning</h3>
-                    <p>Point your camera at any warranty card, appliance manual, or service receipt. PropertyNest extracts the text and files it under the right asset automatically.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">🛠️</div>
-                    <h3>Maintenance and Service History</h3>
-                    <p>Log every repair, service visit, and self-fix with date, cost, contractor, and photos. Know exactly when the boiler was last serviced -- and what it cost.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">⏰</div>
-                    <h3>Smart Reminders and Timeline</h3>
-                    <p>Set reminders for annual services, filter changes, or warranty expirations. A unified timeline shows all upcoming tasks across every property you manage.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">📄</div>
-                    <h3>Property Passport Export</h3>
-                    <p>Generate a comprehensive PDF of your full property record -- perfect for insurance claims, tenant handovers, or selling. Premium feature.</p>
-                </div>
+        </div>
+        <div style="padding: 0 24px;">
+            <div class="screenshot-gallery reveal">
+                <img src="/propertynest/screenshot/PN-SS-iPhone01.png" alt="PropertyNest home screen — manage multiple properties">
+                <img src="/propertynest/screenshot/PN-SS-iPhone02.png" alt="PropertyNest room organization and asset tracking">
+                <img src="/propertynest/screenshot/PN-SS-iPhone03.png" alt="PropertyNest maintenance records and service history">
+                <img src="/propertynest/screenshot/PN-SS-iPhone04.png" alt="PropertyNest warranty and document storage">
+                <img src="/propertynest/screenshot/PN-SS-iPhone05.png" alt="PropertyNest OCR document scanning">
+                <img src="/propertynest/screenshot/PN-SS-iPhone06.png" alt="PropertyNest home maintenance reminders and tasks">
+                <img src="/propertynest/screenshot/PN-SS-iPhone07.png" alt="PropertyNest property records and home inventory">
+                <img src="/propertynest/screenshot/PN-SS-iPhone08.png" alt="PropertyNest Property Passport PDF export">
             </div>
         </div>
     </section>
 
-    <!-- How it works -->
-    <section class="section" id="how" style="background:linear-gradient(180deg,#fff,var(--bg));">
+    <!-- Your home, finally organized -->
+    <section class="section" id="features">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Simple Workflow</span>
-                <h2>Get your property organized in minutes</h2>
+                <span class="eyebrow">Your Home, Finally Organized</span>
+                <h2>One place for everything your home needs to remember</h2>
+                <p>PropertyNest connects the pieces of your property instead of scattering them across different apps, drawers, and emails.</p>
+                <div class="flow-chain">
+                    <div class="flow-chain-item">Property</div>
+                    <div class="flow-chain-arrow">→</div>
+                    <div class="flow-chain-item">Rooms</div>
+                    <div class="flow-chain-arrow">→</div>
+                    <div class="flow-chain-item">Assets</div>
+                    <div class="flow-chain-arrow">→</div>
+                    <div class="flow-chain-item">Documents</div>
+                    <div class="flow-chain-arrow">→</div>
+                    <div class="flow-chain-item">Warranties</div>
+                    <div class="flow-chain-arrow">→</div>
+                    <div class="flow-chain-item">Maintenance</div>
+                </div>
             </div>
-            <div class="steps">
-                <div class="step reveal"><h3>Add your property</h3><p>Enter a property name, type, and address. PropertyNest creates a full dashboard instantly. Add as many properties as you own.</p></div>
-                <div class="step reveal"><h3>Catalog rooms and assets</h3><p>Add each room, then populate it with appliances, fixtures, and systems. Capture model numbers, serial numbers, purchase dates, and warranties.</p></div>
-                <div class="step reveal"><h3>Log, scan, and remind</h3><p>Scan documents with your camera, log service visits with receipts and photos, and set reminders so nothing falls through the cracks again.</p></div>
+            <div class="grid grid-3">
+                <div class="feature reveal">
+                    <div class="f-icon">🏠</div>
+                    <h3>Multi-Property Management</h3>
+                    <p>Manage one or multiple properties from a single app. Homes, rentals, vacation properties, investment properties — each gets its own organized dashboard, room list, and complete record.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🚪</div>
+                    <h3>Room-by-Room Inventory</h3>
+                    <p>Organize rooms and spaces within each property. Track appliances, systems, furniture and valuable assets by exact location so you always know what is where — and when it was last serviced.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🔧</div>
+                    <h3>Home Maintenance Tracking</h3>
+                    <p>Stay ahead of the work your home needs. Create maintenance tasks, schedule recurring upkeep, record completed service, attach photos and documents, and track costs. Keep a clear history of repairs, inspections and improvements.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📜</div>
+                    <h3>Warranties &amp; Documents</h3>
+                    <p>Store warranty details, receipts, manuals, invoices and certificates with the property or asset they belong to. Track warranty expiry dates and find critical paperwork in seconds — not hours.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📸</div>
+                    <h3>Smart Document Scanning (OCR)</h3>
+                    <p>Built-in OCR captures useful information from receipts, warranties, manuals and equipment labels. Everything stays searchable and connected to the right property or asset — entirely on-device.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📋</div>
+                    <h3>Property Passport Export</h3>
+                    <p>Generate a comprehensive Property Passport containing your organized property information — useful for insurance claims, ownership records, property handovers and future reference. Premium feature.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- What you can track -->
-    <section class="section-sm">
+    <section class="section-sm" style="background: white;">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Everything in one place</span>
-                <h2>Your complete property record</h2>
-                <p>Track everything that matters for every property you own.</p>
+                <h2>Your complete home record</h2>
+                <p>Stop searching through drawers, emails, photo libraries and scattered notes for the information you need.</p>
             </div>
             <div class="stats reveal">
                 <div class="stat"><div class="s-val">🏠</div><div class="s-lbl">Properties</div></div>
-                <div class="stat"><div class="s-val">🚪</div><div class="s-lbl">Rooms</div></div>
-                <div class="stat"><div class="s-val">🔧</div><div class="s-lbl">Appliances</div></div>
-                <div class="stat"><div class="s-val">📄</div><div class="s-lbl">Documents</div></div>
+                <div class="stat"><div class="s-val">🚪</div><div class="s-lbl">Rooms &amp; Spaces</div></div>
+                <div class="stat"><div class="s-val">🔧</div><div class="s-lbl">Appliances &amp; Assets</div></div>
+                <div class="stat"><div class="s-val">📄</div><div class="s-lbl">Documents &amp; Manuals</div></div>
                 <div class="stat"><div class="s-val">🔒</div><div class="s-lbl">Warranties</div></div>
-                <div class="stat"><div class="s-val">🛠️</div><div class="s-lbl">Service records</div></div>
+                <div class="stat"><div class="s-val">🛠️</div><div class="s-lbl">Service Records</div></div>
+                <div class="stat"><div class="s-val">🧾</div><div class="s-lbl">Receipts</div></div>
                 <div class="stat"><div class="s-val">⏰</div><div class="s-lbl">Reminders</div></div>
-                <div class="stat"><div class="s-val">📊</div><div class="s-lbl">Timeline</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep feature sections -->
+    <section class="section" style="background:linear-gradient(180deg,var(--bg),#fff);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Home Maintenance</span>
+                <h2>Stay ahead of the work your home needs</h2>
+                <p>Keep a clear history of repairs, inspections, servicing and improvements instead of relying on memory, scattered notes or paper folders.</p>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <h3>Create and schedule tasks</h3>
+                    <p>Build maintenance checklists, schedule recurring upkeep — HVAC filters, boiler service, gutter cleaning — and receive reminders before important dates so nothing gets forgotten.</p>
+                </div>
+                <div class="step reveal">
+                    <h3>Record every service visit</h3>
+                    <p>Log completed work with date, contractor, description, cost, and photos. Know exactly when the roof was last inspected, what it cost, and who did the work.</p>
+                </div>
+                <div class="step reveal">
+                    <h3>Track costs and history</h3>
+                    <p>Build a running cost record for each property. See what you've spent on maintenance, repairs and improvements — valuable context for insurance, selling or renovating.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Home Records</span>
+                <h2>Remember the details that are easy to forget</h2>
+                <p>Paint colours, flooring information, electrical details, shutoff locations, utility providers, trade contacts and other important home information — organized and accessible.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal">
+                    <div class="f-icon">🎨</div>
+                    <h3>Paint &amp; Finish Records</h3>
+                    <p>Save paint colours, brand, and finish for every room. Never repaint the wrong shade or spend an afternoon searching old photos for the colour you used three years ago.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">⚡</div>
+                    <h3>Utility &amp; Shutoff Details</h3>
+                    <p>Keep meter locations, shutoff valve positions, fuse box information, and utility provider contacts organised and findable when you need them most — like during an emergency.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🏗️</div>
+                    <h3>Renovation &amp; Improvement History</h3>
+                    <p>Track renovation projects, costs and improvements. Build a clearer record of the work and investment behind your property — useful for insurance, valuations and future sales.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🛡️</div>
+                    <h3>Insurance &amp; Certificates</h3>
+                    <p>Store insurance policy details, certificates, coverage notes and renewal dates. Keep all the paperwork connected to the property it covers.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">📞</div>
+                    <h3>Trade Contacts</h3>
+                    <p>Save details for plumbers, electricians, builders and other contractors linked to each property. Find the right contact fast when something needs fixing.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🔍</div>
+                    <h3>Search Everything</h3>
+                    <p>Search across your entire property record — assets, documents, maintenance history, warranties, and contacts. Everything is indexed and findable in seconds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy section -->
+    <section class="section-sm" style="background: white;">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Private by Design</span>
+                <h2>Your property information is personal. It stays that way.</h2>
+                <p>Property information is sensitive. PropertyNest is built with privacy and secure local storage in mind, using Apple technologies throughout — no accounts required, no data uploaded.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal">
+                    <div class="f-icon">📱</div>
+                    <h3>On-Device Storage</h3>
+                    <p>All data — properties, rooms, assets, documents, warranties, and records — is stored locally in SwiftData on your iPhone. Nothing leaves your device without your explicit action.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">🔐</div>
+                    <h3>No Account Required</h3>
+                    <p>Download and start organizing immediately. No sign-up, no email address, no account. Your property records belong to you — not to a cloud platform.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">☁️</div>
+                    <h3>Optional iCloud Sync</h3>
+                    <p>Premium subscribers can enable iCloud sync via CloudKit — your data syncs to your personal Apple account, which only you can access. Sync is optional and off by default.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who it's for -->
+    <section class="section" style="background:linear-gradient(180deg,var(--bg),#fff);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Made For</span>
+                <h2>One place for every kind of property owner</h2>
+                <p>Whether you own one home or multiple properties, PropertyNest helps you build a complete digital record of what you own and everything that happens to it.</p>
+            </div>
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val">🏠</div><div class="s-lbl">Homeowners</div></div>
+                <div class="stat"><div class="s-val">🏘️</div><div class="s-lbl">Property owners</div></div>
+                <div class="stat"><div class="s-val">🔑</div><div class="s-lbl">Landlords</div></div>
+                <div class="stat"><div class="s-val">🏖️</div><div class="s-lbl">Vacation homes</div></div>
+                <div class="stat"><div class="s-val">📈</div><div class="s-lbl">Investors</div></div>
+                <div class="stat"><div class="s-val">👨‍👩‍👧</div><div class="s-lbl">Families</div></div>
+                <div class="stat"><div class="s-val">🏢</div><div class="s-lbl">Property managers</div></div>
+                <div class="stat"><div class="s-val">🏡</div><div class="s-lbl">Rental owners</div></div>
             </div>
         </div>
     </section>
 
     <!-- Free vs Premium -->
-    <section class="section" style="background: white;">
+    <section class="section" style="background: white;" id="pricing">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">What's included</span>
                 <h2>Start free. Unlock more when you need it.</h2>
-                <p>The free tier is great for a single home. Upgrade for multiple properties and unlimited records.</p>
+                <p>The free tier is great for a single home. Upgrade for multiple properties, unlimited records and a complete Property Passport.</p>
             </div>
             <div style="overflow-x: auto;" class="reveal">
                 <table class="comp-table">
@@ -170,12 +389,12 @@
     </section>
 
     <!-- Pricing -->
-    <section class="section" id="pricing">
+    <section class="section">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>
                 <h2>Simple, transparent pricing</h2>
-                <p>Free to start. Upgrade with a 7-day free trial -- cancel anytime.</p>
+                <p>Free to start. Upgrade with a 7-day free trial — cancel anytime.</p>
             </div>
             <div class="pricing reveal">
                 <div class="price-card">
@@ -225,11 +444,11 @@
     <section class="section-sm">
         <div class="container">
             <div class="cta reveal">
-                <h2>Available now on the App Store</h2>
-                <p>Give every property its complete digital record. Download PropertyNest free and upgrade to Premium for unlimited properties and assets.</p>
+                <h2>Build your property's digital record today</h2>
+                <p>Stop searching through drawers, emails, photo libraries and scattered notes. PropertyNest keeps your home's maintenance, warranties, appliances, receipts and property records organized, searchable and ready when you need them.</p>
                 <div style="display:flex;justify-content:center;margin:8px 0 28px;">
                     <div class="qr">
-                        <img src="/propertynest/appstore-qr.svg" alt="Scan to download PropertyNest on the App Store">
+                        <img src="/propertynest/appstore-qr.svg" alt="Scan to download PropertyNest: Home Organizer on the App Store">
                         <span>Scan with your iPhone camera</span>
                     </div>
                 </div>
@@ -271,7 +490,7 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
-                <a href="mailto:support@lynxapps.com">support@lynxapps.com</a>
+                <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a>
             </div>
         </div>
     </footer>
