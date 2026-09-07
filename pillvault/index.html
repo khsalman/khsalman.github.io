@@ -12,12 +12,14 @@
     <meta property="og:url" content="https://khsalman.github.io/pillvault/">
     <meta property="og:title" content="PillVault: Medication Tracker — Pill Reminder, Dose Log &amp; Refill Tracker">
     <meta property="og:description" content="Track every dose, stay ahead of refills, understand your adherence, and bring a clear medication report to your next doctor visit.">
+    <meta property="og:image" content="https://khsalman.github.io/pillvault/icon.png">
     <meta property="og:site_name" content="LynxApps">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PillVault: Medication Tracker">
     <meta name="twitter:description" content="Track every dose, stay ahead of refills, understand your adherence, and bring a clear medication report to your next doctor visit.">
+    <meta name="twitter:image" content="https://khsalman.github.io/pillvault/icon.png">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://khsalman.github.io/pillvault/">
@@ -38,6 +40,7 @@
         },
         "url": "https://khsalman.github.io/pillvault/",
         "downloadUrl": "https://apps.apple.com/us/app/pillvault/id6773266360",
+        "image": "https://khsalman.github.io/pillvault/icon.png",
         "author": {
             "@type": "Organization",
             "name": "LynxApps",
@@ -48,6 +51,180 @@
 
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        /* ── App icon in hero ── */
+        .pill-app-icon {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            box-shadow: 0 8px 32px rgba(0,0,0,.18);
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        /* ── Screenshots gallery ── */
+        .screenshots-section {
+            padding: 80px 0 40px;
+            overflow: hidden;
+        }
+        .screenshots-scroll {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 24px 32px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .screenshots-scroll::-webkit-scrollbar { display: none; }
+        .screenshot-card {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            width: min(280px, 72vw);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,.12), 0 2px 8px rgba(0,0,0,.08);
+            background: var(--card);
+            transition: transform .2s, box-shadow .2s;
+        }
+        .screenshot-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,.16);
+        }
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* placeholder shown before image loads */
+        .screenshot-card .sc-placeholder {
+            aspect-ratio: 9/19.5;
+            background: linear-gradient(145deg, var(--accent-soft), var(--accent-border));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 24px;
+            text-align: center;
+        }
+        .screenshot-card .sc-placeholder .sc-emoji { font-size: 2.4rem; }
+        .screenshot-card .sc-placeholder .sc-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent);
+            line-height: 1.3;
+        }
+        .sc-caption {
+            font-size: 12px;
+            text-align: center;
+            color: var(--muted);
+            padding: 10px 12px 14px;
+            font-weight: 500;
+        }
+
+        /* screenshot scroll fade edges */
+        .screenshots-wrapper {
+            position: relative;
+        }
+        .screenshots-wrapper::before,
+        .screenshots-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 48px;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .screenshots-wrapper::before {
+            left: 0;
+            background: linear-gradient(to right, var(--bg), transparent);
+        }
+        .screenshots-wrapper::after {
+            right: 0;
+            background: linear-gradient(to left, var(--bg), transparent);
+        }
+
+        /* ── Screenshot feature rows (alternating layout) ── */
+        .screen-feature {
+            padding: 64px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .screen-feature:last-child { border-bottom: 0; }
+        .screen-feature-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            align-items: center;
+        }
+        .screen-feature-inner.reverse { direction: rtl; }
+        .screen-feature-inner.reverse > * { direction: ltr; }
+        .screen-feature-copy .eyebrow { margin-bottom: 10px; }
+        .screen-feature-copy h2 {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            line-height: 1.15;
+            margin: 0 0 14px;
+        }
+        .screen-feature-copy h2 strong { color: var(--accent); font-weight: 800; }
+        .screen-feature-copy .lead { margin: 0 0 22px; }
+        .screen-feature-copy ul {
+            list-style: none;
+            padding: 0; margin: 0;
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .screen-feature-copy ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 15px;
+            color: var(--text);
+        }
+        .screen-feature-copy ul li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .screen-feature-img {
+            display: flex;
+            justify-content: center;
+        }
+        .screen-feature-img img {
+            width: min(260px, 90%);
+            border-radius: 28px;
+            box-shadow: 0 16px 56px rgba(0,0,0,.14), 0 4px 16px rgba(0,0,0,.08);
+        }
+        .screen-feature-img .img-placeholder {
+            width: min(260px, 90%);
+            aspect-ratio: 9/19.5;
+            border-radius: 28px;
+            background: linear-gradient(145deg, var(--accent-soft), var(--accent-border));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 16px 56px rgba(0,0,0,.14);
+        }
+        .screen-feature-img .img-placeholder .ph-emoji { font-size: 3rem; }
+        .screen-feature-img .img-placeholder .ph-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+            text-align: center;
+            padding: 0 20px;
+        }
+        @media (max-width: 760px) {
+            .screen-feature-inner,
+            .screen-feature-inner.reverse {
+                grid-template-columns: 1fr;
+                direction: ltr;
+                gap: 32px;
+            }
+            .screen-feature-inner.reverse .screen-feature-img { order: -1; }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -57,7 +234,7 @@
             <nav class="nav">
                 <a href="/" class="muted">← All apps</a>
                 <a href="#features">Features</a>
-                <a href="#adherence">Adherence</a>
+                <a href="#screenshots">Screenshots</a>
                 <a href="#pricing">Pricing</a>
                 <a href="/pillvault/support" class="nav-cta">Support</a>
             </nav>
@@ -68,8 +245,12 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">💊 Medication Tracker &amp; Pill Reminder</span>
-                <h1>Track every dose. <span class="gradient-text">Stay ahead of refills.</span></h1>
+                <img src="/pillvault/icon.png"
+                     alt="PillVault: Medication Tracker app icon"
+                     class="pill-app-icon"
+                     onerror="this.style.display='none'">
+                <span class="eyebrow">Medication Tracker &amp; Pill Reminder for iPhone</span>
+                <h1>Your medications. <span class="gradient-text">Under control.</span></h1>
                 <p class="lead">Track every dose, stay ahead of refills, understand your adherence, and bring a clear medication report to your next doctor visit.</p>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/pillvault/id6773266360" class="btn btn-primary">Download on App Store</a>
@@ -83,57 +264,189 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="device">
-                    <div class="device-screen">
-                        <div class="d-icon">💊</div>
-                        <div class="d-title">PillVault</div>
-                        <div class="d-sub">Medication Tracker</div>
-                    </div>
-                    <div class="device-float f1"><span class="dot">⏰</span> Dose reminder</div>
-                    <div class="device-float f2"><span class="dot">📊</span> 94% adherence</div>
+                <div class="screen-feature-img" style="justify-content:center;">
+                    <img src="/pillvault/screenshots/screen-today.png"
+                         alt="PillVault today screen showing 100% adherence for 2 doses"
+                         onerror="this.outerHTML='<div class=\'device\'><div class=\'device-screen\'><div class=\'d-icon\'>💊</div><div class=\'d-title\'>PillVault</div><div class=\'d-sub\'>Medication Tracker</div></div><div class=\'device-float f1\'><span class=\'dot\'>⏰</span> Dose reminder</div><div class=\'device-float f2\'><span class=\'dot\'>📊</span> 94% adherence</div></div>'">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Track Your Medications -->
-    <section class="section" id="features">
+    <!-- Screenshots gallery (quick swipe) -->
+    <section class="screenshots-section" id="screenshots">
+        <div class="container">
+            <div class="section-head reveal" style="margin-bottom:8px;">
+                <span class="eyebrow">See it in action</span>
+                <h2>Everything you need, beautifully simple</h2>
+                <p>Swipe through to see PillVault in action — from today's doses to detailed analytics and shareable reports.</p>
+            </div>
+        </div>
+        <div class="screenshots-wrapper">
+            <div class="screenshots-scroll">
+                <div class="screenshot-card reveal">
+                    <img src="/pillvault/screenshots/screen-today.png"
+                         alt="PillVault today screen — dose tracker showing 100% adherence"
+                         onerror="this.outerHTML='<div class=\'sc-placeholder\'><div class=\'sc-emoji\'>🏠</div><div class=\'sc-label\'>Today\'s doses &amp; adherence ring</div></div>'">
+                    <div class="sc-caption">Today — doses &amp; adherence at a glance</div>
+                </div>
+                <div class="screenshot-card reveal">
+                    <img src="/pillvault/screenshots/screen-medications.png"
+                         alt="PillVault medications list — all active prescriptions in one view"
+                         onerror="this.outerHTML='<div class=\'sc-placeholder\'><div class=\'sc-emoji\'>💊</div><div class=\'sc-label\'>Every medication in one clear view</div></div>'">
+                    <div class="sc-caption">Medications — every prescription organised</div>
+                </div>
+                <div class="screenshot-card reveal">
+                    <img src="/pillvault/screenshots/screen-reminders.png"
+                         alt="PillVault reminders — custom dose schedules and notification times"
+                         onerror="this.outerHTML='<div class=\'sc-placeholder\'><div class=\'sc-emoji\'>⏰</div><div class=\'sc-label\'>Reminders built around your routine</div></div>'">
+                    <div class="sc-caption">Reminders — timed alerts for every dose</div>
+                </div>
+                <div class="screenshot-card reveal">
+                    <img src="/pillvault/screenshots/screen-analytics.png"
+                         alt="PillVault analytics — adherence percentage, streaks, and trend chart"
+                         onerror="this.outerHTML='<div class=\'sc-placeholder\'><div class=\'sc-emoji\'>📊</div><div class=\'sc-label\'>Adherence insights &amp; streaks</div></div>'">
+                    <div class="sc-caption">Analytics — know how you're doing</div>
+                </div>
+                <div class="screenshot-card reveal">
+                    <img src="/pillvault/screenshots/screen-history.png"
+                         alt="PillVault history — complete dose log with taken and missed entries"
+                         onerror="this.outerHTML='<div class=\'sc-placeholder\'><div class=\'sc-emoji\'>📅</div><div class=\'sc-label\'>Complete medication history</div></div>'">
+                    <div class="sc-caption">History — every dose, every day</div>
+                </div>
+                <div class="screenshot-card reveal">
+                    <img src="/pillvault/screenshots/screen-reports.png"
+                         alt="PillVault reports — PDF and CSV export for sharing with your doctor"
+                         onerror="this.outerHTML='<div class=\'sc-placeholder\'><div class=\'sc-emoji\'>📋</div><div class=\'sc-label\'>PDF reports to share with your doctor</div></div>'">
+                    <div class="sc-caption">Reports — share with your doctor</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature deep-dives (screenshot + copy, alternating) -->
+    <section class="section" id="features" style="padding-bottom:0;">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Medication Organizer</span>
-                <h2>One place for every prescription and dose</h2>
-                <p>Whether you take one medication or manage several prescriptions, PillVault gives you one simple place to see what is due, what you have taken, and what is coming next.</p>
+                <span class="eyebrow">Features</span>
+                <h2>Everything you need to stay on track</h2>
             </div>
-            <div class="grid grid-3">
-                <div class="feature reveal">
-                    <div class="f-icon">💊</div>
-                    <h3>Flexible medication schedules</h3>
-                    <p>Add medications with daily, weekly, interval, or custom dose schedules. Schedule multiple doses throughout the day to match your prescription exactly.</p>
+
+            <!-- 1. Medications -->
+            <div class="screen-feature">
+                <div class="screen-feature-inner">
+                    <div class="screen-feature-copy reveal">
+                        <span class="eyebrow">Medication Organizer</span>
+                        <h2>Every medication. <strong>One clear view.</strong></h2>
+                        <p class="lead">Organize medicines, doses, instructions, and schedules in one place — whether you take one medication or manage several prescriptions.</p>
+                        <ul>
+                            <li>Add medications with daily, weekly, interval, or custom schedules</li>
+                            <li>Schedule multiple doses throughout the day</li>
+                            <li>Support for tablets, capsules, liquids, drops, sprays, patches, injections, inhalers &amp; more</li>
+                            <li>Add prescribing doctor details and personal notes</li>
+                            <li>Set start and end dates for short-term courses</li>
+                            <li>Keep complete medication history even for inactive prescriptions</li>
+                        </ul>
+                    </div>
+                    <div class="screen-feature-img reveal">
+                        <img src="/pillvault/screenshots/screen-medications.png"
+                             alt="PillVault medications list showing active prescriptions with dose times and color coding"
+                             onerror="this.outerHTML='<div class=\'img-placeholder\'><div class=\'ph-emoji\'>💊</div><div class=\'ph-label\'>Every Medication.\nOne Clear View.</div></div>'">
+                    </div>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">✅</div>
-                    <h3>One-tap dose logging</h3>
-                    <p>Log each dose with a single tap. See overdue doses at a glance and undo a mistaken log instantly — keeping your medication history accurate at all times.</p>
+            </div>
+
+            <!-- 2. Reminders -->
+            <div class="screen-feature">
+                <div class="screen-feature-inner reverse">
+                    <div class="screen-feature-copy reveal">
+                        <span class="eyebrow">Dose Reminders</span>
+                        <h2>Reminders built <strong>around your routine.</strong></h2>
+                        <p class="lead">Set the right time for every dose and stay on schedule — never lose track of a dose again.</p>
+                        <ul>
+                            <li>Personalised reminders for each medication and dose time</li>
+                            <li>Custom schedules with multiple doses per day</li>
+                            <li>See overdue doses at a glance</li>
+                            <li>View your next dose with Live Activities on the Lock Screen</li>
+                            <li>Use Siri &amp; Shortcuts to log doses and check adherence hands-free</li>
+                        </ul>
+                    </div>
+                    <div class="screen-feature-img reveal">
+                        <img src="/pillvault/screenshots/screen-reminders.png"
+                             alt="PillVault reminders screen showing per-medication notification toggles and times"
+                             onerror="this.outerHTML='<div class=\'img-placeholder\'><div class=\'ph-emoji\'>⏰</div><div class=\'ph-label\'>Reminders Built\nAround Your Routine.</div></div>'">
+                    </div>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">🗂️</div>
-                    <h3>Full medication library</h3>
-                    <p>Support tablets, capsules, liquids, drops, sprays, powders, creams, patches, injections, inhalers and more. Add prescribing doctor details and personal notes for every medicine.</p>
+            </div>
+
+            <!-- 3. Analytics -->
+            <div class="screen-feature">
+                <div class="screen-feature-inner">
+                    <div class="screen-feature-copy reveal">
+                        <span class="eyebrow">Medication Adherence</span>
+                        <h2>Know how <strong>you're doing.</strong></h2>
+                        <p class="lead">Turn your medication history into powerful adherence insights. See patterns, build streaks, and have informed conversations with your healthcare provider.</p>
+                        <ul>
+                            <li>Track daily, weekly, and monthly adherence</li>
+                            <li>See completed and missed doses with trend charts</li>
+                            <li>Build medication streaks and track your personal best</li>
+                            <li>Per-medication adherence breakdown</li>
+                            <li>Actionable insights to help you improve</li>
+                        </ul>
+                    </div>
+                    <div class="screen-feature-img reveal">
+                        <img src="/pillvault/screenshots/screen-analytics.png"
+                             alt="PillVault analytics screen showing 92% adherence, 14-day streak, and weekly trend chart"
+                             onerror="this.outerHTML='<div class=\'img-placeholder\'><div class=\'ph-emoji\'>📊</div><div class=\'ph-label\'>Know How\nYou\'re Doing.</div></div>'">
+                    </div>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">📅</div>
-                    <h3>Start &amp; end dates</h3>
-                    <p>Set start and end dates for short-term medication courses. PillVault keeps your complete medication history even when a prescription is no longer active.</p>
+            </div>
+
+            <!-- 4. History -->
+            <div class="screen-feature">
+                <div class="screen-feature-inner reverse">
+                    <div class="screen-feature-copy reveal">
+                        <span class="eyebrow">Dose Log &amp; History</span>
+                        <h2>Every dose. <strong>Every day.</strong></h2>
+                        <p class="lead">Review your complete medication history and stay accountable — see exactly what was taken, when, and what was missed.</p>
+                        <ul>
+                            <li>Log each dose with a single tap</li>
+                            <li>Undo a mistaken log instantly</li>
+                            <li>Clearly shows taken, on-time, and missed doses</li>
+                            <li>Detailed timeline with scheduled vs actual times</li>
+                            <li>30-day history with running adherence percentage</li>
+                            <li>Review your medication history in a calendar view</li>
+                        </ul>
+                    </div>
+                    <div class="screen-feature-img reveal">
+                        <img src="/pillvault/screenshots/screen-history.png"
+                             alt="PillVault history screen showing dose log with taken and missed entries across multiple days"
+                             onerror="this.outerHTML='<div class=\'img-placeholder\'><div class=\'ph-emoji\'>📅</div><div class=\'ph-label\'>Every Dose.\nEvery Day.</div></div>'">
+                    </div>
                 </div>
-                <div class="feature reveal">
-                    <div class="f-icon">⏰</div>
-                    <h3>Personalised dose reminders</h3>
-                    <p>Set reminders for each medication and dose time. View your next dose with Live Activities on the Lock Screen and use Siri &amp; Shortcuts to log doses hands-free.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">🔒</div>
-                    <h3>Private by design</h3>
-                    <p>Your medication data is stored on your devices and synchronised through Apple iCloud when enabled. No account required, no data sold, no tracking.</p>
+            </div>
+
+            <!-- 5. Reports -->
+            <div class="screen-feature">
+                <div class="screen-feature-inner">
+                    <div class="screen-feature-copy reveal">
+                        <span class="eyebrow">Medication Reports</span>
+                        <h2>Reports you can <strong>actually share.</strong></h2>
+                        <p class="lead">Create detailed reports to share with your doctor, caregiver, or for your personal records — generated in seconds, directly from your dose history.</p>
+                        <ul>
+                            <li>Comprehensive PDF report with adherence summary, history, and insights</li>
+                            <li>Medication-by-medication performance review</li>
+                            <li>Calendar-based adherence patterns</li>
+                            <li>Refill status and healthcare provider information</li>
+                            <li>CSV export for analysis or backup</li>
+                            <li>Share with your doctor, email, or save to Files</li>
+                        </ul>
+                    </div>
+                    <div class="screen-feature-img reveal">
+                        <img src="/pillvault/screenshots/screen-reports.png"
+                             alt="PillVault reports screen showing PDF report and CSV export options with full content breakdown"
+                             onerror="this.outerHTML='<div class=\'img-placeholder\'><div class=\'ph-emoji\'>📋</div><div class=\'ph-label\'>Reports You Can\nActually Share.</div></div>'">
+                    </div>
                 </div>
             </div>
         </div>
@@ -154,54 +467,11 @@
                 </div>
                 <div class="step reveal">
                     <h3>See refill status at a glance</h3>
-                    <p>Clear color-coded refill status indicators show you how urgently each prescription needs a refill — so you can plan ahead with confidence.</p>
+                    <p>Clear color-coded refill status indicators show how urgently each prescription needs a refill — so you can plan ahead without guessing.</p>
                 </div>
                 <div class="step reveal">
                     <h3>Get refill reminders</h3>
                     <p>PillVault sends reminders before your supply runs low, giving you enough lead time to contact your pharmacy or doctor without rushing.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Adherence & Insights -->
-    <section class="section" id="adherence">
-        <div class="container">
-            <div class="section-head reveal">
-                <span class="eyebrow">Medication Adherence &amp; Insights</span>
-                <h2>Understand how well you follow your medication schedule</h2>
-                <p>PillVault turns your dose history into useful information about your routine — so you can see patterns, build streaks, and have informed conversations with your healthcare provider.</p>
-            </div>
-            <div class="grid grid-3">
-                <div class="feature reveal">
-                    <div class="f-icon">📊</div>
-                    <h3>Adherence statistics</h3>
-                    <p>Track daily, weekly, and monthly medication compliance. See completed and missed doses in clear charts to understand your prescription adherence over time.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">🔥</div>
-                    <h3>Medication streaks</h3>
-                    <p>Build dose streaks that reward consistency. Watching your streak grow is a simple but powerful motivator to stay on top of your medication schedule.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">📆</div>
-                    <h3>Calendar history</h3>
-                    <p>Review your complete medication history in a calendar view. Spot missed doses, confirm past doses, and understand how your adherence has changed week by week.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">📋</div>
-                    <h3>Medication reports</h3>
-                    <p>Generate detailed medication reports in seconds. Review 30-day history, adherence analysis, refill status, and calendar-based patterns — then export as a PDF to share with your doctor.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">📤</div>
-                    <h3>PDF &amp; CSV export</h3>
-                    <p>Export professional PDF reports or raw CSV data to share with your doctor, caregiver, or for your own records. A clear medication report makes every visit more productive.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">💡</div>
-                    <h3>Advanced insights</h3>
-                    <p>Explore adherence analysis and insights to understand exactly how consistently you are following your medication routine — available with PillVault Premium.</p>
                 </div>
             </div>
         </div>
@@ -234,17 +504,17 @@
                 <div class="feature reveal">
                     <div class="f-icon">🌙</div>
                     <h3>Dark Mode &amp; Dynamic Type</h3>
-                    <p>Full support for Dark Mode, Dynamic Type, and iOS accessibility features ensures PillVault is easy to read and use for everyone — any time of day.</p>
+                    <p>Full support for Dark Mode, Dynamic Type, and iOS accessibility features — easy to read and use for everyone, any time of day.</p>
                 </div>
                 <div class="feature reveal">
                     <div class="f-icon">⚡</div>
                     <h3>Modern SwiftUI</h3>
-                    <p>Built with SwiftUI for a fast, fluid experience on every supported device. No legacy code — just a clean, modern interface that feels right on iPhone and iPad.</p>
+                    <p>Built with SwiftUI for a fast, fluid experience on every supported device. A clean, modern interface that feels right at home on iPhone and iPad.</p>
                 </div>
                 <div class="feature reveal">
                     <div class="f-icon">🛡️</div>
-                    <h3>Privacy-first storage</h3>
-                    <p>Medication data is stored on-device and synced via iCloud. PillVault does not transmit your health information to any external server — your personal data stays personal.</p>
+                    <h3>Private by design</h3>
+                    <p>Medication data is stored on-device and synced via iCloud. PillVault does not transmit your health information to any external server.</p>
                 </div>
             </div>
         </div>
@@ -348,7 +618,7 @@
                     <h4>PillVault</h4>
                     <a href="/pillvault">Overview</a>
                     <a href="/pillvault#features">Features</a>
-                    <a href="/pillvault#adherence">Adherence</a>
+                    <a href="/pillvault#screenshots">Screenshots</a>
                     <a href="/pillvault#pricing">Pricing</a>
                     <a href="/pillvault/support">Support &amp; FAQ</a>
                 </div>
