@@ -37,10 +37,11 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 | `propertynest` | PropertyNest | ✅ Live | https://apps.apple.com/us/app/propertynest-home-organizer/id6794704452 |
 | `halalcheck` | HalalCheck | 🔧 Under Development | — |
 | `uprep` | UpRep | 🔧 Under Development | — |
+| `chattale` | ChatTale: Chat Wrapped | 🔧 Under Development | — |
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
-**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Seventeen**). Live app count is now 13.
+**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Eighteen**). Live app count is now 13.
 
 ## Per-app theming
 
@@ -64,6 +65,7 @@ Each app gets a `data-theme="<key>"` attribute on `<html>`, which maps to CSS va
 [data-theme="propertynest"] { --g1:#7B4F2E; --g2:#C4824A; --accent:#9A5F38; --accent-soft:#FDF5EF; --accent-border:#F0D5BE; }
 [data-theme="halalcheck"]   { --g1:#14532d; --g2:#16a34a; --accent:#15803d; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 [data-theme="uprep"]        { --g1:#166534; --g2:#84cc16; --accent:#4d7c0f; --accent-soft:#f7fee7; --accent-border:#d9f99d; }
+[data-theme="chattale"]     { --g1:#7c3aed; --g2:#ec4899; --accent:#9333ea; --accent-soft:#faf5ff; --accent-border:#f0d0fe; }
 ```
 
 Homepage app cards use parallel `.theme-row-<key>` / `.grad-<key>` classes defined inline in `index.html`'s `<style>` block — keep these in sync with the per-app theme above when adding a new app.

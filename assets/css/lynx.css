@@ -56,6 +56,7 @@
 [data-theme="propertynest"] { --g1:#7B4F2E; --g2:#C4824A; --accent:#9A5F38; --accent-soft:#FDF5EF; --accent-border:#F0D5BE; }
 [data-theme="halalcheck"]   { --g1:#14532d; --g2:#16a34a; --accent:#15803d; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 [data-theme="uprep"]        { --g1:#166534; --g2:#84cc16; --accent:#4d7c0f; --accent-soft:#f7fee7; --accent-border:#d9f99d; }
+[data-theme="chattale"]     { --g1:#7c3aed; --g2:#ec4899; --accent:#9333ea; --accent-soft:#faf5ff; --accent-border:#f0d0fe; }
 
 /* ---------- Reset / Base ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
