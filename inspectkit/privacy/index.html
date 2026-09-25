@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - InspectKit Site Reports Pro</title>
-    <meta name="description" content="Privacy Policy for InspectKit Site Reports Pro by LynxApps. Your inspection data stays on your device.">
+    <title>Privacy Policy - InspectKit</title>
+    <meta name="description" content="Privacy Policy for InspectKit by LynxApps. Your inspection data stays on your device.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
 </head>
@@ -12,9 +12,9 @@
     <header class="site-header">
         <div class="container">
             <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
-            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
             <nav class="nav">
-                <a href="/inspectkit" class="muted">← InspectKit</a>
+                <a href="/inspectkit" class="muted">&#8592; InspectKit</a>
                 <a href="/inspectkit/terms">Terms</a>
                 <a href="/inspectkit/support">Support</a>
                 <a href="mailto:lynxapps.contact@gmail.com" class="nav-cta">Contact</a>
@@ -28,105 +28,116 @@
                 <a href="/">LynxApps</a><span>/</span><a href="/inspectkit">InspectKit</a><span>/</span><span>Privacy Policy</span>
             </div>
             <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: June 2026</p>
+            <p class="updated">Last updated: September 2026</p>
         </div>
     </section>
 
     <main class="doc-body">
         <div class="container-doc">
             <div class="callout">
-                <p><strong>Your inspection data stays on your device.</strong> All inspection data, photos, and reports are stored locally on your device. We never upload, transmit, or share your inspection data with external servers unless you explicitly enable iCloud sync.</p>
+                <p><strong>Your inspection data stays on your device.</strong> All inspection data, photos, video clips, voice notes, and reports are stored locally on your device. We never upload your inspection content to our servers. iCloud sync (Pro feature) stores your data in your own private iCloud account under Apple's encryption -- not on our servers.</p>
             </div>
 
-            <h2>1. Introduction</h2>
-            <p>InspectKit Site Reports Pro ("we," "us," "our") respects your privacy. This Privacy Policy explains how we collect, use, disclose, and otherwise handle your information when you use our mobile application, InspectKit (the "App").</p>
+            <h2>1. Who We Are</h2>
+            <p>InspectKit is developed by LynxApps ("we", "us", "our"). This Privacy Policy explains how we handle your information when you use InspectKit on iPhone or iPad.</p>
 
-            <h2>2. Information We Collect</h2>
-
-            <h3>Information You Provide Directly</h3>
+            <h2>2. Data Stored on Your Device</h2>
+            <p>All inspection content lives locally on your device:</p>
             <ul>
-                <li>Business information (company name, owner name, phone, email)</li>
-                <li>Client information (names, contact details for inspection purposes)</li>
-                <li>Property inspection data (locations, inspection details, findings)</li>
-                <li>Photos and annotations you capture within the App</li>
-                <li>Voice notes you record</li>
-                <li>Account information if you create an account</li>
-                <li>Payment information for subscription purchases (processed through Apple's App Store)</li>
+                <li><strong>Inspections and findings:</strong> Client details, property info, checklist results, notes, severity ratings -- stored in SwiftData in the app sandbox.</li>
+                <li><strong>Photos and annotations:</strong> Stored in the app sandbox. Photo evidence stamps (date, time, address, GPS coordinates) are burned into the image and stored with it on your device. Camera frames are never uploaded anywhere.</li>
+                <li><strong>Video clips:</strong> Stored on your device in the app's local storage only (not in iCloud, not synced to other devices). They are included in your normal iOS device backup. Clips are deleted when you delete the finding or inspection they belong to.</li>
+                <li><strong>Voice notes:</strong> Audio files and transcripts stored locally. Transcription happens on-device using Apple's speech recognition -- no audio is sent to any external server.</li>
+                <li><strong>PDF reports:</strong> Generated and stored locally; shared only when you explicitly share them via the system share sheet.</li>
+                <li><strong>Business profile:</strong> Your company name, logo, signature, and contact details -- stored locally, used only to populate your reports.</li>
+                <li><strong>Settings:</strong> Language preference, photo stamp toggle, notification preferences, and other app settings stored in UserDefaults.</li>
             </ul>
 
-            <h3>Information Collected Automatically</h3>
+            <h2>3. iCloud Sync (Pro Feature)</h2>
+            <p>When you enable iCloud sync, InspectKit stores your inspections, findings, photos, and reports in your personal iCloud account using Apple's CloudKit private database. This data is:</p>
             <ul>
-                <li>Device information (device type, operating system, unique device identifiers)</li>
-                <li>App usage data (features used, time spent, interactions)</li>
-                <li>Error logs and crash reports</li>
-                <li>Camera and microphone access logs</li>
+                <li>Stored in your iCloud account, encrypted by Apple</li>
+                <li>Accessible only to you on devices signed in to the same Apple ID</li>
+                <li>Not accessible by LynxApps</li>
+                <li>Governed by Apple's iCloud Privacy Policy</li>
+            </ul>
+            <p>Video clips are explicitly excluded from iCloud sync by design -- they never count against your iCloud storage quota. They remain on the device where they were recorded and are included in your normal iOS device backup.</p>
+
+            <h2>4. Photo Location Data</h2>
+            <p>When you take a new photo inside InspectKit, the app requests "When In Use" location permission to obtain your current GPS coordinates and reverse-geocode them into a street address. This location data is:</p>
+            <ul>
+                <li>Used only to create the evidence stamp burned into that photo</li>
+                <li>Stored with the photo on your device (and in iCloud if you have sync enabled)</li>
+                <li>Never transmitted to LynxApps or any third party</li>
+                <li>Not used for advertising or tracking of any kind</li>
+            </ul>
+            <p>For library photos, InspectKit reads EXIF GPS metadata already embedded in the photo. If a library photo has no EXIF GPS, no location stamp is added. You can disable evidence stamps at any time in Settings &gt; Photos &gt; "Stamp Date &amp; Location".</p>
+
+            <h2>5. On-Device AI</h2>
+            <p>On devices running iOS 26 with Apple Intelligence, InspectKit can rewrite finding notes and generate templates using Apple Foundation Models. All AI processing happens entirely on your device. No finding content, notes, or voice transcripts are ever sent to LynxApps or any third-party AI service. LynxApps does not operate an AI backend for InspectKit.</p>
+
+            <h2>6. Analytics and Crash Reporting</h2>
+            <p>InspectKit uses Firebase (by Google) for two purposes in release builds:</p>
+            <ul>
+                <li><strong>Analytics:</strong> Anonymous, aggregated event data such as "inspection created", "report shared", "template used". No inspection content, client names, property addresses, finding details, photos, or voice content is ever included in analytics events.</li>
+                <li><strong>Crashlytics:</strong> If the app crashes, a report containing device model, iOS version, and a stack trace is sent. No personal data, inspection content, or photos are included in crash reports.</li>
+            </ul>
+            <p>Analytics events are fired only from release (App Store / TestFlight) builds, not from debug or simulator builds. Firebase data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+
+            <h2>7. App Permissions</h2>
+            <p>InspectKit may request the following permissions:</p>
+            <ul>
+                <li><strong>Camera:</strong> To capture photos and record video for findings. Frames and recordings are processed on-device and never uploaded.</li>
+                <li><strong>Microphone:</strong> To record voice notes. Audio is processed on-device for transcription and never sent to external servers.</li>
+                <li><strong>Location (When In Use):</strong> To obtain GPS coordinates and reverse-geocode them into a street address for photo evidence stamps. Requested when you open the camera inside InspectKit. Used only at the moment of capture; not tracked in the background.</li>
+                <li><strong>Photo Library:</strong> To let you add existing photos or video from your library to findings.</li>
+                <li><strong>Notifications:</strong> To send optional inspection reminders before a scheduled inspection date. You control this in iOS Settings and can decline it during onboarding.</li>
             </ul>
 
-            <h3>Information from iCloud</h3>
-            <p>When you enable iCloud sync, we store your inspection data on your iCloud account for synchronization across your devices.</p>
+            <h2>8. In-App Purchases</h2>
+            <p>Pro subscriptions and the Lifetime purchase are processed entirely by Apple via StoreKit. LynxApps never sees or stores your payment details. Purchase receipt validation happens on-device.</p>
 
-            <h2>3. How We Use Your Information</h2>
+            <h2>9. Data Retention and Deletion</h2>
+            <p>Your data exists only on your device (and in your iCloud account if sync is enabled). To delete it:</p>
             <ul>
-                <li>Providing and maintaining the App functionality</li>
-                <li>Processing subscription purchases</li>
-                <li>Generating inspection reports</li>
-                <li>Improving App features and user experience</li>
-                <li>Diagnosing technical issues</li>
-                <li>Complying with legal obligations</li>
-                <li>Communicating with you about updates or support</li>
+                <li>Delete individual inspections, findings, photos, or video clips from within the app at any time.</li>
+                <li>Delete the app from your device to permanently remove all local InspectKit data, including video clips and cached data.</li>
+                <li>If iCloud sync is enabled, deleting data in the app also removes it from iCloud.</li>
             </ul>
 
-            <h3>We do NOT:</h3>
+            <h2>10. Security</h2>
+            <p>InspectKit relies on iOS's built-in security model. App data is stored in the app sandbox, encrypted at rest by iOS data protection. No inspection content, photos, or video clips are transmitted over the network except when you explicitly share them via the system share sheet.</p>
+
+            <h2>11. Children's Privacy</h2>
+            <p>InspectKit is not directed to children under 13. We do not knowingly collect information from children under 13.</p>
+
+            <h2>12. Your Rights (GDPR / CCPA)</h2>
+            <p>Because InspectKit stores all personal data locally on your device (or in your own iCloud):</p>
             <ul>
-                <li>Sell your personal information to third parties</li>
-                <li>Share your inspection data with external services without your consent</li>
-                <li>Use your information for marketing purposes beyond App-related communications</li>
-                <li>Collect information beyond what's necessary for App functionality</li>
+                <li><strong>Access:</strong> All your inspection data is visible within the app at any time.</li>
+                <li><strong>Deletion:</strong> Delete individual records in-app, or delete the app entirely to remove all data.</li>
+                <li><strong>No data sale:</strong> We do not sell personal data.</li>
+                <li><strong>Location opt-out:</strong> Deny or revoke location permission in iOS Settings at any time; evidence stamps will fall back to date/time-only.</li>
+                <li><strong>Notification opt-out:</strong> Disable inspection reminders at any time in iOS Settings or InspectKit Settings.</li>
             </ul>
 
-            <h2>4. Data Storage and Security</h2>
+            <h2>13. Changes to This Policy</h2>
+            <p>We may update this policy from time to time. Material changes will be reflected in the "Last updated" date above. Continued use of the app constitutes acceptance of the revised policy.</p>
 
-            <h3>Local Storage</h3>
-            <p>Your inspection data is stored locally on your device. You have full control over this data and can delete it at any time by uninstalling the App or clearing the App's data.</p>
-
-            <h3>iCloud Sync</h3>
-            <p>When enabled, inspection data syncs to your personal iCloud account. This data is encrypted and stored according to Apple's privacy standards. You control whether iCloud sync is enabled.</p>
-
-            <h3>Security Measures</h3>
-            <p>We implement industry-standard security practices to protect your information, including encryption and secure data transmission. However, no method of transmission over the internet is 100% secure.</p>
-
-            <h3>Data Retention</h3>
-            <p>You control how long your data is retained. Delete inspections and reports directly from the App at any time.</p>
-
-            <h2>5. Third-Party Services</h2>
-
-            <h3>Apple App Store</h3>
-            <p>For subscription purchases and in-app billing. Subject to Apple's Privacy Policy.</p>
-
-            <h3>iCloud</h3>
-            <p>For optional data synchronization. Subject to Apple's iCloud Privacy Policy.</p>
-
-            <h3>Analytics (if enabled)</h3>
-            <p>Basic usage analytics to improve App performance. No personally identifiable information is shared.</p>
-
-            <h2>6. Your Privacy Rights</h2>
+            <h2>14. Contact</h2>
+            <p>Privacy questions? Reach us at:</p>
             <ul>
-                <li>Access your personal information</li>
-                <li>Correct inaccurate information</li>
-                <li>Delete your information by uninstalling the App</li>
-                <li>Export your data in standard formats</li>
-                <li>Disable iCloud sync at any time</li>
-                <li>Opt out of analytics collection</li>
+                <li><strong>Email:</strong> <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></li>
+                <li><strong>Response time:</strong> within 2-3 business days</li>
             </ul>
 
-            <p>To exercise these rights, contact us at <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></p>
-
-            <h2>7. Contact Us</h2>
-            <p><strong>Email:</strong> <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></p>
+            <div class="callout callout-warn">
+                <p><strong>Privacy by design.</strong> Your inspection findings, client details, and site photos are sensitive professional data. InspectKit keeps all of it on your device -- what you inspect is your business, not ours.</p>
+            </div>
 
             <div class="doc-contact">
                 <h2>Questions about our Privacy Policy?</h2>
-                <p>We're committed to protecting your data privacy. Reach out anytime.</p>
+                <p>We are committed to protecting your data. Reach out anytime.</p>
                 <a href="mailto:lynxapps.contact@gmail.com" class="btn btn-white">Contact our team</a>
             </div>
 
@@ -138,9 +149,9 @@
             <div class="footer-bottom" style="border:0;padding-top:0;">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
                 <span>
-                    <a href="/inspectkit">InspectKit</a> &nbsp;·&nbsp;
-                    <a href="/inspectkit/privacy">Privacy</a> &nbsp;·&nbsp;
-                    <a href="/inspectkit/terms">Terms</a>
+                    <a href="/inspectkit">InspectKit</a> &nbsp;&middot;&nbsp;
+                    <a href="/inspectkit/terms">Terms</a> &nbsp;&middot;&nbsp;
+                    <a href="/inspectkit/support">Support</a>
                 </span>
             </div>
         </div>

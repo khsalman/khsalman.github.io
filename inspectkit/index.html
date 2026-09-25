@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InspectKit Site Reports Pro - Professional Inspection Management</title>
-    <meta name="description" content="InspectKit: All-in-one mobile solution for conducting, documenting, and reporting professional inspections. Create branded reports instantly. Now available on the App Store.">
+    <title>InspectKit: Inspection Reports - Home &amp; Property Checklist, PDF</title>
+    <meta name="description" content="InspectKit turns your iPhone into a professional inspection tool. Capture findings with photos, video, and voice notes, then generate a branded PDF report before you leave the site. 19 templates, 5 languages, iCloud sync.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        .screenshots-row {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 8px 4px 20px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .screenshots-row::-webkit-scrollbar { display: none; }
+        .screenshots-row img {
+            height: 420px;
+            width: auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,.14);
+            flex-shrink: 0;
+        }
+        @media (max-width: 600px) {
+            .screenshots-row img { height: 300px; }
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
             <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
-            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
             <nav class="nav">
-                <a href="/" class="muted">← All apps</a>
+                <a href="/" class="muted">&#8592; All apps</a>
                 <a href="#features">Features</a>
-                <a href="#how">How it works</a>
                 <a href="#pricing">Pricing</a>
                 <a href="/inspectkit/support" class="nav-cta">Support</a>
             </nav>
@@ -27,120 +47,160 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">📋 Professional Inspection Management</span>
-                <h1>Inspections made <span class="gradient-text">simple & professional.</span></h1>
-                <p class="lead">Capture findings with photos and annotations, generate branded reports instantly, and sync across all your devices. InspectKit streamlines your entire inspection workflow from site to report delivery.</p>
+                <span class="eyebrow">&#128203; Professional Inspection Reports</span>
+                <h1>Inspect. Document. <span class="gradient-text">Deliver reports in minutes.</span></h1>
+                <p class="lead">InspectKit turns your iPhone into a professional inspection tool. Capture findings with photos, video, and voice notes, stamp evidence with date and location, then generate a branded PDF report before you leave the site.</p>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/inspectkit-site-reports-pro/id6782454914" class="btn btn-primary">Download on App Store</a>
                     <a href="#features" class="btn btn-ghost">Explore features</a>
                 </div>
                 <div class="hero-meta">
-                    <div><div class="m-val gradient-text">7</div><div class="m-lbl">Built-in templates</div></div>
-                    <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device data</div></div>
-                    <div><div class="m-val gradient-text">iOS 17+</div><div class="m-lbl">iPhone & iPad</div></div>
+                    <div><div class="m-val gradient-text">19</div><div class="m-lbl">Built-in templates</div></div>
+                    <div><div class="m-val gradient-text">5</div><div class="m-lbl">Languages</div></div>
+                    <div><div class="m-val gradient-text">iOS 18+</div><div class="m-lbl">iPhone &amp; iPad</div></div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="device">
                     <div class="device-screen">
-                        <div class="d-icon"><img src="/inspectkit/app-icon.jpg" alt="inspectkit app icon"></div>
+                        <div class="d-icon"><img src="/inspectkit/IK-Icon.png" alt="InspectKit app icon" style="width:56px;height:56px;border-radius:14px;"></div>
                         <div class="d-title">InspectKit</div>
                         <div class="d-sub">Professional reports in seconds</div>
                     </div>
-                    <div class="device-float f1"><span class="dot">📸</span> Annotate photos</div>
-                    <div class="device-float f2"><span class="dot">📄</span> Generate reports</div>
+                    <div class="device-float f1"><span class="dot">&#128247;</span> Evidence-stamped photos</div>
+                    <div class="device-float f2"><span class="dot">&#127909;</span> Video findings</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Core concept -->
+    <!-- Screenshots -->
+    <section class="section-sm" style="background:var(--bg);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">See it in action</span>
+                <h2>Built for the way you actually work</h2>
+                <p>From checklist to branded PDF report, entirely on your device.</p>
+            </div>
+            <div class="screenshots-row reveal">
+                <img src="/inspectkit/01.png" alt="InspectKit inspection list">
+                <img src="/inspectkit/02.png" alt="InspectKit active inspection">
+                <img src="/inspectkit/03.png" alt="InspectKit finding with photo">
+                <img src="/inspectkit/04.png" alt="InspectKit video finding">
+                <img src="/inspectkit/05.png" alt="InspectKit PDF report">
+                <img src="/inspectkit/06.png" alt="InspectKit report cover">
+                <img src="/inspectkit/07.png" alt="InspectKit templates">
+                <img src="/inspectkit/08.png" alt="InspectKit settings">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
     <section class="section" id="features">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Built for Professionals</span>
+                <span class="eyebrow">What's new in 6.0</span>
                 <h2>Everything you need for professional inspections</h2>
-                <p>Capture, document, report-all from your phone. Professional output that impresses clients.</p>
+                <p>Photos, video, voice notes, AI polish, and a full PDF report with your branding -- from site to inbox before you drive away.</p>
             </div>
             <div class="grid grid-3">
                 <div class="feature reveal">
-                    <div class="f-icon">📸</div>
-                    <h3>Capture & Annotate</h3>
-                    <p>Take photos directly in the app and annotate them with drawing tools. Mark issues, highlight problems, and add detailed notes-all organized to your findings.</p>
+                    <div class="f-icon">&#127909;</div>
+                    <h3>Video Findings</h3>
+                    <p>Attach up to 20 seconds of video to any finding. Record with the camera or pick from your library. Compressed to HEVC on-device, each clip lands in your PDF as a poster-frame tile with a play glyph and duration pill.</p>
                 </div>
                 <div class="feature reveal">
-                    <div class="f-icon">📋</div>
-                    <h3>7 Templates + Custom</h3>
-                    <p>Choose from 7 pre-built inspection templates or create unlimited custom ones tailored to your specific business needs and inspection types.</p>
+                    <div class="f-icon">&#128247;</div>
+                    <h3>Evidence-Stamped Photos</h3>
+                    <p>New photos are automatically stamped with the date, time, street address, and GPS coordinates. Library photos use their own EXIF date. Stamps appear in the PDF, too -- undeniable, on-device proof.</p>
                 </div>
                 <div class="feature reveal">
-                    <div class="f-icon">🎨</div>
-                    <h3>Branded Reports</h3>
-                    <p>Transform inspection data into polished PDF reports with your company logo, colors, signature, and footer. Deliver professional reports directly from the app.</p>
+                    <div class="f-icon">&#129504;</div>
+                    <h3>On-Device AI</h3>
+                    <p>"Improve with AI" rewrites a finding's notes into a professional observation and suggests a severity. Powered by Apple Intelligence, runs entirely on your device. Available on iPhone 15 Pro and later with Apple Intelligence enabled.</p>
                 </div>
                 <div class="feature reveal">
-                    <div class="f-icon">🎤</div>
+                    <div class="f-icon">&#127775;</div>
+                    <h3>Finding Severity</h3>
+                    <p>Tag each flagged finding as Minor, Major, or Safety. The PDF Recommendations page sorts by severity, adds colored tags, and shows a tally -- Minor N / Major N / Safety N -- so clients see what needs attention first.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">&#127758;</div>
+                    <h3>5 Languages</h3>
+                    <p>English, Spanish, French, Japanese, and Portuguese. Switch language at any time in Settings -- the app, all built-in templates, and the entire PDF report update instantly. Reports print in the language the app was in when you generated them.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">&#127381;</div>
+                    <h3>AI Template Builder</h3>
+                    <p>Describe your inspection in a sentence and InspectKit generates a full checklist -- sections and items -- live in the editor. On-device AI only, no backend, no cost. Available on Apple Intelligence devices.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">&#128248;</div>
+                    <h3>Photos &amp; Annotations</h3>
+                    <p>Capture photos directly in the app and annotate them with drawing tools. Mark issues, highlight problems, and add detailed notes -- all linked to the exact finding they document.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">&#127908;</div>
                     <h3>Voice Notes</h3>
-                    <p>Record findings hands-free with automatic transcription. Your voice notes are automatically included in reports for a complete record.</p>
+                    <p>Record findings hands-free with automatic on-device transcription. Transcription now follows the app language, so notes and PDF content stay in one language throughout.</p>
                 </div>
                 <div class="feature reveal">
-                    <div class="f-icon">☁️</div>
-                    <h3>Seamless Sync</h3>
-                    <p>All data syncs automatically across iPhone, iPad, and Mac via iCloud. Start an inspection on one device, continue on another, everything stays in sync.</p>
-                </div>
-                <div class="feature reveal">
-                    <div class="f-icon">⚡</div>
-                    <h3>Efficient Workflow</h3>
-                    <p>Organize inspections by date, client, or property type. Track status from in-progress to completed. Everything organized and ready to share.</p>
+                    <div class="f-icon">&#9729;&#65039;</div>
+                    <h3>iCloud Sync</h3>
+                    <p>Inspections and reports sync automatically across iPhone and iPad via your private iCloud. Video clips stay on-device only -- they never touch your iCloud storage quota.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How it works -->
-    <section class="section" id="how" style="background:linear-gradient(180deg,#fff,var(--bg));">
+    <section class="section" style="background:linear-gradient(180deg,#fff,var(--bg));">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Streamlined Workflow</span>
+                <span class="eyebrow">Streamlined workflow</span>
                 <h2>From site to professional report in minutes</h2>
             </div>
             <div class="steps">
-                <div class="step reveal"><h3>Create</h3><p>Start a new inspection using a template. Add client info, property details, and custom notes. Everything organized from the start.</p></div>
-                <div class="step reveal"><h3>Document</h3><p>Capture photos, annotate findings, record voice notes. Link every photo to the exact issue it documents. Complete visual record.</p></div>
-                <div class="step reveal"><h3>Report</h3><p>Generate a professional PDF report with a single tap. Customized with your branding, logo, and signature. Ready to deliver.</p></div>
+                <div class="step reveal"><h3>Create</h3><p>Start a new inspection from one of 19 built-in templates or a custom template you built. Add client info, property details, and up to 6 property overview photos. Reuse past clients in a tap.</p></div>
+                <div class="step reveal"><h3>Document</h3><p>Work through each section. Capture annotated photos, stamp evidence with date and location, record a video, or dictate a voice note -- all linked to the exact finding. Add custom items on the fly.</p></div>
+                <div class="step reveal"><h3>Report</h3><p>Tap Generate Report. InspectKit compiles everything into a polished PDF -- cover, property overview, findings, recommendations sorted by severity, photo gallery, and dual-signature sign-off -- with your branding on every page.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Inspection Types -->
+    <!-- Templates -->
     <section class="section-sm">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow">Built-in Templates</span>
-                <h2>7 Professional Inspection Templates</h2>
-                <p>Choose from these pre-built templates or create your own.</p>
+                <span class="eyebrow">19 built-in templates</span>
+                <h2>Ready for every inspection type</h2>
+                <p>Choose a template or build your own from scratch -- or use the AI Template Builder to generate one from a description.</p>
             </div>
             <div class="stats reveal">
-                <div class="stat"><div class="s-val">🏠</div><div class="s-lbl">Home Inspections</div></div>
-                <div class="stat"><div class="s-val">🏢</div><div class="s-lbl">Building Inspections</div></div>
-                <div class="stat"><div class="s-val">🏬</div><div class="s-lbl">Commercial Property</div></div>
-                <div class="stat"><div class="s-val">☀️</div><div class="s-lbl">Solar Panel</div></div>
-                <div class="stat"><div class="s-val">🚰</div><div class="s-lbl">Septic System</div></div>
-                <div class="stat"><div class="s-val">🌳</div><div class="s-lbl">Land/Lot</div></div>
-                <div class="stat"><div class="s-val">🚗</div><div class="s-lbl">Vehicle Fleet</div></div>
+                <div class="stat"><div class="s-val">&#127968;</div><div class="s-lbl">Home Inspection</div></div>
+                <div class="stat"><div class="s-val">&#127970;</div><div class="s-lbl">Building Inspection</div></div>
+                <div class="stat"><div class="s-val">&#127978;</div><div class="s-lbl">Commercial Property</div></div>
+                <div class="stat"><div class="s-val">&#128308;</div><div class="s-lbl">Roof Inspection</div></div>
+                <div class="stat"><div class="s-val">&#128168;</div><div class="s-lbl">HVAC Inspection</div></div>
+                <div class="stat"><div class="s-val">&#9728;&#65039;</div><div class="s-lbl">Solar Panel</div></div>
+                <div class="stat"><div class="s-val">&#128688;</div><div class="s-lbl">Rental Move-In/Out</div></div>
+                <div class="stat"><div class="s-val">&#128295;</div><div class="s-lbl">Punch List</div></div>
+                <div class="stat"><div class="s-val">&#128660;</div><div class="s-lbl">Vehicle Fleet</div></div>
+                <div class="stat"><div class="s-val">&#128273;</div><div class="s-lbl">Safety Audit</div></div>
+                <div class="stat"><div class="s-val">&#127807;</div><div class="s-lbl">Land / Lot</div></div>
+                <div class="stat"><div class="s-val">&#128736;&#65039;</div><div class="s-lbl">+ 8 more</div></div>
             </div>
         </div>
     </section>
 
-    <!-- Free vs Premium -->
+    <!-- Free vs Pro -->
     <section class="section" style="background: white;">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">What's included</span>
-                <h2>Free to try. Professional features when you're ready.</h2>
-                <p>Get started with a free inspection. Upgrade for unlimited inspections and full professional features.</p>
+                <h2>Free to try. Pro when you need unlimited.</h2>
+                <p>Start with a free inspection and report. Upgrade Pro for unlimited inspections, watermark-free branded reports, and iCloud sync across all your devices.</p>
             </div>
-
             <div style="overflow-x: auto;" class="reveal">
                 <table class="comp-table">
                     <thead>
@@ -151,16 +211,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Create inspections</td><td class="yes">✓ 1</td><td class="yes">✓ Unlimited</td></tr>
-                        <tr><td>Generate reports</td><td class="yes">✓ 1</td><td class="yes">✓ Unlimited</td></tr>
-                        <tr><td>Photo capture & annotation</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                        <tr><td>Voice note transcription</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                        <tr><td>Built-in templates (7)</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                        <tr><td>Custom templates</td><td class="no">✗</td><td class="yes">✓ Unlimited</td></tr>
-                        <tr><td>Custom branding</td><td class="no">✗</td><td class="yes">✓ Logo & colors</td></tr>
-                        <tr><td>Company signature</td><td class="no">✗</td><td class="yes">✓</td></tr>
-                        <tr><td>iCloud sync</td><td class="no">✗</td><td class="yes">✓</td></tr>
-                        <tr><td>Priority support</td><td class="no">✗</td><td class="yes">✓</td></tr>
+                        <tr><td>Create inspections</td><td class="yes">&#10003; 1</td><td class="yes">&#10003; Unlimited</td></tr>
+                        <tr><td>Generate reports</td><td class="yes">&#10003; 1</td><td class="yes">&#10003; Unlimited</td></tr>
+                        <tr><td>Photo capture &amp; annotation</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Evidence-stamped photos</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Video findings (20s)</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Voice note transcription</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Finding severity (Minor/Major/Safety)</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>19 built-in templates</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Custom templates</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>5-language support</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>On-device AI (requires Apple Intelligence)</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Watermark-free reports</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Custom branding (logo &amp; signature)</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>iCloud sync</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Priority support</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -173,9 +238,8 @@
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>
                 <h2>Simple, professional pricing</h2>
-                <p>Start free. Upgrade when you need unlimited inspections and professional branding.</p>
+                <p>Start free. Upgrade for unlimited inspections, branded watermark-free reports, and iCloud sync.</p>
             </div>
-
             <div class="pricing reveal">
                 <div class="price-card">
                     <h3>Free</h3>
@@ -184,8 +248,9 @@
                     <ul>
                         <li>1 inspection</li>
                         <li>1 report generation</li>
-                        <li>Photo annotation</li>
-                        <li>Basic templates</li>
+                        <li>Photos, video &amp; voice notes</li>
+                        <li>All 19 templates + custom</li>
+                        <li>5-language support</li>
                     </ul>
                     <a href="https://apps.apple.com/us/app/inspectkit-site-reports-pro/id6782454914" class="btn btn-soft">Download Free</a>
                 </div>
@@ -197,7 +262,7 @@
                     <ul>
                         <li>Unlimited inspections</li>
                         <li>Unlimited reports</li>
-                        <li>Custom branding</li>
+                        <li>Watermark-free branded reports</li>
                         <li>iCloud sync</li>
                         <li>Priority support</li>
                     </ul>
@@ -206,7 +271,7 @@
                 <div class="price-card">
                     <h3>Pro Annual</h3>
                     <div class="amount">$24.99</div>
-                    <div class="per">Per year · save 30%</div>
+                    <div class="per">Per year &middot; save 30%</div>
                     <ul>
                         <li>All Pro features</li>
                         <li>Best annual value</li>
@@ -219,13 +284,14 @@
                     <div class="amount">$39.99</div>
                     <div class="per">One-time purchase</div>
                     <ul>
-                        <li>Lifetime access</li>
-                        <li>All features forever</li>
+                        <li>Lifetime Pro access</li>
+                        <li>All features, no subscription</li>
                         <li>No recurring charges</li>
                     </ul>
                     <a href="https://apps.apple.com/us/app/inspectkit-site-reports-pro/id6782454914" class="btn btn-soft">Get Pro</a>
                 </div>
             </div>
+            <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:24px;">On-device AI requires iOS 26 and Apple Intelligence (iPhone 15 Pro or later with AI enabled). AI features are available to all plan tiers on compatible devices.</p>
         </div>
     </section>
 
@@ -234,7 +300,7 @@
         <div class="container">
             <div class="cta reveal">
                 <h2>Now Available on the App Store</h2>
-                <p>InspectKit is live and ready to streamline your inspection workflow. Download now and start creating professional reports in minutes.</p>
+                <p>InspectKit is live and ready to streamline your inspection workflow. Download now and create your first professional report in minutes.</p>
                 <div style="display:flex;justify-content:center;margin:8px 0 28px;">
                     <div class="qr">
                         <img src="/inspectkit/appstore-qr.svg" alt="Scan to download InspectKit on the App Store">
@@ -273,9 +339,8 @@
                     <h4>More apps</h4>
                     <a href="/duplicate-photo-finder">Duplicate Photo Finder</a>
                     <a href="/pillvault">PillVault</a>
-                    <a href="/receipt-digitizer">Receipt Digitizer</a>
-                    <a href="/vow">Vow</a>
-                    <a href="/microhabit-physics">MicroHabit Physics</a>
+                    <a href="/propertynest">PropertyNest</a>
+                    <a href="/zakatbook">Zakat Book</a>
                     <a href="/">All apps</a>
                 </div>
             </div>
