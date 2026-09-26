@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - ReefDose</title>
-    <meta name="description" content="Privacy Policy for ReefDose by LynxApps. Your tank data is encrypted and stays on your device with optional iCloud sync. GDPR/CCPA compliant.">
+    <meta name="description" content="Privacy Policy for ReefDose by LynxApps. Your tank data is encrypted and stays on your device with optional iCloud sync.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
 </head>
@@ -12,9 +12,9 @@
     <header class="site-header">
         <div class="container">
             <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
-            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
             <nav class="nav">
-                <a href="/reefdose" class="muted">← ReefDose</a>
+                <a href="/reefdose" class="muted">&#8592; ReefDose</a>
                 <a href="/reefdose/terms">Terms</a>
                 <a href="/reefdose/support">Support</a>
                 <a href="mailto:lynxapps.contact@gmail.com" class="nav-cta">Contact</a>
@@ -28,122 +28,99 @@
                 <a href="/">LynxApps</a><span>/</span><a href="/reefdose">ReefDose</a><span>/</span><span>Privacy Policy</span>
             </div>
             <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: June 2026</p>
+            <p class="updated">Last updated: September 2026</p>
         </div>
     </section>
 
     <main class="doc-body">
         <div class="container-doc">
             <div class="callout">
-                <p><strong>Your tank data is encrypted and secure.</strong> All tank parameters, dosing records, and livestock information are stored locally on your device or encrypted in iCloud. We use Firebase Analytics to collect anonymous usage data to improve the app - this data is not linked to your identity and is not used for advertising or tracking.</p>
+                <p><strong>Your tank data stays on your device.</strong> All reef tank parameters, dosing records, livestock data, and journal entries are stored locally on your device or encrypted in your own iCloud account. We use Firebase Analytics to collect anonymous, aggregated usage data to improve the app -- this data is not linked to your identity and is never used for advertising or tracking.</p>
             </div>
 
-            <h2>1. Overview</h2>
-            <p>LynxApps ("we," "us," "our") operates the ReefDose application ("App"). This Privacy Policy explains how we handle your information when you use the App. We are committed to protecting your privacy - your reef tank data is encrypted and stays under your control.</p>
+            <h2>1. Who We Are</h2>
+            <p>LynxApps ("we," "us," "our") develops the ReefDose application ("App"). This Privacy Policy explains how we handle your information when you use ReefDose on iPhone, iPad, or Mac.</p>
 
-            <h2>2. Information We Collect</h2>
-            <h3>Tank & Parameter Data</h3>
-            <p>The App stores reef tank information including tank name, volume, equipment details, water parameters (calcium, alkalinity, magnesium, pH, salinity, temperature), dosing records, livestock inventory, and maintenance logs.</p>
-            <p><strong>Important:</strong> All data is stored locally on your device using SwiftData. With iCloud enabled, your data is encrypted and synced to CloudKit (Apple's private database). Your data is never sent to our servers.</p>
-
-            <h3>Device &amp; Usage Information</h3>
-            <p>Through third-party services, we automatically collect:</p>
+            <h2>2. Data Stored on Your Device</h2>
+            <p>All reef tank content lives locally on your device in the app sandbox (SwiftData):</p>
             <ul>
-                <li>Device model and operating system version</li>
-                <li>App usage data and feature interactions</li>
-                <li>Crash reports and error logs</li>
+                <li><strong>Tank and parameter data:</strong> Tank name, volume, type, water parameters (calcium, alkalinity, magnesium, pH, salinity, temperature, and custom parameters), dosing records, and task schedules.</li>
+                <li><strong>Livestock inventory:</strong> Species, category, add date, care notes, and history -- stored locally, never uploaded.</li>
+                <li><strong>Journal and timeline:</strong> Free-text journal entries and timeline events stored in the app sandbox.</li>
+                <li><strong>Expense records:</strong> Amounts, categories, and notes stored locally.</li>
+                <li><strong>Settings:</strong> Language preference, currency, notification settings, and other app preferences stored in UserDefaults.</li>
             </ul>
 
-            <h3>In-App Purchase Information</h3>
-            <p>All subscription purchases are processed through Apple's App Store. We do not collect or store payment card information. We receive only purchase confirmation and subscription status information.</p>
-
-            <h2>3. How We Use Information</h2>
+            <h2>3. iCloud Sync (Pro Feature)</h2>
+            <p>When you enable iCloud sync, ReefDose stores your tank data in your personal iCloud account using Apple's CloudKit private database. This data is:</p>
             <ul>
-                <li><strong>App functionality:</strong> to store and manage your reef tank data</li>
-                <li><strong>iCloud sync:</strong> to encrypt and sync your data across your devices</li>
-                <li><strong>Service improvement:</strong> to enhance features and user experience</li>
-                <li><strong>Analytics:</strong> to understand usage patterns and improve performance</li>
-                <li><strong>Support:</strong> to provide customer support and troubleshooting</li>
-                <li><strong>Legal compliance:</strong> to comply with applicable laws</li>
+                <li>Stored in your iCloud account, encrypted by Apple</li>
+                <li>Accessible only to you on devices signed in to the same Apple ID</li>
+                <li>Not accessible by LynxApps</li>
+                <li>Governed by Apple's iCloud Privacy Policy</li>
+            </ul>
+            <p>iCloud sync is optional -- you can use ReefDose entirely offline without it.</p>
+
+            <h2>4. Analytics and Crash Reporting</h2>
+            <p>ReefDose uses Firebase (by Google) for two purposes in release builds:</p>
+            <ul>
+                <li><strong>Analytics:</strong> Anonymous, aggregated event data such as "tank created", "parameter logged", "dose logged". No tank content, parameter values, livestock names, or journal entries are ever included in analytics events.</li>
+                <li><strong>Crashlytics:</strong> If the app crashes, a report containing device model, iOS version, and a stack trace is sent. No personal data, tank content, or parameter values are included in crash reports.</li>
+            </ul>
+            <p>Analytics events are fired only from release (App Store / TestFlight) builds, not from debug or simulator builds. Firebase data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+
+            <h2>5. App Permissions</h2>
+            <p>ReefDose may request the following permissions:</p>
+            <ul>
+                <li><strong>Notifications:</strong> To send task reminders and re-engagement nudges. You control this in iOS Settings and can decline it during onboarding. Task reminder notifications are scheduled locally -- no server is involved.</li>
+                <li><strong>iCloud (CloudKit):</strong> To sync your tank data across devices (Pro feature). Enabled via iOS Settings.</li>
+                <li><strong>Spotlight indexing:</strong> To allow Siri Shortcuts and Spotlight search to surface your tanks. Index entries contain only tank names -- no parameter values.</li>
             </ul>
 
-            <h2>4. Data Storage & Encryption</h2>
-            <h3>Local Storage (Free Plan)</h3>
-            <p>Tank data is stored locally on your device using SwiftData. Your data remains on your device unless you enable iCloud sync.</p>
+            <h2>6. In-App Purchases</h2>
+            <p>Pro subscriptions and the Lifetime purchase are processed entirely by Apple via StoreKit 2. LynxApps never sees or stores your payment details. Purchase receipt validation happens on-device.</p>
 
-            <h3>iCloud CloudKit (Pro Plan)</h3>
-            <p>When you enable iCloud sync (Pro plan), your data is encrypted using Apple's CloudKit encryption and stored in Apple's private database. CloudKit encryption means:</p>
+            <h2>7. Data Retention and Deletion</h2>
+            <p>Your data exists only on your device (and in your iCloud account if sync is enabled). To delete it:</p>
             <ul>
-                <li>Your data is encrypted in transit and at rest</li>
-                <li>Only you can decrypt your data (with your Apple ID credentials)</li>
-                <li>Apple cannot access your tank data</li>
-            </ul>
-            <p>iCloud sync is optional - you can use ReefDose entirely offline without syncing.</p>
-
-            <h2>5. Third-Party Services</h2>
-            <h3>Apple CloudKit</h3>
-            <p>CloudKit provides encrypted iCloud sync for Pro subscribers. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy →</a></p>
-
-            <h3>Apple App Store</h3>
-            <p>Processes all in-app subscriptions and billing. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy →</a></p>
-
-            <h3>Firebase Analytics (Google)</h3>
-            <p>We use Firebase Analytics to collect anonymous usage data - feature interactions, screen views, and crash reports. This data is not linked to your identity and is not used for advertising or cross-app tracking. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy →</a></p>
-
-            <h2>6. Your Privacy Rights</h2>
-            <h3>General Users</h3>
-            <ul>
-                <li>Delete all your data by uninstalling the app or deleting from iCloud settings</li>
-                <li>Disable iCloud sync anytime in app settings</li>
-                <li>Request information about data we process</li>
-            </ul>
-            <h3>European Union (GDPR)</h3>
-            <ul>
-                <li><strong>Access:</strong> request a copy of your data</li>
-                <li><strong>Deletion:</strong> request deletion of your data</li>
-                <li><strong>Rectification:</strong> correct inaccurate data</li>
-                <li><strong>Portability:</strong> receive your data in a portable format</li>
-                <li><strong>Object:</strong> object to processing</li>
-            </ul>
-            <h3>California (CCPA/CPRA)</h3>
-            <ul>
-                <li><strong>Right to know</strong> what personal information is collected</li>
-                <li><strong>Right to delete</strong> collected data</li>
-                <li><strong>Right to opt-out</strong> of sale/sharing of personal information</li>
-                <li><strong>Right to non-discrimination</strong> for exercising your rights</li>
-            </ul>
-            <h3>Brazil (LGPD)</h3>
-            <ul>
-                <li>Right to access, correct, and delete your data</li>
-                <li>Right to data portability</li>
-                <li>Right to opt-out of data processing</li>
+                <li>Delete individual tanks, parameters, livestock, or journal entries from within the app at any time.</li>
+                <li>Delete the app from your device to permanently remove all local ReefDose data.</li>
+                <li>If iCloud sync is enabled, deleting data in the app also removes it from iCloud.</li>
             </ul>
 
-            <h2>7. Children's Privacy</h2>
-            <p>The App is not directed to children under 13. We do not knowingly collect personal information from children under 13, and will promptly delete such information if discovered.</p>
+            <h2>8. Security</h2>
+            <p>ReefDose relies on iOS's built-in security model. App data is stored in the app sandbox, encrypted at rest by iOS data protection. No tank content is transmitted over the network except when you export and share it via the system share sheet, or when iCloud sync is enabled (encrypted by Apple).</p>
 
-            <h2>8. Data Retention</h2>
+            <h2>9. Children's Privacy</h2>
+            <p>The App is rated 4+ and is appropriate for all ages. We do not knowingly collect personal information from children under 13.</p>
+
+            <h2>10. Your Rights (GDPR / CCPA / LGPD)</h2>
+            <p>Because ReefDose stores all personal data locally on your device (or in your own iCloud):</p>
             <ul>
-                <li><strong>Tank data:</strong> stored locally on your device; deleted when you uninstall the app or remove iCloud backup</li>
-                <li><strong>Usage analytics:</strong> retained up to 60 days</li>
-                <li><strong>Crash reports:</strong> retained up to 90 days</li>
-                <li><strong>CloudKit data:</strong> synced to iCloud; you control deletion</li>
+                <li><strong>Access:</strong> All your tank data is visible within the app at any time.</li>
+                <li><strong>Deletion:</strong> Delete individual records in-app, or delete the app entirely to remove all data.</li>
+                <li><strong>No data sale:</strong> We do not sell personal data.</li>
+                <li><strong>Notification opt-out:</strong> Disable reminders at any time in iOS Settings or ReefDose Settings.</li>
+                <li><strong>Analytics opt-out:</strong> Anonymous analytics are governed by Firebase; refer to Google's privacy controls for opt-out options.</li>
             </ul>
 
-            <h2>9. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy periodically. We'll reflect changes by updating the "Last updated" date above. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+            <h2>11. Changes to This Policy</h2>
+            <p>We may update this policy from time to time. Material changes will be reflected in the "Last updated" date above. Continued use of the App constitutes acceptance of the revised policy.</p>
 
-            <h2>10. Contact Us</h2>
+            <h2>12. Contact Us</h2>
             <p>For privacy questions or data requests, contact us:</p>
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></li>
-                <li><strong>Response time:</strong> typically 2–3 business days</li>
+                <li><strong>Response time:</strong> within 2-3 business days</li>
             </ul>
-            <p>For GDPR, CCPA, or LGPD requests, please include the applicable regulation in the subject line with details of your request.</p>
+
+            <div class="callout callout-warn">
+                <p><strong>Privacy by design.</strong> Your reef tank parameters, livestock records, and journal entries are your data. ReefDose keeps all of it on your device -- what you track is your business, not ours.</p>
+            </div>
 
             <div class="doc-contact">
                 <h2>Questions about your privacy?</h2>
-                <p>We're here to help. Reach out anytime.</p>
+                <p>We are here to help. Reach out anytime.</p>
                 <a href="mailto:lynxapps.contact@gmail.com" class="btn btn-white">Email our team</a>
             </div>
         </div>
@@ -154,8 +131,8 @@
             <div class="footer-bottom" style="border:0;padding-top:0;">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
                 <span>
-                    <a href="/reefdose">ReefDose</a> &nbsp;·&nbsp;
-                    <a href="/reefdose/terms">Terms</a> &nbsp;·&nbsp;
+                    <a href="/reefdose">ReefDose</a> &nbsp;&middot;&nbsp;
+                    <a href="/reefdose/terms">Terms</a> &nbsp;&middot;&nbsp;
                     <a href="/reefdose/support">Support</a>
                 </span>
             </div>

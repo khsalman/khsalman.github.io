@@ -3,18 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReefDose - Reef tank dosing calculator & parameter tracker</title>
-    <meta name="description" content="ReefDose helps reef aquarium enthusiasts manage water parameters, calculate dosing, schedule maintenance, and track tank analytics. Professional tools for reef keeping-with iCloud sync.">
+    <title>ReefDose - Reef Aquarium &amp; Coral Tracker</title>
+    <meta name="description" content="ReefDose helps reef aquarium enthusiasts manage water parameters, calculate dosing, schedule maintenance, and track tank analytics. Professional tools for reef keeping with iCloud sync.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        .screenshots-row {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 12px 0 24px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .screenshots-row img {
+            height: 420px;
+            width: auto;
+            border-radius: 18px;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
             <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
-            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
             <nav class="nav">
-                <a href="/" class="muted">← All apps</a>
+                <a href="/" class="muted">&#8592; All apps</a>
                 <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
                 <a href="/reefdose/support">Support</a>
@@ -27,29 +45,51 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">🪸 Reef tank management</span>
+                <span class="eyebrow">&#127827; Reef aquarium management</span>
                 <h1>Master your reef chemistry. <span class="gradient-text">Effortlessly.</span></h1>
-                <p class="lead">ReefDose gives you complete control over your tank's water parameters. Track readings, calculate accurate dosing, schedule maintenance tasks, and analyze trends-all with professional-grade tools designed for serious reef keepers.</p>
+                <p class="lead">ReefDose gives you complete control over your reef tank. Track parameters, calculate precise dosing, schedule maintenance, analyze trends, and manage livestock -- all with professional-grade tools built for serious reef keepers.</p>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/reefdose-dosing-calculator/id6782320223" class="btn btn-primary">Download on App Store</a>
                     <a href="#features" class="btn btn-ghost">Explore features</a>
                 </div>
                 <div class="hero-meta">
-                    <div><div class="m-val gradient-text">Unlimited</div><div class="m-lbl">Tank support</div></div>
+                    <div><div class="m-val gradient-text">5</div><div class="m-lbl">Languages</div></div>
                     <div><div class="m-val gradient-text">iCloud</div><div class="m-lbl">Sync across devices</div></div>
-                    <div><div class="m-val gradient-text">Pro</div><div class="m-lbl">Advanced features</div></div>
+                    <div><div class="m-val gradient-text">iOS 18+</div><div class="m-lbl">Compatibility</div></div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="device">
                     <div class="device-screen">
-                        <div class="d-icon"><img src="/reefdose/app-icon.jpg" alt="ReefDose app icon"></div>
+                        <div class="d-icon"><img src="/reefdose/RD-icon.png" alt="ReefDose app icon"></div>
                         <div class="d-title">ReefDose</div>
-                        <div class="d-sub">Professional reef management</div>
+                        <div class="d-sub">Reef aquarium management</div>
                     </div>
-                    <div class="device-float f1"><span class="dot">📊</span> Real-time analytics</div>
-                    <div class="device-float f2"><span class="dot">💧</span> Dosing calculator</div>
+                    <div class="device-float f1"><span class="dot">&#128200;</span> Real-time analytics</div>
+                    <div class="device-float f2"><span class="dot">&#128167;</span> Dosing calculator</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">App screenshots</span>
+                <h2>See it in action</h2>
+            </div>
+            <div class="screenshots-row reveal">
+                <img src="/reefdose/RD-01.png" alt="ReefDose parameter tracking">
+                <img src="/reefdose/RD-02.png" alt="ReefDose dosing calculator">
+                <img src="/reefdose/RD-03.png" alt="ReefDose trend analytics">
+                <img src="/reefdose/RD-04.png" alt="ReefDose task reminders">
+                <img src="/reefdose/RD-05.png" alt="ReefDose livestock tracking">
+                <img src="/reefdose/RD-06.png" alt="ReefDose tank dashboard">
+                <img src="/reefdose/RD-07.png" alt="ReefDose journal and timeline">
+                <img src="/reefdose/RD-08.png" alt="ReefDose widgets">
+                <img src="/reefdose/RD-09.png" alt="ReefDose achievements">
+                <img src="/reefdose/RD-10.png" alt="ReefDose settings">
             </div>
         </div>
     </section>
@@ -63,12 +103,15 @@
                 <p>Professional-grade tools built by reef keepers, for reef keepers.</p>
             </div>
             <div class="grid grid-3">
-                <div class="feature reveal"><div class="f-icon">📋</div><h3>Parameter tracking</h3><p>Log calcium, alkalinity, magnesium, salinity, pH, temperature, and custom parameters with timestamped readings.</p></div>
-                <div class="feature reveal"><div class="f-icon">💉</div><h3>Dosing calculator</h3><p>Intelligent calculator with comprehensive product library. Calculate precise doses for your tank volume instantly.</p></div>
-                <div class="feature reveal"><div class="f-icon">📅</div><h3>Task reminders</h3><p>Never miss maintenance. Schedule reminders for water changes, equipment servicing, and parameter tests.</p></div>
-                <div class="feature reveal"><div class="f-icon">📈</div><h3>Trend analytics</h3><p>Visualize parameter trends over time. Identify patterns and make data-driven adjustments to your tank.</p></div>
-                <div class="feature reveal"><div class="f-icon">🐠</div><h3>Livestock tracking</h3><p>Keep detailed records of fish, corals, and invertebrates with care notes and history.</p></div>
-                <div class="feature reveal"><div class="f-icon">☁️</div><h3>iCloud sync</h3><p>All your data syncs seamlessly across iPhone, iPad, and Mac. Access your tank anywhere.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128203;</div><h3>Parameter tracking</h3><p>Log calcium, alkalinity, magnesium, salinity, pH, temperature, and custom parameters with timestamped readings and trend charts.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128137;</div><h3>Dosing calculator</h3><p>Intelligent calculator with a comprehensive product library. Calculate precise doses for your tank volume with stock depletion estimates.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128197;</div><h3>Task reminders</h3><p>Never miss maintenance. Schedule reminders for water changes, equipment servicing, parameter tests, and custom tasks.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128200;</div><h3>Trend analytics</h3><p>Visualize parameter trends over time with Apple Charts. Identify patterns and make data-driven adjustments to your reef.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128032;</div><h3>Livestock tracking</h3><p>Keep detailed records of fish, corals, and invertebrates with species notes, care history, and tank inventory.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#9925;</div><h3>iCloud sync</h3><p>All your data syncs seamlessly across iPhone, iPad, and Mac via CloudKit. Access your tank anywhere.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128247;</div><h3>Home Screen widgets</h3><p>Monitor tank health at a glance with configurable Home Screen widgets. Per-tank selection with real-time snapshots.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128221;</div><h3>Journal &amp; timeline</h3><p>Free-text journal entries and a full timeline of tank activity -- parameters, doses, tasks, and livestock events in one view.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#127760;</div><h3>5 languages</h3><p>Full UI localization in English, Spanish, French, Portuguese, and Japanese -- with in-session language switching, no restart needed.</p></div>
             </div>
         </div>
     </section>
@@ -81,9 +124,9 @@
                 <h2>Simple workflow, serious results</h2>
             </div>
             <div class="steps">
-                <div class="step reveal"><h3>Add your tank</h3><p>Create a profile for each tank with volume, equipment, and initial parameters.</p></div>
-                <div class="step reveal"><h3>Log readings</h3><p>Record water test results. ReefDose calculates trends and flags concerning changes.</p></div>
-                <div class="step reveal"><h3>Calculate & dose</h3><p>Get precise dosing recommendations based on your parameters and desired changes.</p></div>
+                <div class="step reveal"><h3>Add your tank</h3><p>Create a profile for each tank with volume, type, and initial parameters. Set up equipment and livestock records.</p></div>
+                <div class="step reveal"><h3>Log readings</h3><p>Record water test results regularly. ReefDose calculates trends, flags concerning changes, and shows your reef health score.</p></div>
+                <div class="step reveal"><h3>Calculate &amp; dose</h3><p>Get precise dosing recommendations based on your current parameters and desired targets. Track stock levels and predict when you'll run out.</p></div>
             </div>
         </div>
     </section>
@@ -95,7 +138,7 @@
                 <div class="stat"><div class="s-val gradient-text">iOS 18+</div><div class="s-lbl">Compatibility</div></div>
                 <div class="stat"><div class="s-val gradient-text">SwiftData</div><div class="s-lbl">Local storage</div></div>
                 <div class="stat"><div class="s-val gradient-text">CloudKit</div><div class="s-lbl">iCloud sync</div></div>
-                <div class="stat"><div class="s-val gradient-text">Pro</div><div class="s-lbl">Subscription</div></div>
+                <div class="stat"><div class="s-val gradient-text">5</div><div class="s-lbl">Languages</div></div>
             </div>
         </div>
     </section>
@@ -106,7 +149,7 @@
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>
                 <h2>Plans for every keeper</h2>
-                <p>Start free with one tank. Unlock unlimited tanks and pro features with a subscription.</p>
+                <p>Start free with one tank. Unlock unlimited tanks and Pro features anytime.</p>
             </div>
 
             <div class="grid grid-3" style="max-width:900px;margin:60px auto 0;">
@@ -120,7 +163,8 @@
                         <li>Task reminders</li>
                         <li>Dosing calculator (1 product)</li>
                         <li>7-day trend charts</li>
-                        <li>Livestock tracking &amp; journal</li>
+                        <li>Livestock tracking</li>
+                        <li>Journal, timeline &amp; achievements</li>
                     </ul>
                     <a href="https://apps.apple.com/us/app/reefdose-dosing-calculator/id6782320223" class="btn btn-soft" style="width:100%;">Download free</a>
                 </div>
@@ -130,11 +174,12 @@
                     <div class="price">$2.99</div>
                     <p class="price-desc">/month, auto-renews</p>
                     <ul class="feat" style="margin:24px 0;flex-grow:1;">
-                        <li>Unlimited tanks &amp; products</li>
-                        <li>Full trend history</li>
-                        <li>iCloud sync</li>
+                        <li>Unlimited tanks &amp; dosing products</li>
+                        <li>Full trend history (30d / 3mo / all)</li>
+                        <li>Maintenance &amp; equipment log</li>
+                        <li>iCloud sync across devices</li>
                         <li>Home Screen widgets</li>
-                        <li>CSV/PDF export</li>
+                        <li>CSV &amp; PDF export</li>
                         <li>Expense tracker</li>
                     </ul>
                     <a href="https://apps.apple.com/us/app/reefdose-dosing-calculator/id6782320223" class="btn btn-soft" style="width:100%;">Upgrade to Pro</a>
@@ -149,10 +194,9 @@
                     <p class="price-desc">/year, auto-renews</p>
                     <ul class="feat" style="margin:24px 0;flex-grow:1;">
                         <li>Everything in Monthly</li>
-                        <li>7-day free trial</li>
-                        <li>Save $5.89/year</li>
+                        <li>~$2.50/month billed annually</li>
                     </ul>
-                    <a href="https://apps.apple.com/us/app/reefdose-dosing-calculator/id6782320223" class="btn btn-primary" style="width:100%;">Start free trial</a>
+                    <a href="https://apps.apple.com/us/app/reefdose-dosing-calculator/id6782320223" class="btn btn-primary" style="width:100%;">Upgrade to Pro</a>
                 </div>
 
                 <div class="pricing-card reveal" style="grid-column: span 3; max-width: 300px; margin: 0 auto;">
@@ -160,11 +204,11 @@
                     <div class="price">$49.99</div>
                     <p class="price-desc">One-time purchase</p>
                     <ul class="feat" style="margin:24px 0;flex-grow:1;">
-                        <li>All features forever</li>
+                        <li>All Pro features forever</li>
                         <li>No subscription</li>
                         <li>Permanent access</li>
                     </ul>
-                    <a href="https://apps.apple.com/us/app/reefdose-dosing-calculator/id6782320223" class="btn btn-soft" style="width:100%;">Download free</a>
+                    <a href="https://apps.apple.com/us/app/reefdose-dosing-calculator/id6782320223" class="btn btn-soft" style="width:100%;">Get lifetime access</a>
                 </div>
             </div>
         </div>
@@ -175,18 +219,17 @@
         <div class="container">
             <div class="cta-content reveal">
                 <h2>Now available on the App Store</h2>
-                <p>Download ReefDose free and take control of your reef tank chemistry - dosing calculations, parameter tracking, and maintenance reminders in one app.</p>
+                <p>Download ReefDose free and take control of your reef tank chemistry -- dosing calculations, parameter tracking, and maintenance reminders in one app.</p>
                 <div style="display:flex;justify-content:center;margin:8px 0 28px;">
                     <div class="qr">
                         <img src="/reefdose/appstore-qr.svg" alt="Scan to download ReefDose on the App Store">
                         <span>Scan with your iPhone camera</span>
                     </div>
                 </div>
-                <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
-                    <a href="https://apps.apple.com/us/app/reefdose-dosing-calculator/id6782320223" class="btn btn-primary">Download on App Store</a>
-                    <a href="/reefdose/support" class="btn btn-ghost">Visit support</a>
+                <div class="hero-cta">
+                    <a href="https://apps.apple.com/us/app/reefdose-dosing-calculator/id6782320223" class="btn btn-white">Download on App Store</a>
                 </div>
-                <div style="margin-top:28px;"><span class="review-note">✅ Status: Live on the App Store</span></div>
+                <div style="margin-top:28px;"><span class="review-note">&#10003; Status: Live on the App Store</span></div>
             </div>
         </div>
     </section>
@@ -208,7 +251,7 @@
                     <li><a href="/">All apps</a></li>
                     <li><a href="/duplicate-photo-finder">Photo Finder</a></li>
                     <li><a href="/receipt-digitizer">Receipt Digitizer</a></li>
-                    <li><a href="/vow">Vow</a></li>
+                    <li><a href="/inspectkit">InspectKit</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -221,8 +264,8 @@
             <div class="footer-bottom" style="border-top:1px solid var(--line);padding-top:24px;margin-top:40px;">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
                 <span>
-                    <a href="/reefdose">ReefDose</a> &nbsp;·&nbsp;
-                    <a href="/reefdose/privacy">Privacy</a> &nbsp;·&nbsp;
+                    <a href="/reefdose">ReefDose</a> &nbsp;&middot;&nbsp;
+                    <a href="/reefdose/privacy">Privacy</a> &nbsp;&middot;&nbsp;
                     <a href="/reefdose/support">Support</a>
                 </span>
             </div>
