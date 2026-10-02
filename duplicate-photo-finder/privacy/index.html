@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Duplicate Photo &amp; Video Finder</title>
-    <meta name="description" content="Privacy Policy for Duplicate Photo &amp; Video Finder by LynxApps. Available on iOS and Android. Your photos stay on your device.">
+    <meta name="description" content="Privacy Policy for Duplicate Photo &amp; Video Finder by LynxApps. Your photos stay on your device.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
 </head>
@@ -12,9 +12,9 @@
     <header class="site-header">
         <div class="container">
             <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
-            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
             <nav class="nav">
-                <a href="/duplicate-photo-finder" class="muted">← Photo Finder</a>
+                <a href="/duplicate-photo-finder" class="muted">&#8592; Photo &amp; Video Finder</a>
                 <a href="/duplicate-photo-finder/terms">Terms</a>
                 <a href="/duplicate-photo-finder/support">Support</a>
                 <a href="mailto:lynxapps.contact@gmail.com" class="nav-cta">Contact</a>
@@ -28,114 +28,87 @@
                 <a href="/">LynxApps</a><span>/</span><a href="/duplicate-photo-finder">Duplicate Photo &amp; Video Finder</a><span>/</span><span>Privacy Policy</span>
             </div>
             <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: June 2026</p>
+            <p class="updated">Last updated: October 2026</p>
         </div>
     </section>
 
     <main class="doc-body">
         <div class="container-doc">
             <div class="callout">
-                <p><strong>Your photos never leave your device.</strong> All scanning, comparison, and duplicate detection happens entirely on your device. We do not collect, upload, transmit, or sell your photos.</p>
+                <p><strong>Your photos never leave your device.</strong> All scanning, comparison, and duplicate detection happens entirely on your device using on-device AI. We do not collect, upload, transmit, or sell your photos or videos. We use Firebase Analytics for anonymous usage data and Google AdMob (with Unity Ads mediation) to deliver ads to free users.</p>
             </div>
 
-            <h2>1. Overview</h2>
-            <p>LynxApps ("we," "us," "our") operates the Duplicate Photo &amp; Video Finder application ("App"). This Privacy Policy explains how we handle your information when you use the App. We are committed to protecting your privacy - your photos are processed only on your device using on-device AI technology.</p>
+            <h2>1. Who We Are</h2>
+            <p>LynxApps ("we," "us," "our") develops the Duplicate Photo &amp; Video Finder application ("App") for iPhone, iPad, and Mac. This Privacy Policy explains how we handle your information when you use the App.</p>
 
-            <h2>2. Information We Collect</h2>
-            <h3>Photo &amp; Video Data</h3>
-            <p>The App accesses your photo library to detect duplicate and similar photos, analyze metadata (resolution, quality, format), and provide intelligent recommendations.</p>
-            <p><strong>Important:</strong> All processing happens locally on your device. Your photos are never uploaded, transmitted, or stored on our servers.</p>
+            <h2>2. Photo &amp; Video Data</h2>
+            <p>The App accesses your photo library solely to detect duplicate and similar photos and videos on your device. All detection and analysis -- including dHash perceptual matching, SHA-256 exact matching, Vision ML similarity, color histogram analysis, and EXIF clustering -- happens locally on your device. Your photos and videos are <strong>never uploaded, transmitted, or stored on our servers</strong>.</p>
 
-            <h3>Device &amp; Usage Information</h3>
-            <p>Through third-party services, we automatically collect:</p>
+            <h2>3. Analytics and Crash Reporting</h2>
+            <p>ReefDose uses Firebase (by Google) for two purposes in release builds:</p>
             <ul>
-                <li>Device model and operating system version</li>
-                <li>App usage data and performance metrics</li>
-                <li>Crash reports and error logs</li>
-                <li>Advertising identifier (for personalized ads)</li>
+                <li><strong>Firebase Analytics:</strong> Anonymous, aggregated event data such as "scan started", "scan completed", "deletion performed", and "paywall displayed". No photo content, video content, or file names are ever included in analytics events. Analytics events fire only in release (App Store / TestFlight) builds, not in debug or simulator builds.</li>
+                <li><strong>Firebase Crashlytics:</strong> If the App crashes, a report containing device model, iOS version, app version, and a stack trace is sent. No personal data or photo content is included in crash reports.</li>
+            </ul>
+            <p>Firebase data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+
+            <h2>4. Advertising</h2>
+            <p>Free users see banner and interstitial ads served by Google AdMob with Unity Ads mediation. Pro subscribers see no ads.</p>
+            <ul>
+                <li><strong>Google AdMob:</strong> Delivers ads using advertising identifiers (IDFA/GAID) and device information. Governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+                <li><strong>Unity Ads (mediation):</strong> An ad mediation network that may serve ads to free users. Governed by <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity's Privacy Policy</a>.</li>
+            </ul>
+            <p>You can limit ad tracking in iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking.</p>
+
+            <h2>5. In-App Purchases</h2>
+            <p>All subscriptions and the Lifetime purchase are processed entirely by Apple via StoreKit 2. LynxApps never sees or stores your payment details. Purchase receipt validation happens on-device.</p>
+
+            <h2>6. App Permissions</h2>
+            <ul>
+                <li><strong>Photo Library:</strong> Required to scan your library for duplicates. You can grant Full Access or Limited Access. The App cannot detect duplicates in photos you exclude.</li>
+                <li><strong>Notifications:</strong> Optional, used to notify you when a background scan completes. You control this in iOS Settings.</li>
+                <li><strong>App Tracking Transparency (ATT):</strong> Required on iOS 14.5+ for personalized ads. If you decline, ads are served without personalization.</li>
             </ul>
 
-            <h3>Subscription &amp; Payment Information</h3>
-            <p>All in-app purchases are processed through Apple's App Store (iOS) or Google Play Store (Android). We do not collect or store payment card information. We receive only purchase confirmation, subscription status, and receipt information.</p>
-
-            <h2>3. How We Use Information</h2>
+            <h2>7. Data Retention and Deletion</h2>
+            <p>Your photo and video data is never stored on our servers. To remove locally cached data (scan hashes, settings):</p>
             <ul>
-                <li><strong>App functionality:</strong> to detect and manage duplicate photos on your device</li>
-                <li><strong>Service improvement:</strong> to enhance features and user experience</li>
-                <li><strong>Analytics:</strong> to understand usage and improve performance</li>
-                <li><strong>Support:</strong> to provide customer support and troubleshooting</li>
-                <li><strong>Advertising:</strong> to deliver personalized ads (if enabled)</li>
-                <li><strong>Legal compliance:</strong> to comply with applicable laws</li>
+                <li>Use the "Clear Cache" option in Settings within the App.</li>
+                <li>Delete the App from your device to permanently remove all local App data.</li>
             </ul>
 
-            <h2>4. Third-Party Services</h2>
-            <h3>Google Firebase</h3>
-            <p>Used for analytics, crash reporting, and performance monitoring (both iOS and Android). <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security →</a></p>
-            <h3>Google AdMob</h3>
-            <p>Displays personalized advertisements using advertising identifiers and usage data (iOS and Android). <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob Privacy Information →</a></p>
-            <h3>Apple</h3>
-            <p>Processes all App Store transactions and subscription management (iOS). <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy →</a></p>
-            <h3>Google Play</h3>
-            <p>Processes all Google Play Store transactions and subscription management (Android). <a href="https://play.google.com/about/privacy-security/" target="_blank" rel="noopener">Google Play Privacy &amp; Security →</a></p>
+            <h2>8. Security</h2>
+            <p>The App relies on iOS's built-in security model. App data is stored in the app sandbox, encrypted at rest by iOS data protection. No photo or video content is transmitted over the network.</p>
 
-            <h2>5. Data Security</h2>
-            <ul>
-                <li>On-device processing ensures photos never leave your device (iOS and Android)</li>
-                <li>Encryption in transit for analytics data</li>
-                <li>Regular security updates and patches</li>
-                <li>Limited server-side data retention</li>
-            </ul>
-            <p>However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+            <h2>9. Children's Privacy</h2>
+            <p>The App is rated 4+ and is appropriate for all ages. We do not knowingly collect personal information from children under 13.</p>
 
-            <h2>6. Your Privacy Rights</h2>
-            <h3>General Users</h3>
+            <h2>10. Your Rights (GDPR / CCPA / LGPD)</h2>
             <ul>
-                <li>Revoke photo library access anytime in your device Settings</li>
-                <li>Disable personalized ads in your device Settings</li>
-                <li>Delete the app to stop data collection</li>
-                <li>Request information about data we process</li>
-            </ul>
-            <h3>European Union (GDPR)</h3>
-            <ul>
-                <li><strong>Access:</strong> request a copy of your data</li>
-                <li><strong>Deletion:</strong> request deletion of your data</li>
-                <li><strong>Rectification:</strong> correct inaccurate data</li>
-                <li><strong>Portability:</strong> receive your data in a portable format</li>
-                <li><strong>Object:</strong> object to processing</li>
-            </ul>
-            <h3>California (CCPA/CPRA)</h3>
-            <ul>
-                <li><strong>Right to know</strong> what personal information is collected</li>
-                <li><strong>Right to delete</strong> collected data</li>
-                <li><strong>Right to opt-out</strong> of sale/sharing of personal information</li>
-                <li><strong>Right to non-discrimination</strong> for exercising your rights</li>
+                <li><strong>Access:</strong> All your data is on your device and visible within the App at any time.</li>
+                <li><strong>Deletion:</strong> Delete app data via Settings &rarr; Clear Cache, or delete the App entirely.</li>
+                <li><strong>No data sale:</strong> We do not sell personal data.</li>
+                <li><strong>Ad opt-out:</strong> Limit ad tracking in iOS Settings &rarr; Privacy &amp; Security &rarr; Tracking.</li>
+                <li><strong>Analytics opt-out:</strong> Anonymous analytics are governed by Firebase; refer to Google's privacy controls.</li>
             </ul>
 
-            <h2>7. Children's Privacy</h2>
-            <p>The App is not directed to children under 13. We do not knowingly collect personal information from children under 13, and will promptly delete such information if discovered.</p>
+            <h2>11. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy periodically. Material changes will be reflected in the "Last updated" date above. Continued use of the App constitutes acceptance of the revised policy.</p>
 
-            <h2>8. Data Retention</h2>
-            <ul>
-                <li><strong>Photos:</strong> never stored on our servers</li>
-                <li><strong>Usage analytics:</strong> retained up to 60 days</li>
-                <li><strong>Crash reports:</strong> retained up to 90 days</li>
-                <li><strong>Ad data:</strong> governed by Google's retention policies</li>
-            </ul>
-
-            <h2>9. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy periodically. We'll reflect changes by updating the "Last updated" date above. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
-
-            <h2>10. Contact Us</h2>
+            <h2>12. Contact Us</h2>
             <p>For privacy questions or data requests, contact us:</p>
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></li>
-                <li><strong>Response time:</strong> typically 2–3 business days</li>
+                <li><strong>Response time:</strong> within 2-3 business days</li>
             </ul>
-            <p>For GDPR or CCPA requests, please include "Privacy Request" in the subject line with details of your request.</p>
+
+            <div class="callout callout-warn">
+                <p><strong>Privacy by design.</strong> Your photos and videos are yours. Duplicate Photo &amp; Video Finder processes everything on your device -- what you scan is your business, not ours.</p>
+            </div>
 
             <div class="doc-contact">
                 <h2>Questions about your privacy?</h2>
-                <p>We're here to help. Reach out anytime.</p>
+                <p>We are here to help. Reach out anytime.</p>
                 <a href="mailto:lynxapps.contact@gmail.com" class="btn btn-white">Email our team</a>
             </div>
         </div>
@@ -146,8 +119,8 @@
             <div class="footer-bottom" style="border:0;padding-top:0;">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
                 <span>
-                    <a href="/duplicate-photo-finder">Photo Finder</a> &nbsp;·&nbsp;
-                    <a href="/duplicate-photo-finder/terms">Terms</a> &nbsp;·&nbsp;
+                    <a href="/duplicate-photo-finder">Photo Finder</a> &nbsp;&middot;&nbsp;
+                    <a href="/duplicate-photo-finder/terms">Terms</a> &nbsp;&middot;&nbsp;
                     <a href="/duplicate-photo-finder/support">Support</a>
                 </span>
             </div>

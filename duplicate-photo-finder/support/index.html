@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support &amp; FAQ - Duplicate Photo &amp; Video Finder</title>
-    <meta name="description" content="Support, FAQ, and help for Duplicate Photo &amp; Video Finder by LynxApps. Available on iOS and Android.">
+    <meta name="description" content="Support, FAQ, and help for Duplicate Photo &amp; Video Finder by LynxApps. Get answers about scanning, deletion, subscriptions, and more.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
 </head>
@@ -12,9 +12,9 @@
     <header class="site-header">
         <div class="container">
             <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
-            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
             <nav class="nav">
-                <a href="/duplicate-photo-finder" class="muted">← Photo &amp; Video Finder</a>
+                <a href="/duplicate-photo-finder" class="muted">&#8592; Photo &amp; Video Finder</a>
                 <a href="/duplicate-photo-finder/privacy">Privacy</a>
                 <a href="/duplicate-photo-finder/terms">Terms</a>
                 <a href="mailto:lynxapps.contact@gmail.com" class="nav-cta">Email us</a>
@@ -35,9 +35,9 @@
     <main class="doc-body">
         <div class="container-doc">
             <div class="quick-links">
-                <div class="qlink"><h3>📧 Email support</h3><p>Questions, feature requests, or bug reports - we read them all.</p><a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></div>
-                <div class="qlink"><h3>⏱️ Response time</h3><p>We typically reply within 2–3 business days.</p></div>
-                <div class="qlink"><h3>⭐ Download</h3><p>Get the app on iOS or Android.</p><a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761">App Store</a> · <a href="https://play.google.com/store/apps/details?id=com.lynxapps.duplicatephotofinder">Google Play</a></div>
+                <div class="qlink"><h3>&#128231; Email support</h3><p>Questions, feature requests, or bug reports -- we read them all.</p><a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></div>
+                <div class="qlink"><h3>&#9201; Response time</h3><p>We typically reply within 2-3 business days.</p></div>
+                <div class="qlink"><h3>&#128241; Download</h3><p>Available on iOS 16+</p><a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761">App Store</a></div>
             </div>
 
             <h2>Frequently asked questions</h2>
@@ -45,95 +45,103 @@
                 <details class="faq-item" open>
                     <summary class="faq-q"><span>How does Duplicate Photo &amp; Video Finder work?</span><span class="chev">+</span></summary>
                     <div class="faq-a">
-                        <p>It uses on-device AI and machine learning to scan your library and identify duplicate and similar photos using four methods:</p>
+                        <p>The App uses on-device AI and machine learning to scan your library and identify duplicate and similar photos and videos using five detection methods:</p>
                         <ul>
-                            <li><strong>Exact matching:</strong> identical photos (same file)</li>
-                            <li><strong>Perceptual matching:</strong> photos that look the same even if resized</li>
-                            <li><strong>AI visual similarity:</strong> burst shots and near-identical images</li>
+                            <li><strong>SHA-256 exact matching:</strong> cryptographically identical files</li>
+                            <li><strong>dHash perceptual matching:</strong> photos that look the same even if resized or re-encoded</li>
+                            <li><strong>Vision ML similarity:</strong> burst shots and near-identical images using Apple's ML framework</li>
+                            <li><strong>Color histogram analysis:</strong> same-venue or same-lighting photos</li>
+                            <li><strong>EXIF clustering:</strong> photos captured within the same short time window</li>
                         </ul>
-                        <p>All processing happens entirely on your device - your photos never leave your device (iOS or Android).</p>
+                        <p>All processing happens entirely on your device -- your photos never leave your iPhone or iPad.</p>
                     </div>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-q"><span>Is my privacy protected? Do you upload my photos?</span><span class="chev">+</span></summary>
-                    <div class="faq-a"><p><strong>Your privacy is completely protected.</strong> We do not collect, upload, transmit, or sell your photos. All scanning and duplicate detection happens entirely on your device. We only collect minimal technical data (crash reports and usage analytics) to improve the app.</p></div>
+                    <div class="faq-a"><p><strong>Your privacy is completely protected.</strong> We do not collect, upload, transmit, or sell your photos or videos. All scanning and duplicate detection happens entirely on your device. We only collect anonymous usage analytics and crash reports through Firebase to improve the app.</p></div>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-q"><span>How fast is the scanning process?</span><span class="chev">+</span></summary>
-                    <div class="faq-a"><p>Most users scan 1,000+ photos in under 30 seconds. Speed depends on your library size, device model, photo resolution, and OS version (iOS/Android). On-device processing makes it much faster than cloud-based solutions.</p></div>
+                    <div class="faq-a"><p>Most users scan 1,000+ photos in under 30 seconds. You can also lock your device mid-scan -- the Live Activity on the Lock Screen and Dynamic Island keeps you updated on progress while the App runs in the background.</p></div>
                 </details>
                 <details class="faq-item">
-                    <summary class="faq-q"><span>How does the app choose which photos to keep?</span><span class="chev">+</span></summary>
+                    <summary class="faq-q"><span>How does the App choose which photos to keep?</span><span class="chev">+</span></summary>
                     <div class="faq-a">
-                        <p>The app ranks and pre-selects the best photo in each group based on resolution, sharpness, file format, and overall quality. <strong>You stay in full control</strong> - review the recommendations and manually adjust your selection before confirming.</p>
+                        <p>The App ranks photos in each group and pre-selects the best one based on resolution, sharpness, file format (HEIC preferred), and face detection. <strong>You stay in full control</strong> -- review recommendations and manually adjust your selection before confirming.</p>
                     </div>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-q"><span>What if I accidentally delete important photos?</span><span class="chev">+</span></summary>
                     <div class="faq-a">
-                        <p>Don't worry - deleted photos don't disappear immediately:</p>
+                        <p>Deleted photos don't disappear immediately:</p>
                         <ul>
-                            <li>They go to your device's Photos app trash/bin folder</li>
-                            <li>You have <strong>30 days</strong> to recover them (iOS and Android)</li>
-                            <li>Recovery is easy: open Photos → Recently Deleted/Trash → Recover</li>
-                            <li>The app also provides one-tap undo</li>
+                            <li>They go to the Photos app "Recently Deleted" folder</li>
+                            <li>You have <strong>30 days</strong> to recover them</li>
+                            <li>Recovery: open Photos &rarr; Albums &rarr; Recently Deleted &rarr; Recover</li>
+                            <li>The App also provides one-tap undo immediately after deletion</li>
                         </ul>
-                        <p>We recommend backing up important photos to iCloud or Google Photos before deleting.</p>
+                        <p>We recommend backing up important photos to iCloud before deleting large batches.</p>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary class="faq-q"><span>Does the app support video duplicates?</span><span class="chev">+</span></summary>
-                    <div class="faq-a"><p>Yes! It scans your entire photo and video library, identifies duplicate videos, ranks them by resolution and file size, and provides the same safe 30-day recovery.</p></div>
+                    <summary class="faq-q"><span>Does the App support video duplicates?</span><span class="chev">+</span></summary>
+                    <div class="faq-a"><p>Yes! The App scans your entire photo and video library, identifies duplicate videos, ranks them by resolution and file size, and provides the same safe 30-day recovery. Duplicate videos can reclaim gigabytes of storage -- often far more than photos.</p></div>
                 </details>
                 <details class="faq-item">
                     <summary class="faq-q"><span>What's the difference between Free and Pro?</span><span class="chev">+</span></summary>
                     <div class="faq-a">
-                        <p><strong>Free:</strong> AI duplicate detection, limited duplicate groups, ad-supported, video support.</p>
-                        <p><strong>Pro (Monthly, Yearly, or Lifetime):</strong> unlimited duplicate groups, no ads, priority support, all detection methods, video support.</p>
+                        <p><strong>Free Plan:</strong></p>
+                        <ul>
+                            <li>All 5 detection methods</li>
+                            <li>Up to 100 photo groups (one-by-one deletion)</li>
+                            <li>Up to 10 video groups (one-by-one deletion)</li>
+                            <li>Ad-supported (banner and interstitial ads)</li>
+                        </ul>
+                        <p><strong>Pro Plan:</strong></p>
+                        <ul>
+                            <li>Unlimited photo and video deletions</li>
+                            <li>Bulk delete all duplicates at once</li>
+                            <li>No ads</li>
+                        </ul>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary class="faq-q"><span>How do I manage my subscription?</span><span class="chev">+</span></summary>
+                    <summary class="faq-q"><span>What are the Pro subscription options?</span><span class="chev">+</span></summary>
                     <div class="faq-a">
-                        <p><strong>iOS:</strong> Manage through your Apple ID</p>
+                        <p>Three Pro options to fit your needs:</p>
+                        <ul>
+                            <li><strong>Monthly:</strong> $0.99/month (auto-renews)</li>
+                            <li><strong>Yearly:</strong> $9.99/year (~$0.83/month, auto-renews)</li>
+                            <li><strong>Lifetime:</strong> $14.99 one-time purchase (permanent access, no renewal)</li>
+                        </ul>
+                        <p>All prices shown in USD. Prices may vary by region. All purchases are processed by Apple.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>How do I manage or cancel my subscription?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>You can cancel anytime through your Apple ID:</p>
                         <ol class="steps-list">
                             <li>Open <strong>Settings</strong></li>
                             <li>Tap <strong>[Your Name]</strong> at the top</li>
                             <li>Select <strong>Subscriptions</strong></li>
                             <li>Find <strong>Duplicate Photo &amp; Video Finder</strong></li>
-                            <li>Tap <strong>Manage</strong> or <strong>Cancel Subscription</strong></li>
+                            <li>Tap <strong>Cancel Subscription</strong></li>
                         </ol>
-                        <p><strong>Android:</strong> Manage through Google Play</p>
-                        <ol class="steps-list">
-                            <li>Open <strong>Google Play Store</strong></li>
-                            <li>Tap your <strong>profile icon</strong></li>
-                            <li>Select <strong>Subscriptions</strong></li>
-                            <li>Find <strong>Duplicate Photo &amp; Video Finder</strong></li>
-                            <li>Tap <strong>Manage</strong> or <strong>Cancel</strong></li>
-                        </ol>
+                        <p>You retain Pro access until the end of your current billing period. Refund requests can be submitted at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary class="faq-q"><span>The app won't access my photos. What should I do?</span><span class="chev">+</span></summary>
+                    <summary class="faq-q"><span>The App won't access my photos. What should I do?</span><span class="chev">+</span></summary>
                     <div class="faq-a">
-                        <p><strong>iOS:</strong></p>
                         <ol class="steps-list">
                             <li>Open <strong>Settings</strong></li>
                             <li>Find <strong>Duplicate Photo &amp; Video Finder</strong></li>
                             <li>Tap <strong>Photos</strong></li>
                             <li>Select <strong>"Full Access"</strong> or <strong>"All Photos"</strong></li>
-                            <li>Return to the app and scan again</li>
+                            <li>Return to the App and scan again</li>
                         </ol>
-                        <p><strong>Android:</strong></p>
-                        <ol class="steps-list">
-                            <li>Open <strong>Settings</strong></li>
-                            <li>Go to <strong>Apps & Notifications</strong></li>
-                            <li>Find <strong>Duplicate Photo &amp; Video Finder</strong></li>
-                            <li>Tap <strong>Permissions</strong></li>
-                            <li>Enable <strong>Storage</strong> or <strong>Photos</strong> permission</li>
-                            <li>Return to the app and scan again</li>
-                        </ol>
-                        <p>The app needs full library access to detect duplicates across your entire library.</p>
+                        <p>The App needs full library access to detect duplicates across your entire library.</p>
                     </div>
                 </details>
                 <details class="faq-item">
@@ -142,7 +150,20 @@
                         <ul>
                             <li><strong>iOS 16.0</strong> or later (iPhone)</li>
                             <li><strong>iPadOS 16.0</strong> or later (iPad)</li>
-                            <li><strong>macOS 13.0</strong> or later (Mac with M1 or later)</li>
+                            <li><strong>macOS 13.0</strong> or later (Mac with Apple Silicon)</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-q"><span>What languages does the App support?</span><span class="chev">+</span></summary>
+                    <div class="faq-a">
+                        <p>The App supports 5 languages with complete UI localization:</p>
+                        <ul>
+                            <li>English</li>
+                            <li>Spanish (Espanol)</li>
+                            <li>Chinese Simplified (Zhongwen)</li>
+                            <li>Japanese (Nihongo)</li>
+                            <li>Portuguese (Portugues)</li>
                         </ul>
                     </div>
                 </details>
@@ -151,38 +172,47 @@
             <h2>Troubleshooting</h2>
             <h3>App crashes or won't open</h3>
             <ol class="steps-list">
-                <li>Force-close the app and reopen it</li>
+                <li>Force-close the App (swipe up from the bottom)</li>
                 <li>Restart your iPhone</li>
-                <li>Update iOS in Settings → General → Software Update</li>
-                <li>Delete and reinstall the app from the App Store</li>
+                <li>Update iOS in Settings &rarr; General &rarr; Software Update</li>
+                <li>Delete and reinstall the App from the App Store</li>
             </ol>
-            <h3>Slow scanning or freezing</h3>
+
+            <h3>Scan is slow or freezes</h3>
             <ol class="steps-list">
                 <li>Close other apps running in the background</li>
                 <li>Ensure at least 2 GB of available storage</li>
                 <li>Restart your iPhone</li>
-                <li>Try scanning a smaller album first</li>
+                <li>Try scanning with only dHash + SHA-256 enabled for faster results on very large libraries</li>
             </ol>
+
             <h3>Missing photos in results</h3>
             <ol class="steps-list">
-                <li>Ensure the app has <strong>Full Access</strong> to your library</li>
-                <li>Check Settings → Privacy &amp; Security → Photos</li>
-                <li>iCloud-only photos may take longer to scan</li>
+                <li>Ensure the App has <strong>Full Access</strong> to your library in Settings</li>
+                <li>Check Settings &rarr; Privacy &amp; Security &rarr; Photos</li>
+                <li>iCloud-only photos (not downloaded) may not be detected -- download them first</li>
+            </ol>
+
+            <h3>Live Activity not showing</h3>
+            <ol class="steps-list">
+                <li>Live Activity requires iOS 16.2 or later</li>
+                <li>Ensure Live Activities are enabled in Settings &rarr; Face ID &amp; Passcode (or Display &amp; Brightness)</li>
+                <li>Start a new scan -- the Live Activity appears automatically when the App backgrounds</li>
             </ol>
 
             <div class="doc-contact">
                 <h2>Still need help?</h2>
                 <p>Couldn't find your answer? Our team is happy to help with any question or issue.</p>
-                <a href="mailto:lynxapps.contact@gmail.com?subject=Duplicate%20Photo%20Finder%20Support" class="btn btn-white">Contact support</a>
-                <p style="font-size:13px;opacity:.85;margin:14px 0 0;">Typical response time: 2–3 business days</p>
+                <a href="mailto:lynxapps.contact@gmail.com?subject=Duplicate%20Photo%20%26%20Video%20Finder%20Support" class="btn btn-white">Contact support</a>
+                <p style="font-size:13px;opacity:.85;margin:14px 0 0;">Typical response time: 2-3 business days</p>
             </div>
 
             <h2>More resources</h2>
             <ul>
-                <li><a href="/duplicate-photo-finder">App overview</a> - features and pricing</li>
-                <li><a href="/duplicate-photo-finder/privacy">Privacy Policy</a> - how your data is handled</li>
-                <li><a href="/duplicate-photo-finder/terms">Terms of Service</a> - terms and conditions</li>
-                <li><a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761">App Store</a> - ratings and reviews</li>
+                <li><a href="/duplicate-photo-finder">App overview</a> -- features and pricing</li>
+                <li><a href="/duplicate-photo-finder/privacy">Privacy Policy</a> -- how your data is handled</li>
+                <li><a href="/duplicate-photo-finder/terms">Terms of Service</a> -- terms and conditions</li>
+                <li><a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761">App Store</a> -- ratings and reviews</li>
             </ul>
         </div>
     </main>
@@ -192,8 +222,8 @@
             <div class="footer-bottom" style="border:0;padding-top:0;">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
                 <span>
-                    <a href="/duplicate-photo-finder">Photo Finder</a> &nbsp;·&nbsp;
-                    <a href="/duplicate-photo-finder/privacy">Privacy</a> &nbsp;·&nbsp;
+                    <a href="/duplicate-photo-finder">Photo Finder</a> &nbsp;&middot;&nbsp;
+                    <a href="/duplicate-photo-finder/privacy">Privacy</a> &nbsp;&middot;&nbsp;
                     <a href="/duplicate-photo-finder/terms">Terms</a>
                 </span>
             </div>

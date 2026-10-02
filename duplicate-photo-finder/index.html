@@ -4,17 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duplicate Photo &amp; Video Finder - Reclaim your storage with AI</title>
-    <meta name="description" content="Smart AI-powered app to find and remove duplicate photos and videos. 4 detection methods, on-device privacy, bulk delete Pro. Free on the App Store.">
+    <meta name="description" content="Smart AI-powered app to find and remove duplicate photos and videos. 5 detection methods, on-device privacy, bulk delete Pro. Free on the App Store.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        .screenshots-row {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 12px 0 24px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .screenshots-row img {
+            height: 420px;
+            width: auto;
+            border-radius: 18px;
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
             <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
-            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
             <nav class="nav">
-                <a href="/" class="muted">← All apps</a>
+                <a href="/" class="muted">&#8592; All apps</a>
                 <a href="#features">Features</a>
                 <a href="#pricing">Pricing</a>
                 <a href="/duplicate-photo-finder/support">Support</a>
@@ -27,9 +45,9 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">📷🎬 Photo &amp; Video Cleanup</span>
+                <span class="eyebrow">&#128247;&#127916; Photo &amp; Video Cleanup</span>
                 <h1>Clear the clutter. <span class="gradient-text">Keep the memories.</span></h1>
-                <p class="lead">Duplicate Photo &amp; Video Finder uses on-device AI to find duplicate and similar photos and videos in seconds - so you can reclaim storage without ever risking your privacy. Videos reclaim far more space than photos; this app finds both.</p>
+                <p class="lead">Duplicate Photo &amp; Video Finder uses on-device AI to find duplicate and similar photos and videos in seconds -- so you can reclaim storage without risking your privacy. Videos reclaim far more space than photos; this app finds both.</p>
                 <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-primary">Download on App Store</a>
                     <a href="#download" class="btn btn-ghost">View QR code</a>
@@ -37,19 +55,37 @@
                 <div class="hero-meta">
                     <div><div class="m-val gradient-text">&lt;30s</div><div class="m-lbl">Scan 1,000+ photos</div></div>
                     <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device privacy</div></div>
-                    <div><div class="m-val gradient-text">Free</div><div class="m-lbl">To download</div></div>
+                    <div><div class="m-val gradient-text">iOS 16+</div><div class="m-lbl">Compatibility</div></div>
                 </div>
             </div>
             <div class="hero-visual">
                 <div class="device">
                     <div class="device-screen">
-                        <div class="d-icon"><img src="/duplicate-photo-finder/app-icon.jpg" alt="duplicate-photo-finder app icon"></div>
+                        <div class="d-icon"><img src="/duplicate-photo-finder/Icon-DPF-New.png" alt="Duplicate Photo &amp; Video Finder app icon"></div>
                         <div class="d-title">Duplicate Photo &amp; Video Finder</div>
                         <div class="d-sub">Smart, fast, private cleanup</div>
                     </div>
-                    <div class="device-float f1"><span class="dot">✨</span> 248 duplicates</div>
-                    <div class="device-float f2"><span class="dot">💾</span> 1.2 GB freed</div>
+                    <div class="device-float f1"><span class="dot">&#10024;</span> 248 duplicates found</div>
+                    <div class="device-float f2"><span class="dot">&#128190;</span> 1.2 GB freed</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">App screenshots</span>
+                <h2>See it in action</h2>
+            </div>
+            <div class="screenshots-row reveal">
+                <img src="/duplicate-photo-finder/01.png" alt="Duplicate Photo Finder home screen">
+                <img src="/duplicate-photo-finder/02.png" alt="Scanning for duplicates">
+                <img src="/duplicate-photo-finder/03.png" alt="Duplicate groups results">
+                <img src="/duplicate-photo-finder/04.png" alt="Group detail and comparison">
+                <img src="/duplicate-photo-finder/05.png" alt="Analytics and stats">
+                <img src="/duplicate-photo-finder/06.png" alt="Settings and detection methods">
             </div>
         </div>
     </section>
@@ -63,12 +99,15 @@
                 <p>Advanced on-device intelligence finds what you can't, while you stay in charge of every decision.</p>
             </div>
             <div class="grid grid-3">
-                <div class="feature reveal"><div class="f-icon">⚡</div><h3>Lightning fast</h3><p>Scan 1,000+ photos in under 30 seconds with efficient on-device processing.</p></div>
-                <div class="feature reveal"><div class="f-icon">🤖</div><h3>AI-powered</h3><p>Detects exact duplicates and visually similar shots - including burst photos.</p></div>
-                <div class="feature reveal"><div class="f-icon">🔒</div><h3>100% private</h3><p>Everything happens on your device. Your photos never leave your iPhone.</p></div>
-                <div class="feature reveal"><div class="f-icon">✨</div><h3>Smart selection</h3><p>Automatically recommends the best photo by resolution, sharpness, and quality.</p></div>
-                <div class="feature reveal"><div class="f-icon">🎬</div><h3>Video support</h3><p>Find and remove duplicate videos alongside your photos.</p></div>
-                <div class="feature reveal"><div class="f-icon">↩️</div><h3>Safe deletion</h3><p>One-tap undo, and deleted items are recoverable for 30 days in Photos.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#9889;</div><h3>Lightning fast</h3><p>Scan 1,000+ photos in under 30 seconds with efficient on-device processing and background scan support.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#129302;</div><h3>5 detection methods</h3><p>dHash perceptual matching, SHA-256 exact matching, Vision ML similarity, color histogram analysis, and EXIF clustering.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128274;</div><h3>100% private</h3><p>Everything happens on your device. Your photos and videos never leave your iPhone or iPad.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#10024;</div><h3>AI-powered ranking</h3><p>Automatically selects the best photo per group by resolution, sharpness, file format, and face detection.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#127916;</div><h3>Video support</h3><p>Detect and remove duplicate videos alongside photos. Videos reclaim gigabytes at a time.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#8617;&#65039;</div><h3>Safe deletion</h3><p>One-tap undo and deleted items go to Photos Trash -- recoverable for 30 days.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128247;</div><h3>Live Activity</h3><p>Track scan progress on your Lock Screen and Dynamic Island while the app runs in the background.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#127760;</div><h3>5 languages</h3><p>Full UI localization in English, Spanish, Chinese (Simplified), Japanese, and Portuguese.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128200;</div><h3>Analytics screen</h3><p>Hero metrics dashboard showing storage freed, duplicates found, deletion history, and scan statistics.</p></div>
             </div>
         </div>
     </section>
@@ -81,9 +120,9 @@
                 <h2>Three taps to a cleaner library</h2>
             </div>
             <div class="steps">
-                <div class="step reveal"><h3>Scan</h3><p>Grant photo access and let the AI sweep your entire library in seconds.</p></div>
-                <div class="step reveal"><h3>Review</h3><p>Browse duplicate groups with the best shot pre-selected for you.</p></div>
-                <div class="step reveal"><h3>Clean up</h3><p>Delete with one tap - and recover anytime within 30 days if you change your mind.</p></div>
+                <div class="step reveal"><h3>Scan</h3><p>Grant photo access and let the AI sweep your entire library in seconds -- even from the background with Live Activity.</p></div>
+                <div class="step reveal"><h3>Review</h3><p>Browse duplicate groups in a 3-column grid with the best shot pre-selected. Compare side-by-side in full screen.</p></div>
+                <div class="step reveal"><h3>Clean up</h3><p>Delete one group at a time for free, or bulk delete everything at once with Pro -- and recover anytime within 30 days.</p></div>
             </div>
         </div>
     </section>
@@ -94,8 +133,8 @@
             <div class="stats reveal">
                 <div class="stat"><div class="s-val gradient-text">&lt;30s</div><div class="s-lbl">Scan time</div></div>
                 <div class="stat"><div class="s-val gradient-text">iOS 16+</div><div class="s-lbl">Compatibility</div></div>
-                <div class="stat"><div class="s-val gradient-text">10.2 MB</div><div class="s-lbl">App size</div></div>
-                <div class="stat"><div class="s-val gradient-text">4×</div><div class="s-lbl">Detection methods</div></div>
+                <div class="stat"><div class="s-val gradient-text">5&#215;</div><div class="s-lbl">Detection methods</div></div>
+                <div class="stat"><div class="s-val gradient-text">5</div><div class="s-lbl">Languages</div></div>
             </div>
         </div>
     </section>
@@ -106,51 +145,75 @@
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>
                 <h2>Free to start. Pro to go unlimited.</h2>
-                <p>Start free, then upgrade to remove ads, unlock bulk delete, and get unlimited deletions.</p>
+                <p>Start free with up to 100 photo groups and 10 video groups, then upgrade to remove ads, unlock bulk delete, and get unlimited deletions.</p>
             </div>
-            <div class="pricing">
-                <div class="price-card reveal">
+            <div class="grid grid-3" style="max-width:900px;margin:60px auto 0;">
+                <div class="pricing-card reveal">
                     <h3>Free</h3>
-                    <div class="amount">$0</div>
-                    <div class="per">Forever</div>
-                    <ul><li>AI duplicate detection</li><li>Up to 20 photo groups</li><li>Up to 5 video groups</li><li>Ad-supported</li></ul>
-                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft">Download</a>
+                    <div class="price">$0</div>
+                    <p class="price-desc">Forever</p>
+                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                        <li>5 detection methods</li>
+                        <li>Up to 100 photo groups</li>
+                        <li>Up to 10 video groups</li>
+                        <li>One-by-one deletion</li>
+                        <li>Ad-supported</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft" style="width:100%;">Download free</a>
                 </div>
-                <div class="price-card featured reveal">
-                    <div class="tag-pop">Popular</div>
-                    <h3>Pro Monthly</h3>
-                    <div class="amount">$1.99</div>
-                    <div class="per">Per month</div>
-                    <ul><li>Unlimited deletions</li><li>Bulk delete all at once</li><li>No ads</li><li>Video &amp; photo support</li></ul>
-                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-primary">Get Pro</a>
+
+                <div class="pricing-card reveal" style="border:2px solid var(--accent);transform:scale(1.05);">
+                    <div style="position:relative;margin-bottom:8px;">
+                        <h3>Pro Monthly</h3>
+                        <div style="position:absolute;top:-14px;right:0;background:var(--accent);color:#fff;padding:4px 12px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;">Popular</div>
+                    </div>
+                    <div class="price">$0.99</div>
+                    <p class="price-desc">/month, auto-renews</p>
+                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                        <li>Unlimited deletions</li>
+                        <li>Bulk delete all at once</li>
+                        <li>No ads</li>
+                        <li>Photos &amp; videos</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-primary" style="width:100%;">Get Pro</a>
                 </div>
-                <div class="price-card reveal">
+
+                <div class="pricing-card reveal">
                     <h3>Pro Yearly</h3>
-                    <div class="amount">$14.99</div>
-                    <div class="per">Per year · save 38%</div>
-                    <ul><li>All Pro features</li><li>No ads</li><li>Best annual value</li><li>Video &amp; photo support</li></ul>
-                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft">Get Pro</a>
+                    <div class="price">$9.99</div>
+                    <p class="price-desc">/year, auto-renews</p>
+                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                        <li>All Pro features</li>
+                        <li>~$0.83/month</li>
+                        <li>Save 30%</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft" style="width:100%;">Get Pro</a>
                 </div>
-                <div class="price-card reveal">
-                    <h3>Lifetime</h3>
-                    <div class="amount">$29.99</div>
-                    <div class="per">One-time</div>
-                    <ul><li>Lifetime access</li><li>No ads, forever</li><li>No recurring charges</li><li>Unlimited deletions &amp; bulk delete</li></ul>
-                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft">Get Lifetime</a>
+
+                <div class="pricing-card reveal" style="grid-column:span 3;max-width:300px;margin:0 auto;">
+                    <h3>Pro Lifetime</h3>
+                    <div class="price">$14.99</div>
+                    <p class="price-desc">One-time purchase</p>
+                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                        <li>All Pro features forever</li>
+                        <li>No subscription</li>
+                        <li>Permanent access</li>
+                    </ul>
+                    <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-soft" style="width:100%;">Get Lifetime</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Download CTA -->
-    <section class="section-sm" id="download">
+    <section class="cta" id="download">
         <div class="container">
-            <div class="cta reveal">
+            <div class="cta-content reveal">
                 <h2>Reclaim your storage today</h2>
                 <p>Download Duplicate Photo &amp; Video Finder free and start clearing duplicates in seconds.</p>
                 <div style="display:flex;justify-content:center;margin:8px 0 28px;">
                     <div class="qr">
-                        <img src="/duplicate-photo-finder/appstore-qr.svg" alt="Scan to download Duplicate Photo Finder on the App Store">
+                        <img src="/duplicate-photo-finder/appstore-qr.svg" alt="Scan to download Duplicate Photo &amp; Video Finder on the App Store">
                         <span>Scan with your iPhone camera</span>
                     </div>
                 </div>
@@ -158,6 +221,7 @@
                     <a href="https://apps.apple.com/us/app/duplicate-photo-finder/id6774906761" class="btn btn-white">Download on App Store</a>
                     <a href="/duplicate-photo-finder/support" class="btn btn-on-dark">Visit support</a>
                 </div>
+                <div style="margin-top:28px;"><span class="review-note">&#10003; Status: Live on the App Store</span></div>
             </div>
         </div>
     </section>
@@ -165,33 +229,38 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <img src="/svg/lynxapp-logo.png" alt="LynxApps">
-                    <p>Thoughtfully crafted, privacy-first iOS apps. Made with care for the everyday.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Photo Finder</h4>
-                    <a href="/duplicate-photo-finder">Overview</a>
-                    <a href="/duplicate-photo-finder#features">Features</a>
-                    <a href="/duplicate-photo-finder#pricing">Pricing</a>
-                    <a href="/duplicate-photo-finder/support">Support &amp; FAQ</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <a href="/duplicate-photo-finder/privacy">Privacy Policy</a>
-                    <a href="/duplicate-photo-finder/terms">Terms of Service</a>
-                </div>
-                <div class="footer-col">
-                    <h4>More apps</h4>
-                    <a href="/pillvault">PillVault</a>
-                    <a href="/receipt-digitizer">Receipt Digitizer</a>
-                    <a href="/">All apps</a>
-                </div>
+            <div class="footer-col">
+                <h4>Photo &amp; Video Finder</h4>
+                <ul>
+                    <li><a href="/duplicate-photo-finder">App</a></li>
+                    <li><a href="/duplicate-photo-finder/support">Support</a></li>
+                    <li><a href="/duplicate-photo-finder/privacy">Privacy</a></li>
+                    <li><a href="/duplicate-photo-finder/terms">Terms</a></li>
+                </ul>
             </div>
-            <div class="footer-bottom">
+            <div class="footer-col">
+                <h4>Apps</h4>
+                <ul>
+                    <li><a href="/">All apps</a></li>
+                    <li><a href="/reefdose">ReefDose</a></li>
+                    <li><a href="/receipt-digitizer">Receipt Digitizer</a></li>
+                    <li><a href="/inspectkit">InspectKit</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="mailto:lynxapps.contact@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom" style="border-top:1px solid var(--line);padding-top:24px;margin-top:40px;">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
-                <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a>
+                <span>
+                    <a href="/duplicate-photo-finder">Photo Finder</a> &nbsp;&middot;&nbsp;
+                    <a href="/duplicate-photo-finder/privacy">Privacy</a> &nbsp;&middot;&nbsp;
+                    <a href="/duplicate-photo-finder/support">Support</a>
+                </span>
             </div>
         </div>
     </footer>
