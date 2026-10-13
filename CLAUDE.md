@@ -39,10 +39,11 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 | `uprep` | UpRep | 🔧 Under Development | — |
 | `chattale` | ChatTale: Chat Wrapped | 🔧 Under Development | — |
 | `zakatbook-android` | Zakat Book for Android | 🔧 Under Development | — |
+| `reefdose-android` | ReefDose for Android | 🔧 Under Development | — |
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
-**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Nineteen**). Live app count is now 13. Note: `zakatbook-android` is an Android app (separate directory, no iOS App Store URL, uses Google Play Billing + UMP consent).
+**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Twenty**). Live app count is now 13. Note: `zakatbook-android` is an Android app (separate directory, no iOS App Store URL, uses Google Play Billing + UMP consent).
 
 ## Per-app theming
 
