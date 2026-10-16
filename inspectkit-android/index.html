@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="inspectkit">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspectKit for Android: Inspection Reports, Checklists, PDF</title>
+    <meta name="description" content="InspectKit for Android turns your phone into an inspection tool. Work through 19 built-in checklists, record findings with photos, and generate a branded PDF report before you leave the site. Coming soon to Google Play.">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        .screenshots-row {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 8px 4px 20px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+        .screenshots-row::-webkit-scrollbar { display: none; }
+        .screenshots-row img {
+            height: 420px;
+            width: auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,.14);
+            flex-shrink: 0;
+        }
+        @media (max-width: 600px) {
+            .screenshots-row img { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+            <nav class="nav">
+                <a href="/" class="muted">&#8592; All apps</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="/inspectkit-android/support" class="nav-cta">Support</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">&#128203; Professional Inspection Reports</span>
+                <h1>Inspect. Document. <span class="gradient-text">Deliver reports in minutes.</span></h1>
+                <p class="lead">InspectKit for Android turns your phone into a professional inspection tool. Work through a checklist, capture findings with photos, rate their severity, and generate a branded PDF report before you leave the site.</p>
+                <div class="hero-cta">
+                    <a href="#notify" class="btn btn-primary">Notify me at launch</a>
+                    <a href="#features" class="btn btn-ghost">Explore features</a>
+                </div>
+                <div class="hero-meta">
+                    <div><div class="m-val gradient-text">19</div><div class="m-lbl">Built-in templates</div></div>
+                    <div><div class="m-val gradient-text">5</div><div class="m-lbl">Languages</div></div>
+                    <div><div class="m-val gradient-text">8.0+</div><div class="m-lbl">Android</div></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device">
+                    <div class="device-screen">
+                        <div class="d-icon"><img src="/inspectkit/IK-Icon.png" alt="InspectKit app icon" style="width:56px;height:56px;border-radius:14px;"></div>
+                        <div class="d-title">InspectKit</div>
+                        <div class="d-sub">Professional reports in seconds</div>
+                    </div>
+                    <div class="device-float f1"><span class="dot">&#128247;</span> Photo findings</div>
+                    <div class="device-float f2"><span class="dot">&#128196;</span> Branded PDF reports</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Built for Android</span>
+                <h2>Everything you need for professional inspections</h2>
+                <p>Checklists, findings, severity, and a full PDF report with your branding, all stored on your device.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal">
+                    <div class="f-icon">&#128203;</div>
+                    <h3>19 Built-in Templates</h3>
+                    <p>Start from a ready-made checklist for home, building, commercial, roof, HVAC, solar, rental move-in and move-out, punch list, vehicle fleet, safety audit, land and lot, and more. Build your own custom templates whenever you need them.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">&#128247;</div>
+                    <h3>Photo Findings</h3>
+                    <p>Attach photos to any finding and annotate them with notes. Each photo stays linked to the exact item it documents, so the report always matches the inspection.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">&#127775;</div>
+                    <h3>Finding Severity</h3>
+                    <p>Tag each flagged finding as Minor, Major, or Safety. The report sorts findings by severity and shows a tally, so clients see what needs attention first.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">&#128196;</div>
+                    <h3>Branded PDF Reports</h3>
+                    <p>Generate a professional PDF with a cover page, findings, recommendations, and a sign-off page. Pro adds your own logo, company details, and signature, and removes the watermark.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">&#127758;</div>
+                    <h3>5 Languages</h3>
+                    <p>English, Spanish, French, Japanese, and Portuguese. Switch the app language in Settings, and your templates and reports follow it.</p>
+                </div>
+                <div class="feature reveal">
+                    <div class="f-icon">&#128190;</div>
+                    <h3>Works Offline, Stays Private</h3>
+                    <p>Your inspections, clients, and reports are stored on your device. There is no account to create, and inspection content is never uploaded to our servers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" style="background:linear-gradient(180deg,#fff,var(--bg));">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Streamlined workflow</span>
+                <h2>From site to professional report in minutes</h2>
+            </div>
+            <div class="steps">
+                <div class="step reveal"><h3>Create</h3><p>Start a new inspection from one of the 19 built-in templates or a custom template. Add client and property details, then reuse past clients in a tap.</p></div>
+                <div class="step reveal"><h3>Document</h3><p>Work through each section, mark findings, attach photos, and set severity. Add custom items on the fly for anything the template does not cover.</p></div>
+                <div class="step reveal"><h3>Report</h3><p>Generate the PDF with findings, recommendations sorted by severity, a photo section, and a sign-off page. Share it straight from your phone.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">19 built-in templates</span>
+                <h2>Ready for every inspection type</h2>
+                <p>Choose a template or build your own from scratch.</p>
+            </div>
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val">&#127968;</div><div class="s-lbl">Home Inspection</div></div>
+                <div class="stat"><div class="s-val">&#127970;</div><div class="s-lbl">Building Inspection</div></div>
+                <div class="stat"><div class="s-val">&#127978;</div><div class="s-lbl">Commercial Property</div></div>
+                <div class="stat"><div class="s-val">&#128308;</div><div class="s-lbl">Roof Inspection</div></div>
+                <div class="stat"><div class="s-val">&#128168;</div><div class="s-lbl">HVAC Inspection</div></div>
+                <div class="stat"><div class="s-val">&#9728;&#65039;</div><div class="s-lbl">Solar Panel</div></div>
+                <div class="stat"><div class="s-val">&#128688;</div><div class="s-lbl">Rental Move-In/Out</div></div>
+                <div class="stat"><div class="s-val">&#128295;</div><div class="s-lbl">Punch List</div></div>
+                <div class="stat"><div class="s-val">&#128660;</div><div class="s-lbl">Vehicle Fleet</div></div>
+                <div class="stat"><div class="s-val">&#128273;</div><div class="s-lbl">Safety Audit</div></div>
+                <div class="stat"><div class="s-val">&#127807;</div><div class="s-lbl">Land / Lot</div></div>
+                <div class="stat"><div class="s-val">&#128736;&#65039;</div><div class="s-lbl">+ 8 more</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free vs Pro -->
+    <section class="section" style="background: white;">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">What's included</span>
+                <h2>Free to try. Pro when you need unlimited.</h2>
+                <p>Start with a free inspection and report. Upgrade to Pro for unlimited inspections and branded, watermark-free reports.</p>
+            </div>
+            <div style="overflow-x: auto;" class="reveal">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th style="color: #1B4FBF;">Free</th>
+                            <th style="color: #1B4FBF;">Pro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Create inspections</td><td class="yes">&#10003; 1</td><td class="yes">&#10003; Unlimited</td></tr>
+                        <tr><td>Generate reports</td><td class="yes">&#10003; 1</td><td class="yes">&#10003; Unlimited</td></tr>
+                        <tr><td>Photo findings</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Finding severity (Minor/Major/Safety)</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>19 built-in templates</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Custom templates</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>5-language support</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Watermark-free reports</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Custom branding (logo &amp; signature)</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Priority support</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Pricing</span>
+                <h2>Simple, professional pricing</h2>
+                <p>Start free. Upgrade for unlimited inspections and branded, watermark-free reports. Prices are shown in USD and may vary by region in Google Play.</p>
+            </div>
+            <div class="pricing reveal">
+                <div class="price-card">
+                    <h3>Free</h3>
+                    <div class="amount">$0</div>
+                    <div class="per">Forever</div>
+                    <ul>
+                        <li>1 inspection</li>
+                        <li>1 report generation</li>
+                        <li>Photo findings</li>
+                        <li>All 19 templates + custom</li>
+                        <li>5-language support</li>
+                    </ul>
+                    <a href="#notify" class="btn btn-soft">Notify me at launch</a>
+                </div>
+                <div class="price-card featured">
+                    <div class="tag-pop">Popular</div>
+                    <h3>Pro Monthly</h3>
+                    <div class="amount">$2.99</div>
+                    <div class="per">Per month</div>
+                    <ul>
+                        <li>Unlimited inspections</li>
+                        <li>Unlimited reports</li>
+                        <li>Watermark-free branded reports</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#notify" class="btn btn-primary">Notify me at launch</a>
+                </div>
+                <div class="price-card">
+                    <h3>Pro Annual</h3>
+                    <div class="amount">$24.99</div>
+                    <div class="per">Per year &middot; save 30%</div>
+                    <ul>
+                        <li>All Pro features</li>
+                        <li>Best annual value</li>
+                        <li>Annual billing</li>
+                    </ul>
+                    <a href="#notify" class="btn btn-soft">Notify me at launch</a>
+                </div>
+                <div class="price-card">
+                    <h3>Pro Lifetime</h3>
+                    <div class="amount">$39.99</div>
+                    <div class="per">One-time purchase</div>
+                    <ul>
+                        <li>Lifetime Pro access</li>
+                        <li>All features, no subscription</li>
+                        <li>No recurring charges</li>
+                    </ul>
+                    <a href="#notify" class="btn btn-soft">Notify me at launch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-sm" id="notify">
+        <div class="container">
+            <div class="cta reveal">
+                <h2>Coming Soon to Google Play</h2>
+                <p>InspectKit for Android is in development. Leave your email and we will let you know when it launches.</p>
+                <div class="hero-cta">
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=InspectKit%20Android%20Launch%20Notification" class="btn btn-white">Notify me at launch</a>
+                    <a href="/inspectkit-android/support" class="btn btn-on-dark">Visit support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/svg/lynxapp-logo.png" alt="LynxApps">
+                    <p>Thoughtfully crafted, privacy-first apps. Made with care for the everyday.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>InspectKit Android</h4>
+                    <a href="/inspectkit-android">Overview</a>
+                    <a href="/inspectkit-android#features">Features</a>
+                    <a href="/inspectkit-android#pricing">Pricing</a>
+                    <a href="/inspectkit-android/support">Support &amp; FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/inspectkit-android/privacy">Privacy Policy</a>
+                    <a href="/inspectkit-android/terms">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <h4>More apps</h4>
+                    <a href="/inspectkit">InspectKit (iOS)</a>
+                    <a href="/reefdose-android">ReefDose Android</a>
+                    <a href="/zakatbook-android">Zakat Book Android</a>
+                    <a href="/">All apps</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/lynx.js"></script>
+</body>
+</html>
