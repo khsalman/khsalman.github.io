@@ -41,10 +41,11 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 | `zakatbook-android` | Zakat Book for Android | 🔧 Under Development | — |
 | `inspectkit-android` | InspectKit for Android | 🔧 Under Development | — |
 | `reefdose-android` | ReefDose for Android | 🔧 Under Development | — |
+| `pillvault-android` | PillVault for Android | 🔧 Under Development | — |
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
-**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Twenty-one**). Live app count is now 13. Note: `zakatbook-android` is an Android app (separate directory, no iOS App Store URL, uses Google Play Billing + UMP consent).
+**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Twenty-two**). Live app count is now 13. Note: `zakatbook-android`, `inspectkit-android`, `reefdose-android` and `pillvault-android` are Android apps (separate directories, no iOS App Store URL, uses Google Play Billing + UMP consent). `pillvault-android` reuses the `pill` theme colours under its own `pillvault-android` key.
 
 ## Per-app theming
 
@@ -69,6 +70,7 @@ Each app gets a `data-theme="<key>"` attribute on `<html>`, which maps to CSS va
 [data-theme="halalcheck"]   { --g1:#14532d; --g2:#16a34a; --accent:#15803d; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 [data-theme="uprep"]        { --g1:#166534; --g2:#84cc16; --accent:#4d7c0f; --accent-soft:#f7fee7; --accent-border:#d9f99d; }
 [data-theme="chattale"]     { --g1:#7c3aed; --g2:#ec4899; --accent:#9333ea; --accent-soft:#faf5ff; --accent-border:#f0d0fe; }
+[data-theme="pillvault-android"] { --g1:#0ea5e9; --g2:#14b8a6; --accent:#0d9488; --accent-soft:#ecfeff; --accent-border:#cffafe; }
 ```
 
 Homepage app cards use parallel `.theme-row-<key>` / `.grad-<key>` classes defined inline in `index.html`'s `<style>` block — keep these in sync with the per-app theme above when adding a new app.
