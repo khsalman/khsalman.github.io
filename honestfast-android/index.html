@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="honestfast-android">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HonestFast for Android - Fasting Tracker for Intermittent &amp; Islamic Fasting</title>
+    <meta name="description" content="HonestFast for Android by LynxApps is a fasting tracker for intermittent fasting and Islamic fasting. Track 16:8, 18:6, OMAD, Ramadan, Sehri, Iftar, Qada and Sunnah fasts. Coming soon to Google Play.">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        .icon-hero {
+            width: 96px;
+            height: 96px;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,.18);
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .plans-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+            justify-content: center;
+        }
+        .plan-chip {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: .875rem;
+            font-weight: 500;
+            color: var(--accent);
+        }
+        .stage-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 40px;
+        }
+        .stage-item {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 16px;
+            padding: 20px 22px;
+        }
+        .stage-item .stage-time { font-size: .8rem; font-weight: 700; color: var(--accent); }
+        .stage-item h3 { font-size: 1rem; margin: 4px 0 6px; }
+        .stage-item p { font-size: .875rem; color: var(--text-2); margin: 0; }
+        .lang-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+            justify-content: center;
+        }
+        .lang-chip {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: .875rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+            <nav class="nav">
+                <a href="/" class="muted">&#8592; All apps</a>
+                <a href="#features">Features</a>
+                <a href="#ramadan">Ramadan</a>
+                <a href="#pricing">Pricing</a>
+                <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="nav-cta">Notify me</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <img src="/honestfast/HF-Icon.png" alt="HonestFast for Android icon" class="icon-hero" style="margin-left:0;">
+                <span class="eyebrow">&#9201;&#65039; Fasting Tracker for Android</span>
+                <h1>Fast with <span class="gradient-text">purpose.</span></h1>
+                <p class="lead">Track intermittent fasts like 16:8, 18:6, 20:4 and OMAD, or use Ramadan, Qada and Sunnah fasting tools. HonestFast for Android is coming to Google Play.</p>
+                <div class="hero-cta">
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="btn btn-primary">Notify me at launch</a>
+                    <a href="#features" class="btn btn-ghost">See features</a>
+                </div>
+                <div class="hero-meta">
+                    <div><div class="m-val gradient-text">Free</div><div class="m-lbl">To start</div></div>
+                    <div><div class="m-val gradient-text">6</div><div class="m-lbl">Fasting stages</div></div>
+                    <div><div class="m-val gradient-text">5</div><div class="m-lbl">Languages</div></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device">
+                    <div class="device-screen">
+                        <div class="d-icon"><img src="/honestfast/HF-Icon.png" alt="" style="width:64px;height:64px;border-radius:14px;"></div>
+                        <div class="d-title">HonestFast</div>
+                        <div class="d-sub">Android &mdash; coming soon</div>
+                    </div>
+                    <div class="device-float f1"><span class="dot">&#128293;</span> 14:23 fasting</div>
+                    <div class="device-float f2"><span class="dot">&#9889;</span> Ketosis reached</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status banner -->
+    <section class="section-sm" style="padding-top:0;">
+        <div class="container">
+            <div class="callout" style="text-align:center;max-width:640px;margin:0 auto;">
+                <p><strong>&#9203; Coming soon on Google Play.</strong> HonestFast for Android is currently in development. Leave your email to be notified at launch &mdash; <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification">lynxapps.contact@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intermittent fasting -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Intermittent fasting</span>
+                <h2>Start a fast in one tap</h2>
+                <p>Pick a popular plan or create your own, then follow the timer as your fast progresses. See exactly how long you have been fasting and when your window ends.</p>
+            </div>
+            <div class="plans-row reveal">
+                <span class="plan-chip">16:8 Fasting</span>
+                <span class="plan-chip">18:6 Fasting</span>
+                <span class="plan-chip">20:4 Warrior</span>
+                <span class="plan-chip">One Meal a Day</span>
+                <span class="plan-chip">+ Custom plans (Premium)</span>
+            </div>
+            <div class="stage-list reveal">
+                <div class="stage-item"><div class="stage-time">0&ndash;4 hrs</div><h3>Fed State</h3><p>Digesting and absorbing your last meal.</p></div>
+                <div class="stage-item"><div class="stage-time">4&ndash;8 hrs</div><h3>Catabolic State</h3><p>Insulin drops and glycogen begins to deplete.</p></div>
+                <div class="stage-item"><div class="stage-time">8&ndash;12 hrs</div><h3>Fat Burning</h3><p>Your body switches to burning fat for fuel.</p></div>
+                <div class="stage-item"><div class="stage-time">12&ndash;18 hrs</div><h3>Ketosis</h3><p>The liver produces ketone bodies for fuel.</p></div>
+                <div class="stage-item"><div class="stage-time">18&ndash;24 hrs</div><h3>Autophagy</h3><p>Cellular cleanup and recycling begins.</p></div>
+                <div class="stage-item"><div class="stage-time">24+ hrs</div><h3>Deep Autophagy</h3><p>Peak cellular renewal, tracked as your fast continues.</p></div>
+            </div>
+            <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px;">Stage descriptions are general information, not medical advice. Individual responses vary.</p>
+        </div>
+    </section>
+
+    <!-- Ramadan & Islamic fasting -->
+    <section class="section" id="ramadan" style="background:linear-gradient(180deg,var(--bg),#fff);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Islamic fasting</span>
+                <h2>Built for Ramadan</h2>
+                <p>Ramadan mode starts automatically with the Hijri calendar, and HonestFast keeps your Sehri and Iftar times, prayer times and makeup fasts in one place.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal"><div class="f-icon">&#127769;</div><h3>Automatic Ramadan mode</h3><p>The Hijri calendar detects Ramadan for you, so there's no manual setup.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#127759;</div><h3>Sehri and Iftar times</h3><p>Times calculated for your city, with reminders so you don't miss either.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128204;</div><h3>Prayer times</h3><p>Fajr, Dhuhr, Asr, Maghrib and Isha for your location, or any city you choose.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128203;</div><h3>Qada tracking</h3><p>Record missed Ramadan fasts and keep track of the makeup fasts still owed.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#127358;</div><h3>Sunnah and voluntary fasts</h3><p>Log voluntary fasts alongside your routine. Voluntary fasts can run from Fajr to Maghrib.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128276;</div><h3>Reminders that arrive</h3><p>Fasting and Ramadan reminders are scheduled on your phone, so they work offline.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water, streaks & history -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Hydration and history</span>
+                <h2>Water, streaks and your full fasting record</h2>
+                <p>Staying hydrated during a fast matters. HonestFast makes water logging quick and keeps a complete record of every fast you finish.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal"><div class="f-icon">&#128167;</div><h3>Water tracking</h3><p>Log water in a tap from the app or the home screen widget. The daily count resets on its own.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128293;</div><h3>Streaks</h3><p>See your current and longest fasting streaks, and watch consistency build over time.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128218;</div><h3>Fasting history</h3><p>Review each completed fast with its duration, plan and the metabolic stage you reached. Share a card to mark a milestone.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128200;</div><h3>Insights</h3><p>Trends, heatmaps and plan performance help you see how your routine changes. (Premium)</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128241;</div><h3>Home screen widget</h3><p>Check your fasting timer and water count without opening the app.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#9889;</div><h3>Quick Settings tile</h3><p>Start or check a fast from your notification shade.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="section" style="background:linear-gradient(180deg,#fff,var(--bg));">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Privacy First</span>
+                <h2>Your fasting data stays on your device</h2>
+                <p>Fasting logs are personal. HonestFast stores them on your phone, with no account and no upload of your fasting history.</p>
+            </div>
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val gradient-text">On-device</div><div class="s-lbl">Fasting history</div></div>
+                <div class="stat"><div class="s-val gradient-text">0</div><div class="s-lbl">Accounts required</div></div>
+                <div class="stat"><div class="s-val gradient-text">Offline</div><div class="s-lbl">Core features</div></div>
+                <div class="stat"><div class="s-val gradient-text">5</div><div class="s-lbl">Languages</div></div>
+            </div>
+            <div style="text-align:center;margin-top:32px;" class="reveal">
+                <a href="/honestfast-android/privacy" class="btn btn-soft">Read our privacy policy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">5 Languages</span>
+                <h2>Available worldwide</h2>
+                <p>Switch language anytime from Settings, including right-to-left layouts.</p>
+            </div>
+            <div class="lang-list reveal">
+                <span class="lang-chip">English</span>
+                <span class="lang-chip">العربية</span>
+                <span class="lang-chip">اردو</span>
+                <span class="lang-chip">Bahasa Indonesia</span>
+                <span class="lang-chip">Türkçe</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Pricing</span>
+                <h2>Start free. Go deeper with Premium.</h2>
+                <p>The free version includes the core fasting tools. Premium adds advanced analytics and custom fasting plans. Purchases are handled by Google Play, and prices are shown there.</p>
+            </div>
+            <div class="grid grid-2 reveal" style="max-width:760px;margin:40px auto 0;">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">$0</div>
+                    <p class="price-desc">No account needed</p>
+                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                        <li>Fasting timer and preset plans</li>
+                        <li>Metabolic stage tracking</li>
+                        <li>Ramadan mode and prayer times</li>
+                        <li>Qada and voluntary fasting</li>
+                        <li>Water tracking, streaks and history</li>
+                    </ul>
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="btn btn-soft" style="width:100%;">Notify me</a>
+                </div>
+                <div class="pricing-card" style="border:2px solid var(--accent);">
+                    <h3>Premium</h3>
+                    <div class="price">Premium</div>
+                    <p class="price-desc">Billed through Google Play</p>
+                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                        <li>Everything in Free</li>
+                        <li>Custom plans from 10 to 48 hours</li>
+                        <li>Trends, heatmaps and analytics</li>
+                        <li>Plan performance insights</li>
+                    </ul>
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="btn btn-primary" style="width:100%;">Notify me</a>
+                </div>
+            </div>
+            <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px;">HonestFast is a personal tracking tool. It is not a medical device or a substitute for professional medical advice.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="notify">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Be first to know when it launches</h2>
+                <p>HonestFast for Android is coming soon. Drop us an email and we'll let you know the moment it's live on Google Play.</p>
+                <div class="hero-cta">
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="btn btn-white">Notify me at launch</a>
+                    <a href="/honestfast-android/support" class="btn btn-on-dark">Support &amp; FAQ</a>
+                </div>
+                <div style="margin-top:28px;"><span class="review-note">&#9203; Status: Under Development &mdash; launching soon on Google Play</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>HonestFast Android</h4>
+                <ul>
+                    <li><a href="/honestfast-android">App</a></li>
+                    <li><a href="/honestfast-android/support">Support</a></li>
+                    <li><a href="/honestfast-android/privacy">Privacy</a></li>
+                    <li><a href="/honestfast-android/terms">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Also on iOS</h4>
+                <ul>
+                    <li><a href="/honestfast">HonestFast for iOS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Apps</h4>
+                <ul>
+                    <li><a href="/">All apps</a></li>
+                    <li><a href="/receipt-digitizer-android">Receipt Digitizer Android</a></li>
+                    <li><a href="/pillvault-android">PillVault for Android</a></li>
+                    <li><a href="/zakatbook-android">Zakat Book for Android</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="mailto:lynxapps.contact@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom" style="border-top:1px solid var(--line);padding-top:24px;margin-top:40px;">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <span>
+                    <a href="/honestfast-android/privacy">Privacy</a> &nbsp;&middot;&nbsp;
+                    <a href="/honestfast-android/terms">Terms</a> &nbsp;&middot;&nbsp;
+                    <a href="/honestfast-android/support">Support</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/lynx.js"></script>
+</body>
+</html>
