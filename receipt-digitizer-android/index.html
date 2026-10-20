@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="receipt-android">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Digitizer for Android - Scan Receipts &amp; Track Expenses</title>
+    <meta name="description" content="Receipt Digitizer for Android by LynxApps turns paper receipts into organized expenses with on-device text recognition. Budgets, categories, folders, tax reports and backups. Coming soon to Google Play.">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <link rel="stylesheet" href="/assets/css/lynx.css">
+    <style>
+        .icon-hero {
+            width: 96px;
+            height: 96px;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,.18);
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .scan-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .scan-step {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+        }
+        .scan-step .step-num {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--g1), var(--g2));
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .scan-step h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        .scan-step p { font-size: .9rem; color: var(--text-2); margin: 0; }
+        .cat-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+            justify-content: center;
+        }
+        .cat-chip {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 100px;
+            padding: 6px 16px;
+            font-size: .875rem;
+            font-weight: 500;
+            color: var(--accent);
+        }
+        .lang-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+            justify-content: center;
+        }
+        .lang-chip {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 14px;
+            font-size: .875rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+            <nav class="nav">
+                <a href="/" class="muted">&#8592; All apps</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="/receipt-digitizer-android/support">Support</a>
+                <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification" class="nav-cta">Notify me</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <img src="/receipt-digitizer/RD-Icon.png" alt="Receipt Digitizer for Android icon" class="icon-hero" style="margin-left:0;">
+                <span class="eyebrow">&#129534; Receipt &amp; Expense Tracker for Android</span>
+                <h1>Turn paper receipts into <span class="gradient-text">organized records.</span></h1>
+                <p class="lead">Scan a receipt with your camera, let on-device text recognition pull out the details, and keep every expense sorted by category, folder, and budget. Receipt Digitizer for Android is coming to Google Play.</p>
+                <div class="hero-cta">
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification" class="btn btn-primary">Notify me at launch</a>
+                    <a href="#features" class="btn btn-ghost">See features</a>
+                </div>
+                <div class="hero-meta">
+                    <div><div class="m-val gradient-text">On-device</div><div class="m-lbl">Text recognition</div></div>
+                    <div><div class="m-val gradient-text">Free</div><div class="m-lbl">To get started</div></div>
+                    <div><div class="m-val gradient-text">10</div><div class="m-lbl">Languages</div></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device">
+                    <div class="device-screen">
+                        <div class="d-icon"><img src="/receipt-digitizer/RD-Icon.png" alt="" style="width:64px;height:64px;border-radius:14px;"></div>
+                        <div class="d-title">Receipt Digitizer</div>
+                        <div class="d-sub">Android — coming soon</div>
+                    </div>
+                    <div class="device-float f1"><span class="dot">&#129534;</span> Merchant &amp; total detected</div>
+                    <div class="device-float f2"><span class="dot">&#128202;</span> Groceries: 68% of budget</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status banner -->
+    <section class="section-sm" style="padding-top:0;">
+        <div class="container">
+            <div class="callout" style="text-align:center;max-width:640px;margin:0 auto;">
+                <p><strong>&#9203; Coming soon on Google Play.</strong> Receipt Digitizer for Android is currently in development. Leave your email to be notified at launch — <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification">lynxapps.contact@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scan -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Scan Receipts</span>
+                <h2>Camera to record in seconds</h2>
+                <p>Use your camera or import an existing receipt photo. Text recognition runs on your phone, so receipts are read without being sent anywhere.</p>
+            </div>
+            <div class="scan-steps reveal">
+                <div class="scan-step">
+                    <div class="step-num">1</div>
+                    <h3>Scan or import</h3>
+                    <p>Point your camera at a receipt or pick a photo from your gallery.</p>
+                </div>
+                <div class="scan-step">
+                    <div class="step-num">2</div>
+                    <h3>Details extracted</h3>
+                    <p>On-device text recognition suggests the merchant, amount, and date.</p>
+                </div>
+                <div class="scan-step">
+                    <div class="step-num">3</div>
+                    <h3>Review &amp; save</h3>
+                    <p>Check the suggestions, correct anything, and save in a tap.</p>
+                </div>
+                <div class="scan-step">
+                    <div class="step-num">4</div>
+                    <h3>Organized instantly</h3>
+                    <p>The expense is categorized and filed into your history and folders.</p>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:28px;" class="reveal">
+                <p style="font-size:.9rem;color:var(--text-2);">No receipt to scan? Add expenses manually with the same level of detail.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organize -->
+    <section class="section" style="background:linear-gradient(180deg,var(--bg),#fff);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Organize</span>
+                <h2>Every expense in the right place</h2>
+                <p>Sort receipts with categories and folders that match how you spend and how you file. Create your own categories whenever the built-ins don't fit.</p>
+            </div>
+            <div class="cat-grid reveal">
+                <span class="cat-chip">&#128722; Groceries</span>
+                <span class="cat-chip">&#127869; Dining</span>
+                <span class="cat-chip">&#9992;&#65039; Travel</span>
+                <span class="cat-chip">&#128717; Shopping</span>
+                <span class="cat-chip">&#128161; Utilities</span>
+                <span class="cat-chip">&#127916; Entertainment</span>
+                <span class="cat-chip">&#127973; Healthcare</span>
+                <span class="cat-chip">&#9981; Transport</span>
+                <span class="cat-chip">&#127968; Home</span>
+                <span class="cat-chip">+ Custom</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budgets & insights -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Budgets &amp; Insights</span>
+                <h2>Understand where your money goes</h2>
+                <p>Set budgets, watch your progress, and see how spending changes over time.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal"><div class="f-icon">&#128202;</div><h3>Budgets</h3><p>Set budgets by category or overall, and see how close you are to your limit as the month goes on.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128200;</div><h3>Spending insights</h3><p>Dashboards and category breakdowns show where your money goes and how it trends month to month.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128269;</div><h3>Search</h3><p>Find any receipt by merchant, date, amount, or category across your entire history.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128193;</div><h3>Folders</h3><p>Group receipts into folders for trips, projects, or clients, and keep them apart from everyday spending.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#9200;</div><h3>Reminders</h3><p>Get a reminder to log receipts you've not yet entered, so nothing gets forgotten.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128196;</div><h3>Tax reports</h3><p>Pull together deductible expenses into a report you can export when tax time comes around.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Export & backup -->
+    <section class="section" style="background:linear-gradient(180deg,#fff,var(--bg));">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Export &amp; Backup</span>
+                <h2>Your records, ready when you need them</h2>
+                <p>Export your expenses for reimbursements, accountants, and tax filing, and back up your data whenever you choose.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal"><div class="f-icon">&#128196;</div><h3>PDF reports</h3><p>Generate expense reports to share with an employer, accountant, or your own records.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128202;</div><h3>CSV export</h3><p>Export raw expense data for spreadsheets, accounting software, or custom analysis.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128190;</div><h3>Backups</h3><p>Create a backup of your receipts, budgets, and categories, so a new phone isn't a fresh start.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Privacy First</span>
+                <h2>Your financial data stays on your device</h2>
+                <p>Receipts contain sensitive financial information. Receipt Digitizer reads them on your phone. Your receipt images and expense data are never uploaded to our servers.</p>
+            </div>
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val gradient-text">On-device</div><div class="s-lbl">Text recognition</div></div>
+                <div class="stat"><div class="s-val gradient-text">0</div><div class="s-lbl">Receipt uploads</div></div>
+                <div class="stat"><div class="s-val gradient-text">Offline</div><div class="s-lbl">Core features</div></div>
+                <div class="stat"><div class="s-val gradient-text">10</div><div class="s-lbl">Languages</div></div>
+            </div>
+            <div style="text-align:center;margin-top:32px;" class="reveal">
+                <a href="/receipt-digitizer-android/privacy" class="btn btn-soft">Read our privacy policy</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">10 Languages</span>
+                <h2>Available worldwide</h2>
+                <p>Switch language anytime from Settings, without restarting the app.</p>
+            </div>
+            <div class="lang-list reveal">
+                <span class="lang-chip">English</span>
+                <span class="lang-chip">Español</span>
+                <span class="lang-chip">Français</span>
+                <span class="lang-chip">Deutsch</span>
+                <span class="lang-chip">العربية</span>
+                <span class="lang-chip">Português</span>
+                <span class="lang-chip">Italiano</span>
+                <span class="lang-chip">简体中文</span>
+                <span class="lang-chip">日本語</span>
+                <span class="lang-chip">한국어</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Pricing</span>
+                <h2>Start free. Go ad-free with Pro.</h2>
+                <p>The free version gives you everyday tracking. Pro removes ads and adds more. Purchases are handled by Google Play, and prices are shown there.</p>
+            </div>
+            <div class="grid grid-2 reveal" style="max-width:760px;margin:40px auto 0;">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">$0</div>
+                    <p class="price-desc">Forever, no account needed</p>
+                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                        <li>Receipt scanning &amp; manual entry</li>
+                        <li>Expenses, categories &amp; folders</li>
+                        <li>Budgets &amp; spending insights</li>
+                        <li>Search across all receipts</li>
+                        <li>Ad-supported</li>
+                    </ul>
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification" class="btn btn-soft" style="width:100%;">Notify me</a>
+                </div>
+                <div class="pricing-card" style="border:2px solid var(--accent);">
+                    <h3>Pro</h3>
+                    <div class="price">Pro</div>
+                    <p class="price-desc">Billed through Google Play</p>
+                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                        <li>Everything in Free</li>
+                        <li>Ad-free experience</li>
+                        <li>Pro features, see Google Play for details</li>
+                    </ul>
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification" class="btn btn-primary" style="width:100%;">Notify me</a>
+                </div>
+            </div>
+            <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px;">Receipt Digitizer is a personal expense organiser and is not tax, accounting, or financial advice.</p>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="section-sm" style="background:linear-gradient(180deg,#fff,var(--bg));">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Requirements</span>
+                <h2>What you'll need</h2>
+            </div>
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val gradient-text">Android 8.0+</div><div class="s-lbl">Minimum version</div></div>
+                <div class="stat"><div class="s-val gradient-text">Camera</div><div class="s-lbl">Optional, for scanning</div></div>
+                <div class="stat"><div class="s-val gradient-text">0</div><div class="s-lbl">Account required</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="notify">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Be first to know when it launches</h2>
+                <p>Receipt Digitizer for Android is coming soon. Drop us an email and we'll let you know the moment it's live on Google Play.</p>
+                <div class="hero-cta">
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification" class="btn btn-white">Notify me at launch</a>
+                    <a href="/receipt-digitizer-android/support" class="btn btn-on-dark">Support &amp; FAQ</a>
+                </div>
+                <div style="margin-top:28px;"><span class="review-note">&#9203; Status: Under Development — launching soon on Google Play</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-col">
+                <h4>Receipt Digitizer Android</h4>
+                <ul>
+                    <li><a href="/receipt-digitizer-android">App</a></li>
+                    <li><a href="/receipt-digitizer-android/support">Support</a></li>
+                    <li><a href="/receipt-digitizer-android/privacy">Privacy</a></li>
+                    <li><a href="/receipt-digitizer-android/terms">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Also on iOS</h4>
+                <ul>
+                    <li><a href="/receipt-digitizer">Receipt Digitizer for iOS</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Apps</h4>
+                <ul>
+                    <li><a href="/">All apps</a></li>
+                    <li><a href="/pillvault-android">PillVault for Android</a></li>
+                    <li><a href="/zakatbook-android">Zakat Book for Android</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="mailto:lynxapps.contact@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom" style="border-top:1px solid var(--line);padding-top:24px;margin-top:40px;">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <span>
+                    <a href="/receipt-digitizer-android/privacy">Privacy</a> &nbsp;&middot;&nbsp;
+                    <a href="/receipt-digitizer-android/terms">Terms</a> &nbsp;&middot;&nbsp;
+                    <a href="/receipt-digitizer-android/support">Support</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/lynx.js"></script>
+</body>
+</html>
