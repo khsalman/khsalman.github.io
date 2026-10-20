@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UpRep - The Exercise Alarm That Won't Snooze</title>
-    <meta name="description" content="UpRep is a wake-up alarm that won't turn off until you've done the reps. Push-ups, squats, and jumping jacks counted live by your iPhone camera, all on-device.">
+    <meta name="description" content="UpRep is a wake-up alarm that won't turn off until you've done the reps. Push-ups, squats, sumo squats, lunges and more, counted live by your iPhone camera, all on-device.">
     <!-- Open Graph -->
     <meta property="og:title" content="UpRep - The Exercise Alarm That Won't Snooze">
     <meta property="og:description" content="The exercise alarm that won't turn off until you've done the reps - verified by your camera, all on your device.">
-    <meta property="og:image" content="https://khsalman.github.io/uprep/UpRep-icon.png">
+    <meta property="og:image" content="https://khsalman.github.io/uprep/Icon.png">
     <meta property="og:url" content="https://khsalman.github.io/uprep">
     <meta property="og:type" content="website">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="UpRep - The Exercise Alarm">
     <meta name="twitter:description" content="Your alarm won't stop until you've done the reps, counted live by your iPhone camera - all on-device.">
-    <meta name="twitter:image" content="https://khsalman.github.io/uprep/UpRep-icon.png">
+    <meta name="twitter:image" content="https://khsalman.github.io/uprep/Icon.png">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
     <style>
@@ -26,6 +26,24 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.18);
             margin-bottom: 20px;
         }
+        .shots {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 8px 0 24px;
+            -webkit-overflow-scrolling: touch;
+        }
+        .shots img {
+            flex: none;
+            height: 480px;
+            width: auto;
+            border-radius: 28px;
+            border: 1px solid var(--accent-border);
+            box-shadow: 0 12px 30px rgba(12,42,68,0.18);
+            scroll-snap-align: start;
+        }
+        @media (max-width:600px){ .shots img { height: 400px; } }
     </style>
 </head>
 <body>
@@ -40,7 +58,7 @@
                 <a href="/uprep/privacy">Privacy</a>
                 <a href="/uprep/terms">Terms</a>
                 <a href="/uprep/support">Support</a>
-                <a href="/uprep/support" class="nav-cta">Support</a>
+                <a href="https://apps.apple.com/sa/app/uprep-exercise-alarm-clock/id6812702313" class="nav-cta">Download</a>
             </nav>
         </div>
     </header>
@@ -49,16 +67,16 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <img src="/uprep/UpRep-icon.png" alt="UpRep exercise alarm app icon" class="app-icon-hero">
+                <img src="/uprep/Icon.png" alt="UpRep exercise alarm app icon" class="app-icon-hero">
                 <span class="eyebrow">⏰ The Exercise Alarm</span>
                 <h1>The alarm that won't quit until <span class="gradient-text">you get up.</span></h1>
                 <p class="lead">Ordinary alarms let you tap snooze and fall back asleep. UpRep replaces the snooze button with an exercise challenge - the only way to turn it off is to finish your reps. Your iPhone camera watches and counts each one live, so there's no faking it and no going back to bed.</p>
                 <div class="hero-cta">
-                    <a href="#features" class="btn btn-primary">Explore features</a>
-                    <a href="/uprep/support" class="btn btn-ghost">Support</a>
+                    <a href="https://apps.apple.com/sa/app/uprep-exercise-alarm-clock/id6812702313" class="btn btn-primary">Download on App Store</a>
+                    <a href="#features" class="btn btn-ghost">Explore features</a>
                 </div>
                 <div class="hero-meta">
-                    <div><div class="m-val gradient-text">5</div><div class="m-lbl">Camera-counted exercises</div></div>
+                    <div><div class="m-val gradient-text">6</div><div class="m-lbl">Camera-counted exercises</div></div>
                     <div><div class="m-val gradient-text">100%</div><div class="m-lbl">On-device and private</div></div>
                     <div><div class="m-val gradient-text">0</div><div class="m-lbl">Ways to cheat the snooze</div></div>
                 </div>
@@ -73,6 +91,21 @@
                     <div class="device-float f1"><span class="dot">💪</span> 8 / 10 push-ups counted</div>
                     <div class="device-float f2"><span class="dot">🔥</span> 12-day streak</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="section-sm" aria-label="App screenshots">
+        <div class="container">
+            <div class="shots reveal">
+                <img src="/uprep/screenshots/01.png" alt="UpRep app screenshot 1 of 7" width="900" height="1957" loading="lazy">
+                <img src="/uprep/screenshots/02.png" alt="UpRep app screenshot 2 of 7" width="900" height="1957" loading="lazy">
+                <img src="/uprep/screenshots/03.png" alt="UpRep app screenshot 3 of 7" width="900" height="1957" loading="lazy">
+                <img src="/uprep/screenshots/04.png" alt="UpRep app screenshot 4 of 7" width="900" height="1957" loading="lazy">
+                <img src="/uprep/screenshots/05.png" alt="UpRep app screenshot 5 of 7" width="900" height="1957" loading="lazy">
+                <img src="/uprep/screenshots/06.png" alt="UpRep app screenshot 6 of 7" width="900" height="1957" loading="lazy">
+                <img src="/uprep/screenshots/07.png" alt="UpRep app screenshot 7 of 7" width="900" height="1957" loading="lazy">
             </div>
         </div>
     </section>
@@ -116,7 +149,7 @@
             <div class="section-head reveal">
                 <span class="eyebrow">Features</span>
                 <h2>Built to actually get you moving</h2>
-                <p>Camera-verified counting, chained routines, streaks, and private sync - everything runs on your device.</p>
+                <p>Camera-verified counting, chained routines, streaks, and a device-local history - everything runs on your iPhone.</p>
             </div>
             <div class="grid grid-3">
                 <div class="feature reveal">
@@ -127,7 +160,7 @@
                 <div class="feature reveal">
                     <div class="f-icon">🔗</div>
                     <h3>Routines</h3>
-                    <p>Chain multiple exercises into one wake-up - for example 10 squats, then 10 push-ups, then 20 jumping jacks.</p>
+                    <p>Chain multiple exercises into one wake-up - for example 10 squats, then 10 push-ups, then 10 sumo squats.</p>
                 </div>
                 <div class="feature reveal">
                     <div class="f-icon">📈</div>
@@ -145,9 +178,9 @@
                     <p>Dismissing without finishing only counts against you once you've genuinely skipped in favor of a later wake-up - not for a single missed morning.</p>
                 </div>
                 <div class="feature reveal">
-                    <div class="f-icon">☁️</div>
-                    <h3>Private iCloud sync</h3>
-                    <p>Your alarms, history, and progress sync across your devices through your own private iCloud account - never our servers.</p>
+                    <div class="f-icon">📱</div>
+                    <h3>Stays on your iPhone</h3>
+                    <p>Your alarms, history, and progress are stored on your device. There's no account and no cloud sync - deleting the app is a clean reset.</p>
                 </div>
                 <div class="feature reveal">
                     <div class="f-icon">🎯</div>
@@ -162,7 +195,7 @@
                 <div class="feature reveal">
                     <div class="f-icon">📴</div>
                     <h3>Works offline</h3>
-                    <p>On-device first. Everything works without a connection - sync is a convenience layered on top, not a requirement.</p>
+                    <p>Everything works without a connection. Counting, alarms, history and progress all run on your device.</p>
                 </div>
             </div>
         </div>
@@ -173,7 +206,7 @@
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Exercises</span>
-                <h2>Five moves, counted by your camera</h2>
+                <h2>Six moves, counted by your camera</h2>
                 <p>On-device pose detection counts each exercise. Every one gives a quick camera-positioning tip so you frame yourself for accurate counting.</p>
             </div>
             <div class="grid grid-3">
@@ -187,25 +220,25 @@
                     <h3>Squats <span style="font-size:12px;color:var(--muted);font-weight:600;">&middot; Free</span></h3>
                     <p>Get the blood flowing with full-body squats, counted rep by rep as you rise back up.</p>
                 </div>
-                <div class="feature reveal" style="border-top:3px solid var(--accent);">
-                    <div class="f-icon">🤸</div>
-                    <h3>Jumping jacks <span style="font-size:12px;color:var(--muted);font-weight:600;">&middot; Free</span></h3>
-                    <p>A quick cardio burst to shake off sleep, tracked as your arms and legs extend and close.</p>
+                <div class="feature reveal" style="border-top:3px solid #f2b841;">
+                    <div class="f-icon">🏋️</div>
+                    <h3>Sumo squats <span style="font-size:12px;color:#b45309;font-weight:600;">&middot; Premium</span></h3>
+                    <p>A wider stance that works the inner thighs and glutes, counted rep by rep as you stand back up.</p>
                 </div>
                 <div class="feature reveal" style="border-top:3px solid #f2b841;">
                     <div class="f-icon">🚶</div>
                     <h3>Lunges <span style="font-size:12px;color:#b45309;font-weight:600;">&middot; Premium</span></h3>
-                    <p>Alternating lunges for lower-body strength, counted each time you step through and return.</p>
+                    <p>Alternating lunges for lower-body strength, counted each time you step through and return to standing.</p>
+                </div>
+                <div class="feature reveal" style="border-top:3px solid #f2b841;">
+                    <div class="f-icon">↔️</div>
+                    <h3>Side lunges <span style="font-size:12px;color:#b45309;font-weight:600;">&middot; Premium</span></h3>
+                    <p>Step out to the side and back, tracked for hip and inner-leg strength. Stand side-on to the camera for the best count.</p>
                 </div>
                 <div class="feature reveal" style="border-top:3px solid #f2b841;">
                     <div class="f-icon">🏃</div>
                     <h3>High knees <span style="font-size:12px;color:#b45309;font-weight:600;">&middot; Premium</span></h3>
                     <p>High-energy cardio that gets your heart rate up fast, tracked knee by knee.</p>
-                </div>
-                <div class="feature reveal" style="background:var(--accent-soft);border:1px dashed var(--accent-border);">
-                    <div class="f-icon">📐</div>
-                    <h3>Camera tips built in</h3>
-                    <p>Each exercise shows exactly where to place your phone and how to stand so every valid rep is counted accurately.</p>
                 </div>
             </div>
         </div>
@@ -222,7 +255,7 @@
             <div class="stats reveal">
                 <div class="stat"><div class="s-val">📷</div><div class="s-lbl">Camera processed on-device</div></div>
                 <div class="stat"><div class="s-val">🚫</div><div class="s-lbl">Nothing recorded or uploaded</div></div>
-                <div class="stat"><div class="s-val">☁️</div><div class="s-lbl">Your own private iCloud</div></div>
+                <div class="stat"><div class="s-val">📱</div><div class="s-lbl">Data stays on your iPhone</div></div>
                 <div class="stat"><div class="s-val">🖥️</div><div class="s-lbl">No personal backend</div></div>
                 <div class="stat"><div class="s-val">📴</div><div class="s-lbl">Works fully offline</div></div>
                 <div class="stat"><div class="s-val">🛡️</div><div class="s-lbl">ATT-respecting ads</div></div>
@@ -252,12 +285,12 @@
                     </thead>
                     <tbody>
                         <tr><td>Saved wake-ups</td><td class="yes">✓ Up to 2</td><td class="yes">✓ Unlimited</td></tr>
-                        <tr><td>Push-ups, squats, jumping jacks</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                        <tr><td>Lunges & high knees</td><td class="no">✗</td><td class="yes">✓</td></tr>
+                        <tr><td>Push-ups & squats</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Sumo squats, lunges, side lunges & high knees</td><td class="no">✗</td><td class="yes">✓</td></tr>
                         <tr><td>Camera-verified rep counting</td><td class="yes">✓</td><td class="yes">✓</td></tr>
                         <tr><td>Routines (chained exercises)</td><td class="yes">✓ Within limits</td><td class="yes">✓</td></tr>
                         <tr><td>Progress & streaks</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-                        <tr><td>Private iCloud sync</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>On-device alarms & history</td><td class="yes">✓</td><td class="yes">✓</td></tr>
                         <tr><td>Ad-free experience</td><td class="no">✗</td><td class="yes">✓</td></tr>
                     </tbody>
                 </table>
@@ -280,13 +313,13 @@
                     <div class="per">Forever</div>
                     <ul>
                         <li>Up to 2 saved wake-ups</li>
-                        <li>Three exercises</li>
+                        <li>Push-ups and squats</li>
                         <li>Camera-verified counting</li>
                         <li>Routines within limits</li>
                         <li>Progress & streaks</li>
                         <li>Supported by ads</li>
                     </ul>
-                    <a href="/uprep/support" class="btn btn-soft">Coming soon</a>
+                    <a href="https://apps.apple.com/sa/app/uprep-exercise-alarm-clock/id6812702313" class="btn btn-soft">Download free</a>
                 </div>
                 <div class="price-card featured">
                     <div class="tag-pop">Best value</div>
@@ -294,12 +327,12 @@
                     <div class="amount">Yearly</div>
                     <div class="per">All Premium features</div>
                     <ul>
-                        <li>All five exercises</li>
+                        <li>All six exercises</li>
                         <li>Unlimited wake-ups</li>
                         <li>Completely ad-free</li>
-                        <li>Private iCloud sync</li>
+                        <li>Monthly and lifetime options too</li>
                     </ul>
-                    <a href="/uprep/support" class="btn btn-primary">Coming soon</a>
+                    <a href="https://apps.apple.com/sa/app/uprep-exercise-alarm-clock/id6812702313" class="btn btn-primary">Get Premium</a>
                 </div>
                 <div class="price-card">
                     <h3>Lifetime</h3>
@@ -311,11 +344,11 @@
                         <li>Restores across your devices</li>
                         <li>Monthly plan also available</li>
                     </ul>
-                    <a href="/uprep/support" class="btn btn-soft">Coming soon</a>
+                    <a href="https://apps.apple.com/sa/app/uprep-exercise-alarm-clock/id6812702313" class="btn btn-soft">Get Lifetime</a>
                 </div>
             </div>
             <div class="section-head reveal" style="margin-top:32px;">
-                <p style="font-size:13px;color:var(--muted);max-width:600px;">Purchases restore across your devices, and subscriptions are managed through your Apple Account.</p>
+                <p style="font-size:13px;color:var(--muted);max-width:600px;">Purchases restore across your devices signed in to the same Apple Account, and subscriptions are managed through your Apple Account.</p>
             </div>
         </div>
     </section>
@@ -331,7 +364,6 @@
                 <div class="stat"><div class="s-val">📱</div><div class="s-lbl">iPhone</div></div>
                 <div class="stat"><div class="s-val">iOS 26.1</div><div class="s-lbl">or later</div></div>
                 <div class="stat"><div class="s-val">📷</div><div class="s-lbl">Camera required</div></div>
-                <div class="stat"><div class="s-val">☁️</div><div class="s-lbl">iCloud optional</div></div>
             </div>
         </div>
     </section>
@@ -340,10 +372,16 @@
     <section class="section-sm">
         <div class="container">
             <div class="cta reveal">
-                <h2>Coming soon to the App Store</h2>
-                <p>UpRep is in development and launching soon. Get notified when it's live and turn "just five more minutes" into ten push-ups.</p>
+                <h2>Get UpRep on the App Store</h2>
+                <p>Turn "just five more minutes" into ten push-ups. Start free and upgrade whenever you want more exercises.</p>
+                <div style="display:flex;justify-content:center;margin:8px 0 28px;">
+                    <div class="qr">
+                        <img src="/uprep/appstore-qr.svg" alt="Scan to download UpRep on the App Store">
+                        <span>Scan with your iPhone camera</span>
+                    </div>
+                </div>
                 <div class="hero-cta">
-                    <a href="mailto:lynxapps.contact@gmail.com?subject=Notify%20me%20at%20UpRep%20launch" class="btn btn-white">&#9993;&#65039; Notify me at launch</a>
+                    <a href="https://apps.apple.com/sa/app/uprep-exercise-alarm-clock/id6812702313" class="btn btn-white">Download on App Store</a>
                     <a href="/uprep/support" class="btn btn-on-dark">Visit support</a>
                 </div>
             </div>
