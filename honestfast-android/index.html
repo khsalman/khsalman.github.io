@@ -8,59 +8,45 @@
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
     <style>
-        .icon-hero {
-            width: 96px;
-            height: 96px;
-            border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(0,0,0,.18);
-            display: block;
-            margin: 0 auto 20px;
-        }
-        .plans-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 28px;
-            justify-content: center;
-        }
+        .icon-hero { width: 80px; height: 80px; border-radius: 20px; box-shadow: var(--shadow); margin: 0 0 var(--space-6); }
+        .plans-row { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-7); justify-content: center; }
         .plan-chip {
             background: var(--accent-soft);
             border: 1px solid var(--accent-border);
-            border-radius: 100px;
-            padding: 6px 16px;
-            font-size: .875rem;
-            font-weight: 500;
-            color: var(--accent);
+            border-radius: 999px;
+            padding: 8px 18px;
+            font-size: var(--text-sm);
+            font-weight: 600;
+            color: var(--accent-text);
         }
-        .stage-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px;
-            margin-top: 40px;
-        }
+        .stage-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-8); }
         .stage-item {
-            background: var(--accent-soft);
-            border: 1px solid var(--accent-border);
-            border-radius: 16px;
-            padding: 20px 22px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-top: 3px solid var(--accent);
+            border-radius: var(--radius);
+            padding: var(--space-5) var(--space-6);
+            box-shadow: var(--shadow-sm);
         }
-        .stage-item .stage-time { font-size: .8rem; font-weight: 700; color: var(--accent); }
-        .stage-item h3 { font-size: 1rem; margin: 4px 0 6px; }
-        .stage-item p { font-size: .875rem; color: var(--text-2); margin: 0; }
-        .lang-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 24px;
-            justify-content: center;
-        }
+        .stage-item .stage-time { font-size: var(--text-xs); font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-text); }
+        .stage-item h3 { font-size: var(--text-md); margin: var(--space-1) 0 var(--space-2); }
+        .stage-item p { font-size: var(--text-sm); color: var(--muted); margin: 0; line-height: 1.6; }
+        .lang-list { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; }
         .lang-chip {
             background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 8px 14px;
-            font-size: .875rem;
+            border: 1px solid var(--line-strong);
+            border-radius: var(--radius-sm);
+            padding: 10px 18px;
+            font-size: var(--text-base);
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
         }
+        .fine-print { text-align: center; color: var(--muted); font-size: var(--text-sm); margin: var(--space-6) auto 0; max-width: 60ch; }
+        .status-callout { text-align: center; max-width: 720px; margin: 0 auto; }
+        .center-row { display: flex; justify-content: center; margin-top: var(--space-7); }
+        .pricing-narrow { max-width: 760px; margin: 0 auto; }
+        @media (max-width: 920px) { .stage-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 560px) { .stage-list { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -82,7 +68,7 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <img src="/honestfast/HF-Icon.png" alt="HonestFast for Android icon" class="icon-hero" style="margin-left:0;">
+                <img src="/honestfast/HF-Icon.png" alt="HonestFast for Android icon" class="icon-hero">
                 <span class="eyebrow">&#9201;&#65039; Fasting Tracker for Android</span>
                 <h1>Fast with <span class="gradient-text">purpose.</span></h1>
                 <p class="lead">Track intermittent fasts like 16:8, 18:6, 20:4 and OMAD, or use Ramadan, Qada and Sunnah fasting tools. HonestFast for Android is coming to Google Play.</p>
@@ -99,7 +85,7 @@
             <div class="hero-visual">
                 <div class="device">
                     <div class="device-screen">
-                        <div class="d-icon"><img src="/honestfast/HF-Icon.png" alt="" style="width:64px;height:64px;border-radius:14px;"></div>
+                        <div class="d-icon"><img src="/honestfast/HF-Icon.png" alt=""></div>
                         <div class="d-title">HonestFast</div>
                         <div class="d-sub">Android &mdash; coming soon</div>
                     </div>
@@ -111,9 +97,9 @@
     </section>
 
     <!-- Status banner -->
-    <section class="section-sm" style="padding-top:0;">
+    <section class="section-sm">
         <div class="container">
-            <div class="callout" style="text-align:center;max-width:640px;margin:0 auto;">
+            <div class="callout status-callout">
                 <p><strong>&#9203; Coming soon on Google Play.</strong> HonestFast for Android is currently in development. Leave your email to be notified at launch &mdash; <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification">lynxapps.contact@gmail.com</a></p>
             </div>
         </div>
@@ -142,12 +128,12 @@
                 <div class="stage-item"><div class="stage-time">18&ndash;24 hrs</div><h3>Autophagy</h3><p>Cellular cleanup and recycling begins.</p></div>
                 <div class="stage-item"><div class="stage-time">24+ hrs</div><h3>Deep Autophagy</h3><p>Peak cellular renewal, tracked as your fast continues.</p></div>
             </div>
-            <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px;">Stage descriptions are general information, not medical advice. Individual responses vary.</p>
+            <p class="fine-print">Stage descriptions are general information, not medical advice. Individual responses vary.</p>
         </div>
     </section>
 
     <!-- Ramadan & Islamic fasting -->
-    <section class="section" id="ramadan" style="background:linear-gradient(180deg,var(--bg),#fff);">
+    <section class="section" id="ramadan">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Islamic fasting</span>
@@ -185,7 +171,7 @@
     </section>
 
     <!-- Privacy -->
-    <section class="section" style="background:linear-gradient(180deg,#fff,var(--bg));">
+    <section class="section">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Privacy First</span>
@@ -198,7 +184,7 @@
                 <div class="stat"><div class="s-val gradient-text">Offline</div><div class="s-lbl">Core features</div></div>
                 <div class="stat"><div class="s-val gradient-text">5</div><div class="s-lbl">Languages</div></div>
             </div>
-            <div style="text-align:center;margin-top:32px;" class="reveal">
+            <div class="center-row reveal">
                 <a href="/honestfast-android/privacy" class="btn btn-soft">Read our privacy policy</a>
             </div>
         </div>
@@ -230,34 +216,34 @@
                 <h2>Start free. Go deeper with Premium.</h2>
                 <p>The free version includes the core fasting tools. Premium adds advanced analytics and custom fasting plans. Purchases are handled by Google Play, and prices are shown there.</p>
             </div>
-            <div class="grid grid-2 reveal" style="max-width:760px;margin:40px auto 0;">
+            <div class="pricing pricing-narrow reveal">
                 <div class="pricing-card">
                     <h3>Free</h3>
                     <div class="price">$0</div>
                     <p class="price-desc">No account needed</p>
-                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                    <ul class="feat">
                         <li>Fasting timer and preset plans</li>
                         <li>Metabolic stage tracking</li>
                         <li>Ramadan mode and prayer times</li>
                         <li>Qada and voluntary fasting</li>
                         <li>Water tracking, streaks and history</li>
                     </ul>
-                    <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="btn btn-soft" style="width:100%;">Notify me</a>
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="btn btn-soft">Notify me</a>
                 </div>
-                <div class="pricing-card" style="border:2px solid var(--accent);">
+                <div class="pricing-card featured">
                     <h3>Premium</h3>
                     <div class="price">Premium</div>
                     <p class="price-desc">Billed through Google Play</p>
-                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                    <ul class="feat">
                         <li>Everything in Free</li>
                         <li>Custom plans from 10 to 48 hours</li>
                         <li>Trends, heatmaps and analytics</li>
                         <li>Plan performance insights</li>
                     </ul>
-                    <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="btn btn-primary" style="width:100%;">Notify me</a>
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="btn btn-primary">Notify me</a>
                 </div>
             </div>
-            <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px;">HonestFast is a personal tracking tool. It is not a medical device or a substitute for professional medical advice.</p>
+            <p class="fine-print">HonestFast is a personal tracking tool. It is not a medical device or a substitute for professional medical advice.</p>
         </div>
     </section>
 
@@ -271,7 +257,7 @@
                     <a href="mailto:lynxapps.contact@gmail.com?subject=HonestFast%20Android%20Launch%20Notification" class="btn btn-white">Notify me at launch</a>
                     <a href="/honestfast-android/support" class="btn btn-on-dark">Support &amp; FAQ</a>
                 </div>
-                <div style="margin-top:28px;"><span class="review-note">&#9203; Status: Under Development &mdash; launching soon on Google Play</span></div>
+                <div class="center-row"><span class="review-note">&#9203; Status: Under Development &mdash; launching soon on Google Play</span></div>
             </div>
         </div>
     </section>
@@ -279,38 +265,32 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-col">
-                <h4>HonestFast Android</h4>
-                <ul>
-                    <li><a href="/honestfast-android">App</a></li>
-                    <li><a href="/honestfast-android/support">Support</a></li>
-                    <li><a href="/honestfast-android/privacy">Privacy</a></li>
-                    <li><a href="/honestfast-android/terms">Terms</a></li>
-                </ul>
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h4>HonestFast Android</h4>
+                    <a href="/honestfast-android">App</a>
+                    <a href="/honestfast-android/support">Support</a>
+                    <a href="/honestfast-android/privacy">Privacy</a>
+                    <a href="/honestfast-android/terms">Terms</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Also on iOS</h4>
+                    <a href="/honestfast">HonestFast for iOS</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Apps</h4>
+                    <a href="/">All apps</a>
+                    <a href="/receipt-digitizer-android">Receipt Digitizer Android</a>
+                    <a href="/pillvault-android">PillVault for Android</a>
+                    <a href="/zakatbook-android">Zakat Book for Android</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/">Home</a>
+                    <a href="mailto:lynxapps.contact@gmail.com">Contact</a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Also on iOS</h4>
-                <ul>
-                    <li><a href="/honestfast">HonestFast for iOS</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Apps</h4>
-                <ul>
-                    <li><a href="/">All apps</a></li>
-                    <li><a href="/receipt-digitizer-android">Receipt Digitizer Android</a></li>
-                    <li><a href="/pillvault-android">PillVault for Android</a></li>
-                    <li><a href="/zakatbook-android">Zakat Book for Android</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="mailto:lynxapps.contact@gmail.com">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-bottom" style="border-top:1px solid var(--line);padding-top:24px;margin-top:40px;">
+            <div class="footer-bottom">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
                 <span>
                     <a href="/honestfast-android/privacy">Privacy</a> &nbsp;&middot;&nbsp;

@@ -7,43 +7,6 @@
     <meta name="description" content="Privacy Policy for Vow - Habit &amp; Streak Tracker by LynxApps. Your habits and check-in history stay on your device. No account required, works fully offline.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
-    <style>
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--card);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            margin: 24px 0;
-            font-size: 14px;
-        }
-        .data-table thead tr {
-            background: linear-gradient(120deg, var(--g1), var(--g2));
-        }
-        .data-table th {
-            color: #fff;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 14px 16px;
-            text-align: left;
-            letter-spacing: .05em;
-            text-transform: uppercase;
-        }
-        .data-table td {
-            padding: 13px 16px;
-            color: var(--ink-2);
-            border-top: 1px solid var(--line);
-            vertical-align: top;
-        }
-        .data-table tr:hover td { background: var(--accent-soft); }
-        .data-table .yes { color: #16a34a; font-weight: 700; }
-        .data-table .no  { color: var(--muted-2); }
-        .data-table td:first-child { font-weight: 600; color: var(--ink); }
-        @media (max-width: 640px) {
-            .data-table { display: block; overflow-x: auto; }
-        }
-    </style>
 </head>
 <body>
     <header class="site-header">
@@ -266,7 +229,7 @@
 
             <!-- 10 – summary table -->
             <h2>10. Summary of Data Practices</h2>
-            <div style="overflow-x:auto;">
+            <div class="table-wrap">
                 <table class="data-table">
                     <thead>
                         <tr>
@@ -335,7 +298,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-bottom" style="border:0;padding-top:0;">
+            <div class="footer-bottom">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
                 <span>
                     <a href="/vow">Vow</a> &nbsp;·&nbsp;

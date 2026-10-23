@@ -80,11 +80,17 @@
             .screenshot-gallery img { height: 360px; }
         }
         .feature-list { list-style: none; padding: 0; margin: 0; }
-        .feature-list li { padding: 8px 0; border-bottom: 1px solid var(--border); color: var(--ink-2); display: flex; gap: 10px; align-items: flex-start; }
+        .feature-list li { padding: 8px 0; border-bottom: 1px solid var(--line); color: var(--ink-2); display: flex; gap: 10px; align-items: flex-start; }
         .feature-list li:last-child { border-bottom: none; }
         .feature-list li::before { content: "✓"; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+        .gallery-wrap { padding: 0 max(24px, calc((100vw - 1200px)/2)); }
+        @media (max-width: 920px) { .icon-hero { margin-left: auto; margin-right: auto; } }
+        @media (max-width: 760px) { .gallery-wrap { padding: 0 16px; } .highlight-box { padding: var(--space-5); margin-bottom: var(--space-8); } }
+        .feature-detail h3 { margin-bottom: var(--space-4); font-size: var(--text-xl); }
+        .feature-detail > div > p { color: var(--ink-2); margin-bottom: var(--space-5); }
+        .band-soft { background: var(--accent-soft); border-top: 1px solid var(--accent-border); border-bottom: 1px solid var(--accent-border); }
         .privacy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .privacy-card { background: white; border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; text-align: center; }
+        .privacy-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; text-align: center; }
         .privacy-card .p-icon { font-size: 32px; margin-bottom: 12px; }
         .privacy-card h4 { font-size: 15px; font-weight: 700; margin: 0 0 6px; }
         .privacy-card p { font-size: 13px; color: var(--ink-2); margin: 0; }
@@ -138,14 +144,14 @@
     </section>
 
     <!-- Screenshots -->
-    <section class="section-sm" style="background: white; overflow:hidden;">
+    <section class="section-sm" style="overflow:hidden;">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">App Screenshots</span>
                 <h2>See Zakat Book in action</h2>
             </div>
         </div>
-        <div style="padding: 0 max(24px, calc((100vw - 1200px)/2));">
+        <div class="gallery-wrap">
             <div class="screenshot-gallery">
                 <img src="/zakatbook/screenshots/ZB-SS-iPhone01.png" alt="Zakat Book - Zakat calculation dashboard">
                 <img src="/zakatbook/screenshots/ZB-SS-iPhone02.png" alt="Zakat Book - Nisab settings Gold and Silver">
@@ -159,7 +165,7 @@
     </section>
 
     <!-- Why Zakat Book -->
-    <section class="section" id="features" style="background: white;">
+    <section class="section" id="features">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Built for Muslims</span>
@@ -202,7 +208,7 @@
     </section>
 
     <!-- Zakat Calculation Detail -->
-    <section class="section" style="background: linear-gradient(180deg,#fff,var(--bg));">
+    <section class="section">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Zakat Calculation</span>
@@ -211,8 +217,8 @@
             </div>
             <div class="feature-detail reveal">
                 <div>
-                    <h3 style="margin-bottom:16px;">Gold &amp; Silver Nisab Standards</h3>
-                    <p style="color:var(--ink-2);margin-bottom:20px;">Choose the Nisab standard that applies to your school of thought - Gold (85g) or Silver (595g). Enter today's metal price and your currency; Zakat Book calculates your Nisab threshold and 2.5% Zakat obligation instantly.</p>
+                    <h3>Gold &amp; Silver Nisab Standards</h3>
+                    <p>Choose the Nisab standard that applies to your school of thought - Gold (85g) or Silver (595g). Enter today's metal price and your currency; Zakat Book calculates your Nisab threshold and 2.5% Zakat obligation instantly.</p>
                     <ul class="feature-list">
                         <li>Choose Gold or Silver Nisab standard</li>
                         <li>Enter your current metal price per gram</li>
@@ -224,8 +230,8 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 style="margin-bottom:16px;">Every Zakatable Asset Type</h3>
-                    <p style="color:var(--ink-2);margin-bottom:20px;">Add only the categories that apply to you. No forced classifications. Zakat Book leaves asset classification decisions - especially for contested categories like property - entirely to you.</p>
+                    <h3>Every Zakatable Asset Type</h3>
+                    <p>Add only the categories that apply to you. No forced classifications. Zakat Book leaves asset classification decisions - especially for contested categories like property - entirely to you.</p>
                     <ul class="feature-list">
                         <li>Cash and savings</li>
                         <li>Gold &amp; silver (weight-based calculation)</li>
@@ -242,7 +248,7 @@
     </section>
 
     <!-- Hawl / Annual Tracking -->
-    <section class="section" id="how" style="background: var(--bg);">
+    <section class="section" id="how">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Year-by-Year Hawl Tracking</span>
@@ -267,7 +273,7 @@
     </section>
 
     <!-- Premium analytics / export -->
-    <section class="section" style="background: white;">
+    <section class="section">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Premium Features</span>
@@ -295,7 +301,7 @@
     </section>
 
     <!-- Privacy -->
-    <section class="section" style="background: var(--accent-soft); border-top: 1px solid var(--accent-border);">
+    <section class="section band-soft">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Private by Design</span>
@@ -359,20 +365,20 @@
     </section>
 
     <!-- Comparison table -->
-    <section class="section" id="pricing" style="background: white;">
+    <section class="section" id="pricing">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">What's Included</span>
                 <h2>Start free. Unlock more when you need it.</h2>
                 <p>The free tier covers most users. Upgrade for unlimited years, analytics, export, and an ad-free experience.</p>
             </div>
-            <div style="overflow-x: auto;" class="reveal">
+            <div class="table-wrap reveal">
                 <table class="comp-table">
                     <thead>
                         <tr>
                             <th>Feature</th>
-                            <th style="color:#1B6B3A;">Free</th>
-                            <th style="color:#1B6B3A;">Premium</th>
+                            <th>Free</th>
+                            <th>Premium</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -394,7 +400,7 @@
     </section>
 
     <!-- Pricing cards -->
-    <section class="section" style="background: var(--bg);">
+    <section class="section">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>

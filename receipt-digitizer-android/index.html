@@ -16,6 +16,11 @@
             display: block;
             margin: 0 auto 20px;
         }
+        .hero-grid .icon-hero { margin-left: 0; }
+        .device-screen .d-icon img { width: 64px; height: 64px; border-radius: 14px; }
+        @media (max-width: 920px) { .hero-grid .icon-hero { margin-left: auto; } }
+        .center-row { text-align: center; margin-top: 32px; }
+        .center-row .note { font-size: .9rem; color: var(--muted); }
         .scan-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -43,7 +48,7 @@
             margin: 0 auto 16px;
         }
         .scan-step h3 { font-size: 1.05rem; margin-bottom: 8px; }
-        .scan-step p { font-size: .9rem; color: var(--text-2); margin: 0; }
+        .scan-step p { font-size: .9rem; color: var(--muted); margin: 0; }
         .cat-grid {
             display: flex;
             flex-wrap: wrap;
@@ -58,7 +63,7 @@
             padding: 6px 16px;
             font-size: .875rem;
             font-weight: 500;
-            color: var(--accent);
+            color: var(--accent-text);
         }
         .lang-list {
             display: flex;
@@ -69,7 +74,7 @@
         }
         .lang-chip {
             background: var(--card);
-            border: 1px solid var(--border);
+            border: 1px solid var(--line);
             border-radius: 8px;
             padding: 8px 14px;
             font-size: .875rem;
@@ -95,7 +100,7 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <img src="/receipt-digitizer/RD-Icon.png" alt="Receipt Digitizer for Android icon" class="icon-hero" style="margin-left:0;">
+                <img src="/receipt-digitizer/RD-Icon.png" alt="Receipt Digitizer for Android icon" class="icon-hero">
                 <span class="eyebrow">&#129534; Receipt &amp; Expense Tracker for Android</span>
                 <h1>Turn paper receipts into <span class="gradient-text">organized records.</span></h1>
                 <p class="lead">Scan a receipt with your camera, let on-device text recognition pull out the details, and keep every expense sorted by category, folder, and budget. Receipt Digitizer for Android is coming to Google Play.</p>
@@ -112,7 +117,7 @@
             <div class="hero-visual">
                 <div class="device">
                     <div class="device-screen">
-                        <div class="d-icon"><img src="/receipt-digitizer/RD-Icon.png" alt="" style="width:64px;height:64px;border-radius:14px;"></div>
+                        <div class="d-icon"><img src="/receipt-digitizer/RD-Icon.png" alt=""></div>
                         <div class="d-title">Receipt Digitizer</div>
                         <div class="d-sub">Android — coming soon</div>
                     </div>
@@ -162,8 +167,8 @@
                     <p>The expense is categorized and filed into your history and folders.</p>
                 </div>
             </div>
-            <div style="text-align:center;margin-top:28px;" class="reveal">
-                <p style="font-size:.9rem;color:var(--text-2);">No receipt to scan? Add expenses manually with the same level of detail.</p>
+            <div class="center-row reveal">
+                <p class="note">No receipt to scan? Add expenses manually with the same level of detail.</p>
             </div>
         </div>
     </section>
@@ -240,7 +245,7 @@
                 <div class="stat"><div class="s-val gradient-text">Offline</div><div class="s-lbl">Core features</div></div>
                 <div class="stat"><div class="s-val gradient-text">10</div><div class="s-lbl">Languages</div></div>
             </div>
-            <div style="text-align:center;margin-top:32px;" class="reveal">
+            <div class="center-row reveal">
                 <a href="/receipt-digitizer-android/privacy" class="btn btn-soft">Read our privacy policy</a>
             </div>
         </div>
@@ -277,30 +282,30 @@
                 <h2>Start free. Go ad-free with Pro.</h2>
                 <p>The free version gives you everyday tracking. Pro removes ads and adds more. Purchases are handled by Google Play, and prices are shown there.</p>
             </div>
-            <div class="grid grid-2 reveal" style="max-width:760px;margin:40px auto 0;">
+            <div class="pricing reveal" style="max-width:760px;margin:0 auto;">
                 <div class="pricing-card">
                     <h3>Free</h3>
                     <div class="price">$0</div>
                     <p class="price-desc">Forever, no account needed</p>
-                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                    <ul class="feat">
                         <li>Receipt scanning &amp; manual entry</li>
                         <li>Expenses, categories &amp; folders</li>
                         <li>Budgets &amp; spending insights</li>
                         <li>Search across all receipts</li>
                         <li>Ad-supported</li>
                     </ul>
-                    <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification" class="btn btn-soft" style="width:100%;">Notify me</a>
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification" class="btn btn-soft">Notify me</a>
                 </div>
-                <div class="pricing-card" style="border:2px solid var(--accent);">
+                <div class="pricing-card featured">
                     <h3>Pro</h3>
                     <div class="price">Pro</div>
                     <p class="price-desc">Billed through Google Play</p>
-                    <ul class="feat" style="margin:24px 0;flex-grow:1;">
+                    <ul class="feat">
                         <li>Everything in Free</li>
                         <li>Ad-free experience</li>
                         <li>Pro features, see Google Play for details</li>
                     </ul>
-                    <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification" class="btn btn-primary" style="width:100%;">Notify me</a>
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=Receipt%20Digitizer%20Android%20Launch%20Notification" class="btn btn-primary">Notify me</a>
                 </div>
             </div>
             <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px;">Receipt Digitizer is a personal expense organiser and is not tax, accounting, or financial advice.</p>
@@ -340,37 +345,31 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <div class="footer-col">
-                <h4>Receipt Digitizer Android</h4>
-                <ul>
-                    <li><a href="/receipt-digitizer-android">App</a></li>
-                    <li><a href="/receipt-digitizer-android/support">Support</a></li>
-                    <li><a href="/receipt-digitizer-android/privacy">Privacy</a></li>
-                    <li><a href="/receipt-digitizer-android/terms">Terms</a></li>
-                </ul>
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h4>Receipt Digitizer Android</h4>
+                    <a href="/receipt-digitizer-android">App</a>
+                    <a href="/receipt-digitizer-android/support">Support</a>
+                    <a href="/receipt-digitizer-android/privacy">Privacy</a>
+                    <a href="/receipt-digitizer-android/terms">Terms</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Also on iOS</h4>
+                    <a href="/receipt-digitizer">Receipt Digitizer for iOS</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Apps</h4>
+                    <a href="/">All apps</a>
+                    <a href="/pillvault-android">PillVault for Android</a>
+                    <a href="/zakatbook-android">Zakat Book for Android</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="/">Home</a>
+                    <a href="mailto:lynxapps.contact@gmail.com">Contact</a>
+                </div>
             </div>
-            <div class="footer-col">
-                <h4>Also on iOS</h4>
-                <ul>
-                    <li><a href="/receipt-digitizer">Receipt Digitizer for iOS</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Apps</h4>
-                <ul>
-                    <li><a href="/">All apps</a></li>
-                    <li><a href="/pillvault-android">PillVault for Android</a></li>
-                    <li><a href="/zakatbook-android">Zakat Book for Android</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="mailto:lynxapps.contact@gmail.com">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-bottom" style="border-top:1px solid var(--line);padding-top:24px;margin-top:40px;">
+            <div class="footer-bottom">
                 <span>&copy; 2026 LynxApps. All rights reserved.</span>
                 <span>
                     <a href="/receipt-digitizer-android/privacy">Privacy</a> &nbsp;&middot;&nbsp;

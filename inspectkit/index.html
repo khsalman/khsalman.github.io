@@ -8,6 +8,14 @@
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
     <style>
+        .tpl-grid { row-gap: var(--space-7); }
+        .tpl-grid .stat:nth-child(4n+1) { border-left: 0; }
+        .tpl-grid .stat .s-val { font-size: 2rem; }
+        @media (max-width: 920px) { .tpl-grid .stat:nth-child(4n+1) { border-left: 1px solid var(--line); } .tpl-grid .stat:nth-child(odd) { border-left: 0; } }
+        .band { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+        .fine-print { text-align: center; color: var(--muted); font-size: var(--text-sm); margin: var(--space-6) auto 0; max-width: 64ch; }
+        .qr-wrap { display: flex; justify-content: center; margin: var(--space-2) 0 var(--space-7); }
+        .center-row { display: flex; justify-content: center; margin-top: var(--space-7); }
         .screenshots-row {
             display: flex;
             gap: 16px;
@@ -63,7 +71,7 @@
             <div class="hero-visual">
                 <div class="device">
                     <div class="device-screen">
-                        <div class="d-icon"><img src="/inspectkit/IK-Icon.png" alt="InspectKit app icon" style="width:56px;height:56px;border-radius:14px;"></div>
+                        <div class="d-icon"><img src="/inspectkit/IK-Icon.png" alt="InspectKit app icon"></div>
                         <div class="d-title">InspectKit</div>
                         <div class="d-sub">Professional reports in seconds</div>
                     </div>
@@ -75,7 +83,7 @@
     </section>
 
     <!-- Screenshots -->
-    <section class="section-sm" style="background:var(--bg);">
+    <section class="section-sm">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">See it in action</span>
@@ -154,7 +162,7 @@
     </section>
 
     <!-- How it works -->
-    <section class="section" style="background:linear-gradient(180deg,#fff,var(--bg));">
+    <section class="section band">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Streamlined workflow</span>
@@ -176,7 +184,7 @@
                 <h2>Ready for every inspection type</h2>
                 <p>Choose a template or build your own from scratch -- or use the AI Template Builder to generate one from a description.</p>
             </div>
-            <div class="stats reveal">
+            <div class="stats tpl-grid reveal">
                 <div class="stat"><div class="s-val">&#127968;</div><div class="s-lbl">Home Inspection</div></div>
                 <div class="stat"><div class="s-val">&#127970;</div><div class="s-lbl">Building Inspection</div></div>
                 <div class="stat"><div class="s-val">&#127978;</div><div class="s-lbl">Commercial Property</div></div>
@@ -194,20 +202,20 @@
     </section>
 
     <!-- Free vs Pro -->
-    <section class="section" style="background: white;">
+    <section class="section band">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">What's included</span>
                 <h2>Free to try. Pro when you need unlimited.</h2>
                 <p>Start with a free inspection and report. Upgrade Pro for unlimited inspections, watermark-free branded reports, and iCloud sync across all your devices.</p>
             </div>
-            <div style="overflow-x: auto;" class="reveal">
+            <div class="table-wrap reveal">
                 <table class="comp-table">
                     <thead>
                         <tr>
                             <th>Feature</th>
-                            <th style="color: #1B4FBF;">Free</th>
-                            <th style="color: #1B4FBF;">Pro</th>
+                            <th>Free</th>
+                            <th>Pro</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -291,7 +299,7 @@
                     <a href="https://apps.apple.com/us/app/inspectkit-site-reports-pro/id6782454914" class="btn btn-soft">Get Pro</a>
                 </div>
             </div>
-            <p style="text-align:center;font-size:13px;color:var(--muted);margin-top:24px;">On-device AI requires iOS 26 and Apple Intelligence (iPhone 15 Pro or later with AI enabled). AI features are available to all plan tiers on compatible devices.</p>
+            <p class="fine-print">On-device AI requires iOS 26 and Apple Intelligence (iPhone 15 Pro or later with AI enabled). AI features are available to all plan tiers on compatible devices.</p>
         </div>
     </section>
 
@@ -301,7 +309,7 @@
             <div class="cta reveal">
                 <h2>Now Available on the App Store</h2>
                 <p>InspectKit is live and ready to streamline your inspection workflow. Download now and create your first professional report in minutes.</p>
-                <div style="display:flex;justify-content:center;margin:8px 0 28px;">
+                <div class="qr-wrap">
                     <div class="qr">
                         <img src="/inspectkit/appstore-qr.svg" alt="Scan to download InspectKit on the App Store">
                         <span>Scan with your iPhone camera</span>

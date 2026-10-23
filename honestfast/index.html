@@ -97,7 +97,7 @@
         }
         .plan-card .plan-ratio { font-size: 28px; font-weight: 900; color: var(--accent); margin-bottom: 6px; }
         .plan-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
-        .plan-card p { font-size: 12px; color: var(--muted); line-height: 1.4; }
+        .plan-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
 
         /* Fasting stages */
         .stages-list {
@@ -164,7 +164,7 @@
         .feature-detail-text p { font-size: 16px; color: var(--ink-2); line-height: 1.7; margin-bottom: 12px; }
         .feature-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
         .feature-list li { display: flex; gap: 12px; font-size: 15px; color: var(--ink-2); }
-        .feature-list li::before { content: "&#10003;"; font-weight: 800; color: var(--accent); flex-shrink: 0; }
+        .feature-list li::before { content: "\2713"; font-weight: 800; color: var(--accent); flex-shrink: 0; }
 
         .highlight-box {
             background: var(--accent-soft);
@@ -201,12 +201,17 @@
         }
         .fp-block h3 { font-size: 20px; font-weight: 800; margin-bottom: 6px; }
         .fp-block .fp-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+        .fp-note { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+        .fp-note p { font-size: 14px; color: var(--ink-2); line-height: 1.65; }
         .fp-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
         .fp-list li { display: flex; gap: 12px; font-size: 15px; color: var(--ink-2); }
         .fp-list li .icon { width: 28px; height: 28px; border-radius: 8px; background: var(--accent-soft); display: grid; place-items: center; flex-shrink: 0; font-size: 14px; }
         .fp-list li strong { display: block; font-weight: 600; color: var(--ink); font-size: 14px; }
         .fp-list li span { font-size: 13px; color: var(--muted); }
 
+        @media (max-width: 920px) {
+            .icon-hero { margin-left: auto; margin-right: auto; }
+        }
         @media (max-width: 900px) {
             .plans-grid { grid-template-columns: repeat(2, 1fr); }
             .ramadan-grid { grid-template-columns: 1fr; }
@@ -239,8 +244,8 @@
     <section class="hero">
         <div class="container hero-grid">
             <div>
-                <span class="eyebrow">Fasting Tracker</span>
                 <img src="/honestfast/HF-Icon.png" alt="HonestFast: Fasting Tracker app icon" class="icon-hero">
+                <span class="eyebrow">Fasting Tracker</span>
                 <h1>Fast with<br><span class="gradient-text">purpose.</span></h1>
                 <p class="lead">HonestFast is a fasting tracker for both intermittent fasting and Islamic fasting. Track 16:8, 18:6, 20:4, and OMAD, or use dedicated Ramadan and Sunnah fasting tools to stay consistent with your fasting routine.</p>
                 <div class="hero-cta">
@@ -268,7 +273,7 @@
     </section>
 
     <!-- Screenshot gallery -->
-    <section class="section-sm" style="background: white; overflow: hidden;">
+    <section class="section-sm">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">App Screenshots</span>
@@ -328,7 +333,7 @@
     </section>
 
     <!-- Fasting stages -->
-    <section class="section" style="background: white;">
+    <section class="section">
         <div class="container">
             <div class="feature-detail reveal">
                 <div class="feature-detail-text">
@@ -437,7 +442,7 @@
     </section>
 
     <!-- Live Activity + Water -->
-    <section class="section" style="background: white;">
+    <section class="section">
         <div class="container">
             <div class="feature-detail reveal">
                 <div class="feature-detail-text">
@@ -519,7 +524,7 @@
     </section>
 
     <!-- Free vs Premium -->
-    <section class="section" id="pricing" style="background: white;">
+    <section class="section" id="pricing">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Pricing</span>
@@ -551,8 +556,8 @@
                         <li><span class="icon">&#127919;</span><div><strong>Plan performance insights</strong><span>Which fasting plans work best for you</span></div></li>
                         <li><span class="icon">&#9881;&#65039;</span><div><strong>Custom fasting plans</strong><span>Create any plan from 10 to 48 hours</span></div></li>
                     </ul>
-                    <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line);">
-                        <p style="font-size: 14px; color: var(--ink-2);">Whether you practice <strong>intermittent fasting, 16:8, OMAD, Ramadan fasting, Sunnah fasting, or voluntary fasting</strong>, HonestFast gives you the tools to track your fast, understand your progress, and stay consistent.</p>
+                    <div class="fp-note">
+                        <p>Whether you practice <strong>intermittent fasting, 16:8, OMAD, Ramadan fasting, Sunnah fasting, or voluntary fasting</strong>, HonestFast gives you the tools to track your fast, understand your progress, and stay consistent.</p>
                     </div>
                 </div>
             </div>

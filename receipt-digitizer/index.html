@@ -44,8 +44,11 @@
             border-radius: 26px;
             box-shadow: 0 8px 32px rgba(0,0,0,.18);
             display: block;
-            margin-bottom: 20px;
+            margin: 0 auto 20px;
         }
+        .hero-center { text-align: center; max-width: 720px; margin: 0 auto; }
+        .hero-center .hero-cta, .hero-center .hero-meta { justify-content: center; }
+        .hero-center .lead { margin-left: auto; margin-right: auto; }
         .screenshot-gallery {
             display: flex;
             gap: 16px;
@@ -64,6 +67,8 @@
             flex-shrink: 0;
             box-shadow: 0 8px 24px rgba(0,0,0,.14);
         }
+        .center-row { text-align: center; margin-top: 32px; }
+        .center-row .note { font-size: .9rem; color: var(--muted); }
         .scan-steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -91,7 +96,7 @@
             margin: 0 auto 16px;
         }
         .scan-step h3 { font-size: 1.05rem; margin-bottom: 8px; }
-        .scan-step p { font-size: .9rem; color: var(--text-2); margin: 0; }
+        .scan-step p { font-size: .9rem; color: var(--muted); margin: 0; }
         .category-grid {
             display: flex;
             flex-wrap: wrap;
@@ -106,11 +111,11 @@
             padding: 6px 16px;
             font-size: .875rem;
             font-weight: 500;
-            color: var(--accent);
+            color: var(--accent-text);
         }
         .use-cases {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 16px;
             margin-top: 32px;
         }
@@ -122,7 +127,7 @@
         }
         .use-case .uc-icon { font-size: 1.5rem; margin-bottom: 8px; }
         .use-case h4 { font-size: .95rem; margin-bottom: 4px; }
-        .use-case p { font-size: .85rem; color: var(--text-2); margin: 0; }
+        .use-case p { font-size: .85rem; color: var(--muted); margin: 0; }
         .export-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -131,13 +136,13 @@
         }
         .export-card {
             background: var(--card);
-            border: 1px solid var(--border);
+            border: 1px solid var(--line);
             border-radius: 16px;
             padding: 28px 24px;
         }
         .export-card .ec-icon { font-size: 2rem; margin-bottom: 12px; }
         .export-card h3 { font-size: 1rem; margin-bottom: 8px; }
-        .export-card p { font-size: .9rem; color: var(--text-2); margin: 0; }
+        .export-card p { font-size: .9rem; color: var(--muted); margin: 0; }
         .lang-list {
             display: flex;
             flex-wrap: wrap;
@@ -147,36 +152,16 @@
         }
         .lang-chip {
             background: var(--card);
-            border: 1px solid var(--border);
+            border: 1px solid var(--line);
             border-radius: 8px;
             padding: 8px 14px;
             font-size: .875rem;
         }
-        .free-premium {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            max-width: 760px;
-            margin: 40px auto 0;
+        @media(max-width:760px) {
+            .use-cases { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         }
-        .fp-block {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 28px 24px;
-        }
-        .fp-block.featured {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 1px var(--accent);
-        }
-        .fp-block h3 { font-size: 1.1rem; margin-bottom: 4px; }
-        .fp-price { font-size: 1.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px; }
-        .fp-sub { font-size: .85rem; color: var(--text-2); margin-bottom: 16px; }
-        .fp-list { list-style: none; padding: 0; margin: 0; }
-        .fp-list li { padding: 5px 0; font-size: .9rem; }
-        .fp-list li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
         @media(max-width:640px) {
-            .free-premium { grid-template-columns: 1fr; }
+            .use-cases { grid-template-columns: 1fr; }
             .screenshot-gallery img { height: 340px; }
         }
     </style>
@@ -198,16 +183,16 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <div style="text-align:center;max-width:720px;margin:0 auto;">
-                <img src="/receipt-digitizer/RD-Icon.png" alt="Receipt Digitizer: Scanner icon" class="icon-hero" style="margin:0 auto 20px;">
+            <div class="hero-center">
+                <img src="/receipt-digitizer/RD-Icon.png" alt="Receipt Digitizer: Scanner icon" class="icon-hero">
                 <span class="eyebrow">🧾 Receipt &amp; Expense Tracker</span>
                 <h1>Turn paper receipts into <span class="gradient-text">organized digital records.</span></h1>
                 <p class="lead">Receipt Digitizer: Scanner makes it easy to scan receipts, record expenses, manage budgets, and understand where your money goes - with on-device OCR, automatic categorization, and full privacy.</p>
-                <div class="hero-cta" style="justify-content:center;">
+                <div class="hero-cta">
                     <a href="https://apps.apple.com/us/app/receipt-digitizer/id6771928139" class="btn btn-primary">Download Free on App Store</a>
                     <a href="#features" class="btn btn-ghost">See features</a>
                 </div>
-                <div class="hero-meta" style="justify-content:center;">
+                <div class="hero-meta">
                     <div><div class="m-val gradient-text">On-device</div><div class="m-lbl">OCR - no cloud</div></div>
                     <div><div class="m-val gradient-text">Free</div><div class="m-lbl">Core features always free</div></div>
                     <div><div class="m-val gradient-text">10</div><div class="m-lbl">Languages supported</div></div>
@@ -261,8 +246,8 @@
                     <p>Your expense is categorized and added to your history automatically.</p>
                 </div>
             </div>
-            <div style="text-align:center;margin-top:28px;" class="reveal">
-                <p style="font-size:.9rem;color:var(--text-2);">No receipt photo? Add expenses manually anytime with the same level of detail.</p>
+            <div class="center-row reveal">
+                <p class="note">No receipt photo? Add expenses manually anytime with the same level of detail.</p>
             </div>
         </div>
     </section>
@@ -375,7 +360,7 @@
                 <div class="stat"><div class="s-val gradient-text">Offline</div><div class="s-lbl">Core features</div></div>
                 <div class="stat"><div class="s-val gradient-text">10</div><div class="s-lbl">Languages</div></div>
             </div>
-            <div style="text-align:center;margin-top:32px;" class="reveal">
+            <div class="center-row reveal">
                 <a href="/receipt-digitizer/privacy" class="btn btn-soft">Read our privacy policy</a>
             </div>
         </div>
@@ -455,12 +440,12 @@
                 <h2>Full features are free</h2>
                 <p>Scanning, manual entry, expense tracking, budgets, spending insights, search, categorization, PDF export, CSV export, and more are all available without a subscription. Pro removes ads.</p>
             </div>
-            <div class="free-premium reveal">
-                <div class="fp-block">
+            <div class="pricing reveal" style="max-width:760px;margin:0 auto;">
+                <div class="pricing-card">
                     <h3>Free</h3>
-                    <div class="fp-price">$0</div>
-                    <div class="fp-sub">Forever, no credit card</div>
-                    <ul class="fp-list">
+                    <div class="price">$0</div>
+                    <p class="price-desc">Forever, no credit card</p>
+                    <ul class="feat">
                         <li>Receipt scanning &amp; manual entry</li>
                         <li>On-device OCR (merchant, amount, date)</li>
                         <li>Expense history &amp; categories</li>
@@ -473,20 +458,18 @@
                         <li>Ad-supported</li>
                     </ul>
                 </div>
-                <div class="fp-block featured">
+                <div class="pricing-card featured">
                     <h3>Receipt Digitizer Pro</h3>
-                    <div class="fp-price">Pro</div>
-                    <div class="fp-sub">Monthly, yearly, or lifetime</div>
-                    <ul class="fp-list">
+                    <div class="price">Pro</div>
+                    <p class="price-desc">Monthly, yearly, or lifetime</p>
+                    <ul class="feat">
                         <li>Everything in Free</li>
                         <li>Ad-free experience</li>
                         <li>Monthly subscription</li>
                         <li>Yearly subscription (best value)</li>
                         <li>Lifetime purchase</li>
                     </ul>
-                    <div style="margin-top:20px;">
-                        <a href="https://apps.apple.com/us/app/receipt-digitizer/id6771928139" class="btn btn-primary" style="width:100%;text-align:center;">View on App Store</a>
-                    </div>
+                    <a href="https://apps.apple.com/us/app/receipt-digitizer/id6771928139" class="btn btn-primary">View on App Store</a>
                 </div>
             </div>
         </div>

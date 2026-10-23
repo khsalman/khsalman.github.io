@@ -74,17 +74,22 @@
             background: var(--accent-soft);
             border: 1px solid var(--accent-border);
             border-radius: 8px;
-            padding: 8px 16px;
-            font-size: 14px;
+            padding: 6px 12px;
+            font-size: 13px;
             font-weight: 600;
-            color: var(--accent);
+            color: var(--accent-text);
         }
         .flow-chain-arrow {
-            padding: 0 8px;
+            padding: 0 5px;
             color: var(--muted);
-            font-size: 18px;
+            font-size: 16px;
+        }
+        @media (min-width: 921px) {
+            .stats .stat:nth-child(4n+1) { border-left: 0; }
         }
         @media (max-width: 600px) {
+            .flow-chain { gap: 8px; }
+            .flow-chain-arrow { display: none; }
             .screenshot-gallery img { height: 340px; }
         }
     </style>
@@ -145,7 +150,7 @@
                 <p>Every property, room, asset and document - connected and always within reach.</p>
             </div>
         </div>
-        <div style="padding: 0 24px;">
+        <div class="container">
             <div class="screenshot-gallery reveal">
                 <img src="/propertynest/screenshot/PN-SS-iPhone01.png" alt="PropertyNest home screen - manage multiple properties">
                 <img src="/propertynest/screenshot/PN-SS-iPhone02.png" alt="PropertyNest room organization and asset tracking">
@@ -216,7 +221,7 @@
     </section>
 
     <!-- What you can track -->
-    <section class="section-sm" style="background: white;">
+    <section class="section-sm">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Everything in one place</span>
@@ -304,7 +309,7 @@
     </section>
 
     <!-- Privacy section -->
-    <section class="section-sm" style="background: white;">
+    <section class="section-sm">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">Private by Design</span>
@@ -353,20 +358,20 @@
     </section>
 
     <!-- Free vs Premium -->
-    <section class="section" style="background: white;" id="pricing">
+    <section class="section" id="pricing">
         <div class="container">
             <div class="section-head reveal">
                 <span class="eyebrow">What's included</span>
                 <h2>Start free. Unlock more when you need it.</h2>
                 <p>The free tier is great for a single home. Upgrade for multiple properties, unlimited records and a complete Property Passport.</p>
             </div>
-            <div style="overflow-x: auto;" class="reveal">
+            <div class="table-wrap reveal">
                 <table class="comp-table">
                     <thead>
                         <tr>
                             <th>Feature</th>
-                            <th style="color:#9A5F38;">Free</th>
-                            <th style="color:#9A5F38;">Premium</th>
+                            <th>Free</th>
+                            <th>Premium</th>
                         </tr>
                     </thead>
                     <tbody>
