@@ -37,7 +37,7 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 | `propertynest` | PropertyNest | ✅ Live | https://apps.apple.com/us/app/propertynest-home-organizer/id6794704452 |
 | `halalcheck` | HalalCheck | 🔧 Under Development | — |
 | `uprep` | UpRep | ✅ Live | https://apps.apple.com/sa/app/uprep-exercise-alarm-clock/id6812702313 |
-| `chattale` | ChatTale: Chat Wrapped | 🔧 Under Development | — |
+| `chattale` | ChatTale: Chat Wrapped | ✅ Live | https://apps.apple.com/us/app/chattale-chat-wrapped/id6813243920 |
 | `zakatbook-android` | Zakat Book for Android | 🔧 Under Development | — |
 | `inspectkit-android` | InspectKit for Android | 🔧 Under Development | — |
 | `reefdose-android` | ReefDose for Android | 🔧 Under Development | — |
@@ -47,7 +47,7 @@ Every app page is self-contained HTML with this layout: `site-header` (nav with 
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
-**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Twenty-four**). Live app count is now 14. Note: `zakatbook-android`, `inspectkit-android`, `reefdose-android` and `pillvault-android` are Android apps (separate directories, no iOS App Store URL, uses Google Play Billing + UMP consent). `pillvault-android` reuses the `pill` theme colours under its own `pillvault-android` key. `receipt-digitizer-android` uses its own `receipt-android` key (brand green `#0F5B4C`).
+**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Twenty-four**). Live app count is now 15. Note: `zakatbook-android`, `inspectkit-android`, `reefdose-android` and `pillvault-android` are Android apps (separate directories, no iOS App Store URL, uses Google Play Billing + UMP consent). `pillvault-android` reuses the `pill` theme colours under its own `pillvault-android` key. `receipt-digitizer-android` uses its own `receipt-android` key (brand green `#0F5B4C`).
 
 ## Per-app theming
 
