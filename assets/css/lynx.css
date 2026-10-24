@@ -197,7 +197,7 @@ blockquote {
 ::selection { background: color-mix(in srgb, var(--accent) 22%, transparent); }
 
 /* Visible keyboard focus everywhere (mouse clicks do not show the ring) */
-:focus { outline: none; }
+:focus:not(:focus-visible) { outline: none; }
 :focus-visible {
     outline: var(--focus);
     outline-offset: 3px;
@@ -938,6 +938,7 @@ ul.steps-list li::before { content: ""; width: 10px; height: 10px; border-radius
 .doc-contact > * { position: relative; z-index: 1; }
 .doc-contact h2 { border: 0; color: #fff; margin: 0 0 var(--space-3); padding: 0; font-size: var(--text-2xl); }
 .doc-contact p { color: rgba(255,255,255,.94); margin: 0 auto var(--space-6); max-width: 52ch; }
+.doc-contact p.response-time { font-size: var(--text-sm); opacity: .85; margin: var(--space-4) auto 0; }
 .doc-contact a:not(.btn) { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 
 /* Quick links (support) */
