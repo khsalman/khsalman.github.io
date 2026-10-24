@@ -88,6 +88,12 @@
     --ease: cubic-bezier(.22, 1, .36, 1);
 }
 
+/* Readable link/text colour derived from the accent. Some accents (amber,
+   orange) are too light for small text on white, so text uses a darkened mix.
+   This must come before the per-app themes: same specificity, so a later
+   rule would override a theme's own --accent-text. */
+:root, [data-theme] { --accent-text: color-mix(in srgb, var(--accent) 78%, #0f172a); }
+
 /* ---------- 2. Per-app themes ---------- */
 [data-theme="photo"]   { --g1:#6366f1; --g2:#8b5cf6; --accent:#6d5dfb; --accent-soft:#eef0ff; --accent-border:#e0e3ff; }
 [data-theme="pill"]    { --g1:#0ea5e9; --g2:#14b8a6; --accent:#0d9488; --accent-soft:#ecfeff; --accent-border:#cffafe; }
@@ -110,10 +116,6 @@
 [data-theme="pillvault-android"] { --g1:#0ea5e9; --g2:#14b8a6; --accent:#0d9488; --accent-soft:#ecfeff; --accent-border:#cffafe; }
 [data-theme="receipt-android"] { --g1:#0F5B4C; --g2:#1f8a74; --accent:#0F5B4C; --accent-soft:#ecf6f3; --accent-border:#b9ddd3; }
 [data-theme="honestfast-android"] { --g1:#f97316; --g2:#d4a017; --accent:#ea7317; --accent-soft:#fff7ed; --accent-border:#fed7aa; }
-
-/* Readable link/text colour derived from the accent. Some accents (amber,
-   orange) are too light for small text on white, so text uses a darkened mix. */
-:root, [data-theme] { --accent-text: color-mix(in srgb, var(--accent) 78%, #0f172a); }
 
 /* ---------- 3. Base / reset / typography ---------- */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -798,6 +800,7 @@ section.cta { border-radius: 0; box-shadow: none; }
 .footer-col ul { list-style: none; margin: 0; padding: 0; }
 @media (min-width: 921px) {
     .stats:has(> .stat:nth-child(5)) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .stats:has(> .stat:nth-child(5)) > .stat:nth-child(3n+1) { border-left: 0; }
 }
 @media (max-width: 920px) {
     .hero-grid .eyebrow::before { display: none; }
@@ -1045,11 +1048,16 @@ ul.steps-list li::before { content: ""; width: 10px; height: 10px; border-radius
     50% { transform: translateY(-9px); }
 }
 
-/* ---------- Reveal-on-scroll ---------- */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
-.reveal.in { opacity: 1; transform: none; }
-/* Never leave content invisible when JS is unavailable */
-.no-js .reveal { opacity: 1; transform: none; }
+/* ---------- Reveal-on-scroll ----------
+   Content is hidden only once lynx.js has added .js to <html>, so pages stay
+   readable without JavaScript. The entrance is a one-shot animation with no
+   fill-forwards, so hover transforms and transitions on the element still apply. */
+@keyframes revealUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+}
+.js .reveal:not(.in) { opacity: 0; transform: translateY(18px); }
+.js .reveal.in { animation: revealUp .6s var(--ease) backwards; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
@@ -1149,5 +1157,5 @@ ul.steps-list li::before { content: ""; width: 10px; height: 10px; border-radius
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-    .reveal { opacity: 1; transform: none; }
+    .js .reveal:not(.in) { opacity: 1; transform: none; }
 }
