@@ -11,10 +11,12 @@ Static GitHub Pages site (no build step) for LynxApps — privacy-first iOS apps
 - `<app-slug>/privacy/index.html`, `<app-slug>/terms/index.html`, `<app-slug>/support/index.html` — required sub-pages per app
 - `<app-slug>/appstore-qr.svg` — self-hosted QR code SVG once an app is live (see QR codes below)
 - `assets/css/lynx.css` — single shared stylesheet for every page
-- `assets/js/lynx.js` — shared JS: mobile nav toggle + scroll-reveal (`.reveal` → `.in`)
+- `assets/js/lynx.js` — shared JS: mobile nav toggle + scroll-reveal (`.reveal` → `.in`). The `.js` class that gates reveal hiding is set by an inline script in each page's `<head>` so it applies before first paint; keep it there, not in `lynx.js`.
 - `svg/` — shared logo/lockup/favicon assets
 
 Every app page is self-contained HTML with this layout: `site-header` (nav with `← All apps` / `← <App>`, sub-page links, `nav-cta`) → `hero` → feature/pricing sections → `cta` (download/notify section) → `site-footer`.
+
+The skip link targets `#main`: use `<main id="main">` when the page has one. Landing pages without `<main>` put `id="main"` on the first `<section>` after the header, so keep the hero as that first section.
 
 ## App inventory
 
@@ -84,7 +86,7 @@ Homepage app cards use parallel `.theme-row-<key>` / `.grad-<key>` classes defin
 
 ## Adding a new app
 
-1. Pick a theme key, add its `[data-theme="..."]` block to `lynx.css`.
+1. Pick a theme key, add its `[data-theme="..."]` block to `lynx.css`. Android apps get their own key, never an iOS app's key, so a change to one app's colours cannot restyle the other.
 2. Create `<slug>/index.html`, `<slug>/privacy/index.html`, `<slug>/terms/index.html`, `<slug>/support/index.html` following an existing app as the template (copy structure, not content).
 3. Add a card to `index.html`'s `.apps-grid` with matching `.theme-row-<key>` / `.grad-<key>` CSS, plus footer links (`Apps` and `Support` columns) and increment the "N tools, one philosophy" headline.
 4. Add the app to the inventory table above.
