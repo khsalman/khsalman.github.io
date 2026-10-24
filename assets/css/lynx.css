@@ -92,7 +92,11 @@
    orange) are too light for small text on white, so text uses a darkened mix.
    This must come before the per-app themes: same specificity, so a later
    rule would override a theme's own --accent-text. */
-:root, [data-theme] { --accent-text: color-mix(in srgb, var(--accent) 78%, #0f172a); }
+/* Browsers without color-mix() keep the plain accent. */
+:root, [data-theme] { --accent-text: var(--accent); }
+@supports (color: color-mix(in srgb, red 50%, blue)) {
+    :root, [data-theme] { --accent-text: color-mix(in srgb, var(--accent) 78%, #0f172a); }
+}
 
 /* ---------- 2. Per-app themes ---------- */
 [data-theme="photo"]   { --g1:#6366f1; --g2:#8b5cf6; --accent:#6d5dfb; --accent-soft:#eef0ff; --accent-border:#e0e3ff; }
@@ -115,6 +119,9 @@
 [data-theme="chattale"]     { --g1:#7c3aed; --g2:#ec4899; --accent:#9333ea; --accent-soft:#faf5ff; --accent-border:#f0d0fe; }
 [data-theme="pillvault-android"] { --g1:#0ea5e9; --g2:#14b8a6; --accent:#0d9488; --accent-soft:#ecfeff; --accent-border:#cffafe; }
 [data-theme="receipt-android"] { --g1:#0F5B4C; --g2:#1f8a74; --accent:#0F5B4C; --accent-soft:#ecf6f3; --accent-border:#b9ddd3; }
+[data-theme="inspectkit-android"] { --g1:#1B4FBF; --g2:#0891b2; --accent:#1B4FBF; --accent-soft:#E3F2FD; --accent-border:#90CAF9; }
+[data-theme="reefdose-android"] { --g1:#0e7490; --g2:#1e3a5f; --accent:#0e7490; --accent-soft:#ecfeff; --accent-border:#a5f3fc; }
+[data-theme="zakatbook-android"] { --g1:#1B6B3A; --g2:#2E8B57; --accent:#1B6B3A; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 [data-theme="honestfast-android"] { --g1:#f97316; --g2:#d4a017; --accent:#ea7317; --accent-soft:#fff7ed; --accent-border:#fed7aa; }
 
 /* ---------- 3. Base / reset / typography ---------- */
@@ -138,7 +145,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-feature-settings: "cv11", "ss01";
-    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -211,7 +217,7 @@ blockquote {
    Bare form controls and tables look finished without any class. */
 label { display: inline-block; font-size: var(--text-sm); font-weight: 600; color: var(--ink); margin-bottom: var(--space-2); }
 
-input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="submit"]):not([type="button"]):not([type="reset"]),
+input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]):not([type="submit"]):not([type="button"]):not([type="reset"]),
 select,
 textarea {
     display: block;

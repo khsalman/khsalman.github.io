@@ -75,6 +75,9 @@ Each app gets a `data-theme="<key>"` attribute on `<html>`, which maps to CSS va
 [data-theme="pillvault-android"] { --g1:#0ea5e9; --g2:#14b8a6; --accent:#0d9488; --accent-soft:#ecfeff; --accent-border:#cffafe; }
 [data-theme="receipt-android"] { --g1:#0F5B4C; --g2:#1f8a74; --accent:#0F5B4C; --accent-soft:#ecf6f3; --accent-border:#b9ddd3; }
 [data-theme="honestfast-android"] { --g1:#f97316; --g2:#d4a017; --accent:#ea7317; --accent-soft:#fff7ed; --accent-border:#fed7aa; }
+[data-theme="inspectkit-android"] { --g1:#1B4FBF; --g2:#0891b2; --accent:#1B4FBF; --accent-soft:#E3F2FD; --accent-border:#90CAF9; }
+[data-theme="reefdose-android"] { --g1:#0e7490; --g2:#1e3a5f; --accent:#0e7490; --accent-soft:#ecfeff; --accent-border:#a5f3fc; }
+[data-theme="zakatbook-android"] { --g1:#1B6B3A; --g2:#2E8B57; --accent:#1B6B3A; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 ```
 
 Homepage app cards use parallel `.theme-row-<key>` / `.grad-<key>` classes defined inline in `index.html`'s `<style>` block — keep these in sync with the per-app theme above when adding a new app.

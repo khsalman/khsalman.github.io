@@ -51,6 +51,7 @@
 
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
+    <script>document.documentElement.classList.add('js');</script>
     <style>
         .band { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
         .fine-print { text-align: center; color: var(--muted); font-size: var(--text-sm); margin: var(--space-6) auto 0; max-width: 64ch; }
@@ -231,6 +232,7 @@
     </style>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header class="site-header">
         <div class="container">
             <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
@@ -246,7 +248,7 @@
     </header>
 
     <!-- Hero -->
-    <section class="hero">
+    <section id="main" class="hero">
         <div class="container hero-grid">
             <div>
                 <img src="/pillvault/PillVault-icon.png"

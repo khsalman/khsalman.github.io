@@ -1,8 +1,5 @@
 // LynxApps — shared interactions
 (function () {
-  // Lets CSS hide reveal-on-scroll content only when this script is running
-  document.documentElement.classList.add('js');
-
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.querySelector('.nav');
