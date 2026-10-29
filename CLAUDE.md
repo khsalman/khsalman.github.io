@@ -47,6 +47,7 @@ The skip link targets `#main`: use `<main id="main">` when the page has one. Lan
 | `receipt-digitizer-android` | Receipt Digitizer for Android | 🔧 Under Development | — |
 | `honestfast-android` | HonestFast for Android | 🔧 Under Development | — |
 | `closingdesk-android` | ClosingDesk for Android | 🔧 Under Development | — |
+| `propertynest-android` | PropertyNest for Android | 🔧 Under Development | — |
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
@@ -79,6 +80,7 @@ Each app gets a `data-theme="<key>"` attribute on `<html>`, which maps to CSS va
 [data-theme="receipt-android"] { --g1:#0F5B4C; --g2:#1f8a74; --accent:#0F5B4C; --accent-soft:#ecf6f3; --accent-border:#b9ddd3; }
 [data-theme="honestfast-android"] { --g1:#f97316; --g2:#d4a017; --accent:#ea7317; --accent-soft:#fff7ed; --accent-border:#fed7aa; }
 [data-theme="closingdesk-android"] { --g1:#1B2345; --g2:#2d4a7a; --accent:#f2b841; --accent-soft:#fffbeb; --accent-border:#fde68a; --accent-text:#8a5a00; }
+[data-theme="propertynest-android"] { --g1:#7B4F2E; --g2:#C4824A; --accent:#9A5F38; --accent-soft:#FDF5EF; --accent-border:#F0D5BE; --accent-text:#7B4F2E; }
 [data-theme="inspectkit-android"] { --g1:#1B4FBF; --g2:#0891b2; --accent:#1B4FBF; --accent-soft:#E3F2FD; --accent-border:#90CAF9; }
 [data-theme="reefdose-android"] { --g1:#0e7490; --g2:#1e3a5f; --accent:#0e7490; --accent-soft:#ecfeff; --accent-border:#a5f3fc; }
 [data-theme="zakatbook-android"] { --g1:#1B6B3A; --g2:#2E8B57; --accent:#1B6B3A; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
