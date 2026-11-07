@@ -117,6 +117,7 @@
 [data-theme="halalcheck"]   { --g1:#14532d; --g2:#16a34a; --accent:#15803d; --accent-soft:#f0fdf4; --accent-border:#bbf7d0; }
 [data-theme="uprep"]        { --g1:#0c2a44; --g2:#2dd4bf; --accent:#0f766e; --accent-soft:#f0fdfa; --accent-border:#99f6e4; }
 [data-theme="chattale"]     { --g1:#7c3aed; --g2:#ec4899; --accent:#9333ea; --accent-soft:#faf5ff; --accent-border:#f0d0fe; }
+[data-theme="furivio"]      { --g1:#e11d48; --g2:#f59e0b; --accent:#e11d48; --accent-soft:#fff1f2; --accent-border:#fecdd3; --accent-text:#9f1239; }
 [data-theme="pillvault-android"] { --g1:#0ea5e9; --g2:#14b8a6; --accent:#0d9488; --accent-soft:#ecfeff; --accent-border:#cffafe; }
 [data-theme="receipt-android"] { --g1:#0F5B4C; --g2:#1f8a74; --accent:#0F5B4C; --accent-soft:#ecf6f3; --accent-border:#b9ddd3; }
 [data-theme="inspectkit-android"] { --g1:#1B4FBF; --g2:#0891b2; --accent:#1B4FBF; --accent-soft:#E3F2FD; --accent-border:#90CAF9; }

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="furivio">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furivio - Pet Stories, Comics &amp; Care for Pet Owners</title>
+    <meta name="description" content="Furivio turns each real pet into a fictional character you can chat with, read stories about, and make comics of. It also keeps care reminders, a health log and memories in one place. Coming soon to iPhone.">
+    <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
+    <link rel="stylesheet" href="/assets/css/lynx.css">
+    <script>/* Enables reveal-on-scroll hiding before first paint; keep in <head>. See CLAUDE.md. */document.documentElement.classList.add('js');</script>
+    <style>
+        .center-row { text-align: center; margin-top: 32px; }
+        .steps-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .steps-row .step-num {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--g1), var(--g2));
+            color: #fff;
+            font-weight: 700;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        .step-card {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+        }
+        .step-card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        .step-card p { font-size: .9rem; color: var(--muted); margin: 0; }
+        .flow-chain {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            align-items: center;
+            justify-content: center;
+            margin: 28px 0 0;
+        }
+        .flow-chain-item {
+            background: var(--accent-soft);
+            border: 1px solid var(--accent-border);
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-text);
+        }
+        .flow-chain-arrow { padding: 0 5px; color: var(--muted); font-size: 16px; }
+        @media (max-width: 600px) {
+            .flow-chain { gap: 8px; }
+            .flow-chain-arrow { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="site-header">
+        <div class="container">
+            <a href="/" class="brand"><img src="/svg/lynxapp-logo.png" alt="LynxApps"></a>
+            <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+            <nav class="nav">
+                <a href="/" class="muted">&#8592; All apps</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="/furivio/support">Support</a>
+                <a href="mailto:lynxapps.contact@gmail.com?subject=Furivio%20Launch%20Notification" class="nav-cta">Notify me</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="main" class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow"><span aria-hidden="true">&#128062;</span>Pet stories, comics &amp; care</span>
+                <h1>Your pet has a story worth telling. <span class="gradient-text">Furivio helps you tell it.</span></h1>
+                <p class="lead">Create a fictional character for each real pet from its name, breed, traits and favourite things. Then enjoy stories, comics, chats and daily adventures with it. Furivio always labels this as entertainment and never claims to know what your pet is thinking. Care reminders, a health log and memories live in the same place.</p>
+                <div class="hero-cta">
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=Furivio%20Launch%20Notification" class="btn btn-primary">Notify me at launch</a>
+                    <a href="#features" class="btn btn-ghost">See features</a>
+                </div>
+                <div class="hero-meta">
+                    <div><div class="m-val gradient-text">Stories</div><div class="m-lbl">&amp; comics</div></div>
+                    <div><div class="m-val gradient-text">Private</div><div class="m-lbl">On-device generation</div></div>
+                    <div><div class="m-val gradient-text">Free</div><div class="m-lbl">to get started</div></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="device">
+                    <div class="device-screen">
+                        <div class="d-icon">&#128062;</div>
+                        <div class="d-title">Furivio</div>
+                        <div class="d-sub">Pet stories &amp; care &mdash; coming soon</div>
+                    </div>
+                    <div class="device-float f1"><span class="dot">&#128214;</span> New story chapter ready</div>
+                    <div class="device-float f2"><span class="dot">&#128137;</span> Vaccine due in 3 days</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Status banner -->
+    <section class="section-sm" style="padding-top:0;">
+        <div class="container">
+            <div class="callout" style="text-align:center;max-width:640px;margin:0 auto;">
+                <p><strong>&#9203; Coming soon to iPhone.</strong> Furivio is currently in development. Leave your email to be notified at launch &mdash; <a href="mailto:lynxapps.contact@gmail.com?subject=Furivio%20Launch%20Notification">lynxapps.contact@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Features</span>
+                <h2>Everything about your pet, in one place</h2>
+                <p>Build a character, enjoy its stories, and keep the practical side of pet life organised.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature reveal"><div class="f-icon">&#127917;</div><h3>A character for each pet</h3><p>Add a profile with name, animal type, breed, age, traits, favourite things and a photo. Furivio builds a fictional personality you can review and edit.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128214;</div><h3>Stories</h3><p>Story Studio lets you choose the category, tone, length, setting and pets, and whether to draw on your memories. Read chapter by chapter, keep favourites, and share.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128172;</div><h3>Chat with the character</h3><p>One conversation per pet. Replies follow the saved personality and your most relevant memories, so the character stays consistent.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128202;</div><h3>Comics</h3><p>Turn a story into a comic of one to four panels. Edit the dialogue, pick a layout, and generate artwork for each panel. Share it as a PNG.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#9728;&#65039;</div><h3>Daily adventures</h3><p>Each day brings a thought, a mini-story, a personality moment and a suggested adventure. Add one optional daily reminder.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128197;</div><h3>Memories journal</h3><p>Write notes about your pet, add a photo, and search later. Furivio suggests a title, category and tags, and your own note is always saved. An "on this day" prompt brings back past moments.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#9200;</div><h3>Care reminders</h3><p>Track vet visits, medicine, grooming and other care with due dates. Repeat weekly, monthly or yearly, and mark items done to schedule the next one.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#9878;&#65039;</div><h3>Health log</h3><p>Record weight in kilograms or pounds and add notes over time to see how your pet is changing.</p></div>
+                <div class="feature reveal"><div class="f-icon">&#128230;</div><h3>Export &amp; memorial mode</h3><p>Export a PDF pet profile, a memory book, or your data as JSON. When a pet has passed, Remember a pet pauses chat, daily extras and reminders until you clear it.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">How it works</span>
+                <h2>From profile to story in three steps</h2>
+            </div>
+            <div class="steps-row reveal">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h3>Create the profile</h3>
+                    <p>Answer a few questions about your pet. Adding a photo is optional. Furivio builds the character on your device.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h3>Enjoy the character</h3>
+                    <p>Read stories, make comics, chat, and open a new daily adventure whenever you like.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h3>Keep life organised</h3>
+                    <p>Care reminders, the health log and your memories stay together, so nothing important gets lost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honest by design -->
+    <section class="section" style="background:linear-gradient(180deg,var(--bg),#fff);">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Honest by design</span>
+                <h2>Clearly fiction, clearly yours</h2>
+                <p>Furivio is for fun and for keeping records. It is not a way to read your pet's mind, and it says so.</p>
+            </div>
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val gradient-text">Fiction</div><div class="s-lbl">Every character and story is labelled</div></div>
+                <div class="stat"><div class="s-val gradient-text">On-device</div><div class="s-lbl">Text generation with Apple Intelligence</div></div>
+                <div class="stat"><div class="s-val gradient-text">iCloud</div><div class="s-lbl">Syncs to your private account</div></div>
+                <div class="stat"><div class="s-val gradient-text">7</div><div class="s-lbl">Languages</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Requirements</span>
+                <h2>What you'll need</h2>
+                <p>Stories, comics, chat and daily adventures are written by the AI built into your iPhone. Your pet profiles, memories, care items and health log work without it.</p>
+            </div>
+            <div class="stats reveal">
+                <div class="stat"><div class="s-val gradient-text">iOS 27+</div><div class="s-lbl">Minimum version</div></div>
+                <div class="stat"><div class="s-val gradient-text">Apple Intelligence</div><div class="s-lbl">Needed for generated text</div></div>
+                <div class="stat"><div class="s-val gradient-text">0</div><div class="s-lbl">Account required</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free vs Premium -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">What's included</span>
+                <h2>Start free. Go Premium for more pets and stories.</h2>
+                <p>The free version is enough for one pet. Premium adds more pets and higher daily limits, and removes ads. Purchases are handled by Apple, and prices are shown in the App Store.</p>
+            </div>
+            <div class="table-wrap reveal">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Free</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Pet profiles</td><td class="yes">&#10003; 1</td><td class="yes">&#10003; Up to 8</td></tr>
+                        <tr><td>Stories per day</td><td class="yes">&#10003; 3</td><td class="yes">&#10003; 30</td></tr>
+                        <tr><td>Comics per day</td><td class="yes">&#10003; 1</td><td class="yes">&#10003; 10</td></tr>
+                        <tr><td>Chat messages per day</td><td class="yes">&#10003; 30</td><td class="yes">&#10003; 300</td></tr>
+                        <tr><td>Memories</td><td class="yes">&#10003; Up to 40</td><td>&mdash;</td></tr>
+                        <tr><td>Care reminders &amp; health log</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Memorial mode</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+                        <tr><td>Ad-free experience</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="center-row reveal">
+                <a href="mailto:lynxapps.contact@gmail.com?subject=Furivio%20Launch%20Notification" class="btn btn-primary">Notify me at launch</a>
+            </div>
+            <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:24px;">Furivio is entertainment. It does not provide veterinary or medical advice. Always consult a qualified vet about your pet's health.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-sm">
+        <div class="container">
+            <div class="cta reveal">
+                <h2>Be first to meet your pet's character</h2>
+                <p>Furivio is coming soon to the App Store. Leave your email and we'll let you know the moment it's available.</p>
+                <div class="hero-cta">
+                    <a href="mailto:lynxapps.contact@gmail.com?subject=Furivio%20Launch%20Notification" class="btn btn-white">Notify me at launch</a>
+                    <a href="/furivio/support" class="btn btn-on-dark">Support &amp; FAQ</a>
+                </div>
+                <div style="margin-top:28px;"><span class="review-note">&#9203; Status: Under Development &mdash; coming soon to the App Store</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/svg/lynxapp-logo.png" alt="LynxApps">
+                    <p>Thoughtfully crafted, privacy-first iOS apps. Made with care for the everyday.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Furivio</h4>
+                    <a href="/furivio">Overview</a>
+                    <a href="/furivio#features">Features</a>
+                    <a href="/furivio#pricing">Pricing</a>
+                    <a href="/furivio/support">Support &amp; FAQ</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/furivio/privacy">Privacy Policy</a>
+                    <a href="/furivio/terms">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <h4>More apps</h4>
+                    <a href="/">All apps</a>
+                    <a href="/propertynest">PropertyNest</a>
+                    <a href="/homelogbook">Home Logbook</a>
+                    <a href="/closingdesk">ClosingDesk</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 LynxApps. All rights reserved.</span>
+                <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/js/lynx.js"></script>
+</body>
+</html>
