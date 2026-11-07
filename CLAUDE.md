@@ -53,7 +53,7 @@ The skip link targets `#main`: use `<main id="main">` when the page has one. Lan
 
 **Homepage card order:** Live apps first, then In App Review, then Under Development. Update DOM order (not just CSS) when status changes.
 
-**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Twenty-four**). Live app count is now 15. Note: `zakatbook-android`, `inspectkit-android`, `reefdose-android` and `pillvault-android` are Android apps (separate directories, no iOS App Store URL, uses Google Play Billing + UMP consent). `pillvault-android` reuses the `pill` theme colours under its own `pillvault-android` key. `receipt-digitizer-android` uses its own `receipt-android` key (brand green `#0F5B4C`).
+**Homepage app count headline:** Keep `index.html`'s "N tools, one philosophy" h2 in sync when adding apps (currently: **Twenty-eight**). Live app count is now 15. Note: `zakatbook-android`, `inspectkit-android`, `reefdose-android` and `pillvault-android` are Android apps (separate directories, no iOS App Store URL, uses Google Play Billing + UMP consent). `pillvault-android` reuses the `pill` theme colours under its own `pillvault-android` key. `receipt-digitizer-android` uses its own `receipt-android` key (brand green `#0F5B4C`).
 
 ## Per-app theming
 
