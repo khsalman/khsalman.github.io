@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Zakat Book for Android</title>
-    <meta name="description" content="Privacy Policy for Zakat Book for Android by LynxApps. Your financial data stays on your device.">
+    <meta name="description" content="Privacy Policy for Zakat Book for Android by LynxApps. Your financial data stays on your device, with optional backup to your own Google Drive.">
     <link rel="icon" type="image/svg+xml" href="/svg/lynxapps-favicon-16.svg">
     <link rel="stylesheet" href="/assets/css/lynx.css">
     <script>/* Enables reveal-on-scroll hiding before first paint; keep in <head>. See CLAUDE.md. */document.documentElement.classList.add('js');</script>
@@ -30,23 +30,36 @@
                 <a href="/">LynxApps</a><span>/</span><a href="/zakatbook-android">Zakat Book Android</a><span>/</span><span>Privacy Policy</span>
             </div>
             <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: October 2026</p>
+            <p class="updated">Last updated: November 2026</p>
         </div>
     </section>
 
     <main id="main" class="doc-body">
         <div class="container-doc">
             <div class="callout">
-                <p><strong>Your financial data never leaves your device.</strong> Zakat Book for Android is local-first — all asset data, Zakat calculations, and payment records are stored only on your device. We do not collect, transmit, or store any financial information on our servers.</p>
+                <p><strong>Your financial data never reaches us.</strong> Zakat Book for Android is local-first — all asset data, Zakat calculations, and payment records are stored on your device. If you turn on Google Drive backup, a copy is kept in your own Google Drive, which only you can access. We have no servers and never collect, receive, or store any of your financial information.</p>
             </div>
 
             <h2>1. Who We Are</h2>
             <p>LynxApps ("we," "us," "our") develops Zakat Book for Android ("App"). This Privacy Policy explains what data is collected when you use the App and how it is handled.</p>
 
             <h2>2. Financial &amp; Personal Data</h2>
-            <p>All financial data you enter — including asset values, gold and silver holdings, cash amounts, investments, debts, and Zakat payment records — is stored exclusively on your device. This data is <strong>never uploaded, transmitted, or accessible to LynxApps or any third party</strong>. No account or registration is required to use the App.</p>
+            <p>All financial data you enter — including asset values, gold and silver holdings, cash amounts, investments, debts, and Zakat payment records — is stored on your device. This data is <strong>never sent to LynxApps or any third party</strong>. The only time it leaves your device is when you choose to back it up to your own Google Drive (see section 3). No account or registration is required to use the App.</p>
 
-            <h2>3. Analytics and Crash Reporting</h2>
+            <h2>3. Google Drive Backup</h2>
+            <p>Google Drive backup is optional. It is offered during setup and in Settings &rarr; Google Drive backup, and nothing is backed up unless you turn it on and sign in with your Google account.</p>
+            <ul>
+                <li><strong>What is backed up:</strong> your Zakat records — years, assets, payments, people, recipients and their notes — your currency and Nisab settings, and any receipt photos and profile pictures you added.</li>
+                <li><strong>Where it is stored:</strong> in the hidden app data folder of <strong>your own Google Drive</strong>. The App asks only for the <code>drive.appdata</code> permission, so it can see only its own backup files. It cannot see, open, or change any other file in your Drive, and the backup does not appear among your Drive files.</li>
+                <li><strong>Who can access it:</strong> only you, through the App signed in with your Google account. The backup goes directly from your device to Google over an encrypted connection. LynxApps has no server in between and cannot access your Drive or your backup.</li>
+                <li><strong>Your Google account:</strong> the App uses your account's email address only to show you which account your backup uses. It is stored on your device and never sent to us.</li>
+                <li><strong>Sync between devices:</strong> if you turn on backup with the same Google account on more than one Android device, the App combines their records through your Drive backup.</li>
+                <li><strong>How long it is kept:</strong> the App keeps your newest backups (the latest three, plus all backups from the last 30 days) and deletes older ones automatically.</li>
+                <li><strong>Turning it off and deleting it:</strong> Settings &rarr; Google Drive backup &rarr; <em>Delete backup from Drive</em> deletes every backup copy from your Drive and turns backup off; the records on your device stay. You can also remove the App's hidden data from Google Drive at <a href="https://drive.google.com/drive/settings" target="_blank" rel="noopener">drive.google.com &rarr; Settings &rarr; Manage apps</a>, and revoke the App's access at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.</li>
+            </ul>
+            <p>Zakat Book's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. Data from your Google Drive is used only to back up and restore your own records in the App. It is never used for advertising, never sold, never shared with anyone, and never read by people. Data stored in Google Drive is also governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+
+            <h2>4. Analytics and Crash Reporting</h2>
             <p>The App uses Firebase (by Google) for two purposes in release builds:</p>
             <ul>
                 <li><strong>Firebase Analytics:</strong> Anonymous, aggregated usage events such as "scan started", "calculation completed", or "report generated". No financial amounts, asset values, names, or personal data are ever included in analytics events. Analytics fire only in release builds, not in debug builds.</li>
@@ -54,52 +67,53 @@
             </ul>
             <p>Firebase data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
 
-            <h2>4. Advertising</h2>
+            <h2>5. Advertising</h2>
             <p>Free users see ads served by Google Mobile Ads. Premium subscribers see no ads.</p>
             <ul>
                 <li><strong>Google Mobile Ads:</strong> May collect device identifiers (advertising ID) and device information for ad personalization. An App Tracking Transparency / UMP consent prompt is shown at first launch — you choose how your advertising ID is used.</li>
             </ul>
             <p>Ad data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. You can reset or opt out of ad personalization at any time in Android Settings &rarr; Privacy &rarr; Ads.</p>
 
-            <h2>5. Live Metal Prices</h2>
+            <h2>6. Live Metal Prices</h2>
             <p>The App fetches real-time gold and silver spot prices from a third-party market data provider. These requests contain no personal or financial data — only a request for the current price. Your asset quantities are never sent externally.</p>
 
-            <h2>6. In-App Purchases</h2>
+            <h2>7. In-App Purchases</h2>
             <p>All Premium subscriptions and the Lifetime purchase are processed by Google Play Billing. LynxApps never sees or stores your payment details. Purchase validation happens through Google's secure billing infrastructure.</p>
 
-            <h2>7. App Permissions</h2>
+            <h2>8. App Permissions</h2>
             <ul>
-                <li><strong>Camera / Photo storage:</strong> Optional. Used only to attach receipt photos to Zakat payment records. Photos are stored on your device and never uploaded.</li>
-                <li><strong>Internet:</strong> Required to fetch live gold &amp; silver prices and to serve ads to free users. No financial data is sent over the network.</li>
+                <li><strong>Camera / Photo storage:</strong> Optional. Used only to attach receipt photos to Zakat payment records. Photos are stored on your device, and are included in your Google Drive backup only if you turn backup on.</li>
+                <li><strong>Internet:</strong> Required to fetch live gold &amp; silver prices, to serve ads to free users, and for Google Drive backup if you turn it on. Your financial data is never sent to us; with backup on, it is sent only to your own Google Drive.</li>
                 <li><strong>Notifications:</strong> Optional. Used to send Hawl reminders before your Islamic lunar year ends. You control this in Android Settings.</li>
             </ul>
 
-            <h2>8. Data Retention and Deletion</h2>
-            <p>All your Zakat data is stored locally on your device and is never replicated to our servers. To delete your data:</p>
+            <h2>9. Data Retention and Deletion</h2>
+            <p>Your Zakat data is stored on your device and, if you turn on backup, in your own Google Drive. It is never stored on our servers. To delete your data:</p>
             <ul>
-                <li>Use the "Clear all data" option in App Settings to erase all local records.</li>
-                <li>Uninstall the App to permanently remove all local App data.</li>
+                <li>Delete individual years, payments, people or recipients in the App at any time.</li>
+                <li>Uninstall the App to permanently remove all App data from your device.</li>
+                <li>Use Settings &rarr; Google Drive backup &rarr; <em>Delete backup from Drive</em> to delete your backup from Google Drive (see section 3). Uninstalling the App does not delete your Drive backup.</li>
             </ul>
 
-            <h2>9. Security</h2>
-            <p>The App relies on Android's built-in security model. App data is stored in the app's private sandbox, protected by Android's file-level encryption on supported devices. No financial data is transmitted over the network.</p>
+            <h2>10. Security</h2>
+            <p>The App relies on Android's built-in security model. App data is stored in the app's private sandbox, protected by Android's file-level encryption on supported devices. Your financial data is never sent to us. If you turn on Google Drive backup, it travels to your Google Drive over an encrypted (HTTPS) connection and is protected by your Google account.</p>
 
-            <h2>10. Children's Privacy</h2>
+            <h2>11. Children's Privacy</h2>
             <p>The App is not directed at children under 13. We do not knowingly collect personal information from children.</p>
 
-            <h2>11. Your Rights (GDPR / CCPA / Other)</h2>
+            <h2>12. Your Rights (GDPR / CCPA / Other)</h2>
             <ul>
                 <li><strong>Access:</strong> All your data is on your device and visible within the App at any time.</li>
-                <li><strong>Deletion:</strong> Delete all data via App Settings &rarr; Clear all data, or uninstall the App.</li>
+                <li><strong>Deletion:</strong> Delete records in the App or uninstall it, and delete your Google Drive backup in Settings &rarr; Google Drive backup.</li>
                 <li><strong>No data sale:</strong> We do not sell personal data.</li>
                 <li><strong>Ad opt-out:</strong> Manage ad personalization in Android Settings &rarr; Privacy &rarr; Ads, or through the in-app consent prompt.</li>
                 <li><strong>Analytics opt-out:</strong> Anonymous analytics are governed by Firebase; refer to Google's privacy controls.</li>
             </ul>
 
-            <h2>12. Changes to This Policy</h2>
+            <h2>13. Changes to This Policy</h2>
             <p>We may update this Privacy Policy periodically. Material changes will be reflected in the "Last updated" date above. Continued use of the App constitutes acceptance of the revised policy.</p>
 
-            <h2>13. Contact Us</h2>
+            <h2>14. Contact Us</h2>
             <p>For privacy questions or data requests, contact us:</p>
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></li>
@@ -107,7 +121,7 @@
             </ul>
 
             <div class="callout callout-warn">
-                <p><strong>Privacy by design.</strong> Your Zakat records are yours alone. Zakat Book processes everything on your device — your wealth data never leaves your phone.</p>
+                <p><strong>Privacy by design.</strong> Your Zakat records are yours alone. Zakat Book processes everything on your device — your wealth data never reaches us, and leaves your phone only for your own Google Drive, if you choose.</p>
             </div>
 
             <div class="doc-contact">
