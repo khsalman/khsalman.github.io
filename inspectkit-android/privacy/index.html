@@ -47,9 +47,10 @@
             <p>Everything you enter is stored in the App's private storage on your device, including:</p>
             <ul>
                 <li>Inspections, checklist results, findings, and severity ratings</li>
-                <li>Client and property details</li>
+                <li>Client and property details, and client signatures</li>
                 <li>Photos attached to findings, and the location stamped on a photo when the photo stamp is on</li>
-                <li>Video clips and voice note text attached to findings</li>
+                <li>Video clips attached to findings, which can include sound</li>
+                <li>Voice notes: the text, and the audio of voice notes imported from a backup made on another device</li>
                 <li>Your business profile, such as company name, logo, signature, and contact details, used only to fill in your reports</li>
                 <li>App settings, such as language and reminder preferences</li>
             </ul>
@@ -58,7 +59,7 @@
             <h2>3. Google Drive Sync (Optional)</h2>
             <p>Google Drive sync is off until you turn it on in Settings or from the Dashboard. It keeps your inspections the same on every device signed in to the same Google account, and lets you restore them after reinstalling.</p>
             <ul>
-                <li><strong>What is synced:</strong> inspections, sections, checklist items, findings, client and property details, photos and their locations, video clips, voice notes, reports, templates, and your business profile, including your logo and signature. App settings, such as language and reminders, are not synced.</li>
+                <li><strong>What is synced:</strong> inspections, sections, checklist items, findings, client and property details, client signatures, photos and their locations, video clips, voice notes, reports, templates, and your business profile, including your logo and signature. App settings, such as language and reminders, are not synced.</li>
                 <li><strong>Where it is stored:</strong> in the hidden app data folder of <strong>your own Google Drive</strong>. The files count toward your Drive storage. LynxApps has no access to them and does not receive a copy.</li>
                 <li><strong>What the App can access:</strong> the App asks Google only for the <code>drive.appdata</code> permission. It can read and write only the files it created in its own folder. It cannot see, open, or change any other file in your Drive.</li>
                 <li><strong>How it is sent:</strong> directly between your device and Google, encrypted in transit (HTTPS). Files of 10&nbsp;MB or more, such as video clips, wait for Wi-Fi unless you allow mobile data.</li>
@@ -69,7 +70,7 @@
             <h2>4. Analytics and Crash Reporting</h2>
             <p>The App uses Firebase (by Google) in release builds for two purposes:</p>
             <ul>
-                <li><strong>Firebase Analytics:</strong> A small set of anonymous usage events, such as an inspection being created, a report being generated, or a template being used. Events never include client names, property addresses, finding notes, photos, or any other free-form content you write.</li>
+                <li><strong>Firebase Analytics:</strong> A small set of anonymous usage events, such as an inspection being created, a report being generated, or a template being used, along with general device information such as device model, Android version, and App version. When you buy or cancel Pro, an event records the plan and its price; payment details are never included. Events never include client names, property addresses, finding notes, photos, or any other free-form content you write.</li>
                 <li><strong>Firebase Crashlytics:</strong> If the App crashes, a report containing your device model, Android version, App version, and a stack trace is sent. Reports are linked to a random anonymous install identifier, not to your name or email address. No inspection content is included.</li>
             </ul>
             <p>The anonymous install identifier is created the first time you open the App and is not linked to a Google account. Firebase data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
@@ -90,7 +91,7 @@
             <ul>
                 <li><strong>Internet and network state:</strong> Used for Firebase analytics and crash reports, Google Play Billing, and Google Drive sync when it is on. The network state tells sync whether you are on Wi-Fi. Inspection work does not require a connection.</li>
                 <li><strong>Camera and photos:</strong> Used to capture or add photos and video clips to findings.</li>
-                <li><strong>Microphone:</strong> Optional. Used for voice notes, which Android's speech recognition turns into text. Only the text is kept. Depending on your device, speech recognition may run on the device or through Google's speech service.</li>
+                <li><strong>Microphone:</strong> Optional. Used for voice notes, which Android's speech recognition turns into text. The App keeps the text, not a recording. Voice notes imported from a backup made on another device can include their audio. Video clips recorded with the camera can include sound. Depending on your device, speech recognition may run on the device or through Google's speech service.</li>
                 <li><strong>Location:</strong> Optional. Used only to stamp where a photo was taken, when the photo stamp is on. Precise or approximate location both work, and photos are still taken without it.</li>
                 <li><strong>Foreground service (data sync):</strong> Used to finish large Google Drive transfers while the App is in the background, with a notification shown during the transfer.</li>
                 <li><strong>Notifications:</strong> Optional. Used to send inspection reminders. Reminders are off by default, and you control them in the App and in Android Settings.</li>
@@ -117,7 +118,7 @@
                 <li><strong>Access:</strong> All your data is on your device and visible within the App at any time.</li>
                 <li><strong>Deletion:</strong> Delete records in the App, clear App storage, or uninstall the App. Delete the Google Drive copy as described in section 10.</li>
                 <li><strong>No data sale:</strong> We do not sell personal data.</li>
-                <li><strong>Analytics:</strong> You can limit analytics and crash reporting through your Google account and device settings.</li>
+                <li><strong>Analytics:</strong> Analytics and crash reports are anonymous and contain no inspection content. The App has no setting to turn them off; uninstalling the App stops them.</li>
             </ul>
 
             <h2>14. Changes to This Policy</h2>
