@@ -16,7 +16,9 @@ Static GitHub Pages site (no build step) for LynxApps — privacy-first iOS apps
 
 Every app page is self-contained HTML with this layout: `site-header` (nav with `← All apps` / `← <App>`, sub-page links, `nav-cta`) → `hero` → feature/pricing sections → `cta` (download/notify section) → `site-footer`.
 
-**Internal links must end with a trailing slash** (`/vow/privacy/`, `/vow/#features`), never `/vow/privacy`. GitHub Pages 301-redirects the no-slash form, and Google Search Console then reports those URLs as "Page with redirect" instead of indexing them. Links to files (`/svg/x.svg`, `/assets/css/lynx.css`) take no slash. The same applies to absolute site URLs in `<link rel="canonical">`, `og:url` and JSON-LD: use `https://khsalman.github.io/<slug>/`, and make the canonical match the page's own URL in `sitemap.xml`.
+**Internal links must end with a trailing slash** (`/vow/privacy/`, `/vow/#features`), never `/vow/privacy`. GitHub Pages 301-redirects the no-slash form, and Google Search Console then reports those URLs as "Page with redirect" instead of indexing them. Links to files (`/svg/x.svg`, `/assets/css/lynx.css`) take no slash. The same applies to absolute site URLs in `<link rel="canonical">`, `og:url` and JSON-LD: use the page's own full path with a trailing slash (`https://khsalman.github.io/vow/`, `https://khsalman.github.io/vow/privacy/`, `https://khsalman.github.io/pillvault/guides/<guide>/`, and `https://khsalman.github.io/` for the homepage or publisher). Never point a sub-page's canonical at the app's landing page.
+
+**Every page has a self-referencing canonical** (`<link rel="canonical" href="https://khsalman.github.io/<path>/">`, placed just before the favicon `<link>`) that matches that page's `<loc>` in `sitemap.xml`.
 
 The skip link targets `#main`: use `<main id="main">` when the page has one. Landing pages without `<main>` put `id="main"` on the first `<section>` after the header, so keep the hero as that first section.
 
@@ -99,8 +101,9 @@ Homepage app cards use parallel `.theme-row-<key>` / `.grad-<key>` classes defin
 1. Pick a theme key, add its `[data-theme="..."]` block to `lynx.css`. Android apps get their own key, never an iOS app's key, so a change to one app's colours cannot restyle the other.
 2. Create `<slug>/index.html`, `<slug>/privacy/index.html`, `<slug>/terms/index.html`, `<slug>/support/index.html` following an existing app as the template (copy structure, not content).
 3. Add a card to `index.html`'s `.apps-grid` with matching `.theme-row-<key>` / `.grad-<key>` CSS, plus footer links (`Apps` and `Support` columns) and increment the "N tools, one philosophy" headline.
-4. Add the app to the inventory table above, and add each new page's URL to `sitemap.xml`.
-5. Status badge on the card and hero CTA on the app page must reflect real state — see Launch status below.
+4. Add the app to the inventory table above.
+5. Add a `<url>` entry to `sitemap.xml` for each new page, with a trailing slash: `https://khsalman.github.io/<slug>/`, `.../<slug>/privacy/`, `.../<slug>/terms/`, `.../<slug>/support/`, plus any guides. Give each page a matching canonical tag (see the trailing-slash rule above).
+6. Status badge on the card and hero CTA on the app page must reflect real state — see Launch status below.
 
 ## Launch status — keep in sync everywhere
 
