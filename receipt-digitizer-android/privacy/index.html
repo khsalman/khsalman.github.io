@@ -31,14 +31,14 @@
                 <a href="/">LynxApps</a><span>/</span><a href="/receipt-digitizer-android/">Receipt Digitizer Android</a><span>/</span><span>Privacy Policy</span>
             </div>
             <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: October 20, 2026</p>
+            <p class="updated">Last updated: November 23, 2026</p>
         </div>
     </section>
 
     <main id="main" class="doc-body">
         <div class="container-doc">
             <div class="callout">
-                <p><strong>Your receipts stay on your device.</strong> Receipt Digitizer for Android reads receipts on your phone. Your receipt images and expense details are never uploaded to our servers, and no account is required.</p>
+                <p><strong>Your receipts stay on your device.</strong> Receipt Digitizer for Android reads receipts on your phone. Your receipt images and expense details are never uploaded to our servers, and no account is required. If you choose to turn on Google Drive Sync, your data is saved to a private app folder in <em>your own</em> Google Drive, which we cannot access.</p>
             </div>
 
             <h2>1. Overview</h2>
@@ -46,7 +46,7 @@
             <p>By using the App, you agree to the practices described in this policy.</p>
 
             <h2>2. Information Stored On Your Device</h2>
-            <p>The following is stored locally on your device and is <strong>never uploaded</strong> to our servers:</p>
+            <p>The following is stored locally on your device and is <strong>never uploaded</strong> to our servers. A copy is saved to your own Google Drive only if you turn on Google Drive Sync (see section 5).</p>
             <ul>
                 <li>Receipt images captured with the camera or imported from your gallery</li>
                 <li>Expense details such as merchant, amount, date, and notes</li>
@@ -59,7 +59,8 @@
             <ul>
                 <li>Receipt images or their content</li>
                 <li>Financial details, amounts, or your bank or card information</li>
-                <li>Your precise location, contacts, or messages</li>
+                <li>Your location history, contacts, or messages</li>
+                <li>The contents of your Google Drive. The App can only open its own private app folder, and nothing from Drive is sent to us</li>
             </ul>
 
             <h2>4. Information Collected Automatically</h2>
@@ -70,40 +71,72 @@
                 <li><strong>Support contact (optional):</strong> if you email us, we receive your email address and any details you share</li>
             </ul>
 
-            <h2>5. Permissions</h2>
+            <h2>5. Google Drive Sync (Optional)</h2>
+            <p>Google Drive Sync is off until you turn it on in Settings. It backs up your data to your own Google Drive and keeps it the same on every device where you use the App with the same Google account.</p>
+            <h3>What access the App asks for</h3>
+            <p>When you connect, Google asks you to choose an account and approve access. The App requests only the <code>drive.appdata</code> permission ("See, create, and delete its own configuration data in your Google Drive"). This gives the App a hidden, private app folder in your Drive. It <strong>cannot</strong> see, open, change, or delete any of your other Drive files, and other apps cannot open its folder.</p>
+            <h3>What is saved to your Drive</h3>
+            <ul>
+                <li>Receipt photos and their thumbnails</li>
+                <li>Receipt and expense details: merchant, amounts, tax, currency, date, category, tags, notes, recognised receipt text, and flags such as favourite or tax-deductible</li>
+                <li>Folders, custom categories, budgets, savings goals, subscriptions, and mileage trips (date, distance, rate, and purpose, with no GPS route)</li>
+                <li>Your home currency, business name, and business logo</li>
+            </ul>
+            <h3>What the App reads from Google</h3>
+            <ul>
+                <li>The email address of the Google account you connect, shown in Settings and stored on your device so sync stays on the right account</li>
+                <li>The files in the App's own Drive folder, downloaded to your device to restore and sync your data</li>
+            </ul>
+            <h3>How the data is used and shared</h3>
+            <p>Data from Google Drive is used only to back up, restore, and sync your records inside the App. It travels directly between your device and Google over encrypted (HTTPS) connections and never passes through LynxApps servers. We do not sell it, use it for advertising, or share it with anyone. Your Drive files are stored by Google under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a> and count toward your Google storage.</p>
+            <p>Receipt Digitizer's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+            <h3>Turning sync off and deleting Drive data</h3>
+            <ul>
+                <li><strong>Turn off sync:</strong> Settings → Google Drive Sync → Turn off sync. This device stops syncing; data stays on the device and in Drive.</li>
+                <li><strong>Delete data from Google Drive:</strong> Settings → Google Drive Sync → Delete data from Google Drive. This removes the App's folder from your Drive and turns off sync. Data on the device is kept. Other devices that still sync will upload their own copy again.</li>
+                <li><strong>Remove access:</strong> you can revoke the App's access at any time at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>. You can also delete the App's hidden data in Google Drive on the web under Settings → Manage apps.</li>
+            </ul>
+            <p>Uninstalling the App or clearing its data does not delete the copy in your Google Drive. Use one of the options above to remove it.</p>
+
+            <h2>6. Permissions</h2>
             <ul>
                 <li><strong>Camera:</strong> to scan receipts. Photos are processed on your device.</li>
                 <li><strong>Photos and files:</strong> only the images you choose to import.</li>
                 <li><strong>Notifications:</strong> to send reminders you set up. These are scheduled on your device.</li>
+                <li><strong>Location (optional):</strong> used only while you record a mileage trip, to measure the distance on your device. Only the distance is saved; your route and coordinates are not stored or sent anywhere.</li>
+                <li><strong>Internet:</strong> for ads, analytics, purchases, and Google Drive Sync if you turn it on.</li>
             </ul>
 
-            <h2>6. Third-Party Services</h2>
+            <h2>7. Third-Party Services</h2>
             <h3>Google Firebase (Analytics &amp; Crashlytics)</h3>
             <p>Helps us understand app performance and fix crashes. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security →</a></p>
             <h3>Google Mobile Ads (AdMob)</h3>
             <p>Serves advertisements in the free version. <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob Privacy Information →</a></p>
+            <h3>Google Drive (optional)</h3>
+            <p>Stores your synced data in a private app folder in your own Google Drive, only if you turn on Google Drive Sync. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a></p>
             <h3>Google Play Billing</h3>
             <p>Handles Pro purchases. Payment details are handled by Google, and we never see or store them. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a></p>
 
-            <h2>7. Your Choices &amp; Controls</h2>
+            <h2>8. Your Choices &amp; Controls</h2>
             <ul>
                 <li><strong>Delete records:</strong> remove any receipt, expense, or folder in the App at any time</li>
-                <li><strong>Delete all data:</strong> clear the App's storage in Android Settings, or uninstall the App</li>
+                <li><strong>Delete all data:</strong> use Delete all data in the App, clear the App's storage in Android Settings, or uninstall the App. This does not delete your Google Drive copy</li>
+                <li><strong>Google Drive Sync:</strong> turn sync off, delete the App's data from your Drive, or revoke access, as described in section 5</li>
                 <li><strong>Export:</strong> export your records as PDF or CSV</li>
                 <li><strong>Notifications:</strong> turn reminders off in Android Settings → Apps → Receipt Digitizer → Notifications</li>
                 <li><strong>Ad personalisation:</strong> manage ads in Android Settings → Privacy → Ads</li>
             </ul>
 
-            <h2>8. Data Security</h2>
-            <p>Because your receipts and expense data stay on your device, they are protected by Android's built-in security, including file-level encryption and screen lock on supported devices. Data sent to Google services is sent over encrypted connections.</p>
+            <h2>9. Data Security</h2>
+            <p>Because your receipts and expense data stay on your device, they are protected by Android's built-in security, including file-level encryption and screen lock on supported devices. Data sent to Google services, including Google Drive Sync, is sent over encrypted connections. Your Drive copy is protected by your Google account's security, so we recommend turning on 2-Step Verification.</p>
 
-            <h2>9. Children's Privacy</h2>
+            <h2>10. Children's Privacy</h2>
             <p>Receipt Digitizer is not directed to children under 13, and we do not knowingly collect personal information from children under 13.</p>
 
-            <h2>10. Changes to This Policy</h2>
+            <h2>11. Changes to This Policy</h2>
             <p>We may update this Privacy Policy from time to time. Material changes will be reflected by updating the "Last updated" date above. Continued use of the App constitutes acceptance of the revised policy.</p>
 
-            <h2>11. Contact Us</h2>
+            <h2>12. Contact Us</h2>
             <p>If you have questions about this Privacy Policy or your data, contact us:</p>
             <ul>
                 <li><strong>Email:</strong> <a href="mailto:lynxapps.contact@gmail.com">lynxapps.contact@gmail.com</a></li>
